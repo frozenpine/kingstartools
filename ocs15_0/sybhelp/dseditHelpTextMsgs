@@ -1,0 +1,152 @@
+
+; message strings for helper
+
+; /******************************************************************************		
+;  * THE FOLLOWING MESSAGES DO NOT NEED TO BE CHANGED PER APPLICATION CLIENT   *
+;  ******************************************************************************/
+
+; test message with parameters
+100 = "test. param one: %01!, param two: %2!, param not present: %5!,\na normal exclamation (!), an escaped percent (\%), param one again (quoted): '%00001!', a tab:\t, and a false param: %12"
+
+; empty message EMPTY_MESSAGE
+101 = ""
+
+; /*  console error message if putenv() fails for various environment variable strings	*/
+; /*  HELP_CONSOLE_ERROR_PUTENV_XAPPLRESDIR */
+106 = "\nUnable to set environment variable %1!.\nX class resource files for Helper may be unavailable.\nSet these variables and then try restarting sybsetup.\n"
+
+
+; error message for missing help file
+111 = "\nUnable to open help file: %1!\n"
+
+; customer support message
+120 = "\nPlease contact Sybase customer support!\n"
+
+; HELP_XCOMM_MISSING_HELPER_EXECUTABLE
+200 = "%1!: could not find helper executable\n"
+; HELP_XCOMM_INVALID_HELPER_PROCESS
+202 = "%1!: helper process is not valid\n"
+; HELP_XCOMM_UNAVAILABLE_HELPER_WINDOW
+204 = "%1!: helper window is not available\n"
+; HELP_XCOMM_CANT_GET_HELP_PROPERTY
+206 = "%1!: can't get Help property data\n"
+; HELP_XCOMM_CANT_FIND_HELP_ITEM
+208 = "%1!: can't find indicated help item\n"
+; HELP_XCOMM_FAILED_CALLOC_NEW_HELP_DATA
+210 = "%1!: calloc failed\n"
+
+; /* help panel */
+; /* HELP_PANEL_DISMISS_BUTTON_LABEL */
+600 = "Dismiss"
+; HELP_PANEL_WHICH_TOPIC_LABEL
+602 = "Topics:"
+; HELP_PANEL_MENU_FILE_LABEL
+650 = "File"
+; HELP_PANEL_MENU_FILE_MNEMONIC
+651 = "F"
+; HELP_PANEL_MENU_QUIT_LABEL
+655 = "Exit"
+; HELP_PANEL_MENU_QUIT_MNEMONIC
+656 = "E"
+; HELP_PANEL_MENU_NAVIGATE_LABEL
+660 = "Navigate"
+; HELP_PANEL_MENU_NAVIGATE_MNEMONIC
+661 = "N"
+; HELP_PANEL_MENU_BACK_LABEL
+665 = "Back"
+; HELP_PANEL_MENU_BACK_MNEMONIC
+666 = "B"
+; HELP_PANEL_MENU_HISTORY_LABEL
+670 = "History..."
+; HELP_PANEL_MENU_HISTORY_MNEMONIC
+671 = "H"
+; HELP_PANEL_MENU_HELP_LABEL
+675 = "Topics"
+; HELP_PANEL_MENU_HELP_MNEMONIC
+676 = "T"
+
+; /******************************************************************************		
+;  * THE FOLLOWING MESSAGES WILL NEED TO BE CHANGED PER APPLICATION CLIENT	*
+;  ******************************************************************************/
+
+; HELP_PANEL_TOPIC_0_LABEL
+705 = "About dsedit"
+; HELP_PANEL_TOPIC_0_MNEMONIC
+706 = "A"
+; HELP_PANEL_TOPIC_1_LABEL
+710 = "Main Window"
+; HELP_PANEL_TOPIC_1_MNEMONIC
+711 = "M"
+; HELP_PANEL_TOPIC_2_LABEL
+715 = "Directory Service"
+; HELP_PANEL_TOPIC_2_MNEMONIC
+716 = "D"
+; HELP_PANEL__TOPIC_3_LABEL
+720 = "Server Entry"
+; HELP_PANEL_TOPIC_3_MNEMONIC
+721 = "S"
+; HELP_PANEL_TOPIC_4_LABEL
+725 = "Network Transport"
+; HELP_PANEL_TOPIC_4_MNEMONIC
+726 = "N"
+; HELP_PANEL_TOPIC_5_LABEL
+730 = ""
+; HELP_PANEL_TOPIC_5_MNEMONIC
+731 = ""
+; HELP_PANEL_TOPIC_6_LABEL
+735 = ""
+; HELP_PANEL_TOPIC_6_MNEMONIC
+736 = ""
+; HELP_PANEL_TOPIC_7_LABEL
+740 = ""
+; HELP_PANEL_TOPIC_7_MNEMONIC
+741 = ""
+; HELP_PANEL_TOPIC_8_LABEL
+745 = ""
+; HELP_PANEL_TOPIC_8_MNEMONIC
+746 = ""
+; HELP_PANEL_TOPIC_9_LABEL
+750 = ""
+; HELP_PANEL_TOPIC_9_MNEMONIC
+751 = ""
+; HELP_PANEL_TOPIC_10_LABEL
+755 = ""
+; HELP_PANEL_TOPIC_10_MNEMONIC
+756 = ""
+; HELP_PANEL_TOPIC_11_LABEL
+760 = ""
+; HELP_PANEL_TOPIC_11_MNEMONIC
+761 = ""
+; HELP_PANEL_TOPIC_12_LABEL
+765 = ""
+; HELP_PANEL_TOPIC_12_MNEMONIC
+766 = ""
+; HELP_PANEL_TOPIC_13_LABEL
+770 = ""
+; HELP_PANEL_TOPIC_13_MNEMONIC
+771 = ""
+; HELP_PANEL_TOPIC_14_LABEL
+775 = ""
+; HELP_PANEL_TOPIC_14_MNEMONIC
+776 = ""
+; HELP_PANEL_TOPIC_15_LABEL
+780 = ""
+; HELP_PANEL_TOPIC_15_MNEMONIC
+781 = ""
+; HELP_PANEL_TOPIC_16_LABEL
+785 = ""
+; HELP_PANEL_TOPIC_16_MNEMONIC
+786 = ""
+; HELP_PANEL_TOPIC_17_LABEL
+790 = ""
+; HELP_PANEL_TOPIC_17_MNEMONIC
+791 = ""
+; HELP_PANEL_TOPIC_18_LABEL
+795 = ""
+; HELP_PANEL_TOPIC_18_MNEMONIC
+796 = ""
+; HELP_PANEL_TOPIC_19_LABEL
+800 = ""
+; HELP_PANEL_TOPIC_19_MNEMONIC
+801 = ""
+

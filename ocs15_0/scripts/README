@@ -1,0 +1,21 @@
+This is the README file for the SDK/Open Server scripts.
+
+This directory contains the following script(s):
+
+lnsyblibs:
+	As of SDK 15.0 and Open Server 15.0, Sybase library names have 
+	changed from lib<name> to libsyb<name> to avoid name clashes
+	with other libraries.
+
+	To allow pre-15.0 applications to continue to work with the
+	renamed shared libraries, this script is provided to create
+	symbolic links from the new library names to the old ones in
+	$SYBASE/$SYBASE_OCS/(dev)lib.
+
+	Usage of the script:
+
+	  lnsyblibs { create | remove }
+
+	where 'create' makes the symbolic links in $SYBASE/$SYBASE_OCS/(dev)lib
+	and 'remove' can be used to destroy these links again.
+

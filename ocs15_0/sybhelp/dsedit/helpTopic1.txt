@@ -1,0 +1,27 @@
+
+SPECIFYING AN INTERFACES FILE TO EDIT
+
+You can store server/client network connection information in
+the Sybase interfaces file. The interfaces file contains server 
+location and connection information. 
+ 
+When you install Sybase products, the default file $SYBASE/interfaces 
+is created.
+
+To add, modify, or delete server information in an interfaces file:
+  
+1. Click Sybase Interfaces File at the top of the screen.
+
+2. Verify that the default interfaces file whose name appears in 
+   the Interfaces File to Edit field is the file you want to edit.
+
+   If this is not the file you want, type the name of a different 
+   interfaces file in this field.
+
+3. Click OK.
+
+If the file you have specified does not exist, dsedit creates an 
+empty file.
+
+For more information about interfaces files, see the Adaptive Server 
+installation guide.

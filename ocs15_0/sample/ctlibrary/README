@@ -1,0 +1,492 @@
+This is the README file for the Open Client sample programs.
+
+The sample programs demonstrate specific Open Client functionality.
+These programs are designed as guides for sophisticated application 
+programmers, not as Open Client training aids.
+
+It is recommended that users read the descriptions at the top of each 
+source file and examine the source code prior to attempting to use the 
+sample programs. All of the examples use the utility routines from the 
+file exutils.c. Functions whose names begin with "ex_" are in exutils.c.
+All the examples use connection information as defined in example.h.
+
+Lastly, these programs are not intended as examples of robust,
+production-quality open client applications; only minimal effort has 
+been made to "bullet-proof" these applications.
+
+
+
+Build instructions follow the list of examples.
+
+
+LIST OF EXAMPLE PROGRAMS (Source file names given in parentheses)
+
+arraybind	(FILES: arraybind.c exutils.c)
+
+	Illustrates use of array binding when extracting data through use
+	of ct_fetch.
+
+batch_dynamic	(FILES: batch_dynamic.c exutils.c)
+
+	Demonstrates the use of parameter batching using ct_send_params()
+	in dynamic SQL.
+
+batch_lang	(FILES: batch_lang.c exutils.c)
+
+	Demonstrates the use of parameter batching using ct_send_params()
+	in language commands.
+
+blktxt		(FILES: blktxt.c, exutils.c)
+
+	Illustrates use of bulk library routines to copy static data into 
+	a table. 
+
+compute 	(FILES: compute.c, exutils.c)
+
+	Shows how to send a Transact-SQL command and how to process regular 
+	results and compute results.
+
+csr_disp	(FILES: csr_disp.c, exutils.c)
+
+	Demonstrates use of Client-Library cursors. Opens a cursor 
+	with a SELECT statement, then uses the cursor to step through the 
+	result rows. 
+
+csr_disp_implicit	(FILES: csr_disp_implicit.c, exutils.c)
+
+	Demonstrates use of Client-Library cursors. Opens a cursor 
+	with a SELECT statement, then uses the cursor to step through the 
+	result rows. Same functionality as csr_disp, but more efficient
+	internally for read-only cursors. 
+
+csr_disp_scrollcurs	(FILES: csr_disp_scrollcurs.c, exutils.c, exutils2.c)
+
+	Demonstrates use of Client-Library scrollable cursors. Opens a scrollable,
+	read-only cursor with a SELECT statement, then uses the cursor to scroll 
+	through the result rows. The exutils2.c example file has facilities for
+	emulating scrollable cursor commands to retrieve data at random from
+	the resulting rows.
+
+csr_disp_scrollcurs2	(FILES: csr_disp_scrollcurs2.c, exutils.c, exutils2.c)
+
+	Demonstrates use of Client-Library scrollable cursors. Opens a scrollable,
+	read-only cursor with a SELECT statement, then uses the cursor to scroll 
+	through the result rows. The exutils2.c example file has facilities for
+	emulating scrollable cursor commands to retrieve data at random from
+	the resulting rows. This example also uses array binding on prefetched
+	rows.
+
+csr_disp_scrollcurs3	(FILES: csr_disp_scrollcurs3.c, exutils.c, exutils2.c)
+
+	Demonstrates use of Client-Library scrollable cursors. Opens a scrollable,
+	read-only cursor with a SELECT statement with new ct_cursor() option
+	CS_CUR_RELLOCKS_ONCLOSE. 
+	It then uses the cursor to scroll through the result rows. The ASE server
+	releases shared level 1 locks upon cursor close directive.
+	The exutils2.c example file has facilities for emulating scrollable cursor 
+	commands to retrieve data at random from the resulting rows.
+
+dynamic	(FILE: dynamic.c wide_util.c exutils.c)
+
+	Shows how to send dynamic SQL to a server and process the results 
+	returned from the server.
+
+exasync		(FILES: ex_amain.c, ex_alib.c, exutils.c)
+
+	Demonstrates Client-Library's asynchronous mode. Sends a language
+	command and processes the results asynchronously. ex_alib.c shows 
+	how an asynchronous layer can be created on top of Client-Library. 
+
+
+	NOTE:	The file EX_AREAD.ME contains a more detailed 
+		description of the asynchronous example and the 
+		routines in ex_alib.c.
+
+exconfig        (FILES: exconfig.c, exutils.c)
+
+	Demonstrates the use of Client-Library's external config file.
+	Shows how to set CS_SERVERNAME property value through the default
+	external config file of "${SYBASE}/${SYBASE_OCS}/config/ocs.cfg". 
+	For Windows, the default directory for ocs.cfg is
+	"%SYBASE%\%SYBASE_OCS%\ini".
+
+	The following statement is a sample of ocs.cfg that can be put
+	in the indicated config or ini directory:
+	
+	[DEFAULT]
+		; This default section should always be present
+	[server1]
+		CS_SERVERNAME = connect50
+
+
+firstapp	(FILES: firstapp.c)
+	
+	A simple example program that connects to a server, sends a
+	select query, and prints the rows. This is the program that
+	that is discussed in the "Getting Started" chapter of the
+	Open Client Client-Library/C Programmer's Guide.
+
+multthrd:	(FILES: multthrd.c, thrdutil.c, thrdfunc.c)
+
+	Demonstrates techniques for coding a multi-threaded client 
+	application coded with Client-Library.
+
+	This sample requires a thread package to be available for the build
+	and execution. Some platforms may not support a thread package. Please 
+	read the platform supplement for Open Client for information on the 
+	thread packages that are supported on that platform. If no thread
+	package is available on a platform, this sample is not supported.
+	This example requires "nthread_<platform>" to be set in order to build 
+	properly.
+		
+getsend 	(FILES: getsend.c, exutils.c)
+
+	Shows how to retrieve and update data from a text-datatype column. 
+	The technique demonstrated here can also be used for image data. 
+
+i18n 		(FILES: i18n.c, exutils.c)
+
+	Demonstrates some of the international features available in 
+	Client-Library, including localized error messages and user-defined 
+	bind types.
+
+id_update	(FILES: id_update.c exutils.c)
+
+	Demonstrates the use of the 'identity_update' option.
+	This sample connects to a server, creates 'test_table' in the 'pubs2'
+	database and inserts a couple of rows with an identity field.
+	Then turns on the 'identity_update' option and updates the
+	identity field in one of the rows with a user-specified value.
+
+lobdynamic	(FILES: lobdynamic.c, exutils.c)
+
+	Shows how to send Large Object data (text, image or unitext types) as
+	parameters for Dynamic SQL statements. This sample shows two ways of
+	sending LOB data to a server: Either in one batch with a known size of
+	the data or in a stream of chunks, using a loop of ct_send_data() calls
+	until the entire LOB parameter is sent.
+	This sample can be run  against ASE version 15.7 or up or against 
+	Open Server sample 'paramreader'.
+
+lobrpc		(FILES: lobrpc.c, exutils.c)
+
+	Shows how to send Large Object data (text, image or unitext types) as
+	input parameters for remote procedures. This sample shows two ways of
+	sending LOB data to a server: Either in one batch with a known size of
+	the data or in a stream of chunks, using a loop of ct_send_data() calls
+	until the entire LOB parameter is sent.
+	This sample is intended to run against the Open Server sample 'paramreader'
+	but can also be run against ASE version 15.7 or up.
+
+locator		(FILES: locator.c)
+
+	Demonstrates the use of lob locators to handle text/image/unitext
+	data without pulling the entire lob to the client application first.
+	This sample requires the pubs2 database to be installed in ASE.
+
+rpc		(FILES: rpc.c, exutils.c)
+
+	Shows how to send an RPC command to a server and how to process row, 
+	parameter, and status results returned from an RPC command.
+
+usedir		(FILES: usedir.c, exutils.c)
+
+	Shows how to use ct_ds_lookup and ct_ds_objinfo to search for
+	and view directory entries. The program queries the directory
+	for Sybase server entries, and prints the contents of each entry
+	it finds.
+
+	If using a network-based directory (such as the NT Registry), 
+	you should make sure that a  default directory driver is correctly 
+	configured in libtcl.cfg, and populate the directory with entries 
+	for your Sybase servers.
+	
+	If no directory driver is configured, the program will show all
+	servers defined in the Sybase interfaces file (or SQL.INI, if your
+	platform uses it instead).
+
+
+secct_krb  (FILES: secct.c, exutils.c)
+
+	Demonstrates how to use network-based security in a Client-Library
+	application. This example requires that CyberSAFE Kerberos 
+	is installed and running on your machine. You also must have a 
+	server that supports network-based security, such as Security 
+	Guardian or the secsrv.c Open Server example program.
+
+	Build the secct_krb target to use CyberSAFE Kerberos security.
+
+	When run, secct_krb require command line arguments to specify the 
+	security options for the connection. See the comments at the top 
+	of secct.c for a description of the syntax.
+
+	NOTE: 
+	RS6000 only: Set SYBPLATFORM to nthread_rs6000 (nthread_rs600064 for 64bit 
+	platform) while building the secct_krb sample program. Further more, 
+	just like other applications that need to use kerberos, we added the 
+	link parameter "-bexpall". 
+
+
+The following (wide) examples can only be used with OCS version 12.5 or 
+beyond, as they rely on larger ASE page sizes (ASE 12.5 or beyond)
+
+
+wide_compute:e 	(FILES: wide_compute.c, exutils.c)
+
+	Shows how to send a Transact-SQL command and how to process regular 
+	results and compute results from a wide table.
+
+wide_rpc: (FILES: wide_rpc.c, exutils.c)
+
+	Shows how to send an RPC command to a server and how to process row, 
+	parameter, and status results returned from an RPC command for a 
+	wide table.
+
+wide_dynamic:	(FILE: wide_dynamic.c wide_util.c exutils.c)
+
+	Shows how to send dynamic SQL to a server and process the results 
+	returned from the server for a wide table using cursors.
+
+wide_curupd:	(FILE: wide_curupd.c wide_util.c exutil.c)
+
+	Shows how to write a cursor update programs. It sends the query to
+	server using cursor, updates the row and sends back to the server.
+
+uni_blktxt	(FILES: uni_blktxt.c, exutils.c)
+
+	Illustrates use of bulk library routines to copy static data into 
+	a table. Modified from blktxt for unichar16 datatype support. Use
+	unipubs2 database instead of pubs2.
+
+uni_compute 	(FILES: uni_compute.c, exutils.c)
+
+	Shows how to send a Transact-SQL command and how to process regular 
+	results and compute results. Modified from compute for unichar16
+	datatype support. Use unipubs2 database instead of pubs2.
+
+uni_csr_disp	(FILES: uni_csr_disp.c, exutils.c)
+
+	Demonstrates use of Client-Library cursors. Opens a cursor 
+	with a SELECT statement, then uses the cursor to step through the 
+	result rows. Modified from csr_disp for unichar16 datatype support.
+	Use unipubs2 database instead of pubs2.
+
+uni_firstapp	(FILES: uni_firstapp.c)
+	
+	A simple example program that connects to a server, sends a
+	select query, and prints the rows. Modified from firstapp for
+	unichar16 datatype support. Use unipubs2 database instead of
+	pubs2.
+
+uni_rpc		(FILES: uni_rpc.c, exutils.c)
+
+	Shows how to send an RPC command to a server and how to process row, 
+	parameter, and status results returned from an RPC command. Modified
+	from rpc for unichar16 datatype support.
+
+twophase	(FILES: twophase.c, ctxact.c, ctpr.c)
+
+	Illustrates the use of the two-phase commit service to perform
+	a distributed transaction.
+
+uctext 	(FILES: uctext.c, exutils.c)
+
+	Shows how to construct partial text update commands for an open server.
+	This requires a running 'updtext' open server sample.
+
+MAKING AND RUNNING THE EXAMPLES
+
+To make and run an example, perform the following steps:
+
+ 1.	Verify that you have a user account on an available ASE. 
+	Depending on the example program, there may be special requirements.
+	For each example, the introductory comment in the main source file 
+	lists the specific server requirements. 
+
+ 2.	Set the following environment variables:
+
+	${SYBASE} is set to the full pathname of the Sybase root directory.
+
+	${SYBASE_OCS} is set to the directory where the Open Client
+		   product is installed (e.g. OCS-15_0).
+
+	${SYBPLATFORM} is set the Sybase abbreviation for your platform name. 
+		This is required by the example make file. Legal values are listed below.
+
+		HP:
+
+                hpia                    - 32bit HP IPF HP-UX B.11.22
+		nthread_hpia            - 32bit HP IPF HP-UX B.11.22 with native threads
+                hpia64                  - 64bit HP IPF HP-UX B.11.22 
+                nthread_hpia64          - 64bit HP IPF HP-UX B.11.22 with native threads
+
+		hpux 			- HP 9000 HP-UX B.11 
+		nthread_hpux 		- HP 9000 HP-UX B.11 with native threads
+		hpux64 			- 64bit HP 9000 HP-UX B.11 
+		nthread_hpux64 		- 64bit HP 9000 HP-UX B.11 with native threads
+
+		SGI:
+
+		sgi 			- SGI (compiled with -n32)
+		sgi64 			- SGI (compiled with -64)
+		nthread_sgi 		- SGI (compiled with -n32 for nthread)
+		nthread_sgi64 		- SGI (compiled with -64 for nthread)
+
+		IBM rs6000:
+
+		rs6000 			- IBM RISC System 6000
+		nthread_rs6000 		- IBM RISC System 6000 with aix native threads
+		rs600064 		- IBM RISC System 6000 (64bit)
+		nthread_rs600064 	- IBM RISC System 6000 with aix native threads (64bit)
+
+		Sun SPARC:
+
+		sun_svr4 		- Sun Solaris SPARC 
+		nthread_sun_svr4 	- Sun Solaris SPARC with native threads 
+		sun_svr464 		- 64bit Sun Solaris SPARC 
+		nthread_sun_svr464	- 64bit Sun Solaris SPARC with native threads 
+
+		Digital Unix:
+
+		axposf			- Digital Unix
+		nthread_axposf		- Digital Unix with native threads
+
+		Linux Intel x86/x86_64:
+
+		linux 			- Linux Intel x86 non-threaded mode (32bit)
+		nthread_linux 		- Linux Intel x86 threaded mode (32bit)
+		linuxamd64  | linux64   - Linux Intel/AMD64 non-threaded mode (64bit)
+		nthread_linuxamd64 |
+			nthread_linux64 - Linux Intel/AMD64 threaded mode (64bit)
+
+		Linux IBM P Series:
+
+		ibmplinux		- Linux IBM P Series non-threaded mode (32bit)
+		nthread_ibmplinux	- Linux IBM P Series pthread mode (32bit)
+		ibmplinux64		- Linux IBM P Series non-threaded mode (64bit)
+		nthread_ibmplinux64	- Linux IBM P Series pthread mode (64bit)
+
+		Mac OS X:
+
+		macosx			- Mac OS X non-threaded mode
+		nthread_macosx		- Mac OS X pthread mode
+
+		Sun x86:
+
+		sunx86			- Sun Solaris x86 non-threaded mode
+		nthread_sunx86		- Sun Solaris x86 pthread mode
+		sunx8664		- 64bit Sun Solaris x86 non-threaded mode
+		nthread_sunx8664	- 64bit Sun Solaris x86 pthread mode
+
+
+	${DSQUERY} is set to the name of the server that the examples connect to. 
+
+		Alternatively, edit example.h to hard-code a server name. 
+		See Step 3 below for details.
+
+
+	Set the library path environment variable. Depending on your platform, 
+	use the following (example for Sun Solaris):
+
+        	C-shell:
+		setenv LD_LIBRARY_PATH ${SYBASE}/${SYBASE_OCS}/lib
+
+		Bourne/Korn shell:
+		LD_LIBRARY_PATH=${SYBASE}/${SYBASE_OCS}/lib
+		export LD_LIBRARY_PATH
+
+	Note 1: Refer to your operating sytem documentation for the
+		name of the library path envirmonment variable.
+		(E.g. on hpux, use SHLIB_PATH)
+
+	Note 2: Some platforms (sun_svr4, hpux) require /usr/ccs/bin
+		in your path.
+
+	Note 3: Some platforms (such as rs6000) require /usr/lib in
+		your LD_LIBRARY_PATH.
+
+ 3.	If necessary, edit the following connection information that is 
+	defined in example.h:
+
+	EX_USER - User name to connect with. Defined as "sa" in the shipped
+		version of example.h.
+
+	EX_PASSWORD - Password to connect with. Defined as "" (no
+		password) in the shipped version of example.h.
+
+	EX_SERVER - Server name to connect to. Defined as NULL (null 
+		pointer) in the shipped version of example.h. Leave this 
+		definition alone if you want to use the DSQUERY environment 
+		variable to name the server.
+
+		NOTE:	If EX_SERVER is not null, then its value is used
+			instead of the DSQUERY environment variable.
+
+ 4.	Build the example with the command "make <program>", where <program>
+	is the program name. To make all the examples, use "make all". To
+	make unichar16 support examples, use "make uni".
+
+ 5.	HAFAILOVER Feature :
+
+	The sample programs have been modified and tested for HA Failover
+	feature.
+	exasync the sample for CS_ASYNC_IO/CS_DEFER_IO .
+	All samples using the ex_connect function like the compute application.
+
+	a. To activate the HA Failover feature, define the constant 
+              ie.,  #define HAFAILOVER 1
+           Build the executable as described above.
+
+	c. To test this feature. 
+	   i. You need two dataservers (say S1 and S2). defined in the 
+	      interfaces file as one being the failover of the other.
+	      S1
+		query ....
+		master ....
+		hafailover S2
+	      S2
+		query ....
+		master ....
+
+	   ii.Set the DSQUERY to the primary server (ie., S1)
+
+	  iii.Connect, bring down the server, and see that the client connects
+	      to the failover server. Test this in any combination.
+
+6.	Unichar16 (utf16 encoded) support :
+
+	Unichar16 examples use unipubs2 database. "unipubs2" database is
+	modified from "pubs2" database, by changing some data's type from
+	char/varchar to unichar/univarchar. To install unipubs2, the default
+	charset of dataserver need to be set to "utf8" to enable dataserver's
+	unichar/univarchar types and your client need to have "utf8" charset
+	installed. Then run the following command:
+
+	  isql -Uusername -Ppassword -Sservername -Jutf8 < installunipubs2
+
+	All unichar16 examples bind the unichar/univarchar results to
+	char/varchar to do the implicit convert to the client's default
+	charset, so that results can be displayed on non unicode support
+	client and standard C program.
+
+7.	Two Phase Commit example :
+
+	The two-phase commit example requires two servers, which are ready
+	for two-phase commit transactions, and each of which must contain 
+	the "pubs2" database. If necessary, edit the servers' information,
+	SERVER1, SERVER2, and COMMIT. To build two phase commit example,
+	use "make twophase". To configure server for two-phase commit
+	transactions, please refer to server's configuration guide.
+
+8.	uctext - partial text update sample
+
+	This sample demonstrates generating a partial update command
+	in an open server.  You may vary the offset and delete length
+	elements of the CS_IODESC structure and the text to be sent.
+	This requres an ASE to create and retrieve a text column from
+	and an open server to which to send the 'updatetext' command.
+	The open server should be the 'updtext' sample in the srvlibrary
+	directory.  The open server will send back messages indicating
+	it received the 'updatetext' command in the language handler
+	and the text that was received in the bulk handler.
+

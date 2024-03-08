@@ -1,0 +1,4 @@
+dsedit/15.7 SP133/P/Linux Intel/Linux 2.6.18-128.el5 x86_64/EBF 23777/OPT/Fri Apr  3 00:27:37 PDT 2015
+Confidential property of Sybase, Inc.
+(c) Copyright Sybase Inc. 1997 - 2015. All rights reserved.
+Sybase, Inc. One Sybase Drive, Dublin, CA 94568, USA.

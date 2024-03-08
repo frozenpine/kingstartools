@@ -10,7 +10,7 @@ import (
 
 var db *sql.DB
 
-func connect(user, pass string, host string, port int) (err error) {
+func connect(user, pass string, host string, port int, name string) (err error) {
 	info, err := ase.NewInfo()
 	if err != nil {
 		return err
@@ -21,6 +21,8 @@ func connect(user, pass string, host string, port int) (err error) {
 	info.Username = user
 	info.Password = pass
 	info.DebugLogPackages = true
+	info.Database = name
+	info.Network = "tcp"
 
 	conn, err := ase.NewConnector(info)
 	if err != nil {

@@ -1,0 +1,13 @@
+
+# The default font
+#Sybhelp*fontList:		*courier-medium-r-*-140*
+# Font for labels
+#Sybhelp*XmLabel.fontList:	*courier-medium-r-*-140*
+# Font for text fields (user editable)
+#Sybhelp*XmText.fontList:	*courier-medium-r-*-140*
+
+# Colors
+#Sybhelp*Background: grey
+#Sybhelp*Foreground: black
+Sybhelp*selectColor: yellow
+

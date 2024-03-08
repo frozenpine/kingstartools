@@ -1,0 +1,13 @@
+
+# The default font
+#Dsedit*fontList:		*courier-medium-r-*-140*
+# Font for labels
+#Dsedit*XmLabel.fontList:	*courier-medium-r-*-140*
+# Font for text fields (user editable)
+#Dsedit*XmText.fontList:	*courier-medium-r-*-140*
+
+# Colors
+#Dsedit*Background: grey
+#Dsedit*Foreground: black
+Dsedit*selectColor: yellow
+

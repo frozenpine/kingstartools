@@ -1,0 +1,61 @@
+
+EDITING A SERVER ENTRY
+  
+Use the Server Entry Editor to add or modify interfaces file 
+entries for servers in your Sybase installation. 
+You can also use this screen to view the following information 
+about a server:
+  
+Server Name
+-----------
+If you are adding a server entry, type the server name in this field.
+
+If you are modifying a server entry, this field displays the name of the 
+server you selected in the Directory Service Session screen. 
+  
+If you change this value to a server name that is not used in 
+this interfaces file, dsedit creates a new entry as a copy of the old 
+entry and deletes the old entry.
+
+Security Mechanism
+------------------
+The name of the third-party network security mechanism (such as DCE, 
+Banyan, or CyberSafe) that this server will use, as listed in the 
+$SYBASE/config/libtcl.cfg file. 
+ 
+If you are using more than one security mechanism, enter the names, 
+separated by commas.
+  
+Available Network Transports
+----------------------------
+List the network transports through which connections to this server 
+are made. Transports are listed in the order in which the connections 
+are attempted.
+
+
+OPERATIONS YOU CAN PERFORM IN THE SERVER ENTRY EDITOR
+  
+Add Network Transport
+---------------------
+Displays the Network Transport Editor, where you can add 
+a network transport to this server.
+  
+Modify Network Transport
+-----------------------
+1. Highlight a transport in the Available Transports list.  
+2. Click Modify Network Transport to display the Network Transport 
+   Editor. 
+  
+Delete Network Transport
+------------------------
+1. Highlight a transport in the Available Transports list. 
+2. Click Delete Network Transport to remove the transport. 
+
+
+Move Network Transport Up/ Move Network Transport Down
+------------------------------------------------------
+1. Highlight a transport in the Available Transports list.
+2. To change the order, click the Move Network Transport Up or the
+   Move Network Transport Down.
+3. When you finish making changes to the network transport information 
+   for this server, click OK.  

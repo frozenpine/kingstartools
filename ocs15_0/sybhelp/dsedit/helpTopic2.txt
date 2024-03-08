@@ -1,0 +1,66 @@
+
+ADDING, MODIFYING, DELETING SERVER ENTRIES
+  
+For every server (such as Adaptive Server, Backup Server, XP Server) 
+in your Sybase installation, you must specify network connection 
+information to perform tasks like starting the server or connecting
+clients to the server. 
+  
+When you install Adaptive Server and Backup Server, interface file 
+entries are created for those servers. You do not need to use dsedit 
+to add them. 
+
+You must add interfaces file entries for all servers in your Sybase 
+installation for which no entry is created automatically. You can modify 
+server entries, to specify a change in host name or network address, 
+for example. You also can delete server entries that you no longer need.
+
+To add a server entry:
+---------------------
+Click the Add Server Entry button in the Directory Service Session screen.
+
+dsedit displays the Server Entry Editor, where you specify information 
+about the server.
+
+
+To modify a server entry:
+------------------------
+1. Highlight the name of the server in the Available Servers list. 
+2. Click Modify Server Entry.
+   dsedit displays the Server Entry Editor where you can change the 
+   connection information for the server or change the server name for 
+   the entry.
+   
+   You can open several Server Entry Editors and add or modify several 
+   server entries at once.
+
+
+To delete server entries:
+------------------------
+1. Highlight the name(s) of the server(s) in the Available Servers list.
+2. Click Delete Server Entry.
+
+
+To copy server entries:
+----------------------
+1. Highlight the name(s) of the server(s) in the Available Servers list. 
+2. Click Copy Server Entry.
+   dsedit displays the Select a Destination Directory Service screen.
+
+   To specify the destination for the server(s):
+   
+3. Click Sybase Interfaces File in the field at the top of the screen. 
+4. Type the name of the file in the Interfaces File to Copy To field.
+
+
+To create an entry based on an existing entry:
+--------------------------------------------- 
+1. Copy the entry to the same file you are copying from. 
+   dsedit creates an identical entry in the file 
+   with the server name "SERVER_2" (or the next available number). 
+  
+   To rename the entry to an actual server: 
+
+2. Select Modify Server Entry in the Directory Service Session screen. 
+3. Type the correct server name in the Server Entry Editor over the 
+   name created by dsedit.

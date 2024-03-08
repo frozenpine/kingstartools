@@ -1,0 +1,65 @@
+#!/bin/sh
+#
+# As of SDK 15.0 and Open Server 15.0, Sybase library names have 
+# changed from lib<name> to libsyb<name> to avoid name clashes
+# with other libraries.
+#
+# To allow pre-15.0 applications to continue to work with the
+# renamed shared libraries, this script is provided to create
+# symbolic links from the new library names to the old ones
+# in $SYBASE/$SYBASE_OCS/(dev)lib.
+#
+# Usage of the script: 
+#	lnsyblibs { create | remove }
+#
+# where 'create' makes the symbolic links in $SYBASE/$SYBASE_OCS/(dev)lib
+# and 'remove' can be used to destroy these links again.
+
+sanity()
+{
+   if [ ! "$SYBASE" ]
+   then
+	echo "Error: \$SYBASE is not set."
+	exit 1
+   fi 
+   if [ ! "$SYBASE_OCS" ]
+   then
+	echo "Error: \$SYBASE_OCS is not set."
+	exit 1
+   fi
+}
+
+createlinks()
+{
+   ls libsyb*.s[ol] |\
+	awk '{
+		print "ln -s " $1 " lib" substr($1, 7, length($1) - 6)
+	}' | sh
+}
+
+removelinks()
+{
+   ls libsyb*.s[ol] |\
+	awk '{
+		print "rm -f lib" substr($1, 7, length($1) - 6)
+	}' | sh
+}
+
+sanity
+cd ${SYBASE}/${SYBASE_OCS}
+case "$1" in
+
+'create')
+   (cd lib ; removelinks ; createlinks)
+   (cd devlib ; removelinks ; createlinks)
+   ;;
+
+'remove')
+   (cd lib ; removelinks)
+   (cd devlib ; removelinks)
+   ;;
+
+*)
+   echo "Usage: $0 { create | remove }"
+   ;;
+esac

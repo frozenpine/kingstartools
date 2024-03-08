@@ -1,0 +1,83 @@
+
+ADDING OR MODIFYING A NETWORK TRANSPORT ENTRY
+
+In the Network Transport Editor, you specify information about 
+the transport for the server entry you are adding or modifying. 
+The following transport types are available:
+
+ * tcp:      TCP/IP transport for connecting to a UNIX network
+ * tli tcp:  tli version of TCP/IP for adding entries for tli-based 
+             Adaptive Servers.
+ * spx:      SPX/IPX transport for connecting to a Novell NetWare network.
+ * tli spx:  tli version of SPX/IPX for adding entries for tli-based 
+             Adaptive Servers.
+
+To add or modify a transport entry:
+----------------------------------
+1.  Select a transport type from the list.
+    If you are modifying a transport entry, you can use this field to 
+    change the transport type, for example, from "tcp" to "tli tcp."
+2.  Enter the requested connection information for the transport you 
+    have selected.
+3.  Click OK.
+ 
+dsedit adds the transport to the list of Available Transports. 
+   
+NOTE:  If you are adding information to an interfaces file, the file 
+is not updated until you click Close Session on the Directory Service 
+Session window.
+
+
+
+TCP/IP AND TLI TCP/IP TRANSPORT INFORMATION
+
+Provide the following information for TCP/IP transport entries:
+  
+Host Name
+---------
+The name or IP address (in the format like 123.456.78.90) of the machine 
+on which the server is located.  The default value is the name of the 
+machine on which dsedit is running.
+ 
+Port Number
+-----------
+A 4-digit decimal value (between 1025 and 65535 inclusive) for a port 
+believed to be available on the host machine.  The default value is 
+4000 (or the next highest port number not already used for this dsedit 
+session).
+
+Filter Information
+------------------
+The filter for the server entry. For example, SSL Filters information can
+be added here.
+
+
+SPX/IPX AND TLI SPX/IPX TRANSPORT INFORMATION
+
+Provide the following information for SPX/IPX transport entries:
+   
+Host Address
+------------
+An 8-digit hexadecimal value representing the network location 
+of the host machine on which this server is located.
+   
+Port Number
+-----------
+A 4-digit hexadecimal value for an available port on the host machine.
+   
+Endpoint
+--------
+The path for the device file that points to the SPX device driver. 
+This value defaults to /dev/mspx for Sun Solaris and to /dev/nspx for 
+all other platforms. If you change the value, be sure the path you 
+enter begins with "/dev".
+
+Filter Information
+------------------
+The filter for the server entry. For example, SSL Filters information can
+be added here.
+
+NOTE: The default values are based on the platform on which dsedit is 
+      running. If the server is running on a different platform, adjust 
+      the value accordingly. 
+
