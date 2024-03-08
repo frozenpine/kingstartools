@@ -1,0 +1,64 @@
+; "cobct.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "COBOL CT库veneer层"
+2 = ZZZZZ, "COBOL运行时层"
+
+[cobcterror]
+
+1 = ZZZZZ, "类型对于CSBDIAG或CTBDIAG非法。"
+2 = ZZZZZ, "Cobol不支持CS_USERDATA选项。"
+3 = ZZZZZ, "不可识别的编译器代码。"
+4 = ZZZZZ, "在CTBPARAM中转换输入变量失败。"
+5 = 22022, "存储或检索指示符类型信息失败。"
+6 = ZZZZZ, "内存分配失败。"
+7 = ZZZZZ, "类型不受支持。"
+8 = ZZZZZ, "Cobol不支持CS-ALL-CAPS功能。"
+9 = 22003, "对于获取了某个整数的数据项的PIC而言，该整数的位数过多。"
+10 = ZZZZZ, "SYBSETSQLDA参数合并非法。"
+11 = ZZZZZ, "SQLDA-SQLN小于SQLDA-SQLD。"
+12 = ZZZZZ, "SQLDA-SQLD是负值。"
+
+[cobctorigin]
+
+1 = ZZZZZ, "内部错误"
+2 = ZZZZZ, "调用程序时出错，可能是预编译器生成的代码"
+3 = ZZZZZ, " "
+
+[cobctruntime]
+1 = ZZ000, "发生不可恢复的错误。"
+2 = ZA000, "发生内部错误。"
+3 = ZD000, "收到意外的CS_COMPUTE_RESULT。"
+4 = ZE000, "收到意外的CS_CURSOR_RESULT。"
+5 = ZF000, "收到意外的CS_PARAM_RESULT。"
+6 = ZG000, "收到意外的CS_ROW_RESULT。"
+7 = ZB000, "sqlca、SQLCODE或SQLSTATE未返回任何消息。"
+8 = ZC000, "连接尚未定义。"
+9 = 00102, "收到意外的CS_STATUS_RESULT。"
+10 = ZI000, "收到意外的CS_DESCRIBE_RESULT。"
+11 = 22005, "数据异常--项描述符-类型分配错误。"
+12 = JZ000, "内存分配失败。"
+13 = ZK000, "SQL-Server必须为版本10或更高。"
+14 = ZM000, "初始化客户端库时出错。"
+15 = ZN000, "创建或释放互斥时出错。"
+16 = 08002, "连接名称正在使用中。"
+17 = ZO000, "发生了HA故障切换。"

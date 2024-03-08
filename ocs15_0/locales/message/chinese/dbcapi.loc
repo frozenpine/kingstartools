@@ -1,0 +1,55 @@
+; "dbcapi.loc" - Localization file for DBCAPI Server
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; DBCAPI Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[dbcapidefaults]
+
+1 = ZZZZZ, "由于内存不足，无法获取字符串"
+
+2 = ZZZZZ, "无法获取层消息字符串"
+
+3 = ZZZZZ, "无法获取源消息字符串"
+
+4 = ZZZZZ, "错误字符串不可用"
+
+[dbcapilayer]
+
+8 = ZZZZZ, "DBCAPI层"
+
+[dbcapiorigin]
+
+10 = ZZZZZ, "错误"
+
+[dbcapierror]
+
+1 = ZZZZZ, "CT-Lib例程%1!失败。"
+
+2 = ZZZZZ, "%1!返回意外结果，获得%2!。"
+
+3 = ZZZZZ, "分配%1!时内存失败。"
+
+4 = ZZZZZ, "参数%1!不能为NULL。"
+
+5 = ZZZZZ, "参数%1!具有无效值。"
+
+6 = ZZZZZ, "错误。"
+

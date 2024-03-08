@@ -12,4 +12,5 @@ VENV_BASE="${BASE_DIR}/.venv"
 
 export LD_LIBRARY_PATH="${LIB_BASE}":"${LIB3P_BASE}":"${PY_MODULE_BASE}":${LD_LIBRARY_PATH}
 
-source "${VENV_BASE}/bin/activate"
+export SYBASE="${OCS_BASE}"
+# source "${VENV_BASE}/bin/activate"

@@ -1,0 +1,706 @@
+; "dblib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=chinese
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+[dbliberrors]
+
+1 = SYBESYNC, "与服务器不同步时尝试执行读取操作。"
+
+2 = SYBEFCON, "服务器连接失败。"
+
+3 = SYBETIME, "服务器连接超时。"
+
+4 = SYBEREAD, "从服务器中读取数据失败。"
+
+5 = SYBEBUFL, "DB-LIBRARY内部错误 - 发送缓冲区长度已损坏。"
+
+6 = SYBEWRIT, "向服务器写入数据失败。"
+
+7 = SYBEVMS, "Sendflush: VMS输入/输出错误。"
+
+8 = SYBESOCK, "无法打开套接字。"
+
+9 = SYBECONN, "无法连接套接字 - 服务器不可用\
+或不存在。"
+
+10 = SYBEMEM, "无法分配足够的内存。"
+
+11 = SYBEDBPS, "分配的DBPROCESS数已达到最大值。"
+
+12 = SYBEINTF, "未在interfaces文件中找到服务器名。"
+
+13 = SYBEUHST, "未知的主机名。"
+
+14 = SYBEPWD, "登录不正确。"
+
+15 = SYBEOPIN, "无法打开interfaces文件。"
+
+16 = SYBEINLN, "Interfaces文件: 意外的行尾。"
+
+17 = SYBESEOF, "来自服务器的意外文件结束符。"
+
+18 = SYBESMSG, "常规服务器错误: 检查来自服务器的消息。"
+
+19 = SYBERPND, "尝试在结果待定时启动新的\
+服务器操作。"
+
+20 = SYBEBTOK, "来自服务器的错误令牌: 数据流处理不同步。"
+
+21 = SYBEITIM, "指定的超时值非法。"
+
+22 = SYBEOOB, "将带外数据发送到服务器时出错。"
+
+23 = SYBEBTYP, "向DB-LIBRARY函数传递的绑定类型未知。"
+
+24 = SYBEBNCR, "尝试将用户变量与不存在的计算行绑定在一起。"
+
+25 = SYBEIICL, "服务器返回的整数列长度非法。\
+合法的整数长度为1、2和4个字节。"
+
+26 = SYBECNOR , "列号超出范围。"
+
+27 = SYBENPRM, "不允许对该dboption使用NULL参数。"
+
+28 = SYBEUVDT , "遇到未知的可变长度数据类型。"
+
+29 = SYBEUFDT , "遇到未知的固定长度数据类型。"
+
+30 = SYBEWAID, "DB-LIBRARY内部错误: ALTNAME后面的ALTFMT的id\
+错误。"
+
+31 = SYBECDNS, "数据流表示计算列取自不存在的选择列\
+表成员。"
+
+32 = SYBEABNC, "尝试绑定不存在的列。"
+
+33 = SYBEABMT, "用户尝试使用含有不匹配列和变量类型\
+的dbbind()。"
+
+34 = SYBEABNP, "尝试用NULL指针绑定。"
+
+35 = SYBEAAMT, "用户尝试使用含有不匹配列和变量类型\
+的dbaltbind()。 "
+
+36 = SYBENXID, "服务器未授予分布式事务ID。"
+
+37 = SYBERXID, "服务器未识别分布式事务ID。"
+
+38 = SYBEICN, "computeid或计算列号无效。"
+
+39 = SYBENMOB, "在'order by'子句中无这样的成员。"
+
+40 = SYBEAPUT, "尝试打印未知令牌。"
+
+41 = SYBEASNL, "尝试在空的loginrec中设置字段。"
+
+42 = SYBENTLL, "对于loginrec字段名称太长。"
+
+43 = SYBEASUL, "尝试设置未知的loginrec字段。"
+
+44 = SYBERDNR, "尝试从不存在的行中检索数据。"
+
+45 = SYBENSIP, "向dbstrcpy()传递的起始索引为负。"
+
+46 = SYBEABNV, "尝试绑定到NULL程序变量。"
+
+47 = SYBEDDNE, "DBPROCESS已停顿或未启用。"
+
+48 = SYBECUFL, "数据转换导致下溢出。"
+
+49 = SYBECOFL, "数据转换导致上溢出。"
+
+50 = SYBECSYN, "由于源字段中存在语法错误，已停止数据\
+转换尝试。 "
+
+51 = SYBECLPR, "数据转换导致精度损失。"
+
+52 = SYBECNOV, "尝试将变量设为NULL导致溢出。"
+
+53 = SYBERDCN, "所请求的数据转换不存在。"
+
+54 = SYBESFOV, "dbsafestr()溢出其目标缓冲区。"
+
+55 = SYBEUNT, "在interfaces文件中发现未知的网络类型。"
+
+56 = SYBECLOS, "关闭网络连接时出错。"
+
+57 = SYBEUAVE, "无法分配VMS事件标志。"
+
+58 = SYBEUSCT, "无法设置通讯计时器。"
+
+59 = SYBEEQVA, "对VMS AST例程排队时出错。"
+
+60 = SYBEUDTY, "遇到未知的数据类型。"
+
+61 = SYBETSIT, "尝试用无效的时间戳调用dbtsput()。"
+
+62 = SYBEAUTN, "尝试更新不含时间戳列的表\
+的时间戳。"
+
+63 = SYBEBDIO, "批量复制方向错误。必须是IN或OUT。"
+
+64 = SYBEBCNT, "尝试对不存在的服务器表执行批量复制操作。"
+
+65 = SYBEIFNB, "向bcp_control()传递的字段编号非法。"
+
+66 = SYBETTS, "批量复制尝试\
+复制至主机文件的表短于\
+批量复制按照指示应跳过的行数。"
+
+67 = SYBEKBCO, "已成功向主机文件批量复制1000行。"
+
+68 = SYBEBBCI, "已成功将批数据批量复制到服务器。"
+
+69 = SYBEKBCI, "bcp: 已向服务器发送1000行。"
+
+70 = SYBEBCRE, "读取bcp数据文件时出现输入/输出错误。"
+
+71 = SYBETPTN, "语法错误: 表名中只允许两个句点。"
+
+72 = SYBEBCWE, "写入bcp数据文件时出现输入/输出错误。"
+
+73 = SYBEBCNN, "尝试将NULL值批量复制至不接受NULL值的\
+服务器列%1!。"
+
+74 = SYBEBCOR, "尝试将过大的行批量复制到服务器。"
+
+75 = SYBEBCIS, "尝试将大小不符合要求的列值批量复制至\
+服务器。"
+
+76 = SYBEBCPI, "bcp_init()必须先于其它任何bcp例程进行调用。"
+
+77 = SYBEBCPN, "只有在复制方向设置为DB_IN的情况下\
+调用bcp_init()后才可使用\
+bcp_bind()、bcp_collen()和bcp_colptr()。"
+
+78 = SYBEBCPB, "为bcp_init()传递\
+非NULL的输入文件名后，不可使用bcp_bind()。"
+
+79 = SYBEVDPT, "对于批量复制，必须为所有可变长度数据\
+指定长度前缀或终止符。"
+
+80 = SYBEBIVI, "只有在为bcp_init()传递有效的输入文件后，才可使用bcp_columns()\
+和bcp_colfmt()。"
+
+81 = SYBEBCBC, "bcp_columns()必须先于bcp_colfmt()进行调用。"
+
+82 = SYBEBCFO, "Bcp主机文件至少必须包含一列。"
+
+83 = SYBEBCVH, "只有在为bcp_init()传递有效的\
+主机文件后，才可调用bcp_exec()。"
+
+84 = SYBEBCUO, "Bcp: 无法打开主数据文件。"
+
+85 = SYBEBCUC, "Bcp: 无法关闭主数据文件。"
+
+86 = SYBEBUOE, "Bcp: 无法打开错误文件。"
+
+87 = SYBEBUCE, "Bcp: 无法关闭错误文件。"
+
+88 = SYBEBWEF, "写入bcp错误文件时出现输入/输出错误。"
+
+89 = SYBEASTF, "VMS: 无法为control_c ast设置模式。"
+
+90 = SYBEUACS, "VMS: 无法为sys$command分配通道。"
+
+91 = SYBEASEC, "尝试向服务器发送空的命令缓冲区。"
+
+92 = SYBETMTD, "尝试通过dbmoretext()调用发送过多的TEXT数据。"
+
+93 = SYBENTTN, "尝试使用dbtxtsput()将新的\
+text-timestamp放入不存在的数据行中。"
+
+94 = SYBEDNTI, "尝试使用dbtxtsput()将新的\
+text-timestamp放入数据类型既不是SYBTEXT\
+也不是SYBIMAGE的列中。"
+
+95 = SYBEBTMT, "尝试通过bcp_moretext()\
+调用发送过多的TEXT数据。"
+
+96 = SYBEORPF, "尝试设置远程口令将\
+溢出登录记录的远程口令字段。"
+
+97 = SYBEUVBF, "尝试读取未知版本的BCP格式文件。"
+
+98 = SYBEBUOF, "Bcp: 无法打开格式文件。"
+
+99 = SYBEBUCF, "Bcp: 无法关闭格式文件。"
+
+100 = SYBEBRFF, "读取bcp格式文件时出现输入/输出错误。"
+
+101 = SYBEBWFF, "写入bcp格式文件时出现输入/输出错误。"
+
+102 = SYBEBUDF, "Bcp: 在格式文件中发现不可识别的数据类型。"
+
+103 = SYBEBIHC, "在bcp格式文件中发现不正确的主列号。"
+
+104 = SYBEBEOF, "在BCP数据文件中遇到意外的文件结束符。"
+
+105 = SYBEBCNL, "在BCP数据文件中发现负的长度前缀。"
+
+106 = SYBEBCSI, "只有在复制至\
+服务器时，才能跳过主机文件列。 "
+
+107 = SYBEBCIT, "除了\
+SYBCHAR、SYBBINARY、SYBTEXT或SYBIMAGE，使用其它含有\
+程序变量的BCP终止符都是非法的。"
+
+108 = SYBEBCSA, "BCP主机文件'%1!'只包含%2! \
+行。不允许跳过所有这些行。"
+
+109 = SYBENULL, "向DB-Library传递了NULL DBPROCESS指针。"
+
+110 = SYBEUNAM, "无法从操作系统获得当前用户名。"
+
+111 = SYBEBCRO, "BCP主机文件'%1!'仅包含%2! \
+行。无法读取请求的%3!行。"
+
+112 = SYBEMPLL, "尝试将最大DBPROCESS数设置为小于1的值。"
+
+113 = SYBERPIL, "将-1传给\
+类型为SYBCHAR、SYBVARCHAR、SYBBINARY\
+或SYBVARBINARY的数据长度参数dbrpcparam()非法。"
+
+114 = SYBERPUL, "通过rpcparam()传递SYBINTN、SYBDATETIMN、\
+SYBMONEYN或SYBFLTN参数\
+时，必须指定\
+参数的最大长度或实际长度，\
+以便DB-Library将其识别为\
+SYBINT1、SYBINT2、SYBINT4、SYBMONEY、\
+SYBMONEY4等等。"
+
+115 = SYBEUNOP, "向dbsetopt()传递了未知选项。"
+
+116 = SYBECRNC, "当前行不是COMPUTE\
+子句%1!产生的结果，所以尝试\
+从此行中抽取相应数据是非法的。"
+
+117 = SYBERTCC, "dbreadtext()不能用于接收\
+包含\
+COMPUTE子句的查询结果。"
+
+118 = SYBERTSC, "dbreadtext()只能用于接收\
+包含\
+单一结果列的查询结果。"
+
+119 = SYBEUCRR, "内部软件错误: dbpasswd()报告了未知\
+连接结果。"
+
+120 = SYBERPNA, "只有在\
+使用的服务器版本号大于等于4.0时RPC工具才可用。"
+
+121 = SYBEOPNA, "只有在\
+使用的服务器版本号大于等于4.0时文本/图像工具才可用。"
+
+122 = SYBEFGTL, "Bcp: 待复制的第一行的行号\
+不能大于待复制的\
+最后一行的行号。"
+
+123 = SYBECWLL, "尝试将列宽设置为小于1的值。"
+
+124 = SYBEUFDS, "在dbstrbuild()中遇到不可识别的格式。"
+
+125 = SYBEUCPT, "在dbstrbuild()\
+中遇到不可识别的自定义格式参数类型。"
+
+126 = SYBETMCF, "尝试通过dbfmtinstall()\
+安装过多的自定义格式。"
+
+127 = SYBEAICF, "尝试安装自定义格式时出错。"
+
+128 = SYBEADST, "尝试确定转换表对的\
+大小时出错。"
+
+129 = SYBEALTT, "尝试装载转换表对时出错。"
+
+130 = SYBEAPCT, "尝试执行字符集转换时出错。"
+
+131 = SYBEXOCI, "使用bcp将数据从主机文件复制\
+至服务器时，字符集转换溢出\
+相应的目标缓冲区。"
+
+132 = SYBEFSHD, "尝试查找SYBASE主目录时出错。"
+
+133 = SYBEAOLF, "尝试打开一个本地化文件时出错。"
+
+134 = SYBEARDI, "尝试从本地化文件读取日期时间\
+信息时出错。"
+
+135 = SYBEURCI, "无法从dblib\
+本地化文件中读取版权信息。"
+
+136 = SYBEARDL, "尝试读取dblib.loc\
+本地化文件时出错。"
+
+137 = SYBEURMI, "无法从dblib本地化文件中读取\
+货币格式信息。"
+
+138 = SYBEUREM, "无法从dblib本地化文件中读取\
+错误助记符。"
+
+139 = SYBEURES, "无法从dblib本地化文件中读取\
+错误字符串。"
+
+140 = SYBEUREI, "无法从dblib本地化文件中读取\
+错误信息。"
+
+141 = SYBEOREN, "警告: 在dblib.loc中\
+遇到超出范围的错误号。sybdb.h中定义的\
+允许使用的最大错误号\
+为DBERRCOUNT。"
+
+142 = SYBEISOI,	"发现无效的排序顺序信息。"
+
+143 = SYBEIDCL, "服务器返回的日期时间列长度非法。\
+合法的日期时间长度为4个字节和8个字节。"
+
+144 = SYBEIMCL, "服务器返回的货币列长度非法。\
+合法的货币长度为4个字节和8个字节。"
+
+145 = SYBEIFCL, "服务器返回的浮点列长度非法。\
+合法的浮点长度为4个字节和8个字节。"
+
+146 = SYBEUTDS,	"从服务器收到无法识别的TDS版本。"
+
+147 = SYBEBUCF, "Bcp: 无法创建格式文件。"
+
+148 = SYBEACNV, " 尝试使用NULL目标\
+变量进行数据转换。"
+
+149 = SYBEDPOR, "datepart常量超出范围。"
+
+150 = SYBENDC, "在数字格式的日期中不能有负值。"
+
+151 = SYBEMVOR, "月份值必须在1和12之间。"
+
+152 = SYBEDVOR, "星期值必须在1和7之间。"
+
+153 = SYBENBVP, "不能为dbsetnull()传递空的bindval指针。"
+
+154 = SYBESPID, "用空的dbproc调用dbspid()。"
+
+155 = SYBENDTP, "用空的日期时间参数调用dbdatecrack()"
+
+156 = SYBEXTN, "dbfree_xlate()的xlt_tosrv和xlt_todisp参数是空值。"
+
+157 = SYBEXTDN, "警告: dbfree_xlate()的xlt_todisp参数为NULL。与参数xlt_tosrv关联的空间已释放。"
+
+158 = SYBEXTSN, "警告: dbfree_xlate()的xlt_tosrv参数为NULL。与参数xlt_todisp关联的空间已释放。"
+
+159 = SYBENUM, "为DB-Library提供的参数数量不正确。"
+
+160 = SYBETYPE, "为Hyper/DB-Library提供的参数类型无效。"
+
+161 = SYBEGENOS, "常规操作系统错误。"
+
+162 = SYBEPAGE, "为dbpage??()操作提供的资源类型或长度错误。"
+
+163 = SYBEOPTNO, "不允许使用此选项。"
+
+164 =  SYBEETD, "通过dbmoretext()传送期望数量的TEXT或IMAGE数据失败。"
+
+165 = SYBERTYPE, "为Hyper/DB-Library提供的资源类型无效。"
+
+166 = SYBERFILE, "无法打开资源文件。"
+
+167 = SYBEFMODE, "文件不支持读/写/添加模式。"
+
+168 = SYBESLCT, "无法选择或复制指定字段。"
+
+169 = SYBEZTXT, "尝试通过dbwritetext()向数据服务器发送零长度的TEXT或IMAGE。"
+
+170 = SYBENTST, "VMS: 正在打开的文件必须是stream_lf。"
+
+171 = SYBEOSSL, "登录不正确: 操作系统登录安全级别不在安全服务器的范围内。"
+
+172 = SYBEESSL, "登录不正确: 输入的登录安全性级别与操作系统级别不一致。"
+
+173 = SYBENLNL, "程序未与指定的网络库链接。"
+
+174 = SYBENHAN, "使用NULL句柄参数调用dbrecvpassthru()。"
+
+175 = SYBENBUF, "使用NULL缓冲参数调用dbsendpassthru()。"
+
+176 = SYBENULP, "使用NULL%1!参数调用%1!。"
+
+177 = SYBENOTI, "必须先安装事件处理程序，然后才能发送通知请求。"
+
+178 = SYBEEVOP, "使用错误的选项参数调用dbregwatch()。"
+
+179 = SYBENEHA, "使用NULL处理程序参数调用dbreghandle()。"
+
+180 = SYBETRAN, "DBPROCESS正在为其它事务所使用。"
+
+181 = SYBEEVST, "必须在调用dbregparam()之前启动事务。"
+
+182 = SYBEEINI, "必须在dbregexec()之前调用dbreginit()。"
+
+183 = SYBEECRT, "必须在dbnpcreate()之前调用dbnpdefine()。"
+
+184 = SYBEECAN, "尝试取消未请求的事件通知。"
+
+185 = SYBEEUNR, "接收到未经请求的事件通知。"
+
+186 = SYBERPCS, "必须在dbrpcparam()或dbrpcsend()之前调用dbrpcinit()。"
+
+187 = SYBETPAR, "未定义参数SYBTEXT或SYBIMAGE。"
+
+188 = SYBETEXS, "使用错误的大小参数调用dbmoretext()。"
+
+189 = SYBETRAC, "尝试关闭未打开的跟踪标志。"
+
+190 = SYBETRAS, "DB-Library内部错误 - 未找到跟踪结构。"
+
+191 = SYBEPRTF, "dbtracestring()只能通过printfunc()调用。"
+
+192 = SYBETRSN, "为dbtracestring()传递的numbytes参数错误。"
+
+193 = SYBEBPKS, "在DBSETLPACKET()中，包大小参数值必须在256和9999之间。"
+
+194 = SYBEIPV, "对于%3!的参数%2!，%1!是非法值。"
+
+195 = SYBEMOV, "货币运算导致函数%1!发生溢出。"
+
+196 = SYBEDIVZ, "尝试在函数%1!中用$0.00除。"
+
+197 = SYBEASTL, "尝试在AST级别进行同步输入/输出。 "
+
+198 = SYBESEFA, "如果存在连接，则无法调用DB_SETEVENT_VMS。"
+
+199 = SYBEPOLL, "已存在活动的dbpoll()。"
+
+200 = SYBENOEV, "在注册过程通知已禁用的情况下无法调用DBPOLL"
+
+201 =  SYBEBADPK, "不支持包大小%1! - 改用大小%2!。"
+202 =  SYBESECURE, "该版本不支持安全服务器功能。"
+
+203 =  SYBECAP,  "服务器不支持DB-Library功能。"
+
+204 =  SYBEFUNC,  "指定版本级别不支持该功能。"
+
+205 =  SYBERESP, "传给dbresponse()的响应函数地址不得为NULL。"
+
+206 =  SYBEIVERS, "指定的版本级别非法。"
+
+207 =  SYBEONCE, "该函数只能调用一次。"
+
+208 =  SYBERPNULL, "只有在数据长度参数为0时，dbprcparam()的值参数才能为NULL。"
+
+209 =  SYBERPTXTIM, "RPC参数不能是文本/图像类型。"
+
+210 =  SYBENEG, "协商登录尝试失败。"
+
+211 =  SYBELBLEN, "安全标签的长度应小于256个字符。"
+
+212 =  SYBEUMSG, "MSG数据流中存在未知消息标识。"
+
+213 =  SYBECAPTYP,  "CAPABILITY数据流中存在意外的功能类型。"
+
+214 =  SYBEBNUM, "传给dbstrcpy()的numbytes参数错误。"
+
+215 =  SYBEBBL, "传给dbsetnull()的bindlen参数错误。"
+
+216 =  SYBEBPREC, "指定的精度非法。"
+
+217 =  SYBEBSCALE, "指定的标度非法。"
+
+218 =  SYBECDOMAIN, "源字段值不在合法值定义域的范围内。"
+
+219 =  SYBECINTERNAL, "内部转换错误。"
+
+220 =  SYBEBTYPSRV, "服务器不支持该数据类型。"
+
+221 =  SYBEBCSET,  "遇到未知的字符集。"
+
+222 =  SYBEFENC,  "口令加密失败。"
+
+223 =  SYBEFRES,  "Challenge-Response函数失败。"
+
+224 =  SYBEISRVPREC, "服务器返回的精度非法。"
+
+225 =  SYBEISRVSCL, "服务器返回的标度非法。"
+
+226 =  SYBEINUMCL, "服务器返回的数值列长度无效。"
+
+227 =  SYBEIDECCL, "服务器返回的十进制列长度无效。"
+
+228 =  SYBEBCMTXT, "只有在服务器表中至少有一个文本或图像列时，才可使用bcp_moretext()。"
+
+229 =  SYBEBCPREC, "列%1!: 遇到非法的精度值。"
+
+230 =  SYBEBCBNPR, "bcp_bind(): 如果varaddr为NULL，则prefixlen必须为0且不得指定终止符。"
+
+231 =  SYBEBCBNTYP, "bcp_bind(): 如果varaddr为空值NULL并且varlen大于0，则表列类型必须为SYBTEXT或SYBIMAGE，并且程序变量类型必须为SYBTEXT、SYBCHAR、SYBIMAGE或SYBBINARY。"
+
+232 =  SYBEBCSNTYP, "列号%1!: 如果varaddr为NULL并且varlen大于0，则表列类型必须为SYBTEXT或SYBIMAGE，并且程序变量类型必须为SYBTEXT、SYBCHAR、SYBIMAGE或SYBBINARY。"
+
+233 =  SYBEBCPCTYP, "bcp_colfmt(): 如果table_colnum是0，则host_type不能是0。"
+
+234 =  SYBEBCVLEN, "varlen应该大于等于-1。"
+
+235 =  SYBEBCHLEN, "host_collen应该大于等于-1。"
+
+236 =  SYBEBCBPREF, "前缀长度非法。合法值是0、1、2或4。"
+
+237 =  SYBEBCPREF, "前缀长度非法。合法值是-1、0、1、2或4。"
+
+238 =  SYBEBCITBNM, "bcp_init(): tblname参数不能为NULL。"
+
+239 =  SYBEBCITBLEN, "bcp_init(): tblname参数过长。"
+
+240 =  SYBEBCSNDROW, "除非以前行的所有文本数据均已使用bcp_moretext()发送，否则无法调用bcp_sendrow()。"
+
+241 =  SYBEBPROCOL, "bcp协议错误: 返回的列数与实际接收的列数不同。"
+
+242 =  SYBEBPRODEF, "bcp协议错误: 期望缺省信息，但未找到。"
+
+243 =  SYBEBPRONUMDEF, "bcp协议错误: 期望的缺省值数量与接收的实际缺省值数量不同。"
+
+244 =  SYBEBPRODEFID, "bcp协议错误: 缺省列标识与实际列标识不同"
+
+245 =  SYBEBPRONODEF, "bcp协议错误: 为没有缺省值的列接收到缺省值。"
+
+246 =  SYBEBPRODEFTYP, "bcp协议错误: 缺省值数据类型与列数据类型不同。"
+
+247 =  SYBEBPROEXTDEF, "bcp协议错误: 收到超过一行的缺省信息。"
+
+248 =  SYBEBPROEXTRES, "bcp协议错误: 收到意外的结果集。"
+
+249 =  SYBEBPROBADDEF, "bcp协议错误: 收到非法的缺省列标识。"
+
+250 =  SYBEBPROBADTYP, "bcp协议错误: 未知的列数据类型。"
+
+251 =  SYBEBPROBADLEN, "bcp协议错误: 收到非法的数据类型长度。"
+
+252 =  SYBEBPROBADPREC, "bcp协议错误: 收到非法的精度值。"
+
+253 =  SYBEBPROBADSCL, "bcp协议错误: 收到非法的标度值。"
+
+254 = SYBEBADTYPE, "传给%1!的类型参数值非法。"
+
+255 = SYBECRSNORES, "游标语句未产生结果。"
+
+256 = SYBECRSNOIND, "游标语句中涉及的其中一个表没有唯一索引。"
+
+257 = SYBECRSVIEW, "无法将某视图与游标语句中的另一个表或视图连接。"
+
+258 = SYBECRSVIIND, "游标语句中所使用的视图不包含基础表的所有唯一索引列。"
+
+259 = SYBECRSORD, "只有完全由键集驱动的游标可包含'order by'、'group by'或'having'子句。"
+
+260 = SYBECRSBUFR, "使用游标API时不应打开行缓冲。"
+
+261 = SYBECRSNOFREE, "使用游标API时不应打开DBNOAUTOFREE选项。"
+
+262 = SYBECRSDIS, "游标语句中包含以下其中一个不允许使用的短语: 'compute'、'union'、'for browse'或'select into'。"
+
+263 = SYBECRSAGR, "游标语句中不允许使用聚合函数。"
+
+264 = SYBECRSFRAND, "Fetch类型RANDOM和RELATIVE只能用于键集驱动游标的键集范围内。"
+
+265 = SYBECRSFLAST, "Fetch类型LAST需要完全由键集驱动的游标。"
+
+266 = SYBECRSBROL, "在正向滚动游标中无法使用反向滚动。"
+
+267 = SYBECRSFROWN, "要读取的行号超出有效范围。"
+
+268 = SYBECRSBSKEY, "在上一fetch类型的混合游标中无法反向滚动键集。"
+
+269 = SYBECRSRO, "无法在READONLY游标中进行数据锁定或修改。"
+
+270 = SYBECRSNOCOUNT, "使用dbcursor()进行更新或删除时不应打开DBNOCOUNT选项。"
+
+271 = SYBECRSTAB, "必须在涉及数据锁定或修改的操作中确定表名。"
+
+272 = SYBECRSUPDNB, "当绑定类型为NOBIND时，更新或插入操作无法使用绑定变量。"
+
+273 = SYBECRSNOWHERE, "不允许在游标更新或插入中使用WHERE子句。"
+
+274 = SYBECRSSET, "游标的更新或插入需要使用SET子句。"
+
+275 = SYBECRSUPDTAB, "使用绑定变量执行更新或插入时需要使用单表游标。"
+
+276 = SYBECRSNOUPD, "更新或删除操作不影响任何行。"
+
+277 = SYBECRSINV, "游标语句无效。"
+
+278 = SYBECRSNOKEYS, "必须为KEYSET类型游标定义全部键集。"
+
+279 = SYBECRSNOBIND, "游标绑定必须在调用dbcursor之前调用。"
+
+280 = SYBECRSFTYPE, "读取类型未知。"
+
+281 = SYBECRSINVALID, "游标句柄无效。"
+
+282 = SYBECRSMROWS, "检索dbname时只应返回一行，但返回多行。"
+
+283 = SYBECRSNROWS, "至少应返回一行，但未返回任何行。"
+
+284 = SYBECRSNOLEN, "未找到唯一索引。"
+
+285 = SYBECRSNOPTCC, "未找到OPTCC。"
+
+286 = SYBECRSNORDER, "子句的顺序必须是from、where和order by。"
+
+287 = SYBECRSNOTABLE, "表名为NULL。"
+
+288 = SYBECRSNUNIQUE, "没有与该视图关联的唯一键值。"
+
+289 = SYBECRSVAR, "没有与该绑定关联的有效地址。"
+
+290 = SYBENOVALUE, "安全标签要求同时有名称和值。"
+
+291 = SYBEVOIDRET, "返回参数不能是SYBVOID类型。"
+
+292 = SYBECLOSEIN, "无法关闭interfaces文件。"
+
+293 = SYBEBOOL, "布尔参数值应是TRUE或FALSE。"
+
+294 = SYBEBCPOPT, "在执行批量复制操作时无法调用%1!选项."
+
+295 = SYBEERRLABEL, "安全标签处理程序返回的值非法。"
+
+296 = SYBEATTNACK, "等待服务器应答时超时。"
+
+297 = SYBEBBFL, "在批量复制到服务器的过程中批处理失败。"
+
+298 = SYBEDCL, "发生目录控制层(DCL)错误。"
+
+299 = SYBECS, "发生CS上下文错误。"
+
+300 = SYBEVERENV, "对SYBOCS_DBVERSION使用了无效值。"
+
+301 = SYBCOPNOV, "dbcursoropen(): scrollopt与nrows的乘积导致溢出。"
+
+302 = SYBEINTOVFL, "DB-LIBRARY内部错误: 算术运算导致整数溢出。"
+
+; end of dblib error strings
+;

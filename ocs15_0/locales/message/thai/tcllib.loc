@@ -1,0 +1,445 @@
+; "tcllib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=thai
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "ไม่สามารถกำหนดจำนวนหน่วยความจำที่ไดรฟ์เวอร์ของโปรโตคอลจำเป็นต้องใช้"
+
+2 = NETE_NULLOPT, "การส่งผ่านตัวเลือก NULL ptr ไปยังรูทีน Net-Library ไม่ถูกต้อง"
+
+3 = NETE_UNKWOPT, "ไม่รู้จักตัวเลือก Net-Library ที่ต้องการ"
+
+4 = NETE_UNKWINFCDE, "ไม่รู้จักรหัสข้อมูลแอดเดรสที่ต้องการ"
+
+5 = NETE_BOOLREP, "ค่าของตัวเลือกต้องเป็น NET_TRUE หรือ NET_FALSE"
+
+6 = NETE_NULLNETBUF, "การส่งผ่านตัวชี้บัฟเฟอร์ NULL ไปยัง net_init() ไม่ถูกต้อง"
+
+7 = NETE_NOTSUPPORTED, "ฟีเจอร์ไม่ได้รับการสนับสนุน"
+
+8 = NETE_NULLHDLR, "การส่งผ่านตัวชี้อาร์เรย์ NULL NET_POLL ไม่ถูกต้อง"
+
+9 = NETE_BADENGINE, "ตัวระบุเอนจิ้นไม่ถูกต้อง"
+
+10 = NETE_ALREADYINIT, "กระบวนการปัจจุบันเรียก net_init() แล้ว"
+
+11 = NETE_DICTNOTFOUND, "ไม่พบพจนานุกรมแอดเดรส"
+
+12 = NETE_SRVNAMENOTFND, "ไม่พบแอททริบิวต์ชื่อเซิร์ฟเวอร์ที่ระบุ"
+
+13 = NETE_NODICTS, "ไม่พบโครงสร้างพจนานุกรมแอดเดรสที่พร้อมใช้งาน"
+
+14 = NETE_DRVINIT, "เกิดข้อผิดพลาดระหว่างการกำหนดค่าเริ่มต้นไดรฟ์เวอร์ของโปรโตคอล"
+
+15 = NETE_NODRIVERS, "ไม่พบโครงสร้างไดรฟ์เวอร์ของโปรโตคอลที่พร้อมใช้งาน"
+
+16 = NETE_LFNOSECTION , "ไม่พบเซกชันข้อผิดพลาด Net-Library ในไฟล์ภาษาท้องถิ่น"
+
+17 = NETE_DICTSYNTAX, "เกิดข้อผิดพลาดทางไวยากรณ์ในพจนานุกรมแอดเดรส"
+
+18 = NETE_ADRTYPNOTFND, "ไม่พบแอททริบิวต์ประเภทแอดเดรสที่ระบุ"
+
+19 = NETE_DICTCLOSE, "เกิดข้อผิดพลาดในการปิดพจนานุกรมแอดเดรส"
+
+20 = NETE_NOEPS, "ไม่พบโครงสร้างจุดสิ้นสุดที่พร้อมใช้งาน"
+
+21 = NETE_EPINUSE, "พยายามใช้จุดสิ้นสุดที่มีการใช้งานอยู่แล้ว"
+
+22 = NETE_DRVPROPERTY, "การเรียกไดรฟ์เวอร์ของโปรโตคอลเพื่อกำหนดคุณสมบัติล้มเหลว"
+
+23 = NETE_DRVLISTEN, "การเรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่อลงทะเบียนผู้ฟังล้มเหลว"
+
+24 = NETE_DRVCONNECT, "การเรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่อเชื่อมต่อจุดสิ้นสุดสองจุดล้มเหลว"
+
+25 = NETE_DRVACCEPT, "การเรียกไดรฟ์เวอร์ของโปรโตคอลเพื่อยอมรับคำขอการเชื่อมต่อขาเข้าล้มเหลว"
+
+26 = NETE_BADIOSTATE, "จุดสิ้นสุดมีสถานะ I/O ที่ไม่ถูกต้อง"
+
+27 = NETE_DRVNOTAVAIL, "ไม่มีไดรฟ์เวอร์ของโปรโตคอล Net-Lib ที่ระบุ"
+
+28 = NETE_BADPROPERTY, "อาร์กิวเมนต์ประเภทคุณสมบัติไม่ถูกต้อง"
+
+29 = NETE_DISCONNECT, "การดำเนินการ Net-Library สิ้นสุดลงเนื่องจากการยกเลิกการเชื่อมต่อ"
+
+30 = NETE_DRVEXIT, "รูทีนการออกจากไดรฟ์เวอร์ของโปรโตคอล Net-Lib ล้มเหลว"
+
+31 = NETE_SUBACCEPT, "ความพยายามยอมรับผู้ฟังรายการหนึ่งล้มเหลว"
+
+32 = NETE_DRVREAD, "การเรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่ออ่านข้อมูลล้มเหลว"
+
+33 = NETE_RDDATLEN, "ขนาดของข้อมูลที่ต้องการจะอ่านมีขนาดใหญ่กว่าบัฟเฟอร์การอ่าน"
+
+34 = NETE_DRVREADOOB, "เรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่ออ่านข้อมูลด่วน"
+
+35 = NETE_EXPNOTSUPPORT, "ข้อมูลที่ถูกเร่งไม่ได้รับการสนับสนุนโดยไดรฟ์เวอร์ของโปรโตคอล Net-Lib นี้"
+
+36 = NETE_DRVWRITE, "การเรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่อเขียนข้อมูลล้มเหลว"
+
+37 = NETE_NULLADDR, "การส่งผ่านตัวชี้ net_addr NULL ไม่ถูกต้อง"
+
+38 = NETE_NULLDICT, "การส่งผ่านตัวชี้พจนานุกรม NULL ไม่ถูกต้อง"
+
+39 = NETE_NULLSTATE, "การส่งผ่านตัวชี้ net_state NULL ไม่ถูกต้อง"
+
+40 = NETE_NULLRETRES, "การส่งผ่านตัวชี้ return_reason NULL ไม่ถูกต้อง"
+
+41 = NETE_NULLEP, "การส่งผ่านตัวชี้จุดสิ้นสุด NULL ไม่ถูกต้อง"
+
+42 = NETE_NULLCBACK, "การส่งผ่านตัวชี้รูทีนการเรียกกลับ NULL ไม่ถูกต้อง"
+
+43 = NETE_NULLDICTNAME, "การส่งผ่านตัวชี้ ID พจนานุกรม NULL ไม่ถูกต้อง"
+
+44 = NETE_NULLEXPFLAG, "การส่งผ่านตัวชี้แฟลกข้อมูลที่ถูกเร่ง NULL ไม่ถูกต้อง"
+
+45 = NETE_NULLDICTPTR, "การส่งผ่านตัวชี้ตัวจัดการพจนานุกรม NULL ไม่ถูกต้อง"
+
+46 = NETE_NULLNEWEP, "การส่งผ่านตัวชี้ตัวจัดการจุดสิ้นสุด NULL ไม่ถูกต้อง"
+
+47 = NETE_NULLATTRLST, "การส่งผ่านตัวชี้ข้อมูลแอดเดรส NULL ไม่ถูกต้อง"
+
+48 = NETE_NULLADDRPTR, "การส่งผ่านตัวชี้ตัวจัดการ net_addr NULL ไม่ถูกต้อง"
+
+49 = NETE_NULLLASTENTRY, "การส่งผ่านตัวชี้รายการสุดท้าย NULL ไม่ถูกต้อง"
+
+50 = NETE_NULLRDDATA, "การส่งผ่านบัฟเฟอร์การอ่าน NULL ไม่ถูกต้อง"
+
+51 = NETE_NOADDRS, "ไม่พบโครงสร้างแอดเดรสที่พร้อมใช้งาน"
+
+52 = NETE_NULLBYTSRD, "การส่งผ่านตัวชี้ bytes_read NULL ไม่ถูกต้อง"
+
+53 = NETE_EPCLOSING, "กำลังปิดจุดสิ้นสุดที่ระบุ"
+
+54 = NETE_NULLWRDATA, "การส่งผ่านบัฟเฟอร์การเขียน NULL ไม่ถูกต้อง"
+
+55 = NETE_CANCELLED, "การดำเนินการที่ต้องการถูกยกเลิกแล้วเนื่องจากเหตุการณ์อื่น"
+
+56 = NETE_NULLINTL, "การส่งผ่านโครงสร้าง NULL NET_INTL ไม่ถูกต้อง"
+
+57 = NETE_NULLUSERPTR, "การส่งผ่านบัฟเฟอร์ตัวชี้ผู้ใช้ NULL ไม่ถูกต้อง"
+
+58 = NETE_BADDICT, "พยายามใช้ตัวจัดการพจนานุกรมที่ไม่ถูกต้อง"
+
+59 = NETE_BADADDR, "พยายามใช้ตัวจัดการแอดเดรสที่ไม่ถูกต้อง"
+
+60 = NETE_BADEP, "พยายามใช้ตัวจัดการจุดสิ้นสุดที่ไม่ถูกต้อง"
+
+61 = NETE_DRVCLOSE, "การเรียกไดรฟ์เวอร์ของโปรโตคอล Net-Lib เพื่อปิดจุดสิ้นสุดล้มเหลว"
+
+62 = NETE_VERSION, "ไดรฟ์เวอร์ของโปรโตคอลเข้ากันไม่ได้กับ Net-Lib ปัจจุบัน - อาจเป็นเพราะ Net-Library เป็นเวอร์ชันที่เก่ากว่า"
+
+63 = NETE_NULLSUPPORT, "การส่งผ่านตัวชี้ NULL สำหรับพารามิเตอร์ 'ที่สนับสนุน' ไปยัง net_capability() ไม่ถูกต้อง"
+
+64 = NETE_BADPROCMODE, "โหมดการประมวลผลไม่ถูกต้อง"
+
+65 = NETE_FUNCCODE, "รหัสฟังก์ชันที่ส่งผ่านไปยัง net_report() ไม่ถูกต้อง"
+
+66 = NETE_DRVINUSE, "ไม่สามารถยกเลิกการโหลดไดรฟ์เวอร์ -- ยังมีการใช้งานอยู่"
+
+67 = NETE_NCONNECTED, "พยายามทำ I/O บนจุดสิ้นสุดที่ไม่ได้เชื่อมต่ออยู่"
+
+68 = NETE_NOMULTIRW, "ไม่สามารถอ่านมากกว่าหนึ่งครั้ง"
+
+69 = NETE_NULLPREVMODE, "ตัวชี้โหมด NULL ก่อนหน้าไม่ถูกต้อง"
+
+70 = NETE_NULLREPORT, "ไม่สามารถเรียก net_report() ถ้าไม่มีการขอการรายงานโดย net_opt_report() "
+
+71 = NETE_LFILENAME, "ไม่ได้ระบุชื่อไฟล์ภาษาท้องถิ่นในการเรียกไปยัง net_intl_errstr()"
+
+72 = NETE_INTLOPEN, "ความพยายามเปิดไฟล์ภาษาท้องถิ่นโดยใช้ intl_open ล้มเหลว"
+
+73 = NETE_UP1ENIGNE, "อนุญาตให้ใช้เวอร์ชันตัวประมวลผลเดี่ยวของ Net-Lib ได้เพียง 1 เอนจิ้นเท่านั้น"
+
+74 = NETE_NULLCBPARM, "พารามิเตอร์การเรียกกลับ NULL ไปยังรูทีน Net-Library ไม่ถูกต้อง"
+
+75 = NETE_NULLINFOLEN, "ตัวชี้ความยาวข้อมูล NULL ไปยัง net_address_info() ไม่ถูกต้อง"
+
+76 = NETE_UNKWNMODE, "ไม่รู้จักโหมดการเรียกกลับที่ต้องการ"
+
+77 = NETE_BADEPNUM, "เลขที่จุดสิ้นสุดที่ต้องการไม่ถูกต้อง"
+
+78 = NETE_NULLENGPTR, "การส่งผ่านตัวชี้เอนจิ้น NULL ไปยัง net_engine_init() ไม่ถูกต้อง"
+
+79 = NETE_NULLENGINE, "การส่งผ่านตัวชี้เอนจิ้น NULL ไปยังรูทีน Net-Library ไม่ถูกต้อง"
+
+80 = NETE_NOENGS, "ไม่พบโครงสร้างเอนจิ้นที่พร้อมใช้งาน"
+
+81 = NETE_NOREQUESTS, "ไม่พบโครงสร้างคำขอที่พร้อมใช้งาน"
+
+82 = NETE_BADMONFLAG, "มาสก์แฟลกการตรวจสอบที่ต้องการไม่ถูกต้อง"
+
+83 = NETE_EPINCLOSE, "กำลังปิดจุดสิ้นสุดที่ต้องการ"
+
+84 = NETE_BADMODE, "โหมดที่ต้องการไม่ได้รับการสนับสนุน"
+
+85 = NETE_DRVLOAD, "ความพยายามโหลดไดรฟ์เวอร์ของโปรโตคอลล้มเหลว"
+
+86 = NETE_DRVUNLOAD, "ความพยายามยกเลิกการโหลดไดรฟ์เวอร์ของโปรโตคอลล้มเหลว"
+
+87 = NETE_MEMPOLICY, "นโยบายหน่วยความจำที่ต้องการไม่ถูกต้อง"
+
+88 = NETE_MEMREALLOC, "ความพยายามจัดสรรหน่วยความจำใหม่ล้มเหลว"
+
+89 = NETE_MEMALLOC, "ความพยายามจัดสรรหน่วยความจำล้มเหลว"
+
+90 = NETE_NULLSIZE, "การส่งผ่านตัวชี้ขนาด NULL ไปยัง net_initsize() ไม่ถูกต้อง"
+
+91 = NETE_NULLSTATEPTR, "การส่งผ่านตัวชี้ NET_STATE NULL ไปยัง net_init() ไม่ถูกต้อง"
+
+92 = NETE_NULLSPNLCKCNTPTR, "การส่งผ่านตัวชี้จำนวน spinlock NULL ไปยัง net_spinlocks() ไม่ถูกต้อง"
+
+93 = NETE_ENGACTIVE, "ไม่สามารถทำการดำเนินการที่ต้องการได้ขณะที่มีเอนจิ้นที่ใช้งาน"
+
+94 = NETE_UNKWIDTYPE, "ประเภท ID พจนานุกรมแอดเดรสที่ระบุไม่ถูกต้อง"
+
+95 = NETE_SECNOTFOUND, "ไม่พบเซกชันของไฟล์กำหนดรูปแบบที่ต้องการ"
+
+96 = NETE_DRVNOTLOADED, "ไม่ได้โหลดไดรฟ์เวอร์เครือข่ายสำหรับโปรโตคอลเครือข่ายที่ระบุ"
+
+97 = NETE_NODRVERRSTR, "ไม่มีสตริงข้อผิดพลาดของไดรฟ์เวอร์โปรโตคอลที่พร้อมใช้งานสำหรับข้อผิดพลาดปัจจุบัน"
+
+98 = NETE_SHRTINFOBUF, "บัฟเฟอร์ข้อมูลแอดเดรสเล็กเกินไป"
+
+99 = NETE_NULLNFDS, "การส่งผ่านตัวชี้ NULL nfds ไปยัง net_poll_external() ไม่ถูกต้อง"
+
+100 = NETE_BADNFDS, "จำนวนตัวอธิบายไฟล์ที่ต้องการไม่ถูกต้อง"
+
+101 = NETE_NULLRDBUF, "การส่งผ่านบัฟเฟอร์การอ่าน NULL ไปยัง Net-Library ไม่ถูกต้อง"
+
+102 = NETE_NULLWRTBUF, "การส่งผ่านบัฟเฟอร์การเขียน NULL ไปยัง Net-Library ไม่ถูกต้อง"
+
+103 = NETE_INTLNXTSEC, "การเรียกไปยัง intl_nextsection ล้มเหลว"
+
+104 = NETE_INTLNXTVAL, "การเรียกไปยัง intl_nextvalue ล้มเหลว"
+
+105 = NETE_LFNOVALUE, "พบรายการไฟล์ภาษาท้องถิ่นโดยไม่มีข้อความแสดงข้อผิดพลาด"
+
+106 = NETE_BADERRID, "พบรายการไฟล์ภาษาท้องถิ่นโดยมีหมายเลขข้อผิดพลาดที่ไม่ถูกต้อง"
+
+107 = NETE_INTLNXTENT, "การเรียกไปยัง intl_nextentry ล้มเหลว"
+
+108 = NETE_NULLINTLSIZE, "การส่งผ่านตัวชี้ขนาด NULL ไปยัง net_intl_size ไม่ถูกต้อง"
+
+109 = NETE_NULLINTLBUF, "การส่งผ่านตัวชี้บัฟเฟอร์ NULL ไปยัง net_intl_errstr ไม่ถูกต้อง"
+
+110 = NETE_BADMSECS, "ค่าของพารามิเตอร์มิลลิวินาทีไม่ถูกต้อง"
+
+111 = NETE_NOLISTENERS, "การเรียก net_accept ไม่ถูกต้อง ถ้าไม่มีจุดสิ้นสุดการฟัง"
+
+112 = NETE_POLLNOTSUP, "ฟังก์ชัน net_poll_external() ไม่ได้รับการสนับสนุน"
+
+113 = NETE_NONEQUEUED, "ไม่สามารถรอให้คำขอเสร็จสมบูรณ์ เมื่อไม่มีสิ่งใดอยู่ในคิว"
+
+114 = NETE_BADSIGNAL, "ไม่มีการใช้สัญญาณที่ต้องการโดย Net-Library"
+
+115 = NETE_DICTINUSE, "พยายามเข้าถึงพจนานุกรมแอดเดรสโดยมีงานมากกว่าหนึ่งงาน"
+
+116 = NETE_NULLEXPFLG, "การส่งผ่านตัวชี้แฟลกที่ถูกเร่ง NULL ไปยัง net_read ไม่ถูกต้อง"
+
+117 = NETE_NODRVCLASS, "ไม่มีไดรฟ์เวอร์ของคลาสโปรโตคอลที่ต้องการที่พร้อมใช้งาน"
+
+118 = NETE_BADSRCHATTR, "รายการค้นหาแอททริบิวต์มีรายการที่ไม่ถูกต้อง"
+	
+119 = NETE_BADDICTID, "ID พจนานุกรมที่ส่งผ่านไปยัง net_dict_open ไม่ถูกต้อง"
+
+120 = NETE_INVALIDVERSION, "เวอร์ชัน Net-Library ไม่ถูกต้อง"
+
+121 = NETE_NULLVALUE, "อาร์กิวเมนต์ค่าสำหรับตัวเลือกนี้เป็น NULL ไม่ได้"
+
+122 = NETE_NULLARG, "อาร์กิวเมนต์ NULL ไปยังรูทีนไม่ถูกต้อง"
+
+123 = NETE_BUFTOOSMALL, "บัฟเฟอร์มีขนาดเล็กเกินไป"
+
+124 = NETE_BADCMD, "อาร์กิวเมนต์คำสั่งไม่ถูกต้อง"
+
+125 = NETE_NULLBUF, "อาร์กิวเมนต์ของบัฟเฟอร์ Null"
+
+126 = NETE_NULLPROPINFO, "อาร์กิวเมนต์ propinfo Null"
+
+127 = NETE_SETNOTSUPPORTED, "การตั้งค่าคุณสมบัติ Net-Lib ไม่ได้รับการสนับสนุน"
+
+128 = NETE_INTLHOME, "การเรียกไปยัง intl_home ล้มเหลว"
+
+129 = NETE_INVOSERR, "หมายเลขข้อผิดพลาด OS ไม่ถูกต้อง"
+
+130 = NETE_RLIMITERR, "ไม่สามารถดึง/ตั้งค่าจำนวนสูงสุดของไฟล์ที่เปิด "
+
+131 = NETE_GETEF, "ไม่สามารถสร้างแฟลกเหตุการณ์"
+
+132 = NETE_FREEEF, "ไม่สามารถปลดปล่อยแฟลกเหตุการณ์"
+
+133 = NETE_INSQTI, "ไม่สามารถแทรกองค์ประกอบลงในคิวที่เชื่อมโยงกัน"
+
+134 = NETE_REMQHI, "ไม่สามารถย้ายองค์ประกอบออกจากคิวที่เชื่อมโยงกัน"
+
+135 = NETE_SETIMR, "ความพยายามตั้งค่าตัวจับเวลาล้มเหลว"
+
+136 = NETE_CANTIM, "ความพยายามยกเลิกตัวจับเวลาล้มเหลว"
+
+137 = NETE_WAITFR, "ความพยายามรอเหตุการณ์ล้มเหลว"
+
+138 = NETE_CLREF, "ไม่สามารถล้างแฟลกเหตุการณ์"
+
+139 = NETE_SETEF, "ไม่สามารถตั้งค่าแฟลกเหตุการณ์"
+
+140 = NETE_DRVATTNHDLR, "ความพยายามติดตั้งตัวจัดการการแจ้งเตือนสำหรับไดรฟเวอร์ของโปรโตคอลล้มเหลว"
+
+141 = NETE_QUEOPEN, "ความพยายามเปิดคิวการติดต่อสื่อสาร Thread ล้มเหลว"
+
+142 = NETE_QUEREAD, "ความพยายามอ่านจากคิวการติดต่อสื่อสาร Thread ล้มเหลว"
+
+143 = NETE_QUEWRITE, "ความพยายามเขียนไปยังคิวการติดต่อสื่อสาร Thread ล้มเหลว"
+
+144 = NETE_QUECLOSE, "ความพยายามปิดคิวการติดต่อสื่อสาร Thread ล้มเหลว"
+
+145 = NETE_CREATETHREAD, "ความพยายามสร้าง Thread ล้มเหลว"
+
+146 = NETE_EVENTCREATE, "ความพยายามสร้างออบเจคเหตุการณ์ล้มเหลว"
+
+147 = NETE_EVENTPOST, "ความพยายามประกาศไปยังออบเจคเหตุการณ์ล้มเหลว"
+
+148 = NETE_EVENTCLEAR, "ความพยายามล้างออบเจคเหตุการณ์ล้มเหลว"
+
+149 = NETE_EVENTWAIT, "ความพยายามรอออบเจคเหตุการณ์ล้มเหลว"
+
+150 = NETE_CREATEMTX, "ความพยายามสร้างเซมาฟอร์ mutex ล้มเหลว"
+
+151 = NETE_REQUESTMTX, "ความพยายามรับความเป็นเจ้าของเซมาฟอร์ mutex แบบผูกขาดล้มเหลว"
+
+152 = NETE_RELEASEMTX, "ความพยายามปล่อยเซมาฟอร์ mutex ล้มเหลว"
+
+153 = NETE_DESTROYMTX, "ความพยายามทำลายเซมาฟอร์ mutex ล้มเหลว"
+
+154 = NETE_THRDSPND, "ความพยายามหยุด Thread ชั่วคราวล้มเหลว"
+
+155 = NETE_THRDRESUME, "ความพยายามดำเนินการ Thread ต่อล้มเหลว"
+
+156 = NETE_THRDKILL, "ความพยายามหยุด Thread ล้มเหลว"
+
+157 = NETE_SETSIGHDLR, "ไม่สามารถตั้งค่าตัวจัดการสัญญาณที่เหมาะสมได้"
+
+158 = NETE_SELECTFAIL, "การเรียกไปยัง select() ล้มเหลว"
+
+159 = NETE_FDOFLOW, "ไม่มีตัวอธิบายไฟล์อื่นที่พร้อมใช้งานแล้ว"
+
+160 = NETE_NOPOLLSTRATS, "ไม่มีโครงสร้างกลยุทธ์การสำรวจที่พร้อมใช้งานแล้ว"
+
+161 = NETE_NOSIGNALS, "Net-Library ไม่สนับสนุนไดรฟ์เวอร์ของโปรโตคอลที่สร้างสัญญาณ"
+
+162 = NETE_UNKNOWN, "ข้อผิดพลาดของ Net-Library ที่ไม่รู้จัก"
+
+164 = NETE_OODDRIVER, "ไดรฟ์เวอร์มีเวอร์ชันเก่าเกินไปที่จะสนับสนุน"
+
+165 = NETE_OSGENERIC, "ข้อผิดพลาดของระบบปฏิบัติการ - %1!"
+
+166 = NETE_DRVLOCFAIL, "ไม่สามารถเปิดไฟล์ภาษาท้องถิ่นของไดรฟ์เวอร์"
+
+167 = NETE_OSOBJECT, "ไม่สามารถสร้างออบเจค OS"
+
+168 = NET_QPRFSTR, "เกิดข้อผิดพลาดในการอ่านจากไฟล์แอดเดรส"
+
+170 = NETE_BADHANDLER, "ตัวจัดการสัญญาณไม่ถูกต้อง"
+
+171 = NETE_FLTCONNECT, "ไดรฟ์เวอร์ฟิลเตอร์ Net-Lib ไม่สามารถเชื่อมต่อจุดสิ้นสุดสองจุด"
+
+172 = NETE_CONABORTED, "การเชื่อมต่อถูกยกเลิก"
+
+173 = NETE_TIMEOUT, "การดำเนินการ Net-lib หมดเวลา"
+
+174 = NETE_URGENT, "ข้อมูล OOB ที่ได้รับ"
+
+175 = NETE_ACCEPTFAIL, "พบข้อผิดพลาดร้ายแรงขณะรับการเชื่อมต่อใหม่"
+
+176 = NETE_INSTFLT, "ไม่สามารถติดตั้งฟิลเตอร์เครือข่าย"
+
+177 = NETE_FLTDRVINIT, "ไม่สามารถกำหนดค่าเริ่มต้นฟิลเตอร์เครือข่าย"
+
+178 = NETE_DRVPARSE, "การเรียกไดรฟ์เวอร์ของโปรโตคอลเพื่อแยกวิเคราะห์ข้อมูลการเชื่อมต่อล้มเหลว"
+
+179 = NETE_FLTSYN, "เกิดข้อผิดพลาดทางไวยากรณ์ในข้อกำหนดฟิลเตอร์"
+
+180 = NETE_FLTNUNQ, "ต้องระบุฟิลเตอร์หนึ่งครั้งเท่านั้น"
+
+181 = NETE_FLTMAX, "เกินจำนวนสูงสุดของฟิลเตอร์"
+
+182 = NETE_TCPBUF, "ไม่สามารถตั้งค่าขนาดบัฟเฟอร์ซ็อกเก็ต"
+
+183 = NETE_CFG, "ไม่สามารถเปิดไฟล์กำหนดรูปแบบ libtcl.cfg"
+
+[filter]
+
+1 = FLTE_CALLFAIL, "การเรียกผู้ขายล้มเหลว"
+2 = FLTE_BUFOF, "เกิดข้อผิดพลาดในการเกินขนาดของบัฟเฟอร์"
+3 = FLTE_MALLOC, "เกิดข้อผิดพลาดในการจัดสรรหน่วยความจำ"
+4 = FLTE_SRVNOTSUPP, "บริการนี้ไม่ได้รับการสนับสนุน"
+5 = FLTE_INVPRM, "พารามิเตอร์ไม่ถูกต้อง"
+6 = FLTE_BADPOINTER, "ตัวชี้ไม่ถูกต้อง"
+
+; TLS/SSL specific errors:
+60 = FLTE_TLS_MSTRINIT, "ไม่สามารถกำหนดค่าเริ่มต้นเนื้อหาหลัก SSL/TLS"
+61 = FLTE_TLS_IO_SEMANTICS, "ไม่สามารถตั้งค่าความหมาย I/O ให้กับ I/O บางส่วน"
+62 = FLTE_TLS_PROTOCOLVER, "ไม่สามารถตั้งค่าเวอร์ชันโปรโตคอล SSL/TLS"
+63 = FLTE_TLS_RANDOMOBJ, "ไม่สามารถสร้างออบเจค PRNG"
+64 = FLTE_TLS_RANDOMINIT, "ไม่สามารถกำหนดค่าเริ่มต้นออบเจค PRNG"
+65 = FLTE_TLS_RANDOMSEED, "ไม่สามารถเริ่มต้น PRNG"
+66 = FLTE_TLS_RANDOMREF, "ไม่สามารถตั้งค่าการอ้างอิงออบเจค PRNG"
+67 = FLTE_TLS_RANDOMFUNC, "ไม่สามารถตั้งค่าฟังก์ชัน PRNG"
+68 = FLTE_TLS_CERTFUNC, "ไม่สามารถตั้งค่าฟังก์ชันการตรวจสอบใบรับรอง"
+69 = FLTE_TLS_DUPCONTEXT, "ไม่สามารถทำซ้ำข้อมูลเนื้อหา SSL/TLS"
+70 = FLTE_TLS_DUPCHILD, "ไม่สามารถสร้างเนื้อหา SSL/TLS ระดับต่ำกว่า"
+71 = FLTE_TLS_GETVER, "ไม่สามารถดึงเวอร์ชันของโปรโตคอล SSL/TLS"
+72 = FLTE_TLS_INVALIDVER, "เวอร์ชันของโปรโตคอล SSL/TLS ที่ไม่รู้จัก"
+73 = FLTE_TLS_NOVALIDCIPHERS, "การตั้งค่าการเข้ารหัสไม่พบชุดการเข้ารหัสที่รู้จัก"
+74 = FLTE_TLS_SETCIPHER, "เกิดข้อผิดพลาดในการตั้งค่าชุดการเข้ารหัส"
+75 = FLTE_TLS_LOADCERT, "ความพยายามในการโหลด Identity ภายในล้มเหลว"
+76 = FLTE_TLS_LOADCA, "ไม่สามารถเปิดไฟล์สิทธิใบรับรองหรืออ่านใบรับรองที่อยู่ในไฟล์"
+77 = FLTE_TLS_GETCERTLEN, "ไม่สามารถดึงข้อมูลความยาวของใบรับรองของเพียร์"
+78 = FLTE_TLS_GETCERT, "ไม่สามารถดึงข้อมูลใบรับรองของเพียร์"
+79 = FLTE_TLS_GETNAME, "ไม่สามารถแยกข้อมูลชื่อสามัญของเพียร์"
+80 = FLTE_TLS_SETIOREF, "ไม่สามารถตั้งค่าการอ้างอิง TLS/SSL I/O"
+81 = FLTE_TLS_SETCERTREF, "ไม่สามารถตั้งค่าการอ้างอิงใบรับรอง TLS/SSL"
+82 = FLTE_TLS_SETREADFUNC, "ไม่สามารถตั้งค่าฟังก์ชันการเรียกกลับการอ่าน TLS/SSL"
+83 = FLTE_TLS_SETWRITEFUNC, "ไม่สามารถตั้งค่าฟังก์ชันการเรียกกลับการเขียน TLS/SSL"
+84 = FLTE_TLS_HANDSHAKEFAIL, "แฮนด์เชค TLS/SSL ล้มเหลว  ตรวจสอบใบรับรองเพื่อดูความเสียหายที่อาจเกิดขึ้น"
+85 = FLTE_TLS_SERVERSIDE, "ไม่สามารถตั้งค่า TLS/SSL ให้กับด้านเซิร์ฟเวอร์"
+86 = FLTE_TLS_CLIENTSIDE, "ไม่สามารถตั้งค่า TLS/SSL ให้กับด้านไคลเอนท์"
+87 = FLTE_TLS_NOEP, "มีความพยายาม I/O ก่อนมีการตั้งค่า TLS/SSL"
+88 = FLTE_TLS_NOCONTEXT, "มีความพยายาม I/O ก่อนแฮนด์เชค SSL"
+89 = FLTE_TLS_READERROR, "เกิดข้อผิดพลาดระหว่างการอ่าน"
+90 = FLTE_TLS_WRITEERROR, "เกิดข้อผิดพลาดระหว่างการเขียน"
+91 = FLTE_TLS_DNFCOUNT, "ไม่สามารถดึงจำนวนฟิลด์ DN ของใบรับรองระยะไกล"
+92 = FLTE_TLS_DNFEXTRACT, "ไม่สามารถแยกข้อมูลชื่อเฉพาะจากใบรับรองระยะไกล"
+93 = FLTE_TLS_EXTCOUNT, "ไม่สามารถนับจำนวนส่วนขยายของใบรับรองระยะไกล"
+94 = FLTE_TLS_EXTEXTRACT, "ไม่สามารถแยกข้อมูลส่วนขยายจากใบรับรองระยะไกล"
+95 = FLTE_TLS_REQCLNT, "การเรียกใบรับรองไคลเอนท์ที่ต้องการล้มเหลว"
+
+; end of tcllib error strings
+;

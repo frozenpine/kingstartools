@@ -1,0 +1,164 @@
+; "ctbcp.loc" - Localization message file for Open Client bcp.
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "致命错误: 内存分配失败。"
+2 = ZZZZZ, "I/O错误: 输入数据空间不足。"
+3 = ZZZZZ, "打开临时文件'%1!'失败，无法在dbedit()中写入数据。"
+4 = ZZZZZ, "无法调用'%1!'编辑器。"
+5 = ZZZZZ, "无法打开输入文件'%1!'。"
+6 = ZZZZZ, "无法打开输出文件'%1!'。"
+7 = ZZZZZ, "bcp: 未知的参数'%1!'。"
+8 = ZZZZZ, "使用'%1!'标志设置要复制的首行时，行号必须大于或等于1。"
+9 = ZZZZZ, "使用'%1!'和'%2!'标志设置要复制的首行和末行时，首行号必须小于末行号。"
+10 = ZZZZZ, "使用'%1!'标志设置要复制的末行时，行号必须大于或等于1。"
+11 = ZZZZZ, "复制方向必须为'in'或'out'。"
+12 = ZZZZZ, "'%1!'标志后面必须是整数。'%2!'不是合法整数。"
+13 = ZZZZZ, "警告： '%1!'标志出现一次以上。新标志的值将替代旧标志的值。"
+14 = ZZZZZ, "警告： '%1!'将覆盖'%2!'"
+15 = ZZZZZ, "前缀长度无效。有效的前缀长度是0、1、2或4。"
+16 = ZZZZZ, "级别(1-16): "
+17 = ZZZZZ, "级别无效"
+18 = ZZZZZ, "区间(1-64): "
+19 = ZZZZZ, "允许多个记录项(用回车分隔);完成时按回车键。 "
+20 = ZZZZZ, "以SA身份登录(是/否): "
+21 = ZZZZZ, "重试:"
+22 = ZZZZZ, "区间无效"
+23 = ZZZZZ, "开始复制..."
+24 = ZZZZZ, "已复制%1!行。"
+25 = ZZZZZ, "时钟时间(毫秒): 总计=%1!"
+26 = ZZZZZ, "是否要将此格式信息保存在文件中?[是/否] "
+27 = ZZZZZ, "主机文件名[%1!]: "
+28 = ZZZZZ, "列类型无效。有效类型为:"
+29 = ZZZZZ, "    <cr>: 类型与DataServer列相同。"
+30 = ZZZZZ, "  平均值 = %1! (%2!行/秒。)"
+31 = ZZZZZ, "bcp复制%1!失败"
+32 = ZZZZZ, "bcp复制%1!部分失败"
+33 = ZZZZZ, "精度无效。精度应介于%1!和%2!之间"
+34 = ZZZZZ, "标度无效。标度应介于%1!和%2!之间且应小于或等于精度。"
+35 = ZZZZZ, "返回意外的结果类型。"
+36 = ZZZZZ, "返回意外结果。"
+37 = ZZZZZ, "错误: 写入BCP文件(%1!)!"
+38 = ZZZZZ, "检索主机文件说明失败。"
+39 = ZZZZZ, "批量复制尝试复制到主机文件的表短于系统指示批量复制跳过的行数。"
+40 = ZZZZZ, "blk_rowxfer_mult返回意外的返回代码。"
+41 = ZZZZZ, "遇到未知的数据类型'%1!'。"
+42 = ZZZZZ, "读取bcp输入文件时出现I/O错误。"
+43 = ZZZZZ, "写入bcp错误文件时出现输入/输出错误。"
+44 = ZZZZZ, "无法打开错误文件。"
+45 = ZZZZZ, "在BCP数据文件中遇到意外的文件结束符。"
+46 = ZZZZZ, "在BCP数据文件中发现负的长度前缀。"
+47 = ZZZZZ, "BCP主机文件'%1!'只包含%2!行。不允许跳过所有这些行。"
+48 = ZZZZZ, "BCP主机文件'%1!'仅包含%2!行。无法读取请求的行数。"
+49 = ZZZZZ, "对于批量复制，必须为所有可变长度数据指定长度前缀或终止符。"
+50 = ZZZZZ, "文本/图像字段大于最大值。数据已截断。"
+51 = ZZZZZ, "此BCP操作中的错误总数大于允许的错误数上限(%1!)。BCP已停止。"
+52 = ZZZZZ, "无法打开discard文件'%1!'。"
+53 = ZZZZZ, "写入bcp discard文件'%1!'时出现I/O错误。"
+54 = ZZZZZ, "无法关闭文件'%1!'。可能没有复制数据。"
+55 = ZZZZZ, "警告: 批量大小调整为值'%1!'，以优化discard文件功能。"
+56 = ZZZZZ, "已达到bcp能够处理的最大行数，已处理的总行数为'%1!'，bcp操作已终止。"
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "致命错误: 内存分配失败。"
+2 = ZZZZZ, "复制方向必须为'in'或'out'。"
+3 = ZZZZZ, "警告： '%1!'覆盖'%2!'。"
+4 = ZZZZZ, "使用'%1!'标志设置要复制的首行时，行号必须大于或等于1。"
+5 = ZZZZZ, "使用'%1!'和'%2!'标志设置要复制的首行和末行时，首行号必须小于末行号。"
+6 = ZZZZZ, "使用'%1!'标志设置要复制的末行时，行号必须大于或等于1。"
+7 = ZZZZZ, "使用'%1!'标志设置批量大小时，该数字必须大于或等于1。"
+8 = ZZZZZ, "警告: 复制方向为out时忽略'%1!'标志。"
+9 = ZZZZZ, "复制方向为in时不能同时使用'%1!'和'%2!'。"
+10 = ZZZZZ, "使用'%1!'标志设置标识列的起始值时，该数字必须大于或等于0。"
+11 = ZZZZZ, "不能同时使用'%1!标志和'%2!'标志。"
+12 = ZZZZZ, "警告: 正将批量大小从%1!重置为%2!。"
+13 = ZZZZZ, "设置连接属性失败。"
+14 = ZZZZZ, "建立连接失败。"
+15 = ZZZZZ, "设置连接选项失败。"
+16 = ZZZZZ, "检索语言失败。"
+17 = ZZZZZ, "设置缺省值失败。"
+18 = ZZZZZ, "检索表格式失败。"
+19 = ZZZZZ, "blk_init失败。"
+20 = ZZZZZ, "无法打开错误文件。"
+21 = ZZZZZ, "不识别的本地化对象。使用缺省值'%1!'。"
+22 = ZZZZZ, "内部错误: 传递给cs_locale()的本地化类型无效。"
+23 = ZZZZZ, "警告: 不支持选项'%1!'，它已被忽略"
+24 = ZZZZZ, "'%1!'中存在语法错误。"
+25 = ZZZZZ, "尝试装载转换表对时出错。"
+26 = ZZZZZ, "在尝试配置应用程序上下文以便用于与本地化相关的结构时出现错误。"
+27 = ZZZZZ, "警告: 未设置选项'-E'，DataServer将为标识列生成值。"
+28 = ZZZZZ, "使用'%1!'标志设置要跳过的行时，行数必须大于或等于0。"
+29 = ZZZZZ, "'不能同时在命令行使用%1!'标志和'%2!'标志。"
+30 = ZZZZZ, "使用'%1!'和'%2!'标志设置要跳过的行和要复制的末行时，要跳过的行数必须小于末行号。"
+31 = ZZZZZ, "选项--clienterr必须与选项-e互斥。"
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "已成功将批数据批量复制到服务器。"
+2 = ZZZZZ, "已将%1!行发送到服务器。"
+3 = ZZZZZ, "已成功将%1!行批量复制到主机文件。"
+4 = ZZZZZ, "中断 - 批量复制已中止。"
+5 = ZZZZZ, "已复制%1!行。"
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "口令: "
+2 = ZZZZZ, "输入字段%1! [%2!]的文件存储类型: "
+3 = ZZZZZ, "输入字段%1!的长度[无最大长度]: "
+4 = ZZZZZ, "输入字段%1! [%2!]的长度: "
+5 = ZZZZZ, "输入字段终止符[%1!]: "
+6 = ZZZZZ, "输入字段%1! [%2!]的前缀长度: "
+7 = ZZZZZ, "输入字段%1! [%2!]的精度: "
+8 = ZZZZZ, "输入字段%1! [%2!]的标度: "
+9 = ZZZZZ, "输入列名称: "
+10 = ZZZZZ, "输入键名称: "
+11 = ZZZZZ, "输入列%1!的口令: "
+12 = ZZZZZ, "输入键%1!的口令: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: 无法打开格式文件'%2!'。"
+2 = ZZZZZ, "读取bcp格式文件时出现输入/输出错误。"
+3 = ZZZZZ, "无法关闭bcp格式文件。"
+4 = ZZZZZ, "列%1!: 遇到非法的精度值。"
+5 = ZZZZZ, "遇到未知的固定长度数据类型。"
+6 = ZZZZZ, "试图读取bcp格式文件的未知版本。"
+7 = ZZZZZ, "在bcp格式文件中发现不正确的主列号。"
+8 = ZZZZZ, "在格式文件中发现无法识别的数据类型'%1!'。"
+9 = ZZZZZ, "格式文件指示bcp不复制标识列，这与-E选项冲突。"
+10 = ZZZZZ, "没有要复制的列。"

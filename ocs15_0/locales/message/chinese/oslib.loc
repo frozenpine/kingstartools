@@ -1,0 +1,870 @@
+; "oslib.loc" - Localization file for Open Server
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Open Server Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[oserrors]
+
+0 = SRV_EOPTION, "未知选项'%1!'"
+
+1 = SRV_ENOPROC, "无可用服务器进程"
+
+2 = SRV_ELIVEPROC, "尝试删除具有活动的I/O的客户端服务器进程'%1!'"
+
+3 = SRV_ENOEVENT, "为进程'%2!'请求的事件'%1!'未知"
+
+4 = SRV_EBADEVENT, "客户端进程'%1!'无法引发事件'%2!'"
+
+5 = SRV_EBADUEVENT, "事件'%1!'在%2!中未知"
+
+6 = SRV_EIOBADBUF, "发送缓冲区损坏，sleft < 0 (%1!)"
+
+7 = SRV_EIOBADTYPE, "srv__buf_io()中请求的I/O操作(%1!)未知"
+
+8 = SRV_EMEMORY, "在'%2!'中为'%3!'分配'%1!'字节内存失败"
+
+9 = SRV_ENOPPROC, "无法为进程'%1!'创建服务器进程"
+
+10 = SRV_EEINITNET, "在机器'%2!'上对网络'%1!'的初始化失败"
+
+11 = SRV_EIFILE, "错误的interfaces文件"
+
+12 = SRV_EFOPEN, "无法打开%1!文件'%2!'"
+
+13 = SRV_ESRVNAME, "无法在interfaces文件中找到服务器名'%1!'"
+
+14 = SRV_EHOMEDIR, "无法找到用户的(%1!)主目录"
+
+15 = SRV_EPROCTYPE, "例程'%2!'中的进程类型'%1!'未知"
+
+16 = SRV_ENOMSGS, "无自由消息。"
+
+17 = SRV_EMSGPROC, "未分配来自进程'%3!'的消息的%1!进程'%2!'"
+
+18 = SRV_EMSGADDRESS, "来自进程'%3!'的消息的消息%1!进程'%2!'无效"
+
+19 = SRV_EMSGTYPE, "%1!接收到的消息类型无效"
+
+20 = SRV_EBADIOEVENT, "来自srv__runnet()的客户端'%2!'的事件类型'%1!'无效"
+
+21 = SRV_EIOERROR, "客户端进程'%3!'存在I/O错误'%1!'(%2!)"
+
+22 = SRV_EQPROC, "%2!中的服务器进程ID'%1!'无效"
+
+23 = SRV_EQFREE, "无可用的运行队列结构"
+
+24 = SRV_ESRVEVENT, "客户端进程spid%1!接收到非事件消息"
+
+25 = SRV_ECLNTMSG, "%2!中给出的消息类型'%1!'未知"
+
+26 = SRV_ESOCKET, "无法创建监听套接字"
+
+27 = SRV_EBIND, "无法绑定套接字"
+
+28 = SRV_EGETHOST, "无法找到主机'%1!'"
+
+29 = SRV_ELISTEN, "无法启动任何网络监听器"
+
+30 = SRV_ECNTSOCKET, "无法连接客户端套接字"
+
+31 = SRV_EPROCDEAD, "服务器进程'%1!'在'%2!'中不活动"
+
+32 = SRV_EBADINDEX, "传递至'%2!'的STRCHR(%1!)无效"
+
+33 = SRV_ENOCONVERT, "无法从类型'%1!'转换为类型'%2!'"
+
+34 = SRV_EMAXNAME, "%1!名称的长度不能超过%2!字节(%3!给定)"
+
+35 = SRV_ECUFLOW, "从类型'%1!'转换成类型'%2!'导致下溢出"
+
+36 = SRV_ECOFLOW, "从类型'%1!'转换成类型'%2!'导致溢出"
+
+37 = SRV_ECBINOFLOW, "转换成二进制变量导致溢出"
+
+38 = SRV_ECPREC, "从类型'%1!'转换成类型'%2!'导致精度损失"
+
+39 = SRV_ECSYNTAX, "由于源字段中存在语法错误导致从类型'%1!'到类型'%2!'的转换停止"
+
+40 = SRV_EBADLEN, "整数列长度'%1!'非法。合法值为1、2和4字节"
+
+41 = SRV_EUVDT, "遇到未知的可变长度数据类型'%1!'"
+
+42 = SRV_EUFDT, "遇到未知的固定长度数据类型'%1!'"
+
+43 = SRV_ENOROWDESC, "尝试在没有行描述的情况下发送行"
+
+44 = SRV_ENOTYPE, "%1!数据类型'%2!'不是已知数据类型"
+
+45 = SRV_ENOITEM, "%1!: 无%2!的数据项"
+
+46 = SRV_ESTATSTATE, "%1!: 结果状态错误 - %2!已发送至客户端"
+
+47 = SRV_ENOTRACE, "无此类跟踪标志(%1!)"
+
+48 = SRV_ENORPC, "当前无远程过程调用"
+
+49 = SRV_ENOITEMNO, "%1!: 无%3!的数据项#%2!"
+
+50 = SRV_ENORETPARAM, "远程过程调用参数#%1!不是返回参数"
+
+51 = SRV_EBADPARMLEN, "类型'%2!'的长度'%1!'非法"
+
+52 = SRV_EBADPARAMMAXLEN, "实际长度'%1!'不能超过最大长度'%2!'"
+
+53 = SRV_ESYMBOL, "传至srv_symbol()的%1! '%2!'未知"
+
+54 = SRV_ESRVTYPE, "无此类服务器字段(%1!)"
+
+55 = SRV_ESRVPROCTYPE, "无此类服务器进程字段(%1!)"
+
+56 = SRV_ENULLPTR, "传至%2!的是空%1!指针"
+
+57 = SRV_ETDSVERSION, "下层TDS - 尝试发送状态、ENVCHANGE或参数的操作被忽略"
+
+58 = SRV_EOOB, "无法安装网络ATTENTION/OOB处理程序 - 致命错误"
+
+59 = SRV_ENO_OOB, "TCP选择发现无套接字发送至SIGURG - SIGURG被忽略"
+
+60 = SRV_ESIGURG_SETUP, "TCP套接字SIGURG设置因条件%1!而失败"
+
+61 = SRV_ENOTSITE, "线程%1!不是节点处理程序。类型 = %2!，函数 = %3!"
+
+62 = SRV_EBADCONFIGOPT, "选项%2!的配置选项值(%1!)无效"
+
+63 = SRV_EOBJSYNTAX, "对象名语法错误。使用site.db.owner.object;1"
+
+64 = SRV_ENETTERM, "网络中断失败"
+
+65 = SRV_EBADSTATUS, "%1!: 非法状态 - %2!"
+
+66 = SRV_ERETVALRPC, "当前客户端命令是远程过程调用 - 使用srv__paramset()返回参数"
+
+67 = SRV_EBADTYPELEN, "数据类型'%2!'的长度(%1!)非法"
+
+68 = SRV_EPROCFREE, "尝试删除当前空闲的线程"
+
+69 = SRV_EINVCHAN, "为%1!中的无效通道读取消息"
+
+70 = SRV_ENOLOGFILE, "无打开的服务器日志文件"
+
+71 = SRV_ECOLNUMBER, "列编号必须大于%1!"
+
+72 = SRV_EDUPITEM,  "%1!: 项目编号'%2!'已进行描述"
+
+73 = SRV_EINCDESC, "对%3!的%1! %2!描述不完整"
+
+74 = SRV_EMAXUEVENT, "已定义配置的用户事件(%1!)最大数"
+
+75 = SRV_EEVENTTYPE, "错误事件类型(%1!)"
+
+76 = SRV_EINATTN, "无法从ATTENTION处理程序中调用%1!"
+
+77 = SRV_EINCONNECT, "无法从SRV_CONNECT处理程序中调用%1!"
+
+78 = SRV_EBLOCKREAD, "收到来自节点处理程序'%1!'的读取锁定"
+
+79 = SRV_ESIGIO, "无法安装网络输入输出中断处理程序 - 致命错误"
+
+80 = SRV_EDEFQFULL, "延迟唤醒队列已满。使用SRV_S_DEFQUEUESIZE服务器属性增加其大小"
+
+81 = SRV_EFLAGIGN, "警告: 信号%2!的%1!被忽略，因为SAP OCS对该信号安装了处理程序"
+
+82 = SRV_ESIGSUPERCEDE, "%1!的信号处理程序将由SAP OCS为同一信号安装的处理程序执行"
+
+83 = SRV_EDEFUNUSED, "未使用的错误定义"
+
+84 = SRV_EBADPROCTYPE, "当删除服务器时，在%2!中遇到未知的任务类型%1!"
+
+85 = SRV_EDNAALLFAIL, "无法为DECNET的网络控制结构分配内存"
+
+86 = SRV_EDNACRELSNMBX, "未能为DECNET监听器创建信箱"
+
+87 = SRV_EDNANETASSIGN, "针对DECNET进行的_NET指派失败。无法启动网络"
+
+88 = SRV_EDNADUPOBJ, "DECNET中已使用端口名%1!。无法启动网络"
+
+89 = SRV_EDNADECLARE, "针对DECNET声明对象%1!的对象失败。无法启动网络"
+
+90 = SRV_EDNALISTEN, "读取失败，无法在DECNET上监听"
+
+91 = SRV_EDNAASSIGN, "无法为客户端连接指派一个新通道"
+
+92 = SRV_EDNAACCESS, "无法完成新的客户连接"
+
+93 = SRV_EDNANOLINK, "无可用于客户端的链接表记录项"
+
+94 = SRV_ENOTSERVICE, "尝试删除非服务进程%1!"
+
+95 = SRV_EEVENTNOSERVICE, "尝试将非用户定义事件从进程%1!发送到服务进程%2!"
+
+96 = SRV_EDEFHANDLER, "为进程%1!处理延迟的事件通知出错"
+
+97 = SRV_ERPCINCONSIST, "远程过程调用参数必须全部通过名称或位置传送"
+
+98 = SRV_ECHANSETUP, "由于无法分配进程，子通道建立失败"
+
+99 = SRV_ENOSCHEDPROC, "无法为调度程序创建线程"
+
+100 = SRV_EDEFERFAIL, "srv__rundef()，状态 =%1!中出现延迟中断处理程序消息队列故障"
+
+101 = SRV_EDEFERINVMSG, "srv__rundef()中的延迟中断处理程序收到无效消息。类型 = %1!，来自 = %2!"
+
+102 = SRV_EINVEVENT, "节点处理程序接收到的事件类型无效"
+
+103 = SRV_EINVSTACK, "无效堆栈大小，%1!，传递至srv_spawn()"
+
+104 = SRV_ESTACKALLOC, "无法为新线程分配堆栈大小%1!"
+
+105 = SRV_EINVPRIORITY, "无效优先级，%1!，传递至%2!。有效优先级在%3!到%4!范围内"
+
+106 = SRV_EALLOCFAIL, "无法为空闲的进程队列分配内存"
+
+107 = SRV_ENOPRACK, "无法为协议确认分配消息"
+
+108 = SRV_ENULLPARAM, "调用%1!时采用了空的%2!参数"
+
+109 = SRV_EPMSTAT, "只有成功返回%2!后才能调用%1!。"
+
+110 = SRV_EBADPARAM, "调用%1!时采用了错误的%2!参数"
+
+111 = SRV_EPNOTCLIENT, "传递给%1!的SRV_PROC不是客户端线程"
+
+112 = SRV_EOBJNAME, "在%1!中找到的对象名无效"
+
+113 = SRV_EOBJID, "在%1!中找到的对象ID无效"
+
+114 = SRV_ELOCKMODE, "在%1!中找到的锁模式无效"
+
+115 = SRV_ENOSPAWN, "无法启动线程"
+
+116 = SRV_EINRESTART, "试图重启尚未停止的线程%1!"
+
+117 = SRV_EINSTOP, "试图停止执行中的线程%1!"
+
+118 = SRV_ENOTOWNER, "试图解锁不属于线程%1!的互斥。"
+
+119 = SRV_EPRNUM, "接收到的过程%1!的参数过多。"
+
+120 = SRV_EPARAMNAME, "如果为其它参数使用了名称，则必须为过程%2!的参数%1!命名"
+
+121 = SRV_EPTYPE, "过程%2!的参数%1!收到的数据类型不正确"
+
+122 = SRV_EPUNREGNOPROC, "尝试注销未知过程%1!"
+
+123 = SRV_EPROCNOTREG, "尝试执行未注册的过程%1!"
+
+124 = SRV_EPEXISTS, "无法创建%1! %2!，因为它已经存在"
+
+125 = SRV_EPNOPROC, "未知过程%1!请求通知"
+
+126 = SRV_EPNONOTICEREQ, "客户端没有过程%1!的通知请求"
+
+127 = SRV_EPNOSRVPROC, "无法分配SRV_PROC以注册系统过程"
+
+128 = SRV_EBUFFSIZE, "缓冲区大小不足，无法在过程%2!中保存%1!值"
+
+129 = SRV_EPNOPROCEX, "无法取消过程%1!的通知请求，因为该过程不存在"
+
+130 = SRV_ENEEDPARAM, "未提供过程%1!需要的参数%2!"
+
+131 = SRV_EUNKNOWNPARAM, "注册过程%2!不存在命名参数%1!"
+
+132 = SRV_ENOLANG, "当前无语言命令"
+
+133 = SRV_EMAXCONNECT, "%1!连接的配置已超出限制，拒绝连接"
+
+134 = SRV_EPCALLBACK, "%1!的回调例程中止了当前操作"
+
+135 = SRV_EMAXPARAM, "已定义过程%1!的最大参数数目"
+
+136 = SRV_EBADFLAG, "传递至例程%1!的标志值不正确"
+
+137 = SRV_EMAXREMSITES, "已超出节点处理程序的最大数量%1!"
+
+138 = SRV_EPNOTIFYEXISTS, "此客户端已具有过程%1!的通知请求"
+
+139 = SRV_EMAXREMCONNS, "已超出远程通道的最大数量%1!"
+
+140 = SRV_EMAXRPC, "已达到远程过程调用执行堆栈深度的最大值"
+
+141 = SRV_EPROCNULL, "传递给'%1!'的服务器进程为空"
+
+142 = SRV_EPROCINVALID, "服务器进程地址0x%1!不在'%2!'的池中"
+
+143 = SRV_EPROCBOUND, "服务器进程地址0x%1!在'%2!'的错误边界上"
+
+144 = SRV_EPROCNOTUSED, "服务器进程'%1!'未在'%2!'中分配"
+
+145 = SRV_EPROCIODEAD, "服务器进程'%1!'在'%2!'中存在无效I/O"
+
+146 = SRV_ECONSRVFAIL, "连接服务进程失败"
+
+147 = SRV_ENONETBUF, "无法为线程'%1!'分配网络缓冲区"
+
+148 = SRV_ENOTSUPPORTED, "'%1!'不是有效的功能值"
+
+149 = SRV_ECORRUPT, "致命错误: %2!中的内部%1!结构损坏"
+
+150 = SRV_ELOWSTK, "线程'%1!'有可能超出所分配的%2!字节的堆栈空间"
+
+151 = SRV_EBADSTK, "线程'%1!'已溢出或已损坏其堆栈 - 正在中止"
+
+152 = SRV_EIO, "致命错误: 在网络I/O期间检测到错误，错误'%1!'"
+
+153 = SRV_EDISC, "客户端在网络读取期间断开"
+
+154 = SRV_ENETCLOSE, "关闭网络连接时出错，错误'%1!'"
+
+155 = SRV_ENODEV, "致命错误: 超出文件描述符最大数量"
+
+156 = SRV_ECMD, "无效命令参数(0x%1!)"
+
+157 = SRV_ETYPE, "无效类型参数(0x%1!)"
+
+158 = SRV_EBADCOUNT, "%1!: CS_DATAFMT中的计数(%2!)无效"
+
+159 = SRV_EBADSTAT, "%1!: CS_DATAFMT中的状态(0x%2!)无效"
+
+160 = SRV_EBADFORMAT, "%1!: CS_DATAFMT中的格式(0x%2!)无效"
+
+161 = SRV_ENOMSG, "必须在CS_GET的SRV_MSG事件处理程序中"
+
+162 = SRV_ENOBIND, "%1!: 为完成%3!的项目编号(%2!)的绑定"
+
+163 = SRV_ETRUNC, "%1!结构中的长名称已截断"
+
+164 = SRV_ENULLADDR, "尝试使用空程序变量进行绑定。"
+
+165 = SRV_ESTATE, "%1!: %2!对%3!无效"
+
+166 = SRV_ELEN, "%1!: 变量长度无效，旧变量长度(%2!)，新变量长度(%3!)"
+
+167 = SRV_EDUPROW, "行'%1!'已进行描述"
+
+168 = SRV_ENOROW, "%1!: 当前线程无计算行'%2!'"
+
+169 = SRV_ENOAGG, "%1!: 无ID#为'%2!'的聚合运算符"
+
+170 = SRV_EDUPTAB, "%1!: 表'%2!'已进行描述"
+
+171 = SRV_ENOTAB, "%1!: 表'%2!'尚未进行描述"
+
+172 = SRV_EBADROW, "%1!: 错误的计算ID'%2!'"
+
+173 = SRV_EBADCOMPUTBY, "%1!: compute-by列表与order-by列表不匹配"
+
+174 = SRV_ENOCOMPUTEBY, "%1!: 当前语句中无compute-by列表"
+
+175 = SRV_EBADNUMBYLIST, "%1!: compute-by列的数量值'%2!'无效"
+
+176 = SRV_ENOORDERBY, "%1!: 当前语句中无order-by列表"
+
+177 = SRV_EBADNUMCOLS, "%1!: order-by列的数量值'%2!'无效"
+
+178 = SRV_EBADTABNUM, "%1!: 表编号'%2!'无效"
+
+179 = SRV_EBADNAMELEN, "%1!: 名称长度值'%2!'无效"
+
+180 = SRV_EBADCTRLLEN, "%1!: 控制格式长度值'%2!'无效"
+
+181 = SRV_ENULLNAME, "%1!: 参数'%2!'不能为空"
+
+182 = SRV_EBADTABCOL, "%1!: 列'%2!'必须通过srv_tabcolname()与表链接"
+
+183 = SRV_EUNSUPPORTED, "%1!: %3!不支持选项(%2!)"
+
+184 = SRV_ENOCHARSET, "函数'%2!'中的字符集%1!未知"
+
+185 = SRV_ECSRFILE, "csr文件'%1!'具有错误格式('%2!'行)"
+
+186 = SRV_ECHARATTR, "为'%1!'字符集建立字符属性结构出错"
+
+187 = SRV_ENOTHEX, "需要十六进制数，在函数'%2!'中得到%1!"
+
+188 = SRV_EARG, "函数'%3!'中的参数%1! %2!不正确"
+
+189 = SRV_ECSNOCVT, "无法在服务器字符集'%1!'和客户端字符集'%2!'之间转换"
+
+190 = SRV_ECSCVT, "在'%2!'中发生字符集转换%1!"
+
+191 = SRV_ENORETURN, "函数'%2!'中的返回(%1!)未知"
+
+192 = SRV_ECSLOGREC, "登录记录中出现%1!字符集转换错误"
+
+193 = SRV_ECSMISMATCH, "'%1!'不是一个'%2!'"
+
+194 = SRV_ECSLOAD, "无法为%1!装载定义文件'%2!'"
+
+195 = SRV_EBADNULL, "为无效数据类型(%1!)设置了CS_CANBENULL"
+
+196 = SRV_ECHCONFIG, "无法在srv_init()之后更改配置选项'%1!'"
+
+197 = SRV_ELATEORDER, "如果存在compute-by列表，则必须在srv_alt_header()之前调用%1!"
+
+198 = SRV_EBADITEM, "无效项目编号(%1!)"
+
+199 = SRV_ENOTINBULK, "%1!: 必须在SRV_BULK处理程序中才能获取属性 %2!"
+
+200 = SRV_EBADIOTYPE, "%1!: 无效传输类型'%2!'"
+
+201 = SRV_EGTONECOL, "只有针对单列的行调用%1!"
+
+202 = SRV_ENONELEFT, "%1!: 对%2!无剩余"
+
+203 = SRV_EWRONGTYPE, "%1!: 列必须是TEXT或IMAGE类型"
+
+204 = SRV_EBADNUMVAL, "%1!: 结构成员'%3!'的值%2!无效"
+
+205 = SRV_EDUPPARAM, "%1!: 参数'%2!'已进行描述"
+
+206 = SRV_ERPCINC, "远程过程调用参数描述不完整 - %1! %2!未进行描述"
+
+207 = SRV_EBADROWLEN, "%1!: 读入的行不能超过%2!字节"
+
+208 = SRV_EBADALTCOLTYPE, "%1!: 计算行列不能是TEXT或IMAGE类型"
+
+209 = SRV_EIOTYPENOTSET, "%1!: SRV_PROC的srvp_iotype字段未进行初始化"
+
+210 = SRV_EBOUND, "%1!: 不应绑定列%2!"
+
+211 = SRV_ETXTLENREAD, "%1!: 已从客户端读取当前列的文本/图像长度"
+
+212 = SRV_ETXTLENNOTREAD, "%1!: 尚未从客户端读取当前列的文本/图像长度"
+
+213 = SRV_ENOTIMESTAMP, "未定义文本或图像时间戳"
+
+214 = SRV_ECSFALLBACK, "无可用的字符集定义文件 - 将服务器字符设置为'%1!'"
+
+215 = SRV_ELOGINLEN, "登录字段'%2!'的长度(%1!)超出范围"
+
+216 = SRV_EBADCOLTYPE, "%1!无法检索TEXT或IMAGE列值"
+
+217 = SRV_ENEEDROW, "%1!: 必须调用blk_getrow()以检索行信息"
+
+218 = SRV_ENEEDHANDLE, "%1!: 必须调用blk_exec()以初始化批量复制操作"
+
+219 = SRV_EINTERRUPTED, "对%1!的调用被关注中断"
+
+220 = SRV_ESTATUS, "%1!: 状态参数(0x%2!)无效"
+
+221 = SRV_EFLUSH, "%1!: SRV_DONE_FLUSH与SRV_DONE_FINAL不能一同设置"
+
+222 = SRV_EFLUSHCON, "%1!: 不能从SRV_CONNECT事件中执行SRV_DONE_FLUSH"
+
+223 = SRV_EMORE, "%1!: SRV_DONE_MORE与SRV_DONE_FINAL不能一同设置"
+
+224 = SRV_EMORECON, "%1!: 不能从SRV_CONNECT事件中执行SRV_DONE_MORE"
+
+225 = SRV_ECONTEXT, "%1!: 上下文无效"
+
+226 = SRV_EVERSION, "%1!: 版本号无效(%1!)"
+
+227 = SRV_EBADTDS, "spid %2!接收到的%1! TDS未知"
+
+228 = SRV_EINOPTION, "%1!: 只能在SRV_OPTION处理程序中调用。"
+
+229 = SRV_EWRONGTDSVER, "%1!: %3!中的TDS版本(%2!)不正确"
+
+230 = SRV_EWRONGOPTCMD, "%1!: 在函数%2!中来自客户端的选项命令未知"
+
+231 = SRV_EWRONGOPT, "%1!: 在函数%2!中来自客户端的选项未知"
+
+232 = SRV_ENODATA, "%1!: 对于当前令牌流无剩余数据"
+
+233 = SRV_ENULLARG, "参数%1!在函数%2!中为空值"
+
+234 = SRV_EINUSEREVENT, "无法在用户定义的事件处理程序中调用%1!"
+
+235 = SRV_EBINDARG, "函数%3!中的列(%2!)的绑定值(0x%1!)无效"
+
+236 = SRV_ESTATECHK, "%1!: 状态错误(0x%2!)"
+
+237 = SRV_ENOVERSION, "%1!: 未使用srv_version设置版本"
+
+238 = SRV_EBADRESULT, "%1!: 结果类型(%2!)对事件(%3!)无效"
+
+239 = SRV_ECONFAIL, "连接服务线程休眠失败"
+
+240 = SRV_ENETFUNC, "Net-Library例程%1!在%2!中失败"
+
+241 = SRV_EPROCFAIL, "线程%1!未能获取新事件"
+
+242 = SRV_ECLOSEFAIL, "关闭客户端连接失败"
+
+243 = SRV_EREADFAIL, "对进程%1!的读取操作失败"
+
+244 = SRV_EWRITEFAIL, "对进程%1!的写入操作失败"
+
+245 = SRV_EBLOCK, "阻塞中断失败"
+
+246 = SRV_EUNBLOCK, "解除阻塞中断失败"
+
+247 = SRV_ECHANNEL, "节点处理程序spid %1!未能建立一个新通道"
+
+248 = SRV_EPOLL, "%1!中出错 - 文件描述符%2!不再是活动的"
+
+249 = SRV_EGLOBAL, "%1!: 无法访问公用库全局数据"
+
+250 = SRV_EIOPOST, "%1!: 无法运行异步管理器"
+
+251 = SRV_EBADLENARG, "%1!在函数%3!中的长度值(%2!)无效"
+
+252 = SRV_EPROCPROPS, "%2!中的线程属性(%1!)无效"
+
+253 = SRV_EINSERVTHREAD,"%1!: 属性%2!对于服务线程无效"
+
+254 = SRV_EFROMDISCONNECT, "%1!: %2!属性仅在SRV_DISCONNECT句柄中有效"
+
+255 = SRV_ESMALLBUF, "%1!: 缓冲区大小(%2!)对于%3!过小"
+
+256 = SRV_ELARGBUF, "%1!: 缓冲区大小对于%3!不能超过(%2!)"
+
+257 = SRV_EFROMCONNECT, "%1!: 应在连接处理程序中设置属性 %2!"
+
+258 = SRV_EWRONGTDSSET, "%1!: 不能将TDS级别(%2!)设置为大于当前级别(%3!)"
+
+259 = SRV_EWRONGLANG, "%1!: (%2!)对于属性%3!无效"
+
+260 = SRV_ENOPROPSET, "%1!: 属性 - %2!无法进行设置/清除"
+
+261 = SRV_ESRVPROPS, "%2!中的服务器属性(%1!)无效"
+
+262 = SRV_EPROPCFG, "%1!: 不能在srv_init()之后配置服务器属性"
+
+263 = SRV_EBADINTPROP, "%1!: 属性%3!的值(%2!)无效"
+
+264 = SRV_ECAPMASK, "%1!: 性能掩码对于%2!无效"
+
+265 = SRV_EPROPNOSUPPORT, "%1!: 此平台不支持属性: %2!"
+
+266 = SRV_ENOPROPCLEAR, "%1!: 无法清除属性: %2!"
+
+267 = SRV_ENOPROPTDS, "%1!: 属性 - %2!对于当前TDS版本(%3!)无效"
+
+268 = SRV_ENOSERVNAME, "%1!: 不能在srv_init前获得属性%2!"
+
+269 = SRV_ENOFDONE, "事件处理程序未发送最终的DONE"
+
+270 = SRV_EERROR, "%1!: SRV_DONE_FLUSH与SRV_DONE_ERROR不能一同设置"
+
+271 = SRV_EENVDB, "数据库上下文变更为'%1!'"
+
+272 = SRV_EENVLANG, "语言设置变更为'%1!'"
+
+273 = SRV_EENVCHAR, "客户端字符集设置变更为'%1!'"
+
+274 = SRV_ENOCUR, "%1!: 没有ID为%2!或名为'%3!'的游标"
+
+275 = SRV_ENOCUREVENT, "%1!: 不在SRV_CURSOR事件处理程序中"
+
+276 = SRV_ENOCURPARAMS, "%1!: 不存在游标参数"
+
+277 = SRV_ENOCURPARAM, "%1!: 不存在游标参数%2!"
+
+278 = SRV_ENOCURUPCOLS, "%1!: 不存在游标更新列"
+
+279 = SRV_ENOCURUPCOL, "%1!: 不存在游标更新列%2!"
+
+280 = SRV_EDUPCUR, "%1!: 游标'%2!'已进行声明"
+
+281 = SRV_EBADCUR, "%1!: 无效的游标描述符"
+
+282 = SRV_ENOCURROWDESC, "%1!: 不存在游标行描述"
+
+283 = SRV_EROWCNT, "%1!: 游标行读取计数%2!超出范围"
+
+284 = SRV_ENOCURSENT, "%1!: 必须通过srv_cursor_props()发送游标信息后才能发送DONE"
+
+285 = SRV_ECURSENT, "%1!: 已通过srv_cursor_props()发送游标信息"
+
+286 = SRV_ENOSENDCUR, "%1!: 发送游标信息时出错"
+
+287 = SRV_ENOKEY, "%1!: 未描述当前游标行的关键列"
+
+288 = SRV_ENOKEYCOL, "%1!: 不存在关键列%2!"
+
+289 = SRV_ENODYN, "%1!: 不存在动态SQL语句'%2!'"
+
+290 = SRV_ENODYNEVENT, "%1!: 不在SRV_DYNAMIC事件处理程序中"
+
+291 = SRV_ENODYNPARAMS, "%1!: 不存在动态SQL参数"
+
+292 = SRV_ENODYNPARAM, "%1!: 不存在动态SQL参数%2!"
+
+293 = SRV_EDUPDYN, "%1!: 动态SQL语句'%2!'已准备"
+
+294 = SRV_EDYNINC, "%1!: 不完整的动态SQL参数列表 - %2!参数未进行描述"
+
+295 = SRV_ENOSENDDYN, "%1!: 发送动态SQL信息时出错"
+
+296 = SRV_ENODYNSENT, "%1!: 必须通过srv_dynamic()发送动态SQL语句信息之后才能发送%2!"
+
+297 = SRV_EDYNSENT, "%1!: 已通过srv_dynamic()发送动态SQL语句信息"
+
+298 = SRV_EBADCTXT, "%1!: 对此%2!的调用无效"
+
+299 = SRV_EBADRESP, "%1!: 对'%3!'的响应'%2!'无效"
+
+300 = SRV_EBADTOKEN, "从客户端接收到的令牌0x%1!未知"
+
+301 = SRV_ENOCONN, "%1!: 不在SRV_CONNECT事件处理程序中"
+
+302 = SRV_EDUPCURID, "%1!: 游标ID%2!已指派。"
+
+303 = SRV_ETEXTLEFT, "文本/图像列%1!未完全发送"
+
+304 = SRV_EBADALTID, "%1!: 计算ID%2!超过限制 - 必须在1和%3!之间"
+
+305 = SRV_ENOTXTSENT, "%1!: 为列%2!发送了空数据 - 文本指针长度为0"
+
+306 = SRV_ENOTEXTPTR, "%1!: 文本或图像指针未定义"
+
+307 = SRV_ENOPARAMRPC, "%1!: 当前远程过程调用%2!不存在参数"
+
+308 = SRV_ECAPABILITY, "%2!中的性能(%1!)无效"
+
+309 = SRV_ECAPTYPE, "%2!中的性能类型(%1!)无效"
+
+310 = SRV_EBADIO, "%1!: 对spid %3!执行%2!时出现致命错误"
+
+311 = SRV_EBADMSGID, "%1!: 对于msgid存在非法值(%2!)"
+
+312 = SRV_ENOPARAMMSG, "%1!: 当前MSG不存在参数"
+
+313 = SRV_ENOPARAMNUM, "%1!: 当前%3!中不存在参数#%2!"
+
+314 = SRV_EPARAMINC, "%1!: 参数描述不完整 - %2! %3!未进行描述"
+
+315 = SRV_EPROTERR, "%1!: 出现协议错误: %2!"
+
+316 = SRV_ENOPARAMEED, "%1!: 当前错误消息不存在参数"
+
+317 = SRV_ENODYNDESC, "%1!: 动态SQL数据应该定义为CS_DESCIN (输入参数格式)或CS_DESCOUT (输出列格式)"
+
+318 = SRV_ETXTLEFT, "%1!: 仍有需要通过blk_gettext()读取的文本或图像列"
+
+319 = SRV_EBLKINIT, "%1!: 发送表列信息失败"
+
+320 = SRV_ENONATLOCALE, "无法为区域设置%1!装载本地化信息"
+
+321 = SRV_EBADLOCALE, "无效CS_LOCALE，或未使用Open Server CS_CONTEXT分配"
+
+322 = SRV_ENOLOCALE, "无法为线程%1!分配本地化信息"
+
+323 = SRV_ENOCHARLOCALE, "无法为字符集%1!语言%2!装载本地化信息"
+
+324 = SRV_EWRONGNULL, "%1!: 列编号%2!的数据不能是空值"
+
+325 = SRV_ENOINIT, "srv_init未进行调用"
+
+326 = SRV_EWRONGARGLEN, "%2!时向%1!传递的参数长度不正确"
+
+327 = SRV_ENONEGPWD, "%1!: 客户端未发送远程服务器信息"
+
+328 = SRV_EREADFAILED, "%1!: 等待客户端响应过程中失败"
+
+329 = SRV_EWRONGMSG, "%1!: 响应%3!时收到的响应类型%2!不正确"
+
+330 = SRV_EINCPASSTHRU, "spid: %1!的传递不完整"
+
+331 = SRV_ERECURSIVE, "它是虚拟错误字符串。不得在任何位置打印"
+
+332 = SRV_ENORESCAP, "%1!: %2!结果类型被拒绝或不受支持"
+
+333 = SRV_EINSTART, "%1!: 不能在SRV_START处理程序中调用" 
+
+334 = SRV_ESTARTEVENT, "SRV_START事件中止srv_run"
+
+335 = SRV_ENONULLIND, "%1!: 当项目编号%2!的datalength = 0时，未设置空指示符"
+
+336 = SRV_EBADPREC,  "%1!: CS_DATAFMT中的精度值(%2!)无效"
+
+337 = SRV_EBADSCALE, "%1!: CS_DATAFMT中的小数位数值(%2!)无效"
+
+338 = SRV_ERUN, "srv_run检测到致命错误"
+
+339 = SRV_ETAKECOROUTINE, "无法在%1!中重新获得协同例程控制"
+
+340 = SRV_ERELEASECOROUTINE, "无法在%1!中释放协同例程控制"
+
+341 = SRV_ETAKEMUTEX, "无法在%1!中获取系统互斥"
+
+342 = SRV_ERELEASEMUTEX, "无法在%1!中释放系统互斥"
+
+;	End of generic error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VOS
+;	platforms.  Generic error numbers should be added above this
+;
+343 = SRV_EMSGSENDREPLY, "响应spid %1!时出错"
+
+344 = SRV_EFREEBUF, "释放的读取缓冲区无效"
+
+345 = SRV_ENOREADBUFFERS, "当前无可用的网络读取缓冲区"
+
+346 = SRV_EDEADCLIENT, "接收到失效或连接断开的客户端的消息"
+
+347 = SRV_EMSGSKIPPED, "跳过了spid %1!的消息"
+
+348 = SRV_ECLIENTACCEPT, "不能向procid %1!发送登录接受消息"
+
+349 = SRV_ECLIENTDISCONNECT, "Spid %1!已失效或已断开连接"
+
+350 = SRV_EQUEUECREATE, "创建直接队列%1!时出错"
+
+351 = SRV_ESETTINGFASTQ, "使用s$control()设置端口时出错"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VMS
+;	platforms.
+;
+352 = SRV_ETCPALLFAIL, "无法为TCP/IP网络控制结构分配内存"
+
+353 = SRV_ETCPNETASSIGN, "指派TCP/IP设备%1!失败"
+
+354 = SRV_ETCPSETKEEP, "无法设置TCP/IP套接字选项SO_KEEPALIVE"
+
+355 = SRV_ETCPSETREUSE, "无法设置TCP/IP套接字选项SO_REUSEADDR"
+
+356 = SRV_ETCPACCEPTW, "错误说明TCP/IP接受等待"
+
+357 = SRV_ETCPASSIGN, "为客户端连接指派新通道失败"
+
+358 = SRV_ETCPNOLINK, "无链接记录项可用于客户端连接"
+
+359 = SRV_ETCPATTNAST, "在套接字上设置关注ast失败"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported NT
+;	platforms.
+;
+360 = SRV_EWAITFAIL, "WaitForSingleObject()在%1!中失败"
+
+361 = SRV_ECREATEEVENT, "CreateEvent()在%1!中失败"
+
+362 = SRV_ESETEVENT, "SetEvent()在%1!中失败"
+
+363 = SRV_ESTARTCOROUTINE, "无法启动协同例程模式"
+
+364 = SRV_EENDCOROUTINE, "无法结束协同例程模式"
+
+365 = SRV_ECREATEMUTEX, "CreateMutex()在%1!中失败"
+
+366 = SRV_EDELETEMUTEX, "在%1!中删除互斥失败"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added after the initial 10.0 release.
+;
+367 = SRV_EBADMSGFIELD, "CS_SERVERMSG参数的%1!: %2!字段必须设置为%3!以进行初始调用"
+
+368 = SRV_ENOMSGSENT, "%1!: 消息已进行初始化，但未完成"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added for 11.0 release.
+;
+
+369 = SRV_ESCLFUNC, "安全控制层例程%1!在%2!中失败"
+
+370 = SRV_ESCLINIT, "安全控制层初始化失败"
+
+371 = SRV_EBADSECPROT, "安全协议出错"
+
+372 = SRV_EBADSECVER, "接收到的安全版本(%1!)未知"
+
+373 = SRV_EBADSECMECHOID, "接收到的安全机制对象标识符未知"
+
+374 = SRV_ESESSTO, "安全会话过期"
+
+375 = SRV_ECREDTO, "安全会话证书过期"
+
+376 = SRV_EBADSIGN, "接收到的安全签名无效"
+
+377 = SRV_EBADSEAL, "安全解密失败"
+
+378 = SRV_ESECMECHLEN, "安全机制名称过长"
+
+379 = SRV_ELMAN, "列表管理器操作失败"
+
+380 = SRV_EBADSECTOK, "接收到错误的安全消息令牌"
+
+381 = SRV_ESECSRVNOTSUP, "请求的安全服务不受支持。"
+
+382 = SRV_EMAXMUTEXES, "已经创建配置的最大互斥数。"
+
+;
+;	NOTE:	These are for Windows NT Thread Local Storage API errors
+;			being added for the 11.1.1 release
+;
+383 = SRV_ETLSALLOC, "TlsAlloc()在%1!中失败。"
+384 = SRV_ETLSFREE, "TlsFree()在%1!中失败。"
+385 = SRV_ETLSSETVAL, "TlsSetValue()在%1!中失败。"
+386 = SRV_ETLSGETVAL, "TlsGetValue()在%1!中失败。"
+
+;
+; Following added for 15.0 and higher: HA and Login Redirection Support
+;
+387 = SRV_EBADTRANADDRLEN, "addr_trantype或addr_tranaddress长度无效。"
+388 = SRV_ESRVNAMELEN, "服务器名长度(%1!)无效。"
+389 = SRV_ENOSESSION, "客户端不支持HA。"
+
+;
+;	Following is added for 15.0 and higher: Large Identifier Support
+;
+390 = SRV_ENOLARGEID, "以%1!开头的标识符过长。客户端不支持长标识符。"
+
+;
+; New error message added for srv_langcpy()
+;
+391 = SRV_EBADSTART, "起始点(%1!)复制字符不能超过请求缓冲区中的字符数(%2!)。"
+
+;
+; New error message added for creating message queue
+;
+392 = SRV_EMAXMQUEUES, "已创建所配置的最大消息队列数。"
+
+;
+; Following added for 15.0 and higher: Connection Migration 
+;
+393 = SRV_EPROPNOTAVAIL, "%1!: 属性 - %2!不可用"
+394 = SRV_ENOTMIGRATABLE, "%1!: 连接无法迁移"
+395 = SRV_EMIGNOTCANCEL, "%1!: 迁移无法再取消"
+396 = SRV_EMIGFAILED, "迁移失败，但未安装SRV_MIGRATE_STATE处理程序"
+397 = SRV_ENOTLISTENER, "只能在监听器线程上设置属性%1!。"
+398 = SRV_EXMAXLISTEN, "将超过最大监听器计数(%1!)"
+
+;
+; Error messages for handling chunked LOB type parameters
+;
+399 = SRV_EBLOBBADTYPE, "无法在此例程中处理流式LOB数据。使用%1!。"
+
+; Generic error message for an unexpected failure.
+400 - SRV_EUNEXPECTED, "%1!: %2!中出现意外失败。"

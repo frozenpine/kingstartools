@@ -1,0 +1,706 @@
+; "dblib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=japanese
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+[dbliberrors]
+
+1 = SYBESYNC, "サーバと同期化されていない状態で読み取りが試行されました。"
+
+2 = SYBEFCON, "サーバ接続に失敗しました。"
+
+3 = SYBETIME, "サーバ接続がタイムアウトしました。"
+
+4 = SYBEREAD, "サーバからの読み取りに失敗しました。"
+
+5 = SYBEBUFL, "DB-Library 内部エラー - 送信バッファ長が破損しています。"
+
+6 = SYBEWRIT, "サーバへの書き込みに失敗しました。"
+
+7 = SYBEVMS, "Sendflush: VMS I/O エラーです。"
+
+8 = SYBESOCK, "ソケットをオープンできません。"
+
+9 = SYBECONN, "ソケットを接続できません。サーバを使用できない\
+または存在していません。"
+
+10 = SYBEMEM, "十分なメモリを割り当てられません。"
+
+11 = SYBEDBPS, "最大数の DBPROCESS がすでに割り当てられています。"
+
+12 = SYBEINTF, "サーバ名がインタフェースファイルにありません。"
+
+13 = SYBEUHST, "ホストマシン名が不明です。"
+
+14 = SYBEPWD, "ログインが正しくありません。"
+
+15 = SYBEOPIN, "インタフェースファイルをオープンできませんでした。"
+
+16 = SYBEINLN, "インタフェースファイル: 予期しない行末。"
+
+17 = SYBESEOF, "サーバからの予期しない EOF です。"
+
+18 = SYBESMSG, "一般的なサーバエラー: サーバからのメッセージを確認してください。"
+
+19 = SYBERPND, "保留されている結果に対して\
+新しいサーバ操作を開始しようとしています。"
+
+20 = SYBEBTOK, "サーバからの不正なトークン: データストリーム処理が同期化されていません。"
+
+21 = SYBEITIM, "指定されたタイムアウト値が正しくありません。"
+
+22 = SYBEOOB, "サーバに帯域外データを送信中にエラーが発生しました。"
+
+23 = SYBEBTYP, "DB-Library 関数に渡されたバインドタイプが不明です。"
+
+24 = SYBEBNCR, "ユーザ変数を存在しない compute ローにバインドしようとしています。"
+
+25 = SYBEIICL, "サーバから返された整数カラム長が正しくありません。\
+正しい整数長は 1、2、および 4 バイトです。"
+
+26 = SYBECNOR , "カラム番号が範囲外です。"
+
+27 = SYBENPRM, "この dboption には NULL パラメータは使用できません。"
+
+28 = SYBEUVDT , "不明な可変長データ型が見つかりました。"
+
+29 = SYBEUFDT , "固定長データ型が不明です。"
+
+30 = SYBEWAID, "DB-Library 内部エラー: ALTNAME の後の ALTFMT に\
+正しくない ID があります。"
+
+31 = SYBECDNS, "データストリームは\
+存在しない選択リストのメンバから compute カラムが得られたことを示しています。"
+
+32 = SYBEABNC, "存在していないカラムにバインドしようとしています。"
+
+33 = SYBEABMT, "一致していないカラムと\
+変数タイプで dbbind() を実行しようとしました。"
+
+34 = SYBEABNP, "NULL ポインタを使用してバインドしようとしています。"
+
+35 = SYBEAAMT, "一致していないカラムと\
+変数タイプで dbaltbind() を実行しようとしました。"
+
+36 = SYBENXID, "サーバが分散トランザクション ID を付与しませんでした。"
+
+37 = SYBERXID, "サーバがクライアントの分散トランザクション ID を認識しませんでした。"
+
+38 = SYBEICN, "compute ID または compute カラム番号が無効です。"
+
+39 = SYBENMOB, "'ORDER BY' 句のこのようなメンバはありません。"
+
+40 = SYBEAPUT, "不明なトークンを印刷しようとしています。"
+
+41 = SYBEASNL, "NULL の loginrec にフィールドを設定しようとしています。"
+
+42 = SYBENTLL, "loginrec フィールドには名前が長すぎます。"
+
+43 = SYBEASUL, "不明な loginrec フィールドを設定しようとしています。"
+
+44 = SYBERDNR, "データを存在しないローから取得しようとしています。"
+
+45 = SYBENSIP, "負の開始インデックスが dbstrcpy() に渡されました。"
+
+46 = SYBEABNV, "NULL のプログラム変数にバインドしようとしています。"
+
+47 = SYBEDDNE, "DBPROCESS が dead であるかまたは使用できません。"
+
+48 = SYBECUFL, "データ変換がアンダーフローしました。"
+
+49 = SYBECOFL, "データ変換がオーバフローしました。"
+
+50 = SYBECSYN, "ソースフィールド\
+の構文エラーで停止されたデータを変換しようとしています。"
+
+51 = SYBECLPR, "データ変換で総桁数が低下しました。"
+
+52 = SYBECNOV, "変数を NULL に設定しようとしてオーバフローしました。"
+
+53 = SYBERDCN, "要求されたデータ変換は存在しません。"
+
+54 = SYBESFOV, "dbsafestr() によって送信先バッファがオーバフローしました。"
+
+55 = SYBEUNT, "インタフェースファイルで不明なネットワークタイプが見つかりました。"
+
+56 = SYBECLOS, "ネットワーク接続を閉じるときにエラーが発生しました。"
+
+57 = SYBEUAVE, "VMS イベントフラグを割り当てできません。"
+
+58 = SYBEUSCT, "通信タイマを設定できません。"
+
+59 = SYBEEQVA, "VMS AST ルーチンのキューイングでエラーが発生しました。"
+
+60 = SYBEUDTY, "不明なデータ型が見つかりました。"
+
+61 = SYBETSIT, "無効なタイムスタンプで dbtsput() を呼び出そうとしています。"
+
+62 = SYBEAUTN, "タイムスタンプカラムのない\
+テーブルのタイムスタンプを更新しようとしています。"
+
+63 = SYBEBDIO, "バルクコピーの方向が正しくありません。IN か OUT のいずれかを指定する必要があります。"
+
+64 = SYBEBCNT, "バルクコピーを存在しないサーバテーブルで使用しようとしています。"
+
+65 = SYBEIFNB, "bcp_control() に渡されたフィールド番号が正しくありません。"
+
+66 = SYBETTS, "バルクコピーが\
+ホストファイルにコピーしようとしているテーブルは、\
+バルクコピーがスキップと指定されたローの数より短いです。"
+
+67 = SYBEKBCO, "1000 ローがホストファイルにバルクコピーされました。"
+
+68 = SYBEBBCI, "バッチによって、サーバへのバルクコピーが正常に行われました。"
+
+69 = SYBEKBCI, "BCP: 1000 ローがサーバに送信されました。"
+
+70 = SYBEBCRE, "BCP データファイルを読み取り中に I/O エラーが発生しました。"
+
+71 = SYBETPTN, "構文エラー: テーブル名には 2 つのピリオドしか使えません。"
+
+72 = SYBEBCWE, "BCP データファイルを書き込み中に I/O エラーが発生しました。"
+
+73 = SYBEBCNN, "NULL 値を受け入れない\
+サーバカラム %1! に NULL 値をバルクコピーしようとしています。"
+
+74 = SYBEBCOR, "サイズが大きすぎるローをサーバにバルクコピーしようとしています。"
+
+75 = SYBEBCIS, "正しくないサイズのカラム値を\
+サーバにバルクコピーしようとしています。"
+
+76 = SYBEBCPI, "bcp_init() を呼び出してから他の BCP ルーチンを呼び出す必要があります。"
+
+77 = SYBEBCPN, "bcp_bind()、bcp_collen()、および bcp_colptr()\
+を使用できるのは、コピー方向を DB_IN に設定して bcp_init() を\
+呼び出した後だけです。"
+
+78 = SYBEBCPB, "NULL 以外の入力ファイル名を bcp_init() に\
+渡した後には bcp_bind() を使用できません。"
+
+79 = SYBEVDPT, "バルクコピーでは、すべての可変長データは\
+長さプレフィクスかターミネータのいずれかを指定する必要があります。"
+
+80 = SYBEBIVI, "bcp_columns() と bcp_colfmt()\
+を使用できるのは、有効な入力ファイルを bcp_init() に渡した後だけです。"
+
+81 = SYBEBCBC, "bcp_columns() は bcp_colfmt() の前に呼び出す必要があります。"
+
+82 = SYBEBCFO, "BCP ホストファイルには少なくとも 1 つのカラムが含まれている必要があります。"
+
+83 = SYBEBCVH, "bcp_exec() を呼び出すことができるのは、\
+有効なホストファイルを bcp_init() に渡した後だけです。"
+
+84 = SYBEBCUO, "BCP: ホストデータファイルをオープンできません。"
+
+85 = SYBEBCUC, "BCP: ホストデータファイルをクローズできません。"
+
+86 = SYBEBUOE, "BCP: エラーファイルをオープンできません。"
+
+87 = SYBEBUCE, "BCP: エラーファイルをクローズできません。"
+
+88 = SYBEBWEF, "BCP エラーファイルを書き込み中に I/O エラーが発生しました。"
+
+89 = SYBEASTF, "VMS: control_c ast にモード設定できません。"
+
+90 = SYBEUACS, "VMS: sys$command にチャネルの割り当てができません。"
+
+91 = SYBEASEC, "空のコマンドバッファをサーバに送信しようとしています。"
+
+92 = SYBETMTD, "dbmoretext() 呼び出しで送信しようとしている TEXT データが多すぎます。"
+
+93 = SYBENTTN, "dbtxtsput() を使用して新しい\
+テキストタイムスタンプを存在しないデータローに入れようとしています。"
+
+94 = SYBEDNTI, "dbtxtsput() を使用して新しい\
+テキストタイムスタンプをデータ型が\
+ SYBTEXT でも SYBIMAGE でもないカラムに入れようとしています。"
+
+95 = SYBEBTMT, "bcp_moretext() 呼び出し\
+で送信しようとしている TEXT データが多すぎます。"
+
+96 = SYBEORPF, "リモートパスワードを設定しようとすると、\
+ログインレコードのリモートパスワードフィールドがオーバフローします。"
+
+97 = SYBEUVBF, "不明なバージョンの BCP フォーマットファイルを読み取ろうとしています。"
+
+98 = SYBEBUOF, "BCP: フォーマットファイルをオープンできません。"
+
+99 = SYBEBUCF, "BCP: フォーマットファイルをクローズできません。"
+
+100 = SYBEBRFF, "BCP フォーマットファイルを読み込み中に I/O エラーが発生しました。"
+
+101 = SYBEBWFF, "BCP フォーマットファイルを書き込み中に I/O エラーが発生しました。"
+
+102 = SYBEBUDF, "BCP: フォーマットファイルに認識できないデータ型があります。"
+
+103 = SYBEBIHC, "BCP フォーマットファイルに正しくないホストカラム番号があります。"
+
+104 = SYBEBEOF, "予期しない EOF が BCP データファイルに見つかりました。"
+
+105 = SYBEBCNL, "負の長さプレフィクスが BCP データファイルに見つかりました。"
+
+106 = SYBEBCSI, "ホストファイルカラムは、\
+サーバにコピーするときだけ省略できます。"
+
+107 = SYBEBCIT, "SYBCHAR、SYBBINARY、SYBTEXT、または SYBIMAGE\
+ 以外のプログラム変数では、\
+BCP ターミネータの使用は正しくありません。"
+
+108 = SYBEBCSA, "BCP ホストファイル '%1!' には %2! \
+ローだけが含まれています。これらのローのすべてを省略することはできません。"
+
+109 = SYBENULL, "NULL の DBPROCESS ポインタが DB-Library に渡されました。"
+
+110 = SYBEUNAM, "現在のユーザ名をオペレーティングシステムから取得できません。"
+
+111 = SYBEBCRO, "BCP ホストファイル '%1!' には %2! \
+ローだけが含まれています。要求された %3! ローを読み取れませんでした。"
+
+112 = SYBEMPLL, "DBPROCESS の最大数を 1 より小さく設定しようとしています。"
+
+113 = SYBERPIL, "タイプが SYBCHAR、SYBVARCHAR、SYBBINARY、または SYBVARBINARY\
+ のパラメータの datalen として\
+ -1 を dbrpcparam() に渡すことはできません。"
+
+114 = SYBERPUL, "rpcparam() で\
+ SYBINTN、SYBDATETIMN、\
+SYBMONEYN、または SYBFLTN パラメータを渡すとき、\
+DB-Library がこれを \
+SYBINT1、SYBINT2、SYBINT4、SYBMONEY、\
+SYBMONEY4 などとして認識できるように\
+パラメータの最大長または実際の長さを指定する必要があります。"
+
+115 = SYBEUNOP, "dbsetopt() に渡されたオプションが不明です。"
+
+116 = SYBECRNC, "データをこのローから抽出する\
+ことはできないので、現在のローは COMPUTE\
+ 句 %1! の結果ではありません。"
+
+117 = SYBERTCC, "dbreadtext() は \
+COMPUTE 句を持つクエリの結果を\
+受信するためには使用できません。"
+
+118 = SYBERTSC, "dbreadtext() は \
+1 つの結果カラムを含むクエリの結果を\
+受信するためにだけ使用できます。"
+
+119 = SYBEUCRR, "内部ソフトウェアエラー: dbpasswd() によって報告された\
+接続結果が不明です。"
+
+120 = SYBERPNA, "RPC 機能は、\
+バージョン番号が 4.0 以上のサーバを使用しているときにのみ利用できます。"
+
+121 = SYBEOPNA, "テキスト/イメージ機能は、\
+バージョン番号が 4.0 以上のサーバを使用しているときにのみ利用できます。"
+
+122 = SYBEFGTL, "BCP: コピーする最初のローのロー番号は\
+コピーする最後のロー\
+のロー番号より大きくすることはできません。"
+
+123 = SYBECWLL, "カラム幅を 1 より小さく設定しようとしています。"
+
+124 = SYBEUFDS, "dbstrbuild() で認識できないフォーマットが見つかりました。"
+
+125 = SYBEUCPT, "dbstrbuild() で認識できない\
+カスタムフォーマットのパラメータタイプが見つかりました。"
+
+126 = SYBETMCF, "dbfmtinstall() で\
+インストールしようとしたカスタムフォーマットが多すぎます。"
+
+127 = SYBEAICF, "カスタムフォーマットをインストールしようとしてエラーが発生しました。"
+
+128 = SYBEADST, "1 組の変換テーブル\
+のサイズを決定しようとしてエラーが発生しました。"
+
+129 = SYBEALTT, "1 組の変換テーブルをロードしようとしてエラーが発生しました。"
+
+130 = SYBEAPCT, "文字セット変換を実行しようとしてエラーが発生しました。"
+
+131 = SYBEXOCI, "BCP を使用して\
+ホストファイルからサーバにデータをコピーするときに、文字セット変換で\
+出力先バッファがオーバフローしました。"
+
+132 = SYBEFSHD, "SYBASE ホームディレクトリを見つけようとしてエラーが発生しました。"
+
+133 = SYBEAOLF, "ローカライゼーションファイルをオープンしようとしてエラーが発生しました。"
+
+134 = SYBEARDI, "日時情報をローカライゼーションファイルから\
+読み取ろうとしてエラーが発生しました。"
+
+135 = SYBEURCI, "コピーライト情報を\
+ DBLIB ローカライゼーションファイルから読み取れません。"
+
+136 = SYBEARDL, "dblib.loc ローカライゼーションファイル\
+を読み取ろうとしてエラーが発生しました。"
+
+137 = SYBEURMI, "money フォーマット情報を\
+ DBLIB ローカライゼーションファイルから読み取れません。"
+
+138 = SYBEUREM, "エラーニモニックを\
+ DBLIB ローカライゼーションファイルから読み取れません。"
+
+139 = SYBEURES, "エラー文字列を\
+ DBLIB ローカライゼーションファイルから読み取れません。"
+
+140 = SYBEUREI, "エラー情報を\
+ DBLIB ローカライゼーションファイルから読み取れません。"
+
+141 = SYBEOREN, "警告: 範囲外のエラー番号が\
+ dblib.loc に見つかりました。最大\
+許容エラー番号は\
+ sybdb.h の DBERRCOUNT で定義されています。"
+
+142 = SYBEISOI,	"無効なソート順情報が見つかりました。"
+
+143 = SYBEIDCL, "正しくない日時カラム長がサーバから返されました。\
+正しい日時の長さは 4 および 8 バイトです。"
+
+144 = SYBEIMCL, "正しくない money カラム長がサーバから返されました。\
+正しい money 長は 4 および 8 バイトです。"
+
+145 = SYBEIFCL, "正しくない浮動小数点カラム長がサーバから返されました。\
+正しい浮動小数点長は 4 および 8 バイトです。"
+
+146 = SYBEUTDS,	"サーバから受信した TDS バージョンを認識できません。"
+
+147 = SYBEBUCF, "BCP: フォーマットファイルを作成できません。"
+
+148 = SYBEACNV, " NULL のデスティネーション\
+変数でデータ変換を実行しようとしています。"
+
+149 = SYBEDPOR, "datepart 定数が範囲外です。"
+
+150 = SYBENDC, "数値フォームの日付には負の構成要素を指定できません。"
+
+151 = SYBEMVOR, "月の値は 1 から 12 にする必要があります。"
+
+152 = SYBEDVOR, "曜日の値は 1 から 7 にする必要があります。"
+
+153 = SYBENBVP, "dbsetnull() に NULL の bindval ポインタを渡すことはできません。"
+
+154 = SYBESPID, "dbspid() を NULL の dbproc で呼び出しました。"
+
+155 = SYBENDTP, "dbdatecrack() を NULL の日時パラメータで呼び出しました。"
+
+156 = SYBEXTN, "dbfree_xlate() への xlt_tosrv パラメータおよび xlt_todisp パラメータが NULL でした。"
+
+157 = SYBEXTDN, "警告: dbfree_xlate() への xlt_todisp パラメータが NULL でした。xlt_tosrv パラメータに関連する領域は解放されました。"
+
+158 = SYBEXTSN, "警告: dbfree_xlate() への xlt_tosrv パラメータが NULL でした。xlt_todisp パラメータに関連する領域は解放されました。"
+
+159 = SYBENUM, "DB-Library に渡された引数の数が正しくありません。"
+
+160 = SYBETYPE, "Hyper/DB-Library に渡された引数タイプが無効です。"
+
+161 = SYBEGENOS, "オペレーティングシステムの一般エラーです。"
+
+162 = SYBEPAGE, "dbpage??() 操作に指定されたリソースタイプまたは長さが正しくありません。"
+
+163 = SYBEOPTNO, "オプションは使用できません。"
+
+164 =  SYBEETD, "dbmoretext() で必要な量の TEXT または IMAGE データを送信できませんでした。"
+
+165 = SYBERTYPE, "Hyper/DB-Library に渡されたリソースタイプが無効です。"
+
+166 = SYBERFILE, "リソースファイルをオープンできません。"
+
+167 = SYBEFMODE, "読み取り/書き込み/追加モードがファイルで拒否されました。"
+
+168 = SYBESLCT, "指定されたフィールドを選択またはコピーできませんでした。"
+
+169 = SYBEZTXT, "dbwritetext() で、長さがゼロの TEXT または IMAGE を dataserver に送信しようとしています。"
+
+170 = SYBENTST, "VMS: オープンされているファイルは stream_lf である必要があります。"
+
+171 = SYBEOSSL, "不正なログイン: オペレーティングシステムのログインセキュリティレベルが secure サーバの範囲内にありません。"
+
+172 = SYBEESSL, "ログインが正しくありません: 入力されたログインセキュリティレベルがオペレーティングシステムレベルと一致しません。"
+
+173 = SYBENLNL, "プログラムが指定のネットワークライブラリとリンクされていません。"
+
+174 = SYBENHAN, "dbrecvpassthru() を NULL の handle パラメータで呼び出しました。"
+
+175 = SYBENBUF, "dbsendpassthru() を NULL の buf パラメータで呼び出しました。"
+
+176 = SYBENULP, "%1! を NULL の %1! パラメータで呼び出しました。"
+
+177 = SYBENOTI, "イベントハンドラは通知要求を行う前にインストールする必要があります。"
+
+178 = SYBEEVOP, "不正なオプションパラメータを指定して dbregwatch() を呼び出しました。"
+
+179 = SYBENEHA, "NULL のハンドラパラメータを指定して dbreghandle() を 呼び出しました。"
+
+180 = SYBETRAN, "DBPROCESS が別のトランザクションで使用されています。"
+
+181 = SYBEEVST, "dbregparam() を呼び出す前にトランザクションを開始する必要があります。"
+
+182 = SYBEEINI, "dbregexec() の前に dbreginit() を呼び出す必要があります。"
+
+183 = SYBEECRT, "dbnpcreate() の前に dbnpdefine() を呼び出す必要があります。"
+
+184 = SYBEECAN, "要求していないイベント通知を取り消そうとしました。"
+
+185 = SYBEEUNR, "要求していないイベント通知を受信しました。"
+
+186 = SYBERPCS, "dbrpcparam() または dbrpcsend() の前に dbrpcinit() を呼び出す必要があります。"
+
+187 = SYBETPAR, "SYBTEXT パラメータまたは SYBIMAGE パラメータが定義されませんでした。"
+
+188 = SYBETEXS, "不正なサイズパラメータを指定して dbmoretext() を呼び出しました。"
+
+189 = SYBETRAC, "オン状態でないトレースフラグをオフにしようとしました。"
+
+190 = SYBETRAS, "DB-Library 内部エラー - トレース構造体が見つかりません。"
+
+191 = SYBEPRTF, "dbtracestring() は printfunc() からだけ呼び出すことができます。"
+
+192 = SYBETRSN, "dbtracestring() に渡された numbytes パラメータが正しくありません。"
+
+193 = SYBEBPKS, "DBSETLPACKET() ではパケットサイズパラメータは 256 ～ 9999 である必要があります。"
+
+194 = SYBEIPV, "%1! は %3! の %2! パラメータには正しくない値です。"
+
+195 = SYBEMOV, "money 算術演算が関数 %1! でオーバフローしました。"
+
+196 = SYBEDIVZ, "関数 %1! で $0.00 で除算しようとしています。"
+
+197 = SYBEASTL, "AST レベルで同期 I/O をしようとしました。 "
+
+198 = SYBESEFA, "接続が存在する場合、DB_SETEVENT_VMS を呼び出すことはできません。"
+
+199 = SYBEPOLL, "アクティブな dbpoll() がすでにあります。"
+
+200 = SYBENOEV, "登録済みのプロシージャ通知が無効になっているため、DBPOLL を呼び出すことはできません。"
+
+201 =  SYBEBADPK, "%1! のパケットサイズはサポートされていません。代わりに %2! のサイズを使用しました。"
+202 =  SYBESECURE, "このバージョンでは Secure サーバ機能はサポートされていません。"
+
+203 =  SYBECAP,  "DB-Library 機能はサーバによって受け入れられませんでした。"
+
+204 =  SYBEFUNC,  "指定のバージョンレベルでは機能がサポートされていません。"
+
+205 =  SYBERESP, "dbresponse() に渡す応答関数アドレスは NULL 以外にする必要があります。"
+
+206 =  SYBEIVERS, "指定されたバージョンレベルが正しくありません。"
+
+207 =  SYBEONCE, "関数は 1 度だけ呼び出すことができます。"
+
+208 =  SYBERPNULL, "dbprcparam() の値パラメータは datalen パラメータが 0 の場合のみ NULL にすることができます。"
+
+209 =  SYBERPTXTIM, "RPC パラメータのタイプは、テキストまたはイメージにすることはできません。"
+
+210 =  SYBENEG, "ネゴシエーションされたログインの試行に失敗しました。"
+
+211 =  SYBELBLEN, "セキュリティラベルは 256 文字より短くする必要があります。"
+
+212 =  SYBEUMSG, "メッセージデータストリームにあるメッセージ ID が不明です。"
+
+213 =  SYBECAPTYP,  "CAPABILITY データストリームに予期しない機能タイプがあります。"
+
+214 =  SYBEBNUM, "dbstrcpy() に渡された numbytes パラメータが正しくありません。"
+
+215 =  SYBEBBL, "dbsetnull() に渡された bindlen パラメータが正しくありません。"
+
+216 =  SYBEBPREC, "指定された総桁数が正しくありません。"
+
+217 =  SYBEBSCALE, "指定された小数点以下桁数が正しくありません。"
+
+218 =  SYBECDOMAIN, "ソースフィールド値が正しい値の範囲内にありません。"
+
+219 =  SYBECINTERNAL, "内部変換エラーです。"
+
+220 =  SYBEBTYPSRV, "サーバがデータ型をサポートしていません。"
+
+221 =  SYBEBCSET,  "不明な文字セットが見つかりました。"
+
+222 =  SYBEFENC,  "パスワード暗号化に失敗しました。"
+
+223 =  SYBEFRES,  "Challenge-Response 関数を実行できませんでした。"
+
+224 =  SYBEISRVPREC, "サーバによって返された総桁数が正しくありません。"
+
+225 =  SYBEISRVSCL, "サーバによって返された小数点以下桁数が正しくありません。"
+
+226 =  SYBEINUMCL, "サーバによって返された数値カラム長が無効です。"
+
+227 =  SYBEIDECCL, "サーバによって返された 10 進カラム長が無効です。"
+
+228 =  SYBEBCMTXT, "bcp_moretext() は少なくとも 1 つのテキストカラムまたはイメージカラムがサーバテーブルにあるときだけ使用できます。"
+
+229 =  SYBEBCPREC, "カラム %1!: 総桁数値が正しくありません。"
+
+230 =  SYBEBCBNPR, "bcp_bind(): varaddr が NULL の場合は prefixlen を 0 にするか、ターミネータを指定しないでください。"
+
+231 =  SYBEBCBNTYP, "bcp_bind(): varaddr が NULL で varlen が 0 より大きい場合、テーブルカラムタイプを SYBTEXT または SYBIMAGE、プログラム変数タイプを SYBTEXT、SYBCHAR、SYBIMAGE、または SYBBINARY にする必要があります。"
+
+232 =  SYBEBCSNTYP, "カラム番号 %1!: varaddr が NULL で varlen が 0 より大きい場合、テーブルカラムタイプを SYBTEXT または SYBIMAGE、プログラム変数タイプを SYBTEXT、SYBCHAR、SYBIMAGE、または SYBBINARY にする必要があります。"
+
+233 =  SYBEBCPCTYP, "bcp_colfmt(): table_colnum が 0 の場合、host_type は 0 にはできません。"
+
+234 =  SYBEBCVLEN, "varlen は -1 以上にしてください。"
+
+235 =  SYBEBCHLEN, "host_collen は -1 以上にしてください。"
+
+236 =  SYBEBCBPREF, "プレフィクス長が正しくありません。正しい値は 0、1、2、または 4 です。"
+
+237 =  SYBEBCPREF, "プレフィクス長が正しくありません。正しい値は -1、0、1、2、または 4 です。"
+
+238 =  SYBEBCITBNM, "bcp_init(): tblname パラメータは NULL にはできません。"
+
+239 =  SYBEBCITBLEN, "bcp_init(): tblname パラメータが長すぎます。"
+
+240 =  SYBEBCSNDROW, "前のローのすべてのテキストデータが bcp_moretext() を使用して送信されないかぎり、bcp_sendrow() を呼び出すことはできません。"
+
+241 =  SYBEBPROCOL, "BCP プロトコルエラー: 返されたカラムカウントが実際に受信したカラムの数と異なります。"
+
+242 =  SYBEBPRODEF, "BCP プロトコルエラー: デフォルトの情報が必要でしたが、何も取得できませんでした。"
+
+243 =  SYBEBPRONUMDEF, "BCP プロトコルエラー: 必要なデフォルトの数と実際に受信したデフォルトの数が異なります。"
+
+244 =  SYBEBPRODEFID, "BCP プロトコルエラー: デフォルトカラム ID と実際のカラム ID が異なります。"
+
+245 =  SYBEBPRONODEF, "BCP プロトコルエラー: デフォルトを持たないカラムにデフォルト値を受信しました。"
+
+246 =  SYBEBPRODEFTYP, "BCP プロトコルエラー: デフォルト値のデータ型がカラムデータ型と異なります。"
+
+247 =  SYBEBPROEXTDEF, "BCP プロトコルエラー: デフォルト情報のローを複数受信しました。"
+
+248 =  SYBEBPROEXTRES, "BCP プロトコルエラー: 予期しない結果セットを受信しました。"
+
+249 =  SYBEBPROBADDEF, "BCP プロトコルエラー: 正しくないデフォルトカラム ID を受信しました。"
+
+250 =  SYBEBPROBADTYP, "BCP プロトコルエラー: 不明なカラムデータ型です。"
+
+251 =  SYBEBPROBADLEN, "BCP プロトコルエラー: 受信したデータ型長が正しくありません。"
+
+252 =  SYBEBPROBADPREC, "BCP プロトコルエラー: 受信した総桁数値が正しくありません。"
+
+253 =  SYBEBPROBADSCL, "BCP プロトコルエラー: 受信した小数点以下桁数値が正しくありません。"
+
+254 = SYBEBADTYPE, "%1! に指定されたタイプパラメータの値が正しくありません。"
+
+255 = SYBECRSNORES, "カーソル文は結果を生成しませんでした。"
+
+256 = SYBECRSNOIND, "カーソル文に伴うテーブルの 1 つがユニークインデックスを持っていません。"
+
+257 = SYBECRSVIEW, "ビューは別のテーブルまたはカーソル文のビューに結合できません。"
+
+258 = SYBECRSVIIND, "カーソル文に使用されたビューはベースとなるテーブルのユニークインデックスカラムをすべて含んでいるわけではありません。"
+
+259 = SYBECRSORD, "'ORDER BY'、'GROUP BY'、または 'HAVING' 句を持つことができるのは、完全なキーセット方式カーソルだけです。"
+
+260 = SYBECRSBUFR, "カーソル API を使用しているときはローバッファリングをオンにしないでください。"
+
+261 = SYBECRSNOFREE, "カーソル API を使用しているときは DBNOAUTOFREE オプションをオンにしないでください。"
+
+262 = SYBECRSDIS, "カーソル文に、使用できない句 'COMPUTE'、'UNION'、'FOR BROWSE'、または 'SELECT INTO' の 1 つが含まれています。"
+
+263 = SYBECRSAGR, "カーソル文に集合関数は使用できません。"
+
+264 = SYBECRSFRAND, "フェッチタイプ RANDOM と RELATIVE はキーセット方式カーソルのキーセット内でのみ使用できます。"
+
+265 = SYBECRSFLAST, "フェッチタイプ LAST には完全なキーセット方式カーソルが必要です。"
+
+266 = SYBECRSBROL, "フォワードスクロールカーソルではバックワードスクロールを使用できません。"
+
+267 = SYBECRSFROWN, "フェッチするロー番号が有効な範囲外です。"
+
+268 = SYBECRSBSKEY, "前のフェッチタイプとの混合カーソルではキーセットをバックワードスクロールできません。"
+
+269 = SYBECRSRO, "READONLY カーソルではデータのロッキングまたは変更を行うことはできません。"
+
+270 = SYBECRSNOCOUNT, "dbcursor() で更新または削除を行っているときは DBNOCOUNT オプションをオンにしないでください。"
+
+271 = SYBECRSTAB, "データのロッキングまたは変更を伴う操作ではテーブル名を決定する必要があります。"
+
+272 = SYBECRSUPDNB, "バインディングタイプが NOBIND のとき、更新または挿入の操作ではバインド変数を使用できません。"
+
+273 = SYBECRSNOWHERE, "カーソル更新または挿入では WHERE 句を使用できません。"
+
+274 = SYBECRSSET, "カーソル更新または挿入では SET 句が必要です。"
+
+275 = SYBECRSUPDTAB, "バインド変数を使用した更新または挿入の操作では 1 つのテーブルカーソルが必要です。"
+
+276 = SYBECRSNOUPD, "更新または削除の操作はどのローにも影響しませんでした。"
+
+277 = SYBECRSINV, "カーソル文が無効です。"
+
+278 = SYBECRSNOKEYS, "キーセット全体は KEYSET タイプカーソルに定義する必要があります。"
+
+279 = SYBECRSNOBIND, "カーソルバインドは dbcursor 呼び出しより先に呼び出す必要があります。"
+
+280 = SYBECRSFTYPE, "不明なフェッチタイプです。"
+
+281 = SYBECRSINVALID, "カーソルハンドルが無効です。"
+
+282 = SYBECRSMROWS, "複数のローが返されています。DBNAME の検索中は 1 つのローだけが必要です。"
+
+283 = SYBECRSNROWS, "ローが返されませんでした。少なくとも 1 つのローが必要です。"
+
+284 = SYBECRSNOLEN, "ユニークインデックスがありませんでした。"
+
+285 = SYBECRSNOPTCC, "OPTCC がありませんでした。"
+
+286 = SYBECRSNORDER, "句の順序は FROM、WHERE、ORDER BY の順である必要があります。"
+
+287 = SYBECRSNOTABLE, "テーブル名が NULL です。"
+
+288 = SYBECRSNUNIQUE, "このビューに関連したユニークキーがありません。"
+
+289 = SYBECRSVAR, "このバインドに関連した有効なアドレスがありません。"
+
+290 = SYBENOVALUE, "セキュリティラベルには名前と値の両方が必要です。"
+
+291 = SYBEVOIDRET, "リターンパラメータは、SYBVOID 型にはできません。"
+
+292 = SYBECLOSEIN, "interfaces ファイルをクローズできません。"
+
+293 = SYBEBOOL, "ブールパラメータの値は、TRUE または FALSE である必要があります。"
+
+294 = SYBEBCPOPT, "バルクコピー操作が進行中の場合、%1! オプションを呼び出すことはできません。"
+
+295 = SYBEERRLABEL, "セキュリティラベルハンドラから不正な値が返されました。"
+
+296 = SYBEATTNACK, "サーバに対するアテンションの確認の待機中にタイムアウトになりました。"
+
+297 = SYBEBBFL, "サーバへのバルクコピーでバッチが失敗しました。"
+
+298 = SYBEDCL, "ディレクトリ制御レイヤ (DCL) のエラーが発生しました。"
+
+299 = SYBECS, "CS コンテキストのエラーが発生しました。"
+
+300 = SYBEVERENV, "SYBOCS_DBVERSION に無効な値が使用されました。"
+
+301 = SYBCOPNOV, "dbcursoropen(): scrollopt と nrows の乗算結果がオーバフローします。"
+
+302 = SYBEINTOVFL, "DB-Library 内部エラー: 算術演算子結果が整数オーバフローしました。"
+
+; end of dblib error strings
+;

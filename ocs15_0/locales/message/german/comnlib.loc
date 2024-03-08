@@ -1,0 +1,94 @@
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "Zeichenfolge kann wegen Speichermangels nicht abgerufen werden"
+
+2 = ZZZZZ, "Schicht-Meldungszeichenfolge kann nicht abgerufen werden"
+
+3 = ZZZZZ, "Ursprung-Meldungszeichenfolge kann nicht abgerufen werden"
+
+4 = ZZZZZ, "Fehlerzeichenfolge nicht verfügbar"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "Benutzer-API-Schicht"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "Externer Fehler"
+
+2 = ZZZZZ, "Interner Fehler in Clientbibliothek"
+
+3 = ZZZZZ, "Interner Fehler in Netzbibliothek"
+
+4 = ZZZZZ, "Interner allgemeiner Bibliotheksfehler"
+
+5 = ZZZZZ, "Interner Fehler in Intl-Bibliothek"
+
+6 = ZZZZZ, "Interner Fehler im Async-Manager"
+
+7 = ZZZZZ, "Interner Fehler bei Speicherverwaltung"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "Kein Fehler."
+
+1 = ZZZZZ, "Unbekannter Fehler."
+
+2 = ZZZZZ, "Fehler bei der Speicherzuweisung."
+
+3 = ZZX04, "Konfigurationsdatei %1! konnte nicht zum Lesen geöffnet werden."
+
+4 = ZZX05, "Konfiguration %1! wurde gelöscht (CS_FORCE)."
+
+5 = ZZX06, "Name der Konfigurationsdatei %1! ist zu lang."
+
+6 = ZZX07, "Dateiformatfehler, ungültiges Zeichen in Zeile %1!."
+
+7 = ZZX08, "Konfigurationsabschnitt %1! nicht gefunden."
+
+8 = 01X09, "Syntaxfehler in der Konfigurationsdatei Zeile %1! bei (%2!)."
+
+9 = 01X0A, "Konfiguration %1! wurde gelöscht (CS_FORCE), während sie verwendet wurde."
+

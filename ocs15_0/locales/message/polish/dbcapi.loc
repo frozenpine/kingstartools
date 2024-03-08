@@ -1,0 +1,55 @@
+; "dbcapi.loc" - Localization file for DBCAPI Server
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; DBCAPI Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[dbcapidefaults]
+
+1 = ZZZZZ, "nie można pobrać łańcucha, ponieważ brakuje pamięci"
+
+2 = ZZZZZ, "nie można pobrać łańcucha komunikatu warstwy"
+
+3 = ZZZZZ, "nie można pobrać łańcucha komunikatu pochodzenia"
+
+4 = ZZZZZ, "łańcuch błędu nie jest dostępny"
+
+[dbcapilayer]
+
+8 = ZZZZZ, "warstwa DBCAPI"
+
+[dbcapiorigin]
+
+10 = ZZZZZ, "Błąd"
+
+[dbcapierror]
+
+1 = ZZZZZ, "Procedura CT-Lib %1! nie powiodła się."
+
+2 = ZZZZZ, "Nieoczekiwany zwrot z %1!, otrzymano %2!."
+
+3 = ZZZZZ, "Błąd przydzielania pamięci %1!."
+
+4 = ZZZZZ, "Parametr %1! nie może mieć wartości NULL."
+
+5 = ZZZZZ, "Parametr %1! ma nieprawidłową wartość."
+
+6 = ZZZZZ, "Błąd."
+

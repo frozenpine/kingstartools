@@ -1,0 +1,70 @@
+; "libinsck.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=spanish
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+[libinsck]
+
+1 = IPDE_SETSCKPROC, "No es posible definir ID de proceso de señal del socket. Número de error %1!"
+
+2 = IPDE_SETSCKBLK, "No es posible definir el socket como no bloqueo. Número de error %1!"
+
+3 = IPDE_INSUFFDS, "Descripciones de fichero insuficientes. Número de error %1!"
+
+4 = IPDE_CLOSEFAIL, "Error al cerrar el socket. Número de error %1!"
+
+5 = IPDE_PARSEFAIL, "Error al analizar la información de dirección"
+
+6 = IPDE_NORESOLVE, "No se ha podido determinar el nombre del host. Número de error %1!"
+
+7 = IPDE_CONNECTFAIL, "Error de conexión del socket. Número de error %1!"
+
+8 = IPDE_SCKOPTFAIL, "Error al definir las opciones del socket. Número de error %1!"
+
+9 = IPDE_BINDFAIL, "Error de enlace del socket. Número de error %1!"
+
+10 = IPDE_LISTENFAIL, "Error de escucha del socket. Número de error %1!"
+
+11 = IPDE_RECVFAIL, "Error de recepción del socket. Número de error %1!"
+
+12 = IPDE_OOBREADFAIL, "Error de recepción fuera de banda del socket. Número de error %1!"
+
+13 = IPDE_UNSUP, "Se ha intentado una operación de controlador no reconocida"
+
+14 = IPDE_SOCKFAIL, "Error al crear un nuevo socket. Número de error %1!"
+
+15 = IPDE_SENDFAIL, "Error de envío del socket. Número de error %1!"
+
+16 = IPDE_GETOPTFAIL, "Error al obtener opciones del socket. Número de error %1!"
+
+17 = IPDE_ACCEPTFAIL, "Error al aceptar una nueva conexión. Error: %1!"
+
+; end of insock error strings
+;

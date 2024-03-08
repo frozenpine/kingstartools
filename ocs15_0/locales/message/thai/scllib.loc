@@ -1,0 +1,338 @@
+; "scllib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=thai
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+[scllib]
+
+1 = SCLE_DRIVER, "ข้อผิดพลาดของระดับไดรฟ์เวอร์ความปลอดภัย"
+
+2 = SCLE_INITED, "กำหนดค่าเริ่มต้น SCL แล้ว"
+
+3 = SCLE_MEMALLOC, "ความพยายามจัดสรรหน่วยความจำล้มเหลว"
+
+4 = SCLE_MUTXALLOC, "ความพยายามจัดสรร mutex ล้มเหลว"
+
+5 = SCLE_RMAN, "เกิดข้อผิดพลาดใน RMAN API"
+
+6 = SCLE_LMAN, "เกิดข้อผิดพลาดใน LMAN API"
+
+7 = SCLE_VERSION, "เวอร์ชัน SCL-Library ไม่ถูกต้อง"
+
+8 = SCLE_PROPCMD, "คำสั่งคุณสมบัติที่ระบุไม่ถูกต้อง"
+
+9 = SCLE_PROPERTY, "คุณสมบัติที่ระบุไม่ถูกต้อง"
+
+10 = SCLE_PROP_RO, "คุณสมบัติแบบอ่านอย่างเดียว"
+
+11 = SCLE_PROP_OF, "บัฟเฟอร์ของคุณสมบัติเกินขนาด"
+
+12 = SCLE_OPEN, "ไม่สามารถเปิดไดรฟ์เวอร์ความปลอดภัย"
+
+13 = SCLE_LOAD, "ไม่สามารถโหลดไดรฟ์เวอร์ความปลอดภัย"
+
+14 = SCLE_INTLHOME, "ไม่สามารถกำหนดโฮมไดเรกทอรี SYBASE"
+
+15 = SCLE_INTLOPEN, "ไม่สามารถเปิดไฟล์กำหนดรูปแบบ"
+
+16 = SCLE_INTLNOENT, "ไม่พบรายการ SCL ในไฟล์กำหนดรูปแบบ"
+
+18 = SCLE_DRVLOAD, "ไม่สามารถโหลดไดรฟ์เวอร์ความปลอดภัยที่ระบุ"
+
+19 = SCLE_SESSBOUND, "เซสชันถูกผูกอยู่ในขณะนี้"
+
+20 = SCLE_SESSUBOUND, "เซสชันไม่ได้ถูกผูกไว้ในขณะนี้"
+
+21 = SCLE_CREDACT, "มีการใช้ข้อมูลประจำตัวอยู่ในขณะนี้"
+
+22 = SCLE_CRED_NA, "ข้อมูลประจำตัวใช้งานไม่ได้"
+
+23 = SCLE_UNSUPPORT, "คำสั่งไม่ได้รับการสนับสนุน"
+
+24 = SCLE_MUTEXLOCK, "การเรียกล็อค mutex ล้มเหลว"
+
+25 = SCLE_MECHNOTFND, "ไม่พบกลไกความปลอดภัยที่ระบุ"
+
+26 = SCLE_CFGERR, "เกิดข้อผิดพลาดของไฟล์กำหนดรูปแบบ"
+
+27 = SCLE_CREDUSED, "ไม่ได้ลบตัวจัดการข้อมูลประจำตัว"
+
+28 = SCLE_DRIVUSED, "ยังไม่ได้ปิดไดรฟ์เวอร์"
+
+29 = SCLE_MECHUSED, "ไม่ได้ลบตัวจัดการกลไกความปลอดภัย"
+
+30 = SCLE_MECHOIDNOTFND, "ไม่พบ OID กลไกความปลอดภัย"
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "การจัดสรรหน่วยความจำล้มเหลว"
+
+2 = MSSPE_SRVNOTSUPP, "บริการความปลอดภัยที่ขอไม่ได้รับการสนับสนุน"
+
+3 = MSSPE_PRINCIPAL, "ไม่รู้จักชื่อหลักความปลอดภัยที่ระบุ หรือไม่ใช่เจ้าของ"
+
+4 = MSSPE_PROVIDER, "ไม่พบผู้ให้บริการความปลอดภัย หรือการกำหนดค่าเริ่มต้นผู้ให้บริการล้มเหลว"
+
+5 = MSSPE_INITSTR, "สตริงการกำหนดค่าเริ่มต้นไดรฟ์เวอร์ไม่ถูกต้อง"
+
+6 = MSSPE_PROPCMD, "คำสั่งคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+7 = MSSPE_PROPNOTSUPP, "ชื่อคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+8 = MSSPE_CONTEXT, "พบโครงสร้างเนื้อหาของไดรฟ์เวอร์ที่ไม่ถูกต้อง"
+
+9 = MSSPE_OPNOTSUPP, "จุดเข้าใช้งานไดรฟ์เวอร์ไม่ได้รับการสนับสนุน"
+
+10 = MSSPE_PROPVALLEN, "ความยาวบัฟเฟอร์ของค่าคุณสมบัติน้อยเกินไป"
+
+11 = MSSPE_TOKEN, "Token ความปลอดภัยไม่ถูกต้อง"
+
+12 = MSSPE_HANDLE, "ตัวจัดการความปลอดภัยไม่ถูกต้อง"
+
+13 = MSSPE_NAMETOOLONG, "ชื่อกลไก/หลักการ/เป้าหมายยาวเกินไป"
+
+14 = MSSPE_PACKAGE, "แพ็คเกจความปลอดภัยที่ระบุไม่ได้รับการสนับสนุน"
+
+15 = MSSPE_INTERNAL, "มีข้อผิดพลาดภายในที่ไม่คาดคิดเกิดขึ้น"
+
+16 = MSSPE_DENIED, "คำขอเซสชันความปลอดภัยถูกปฏิเสธ"
+
+17 = MSSPE_RMTNAME, "ไม่พบชื่อเป้าหมายของความปลอดภัย หรือชื่อดังกล่าวไม่ถูกต้อง"
+
+18 = MSSPE_PROVIDERERR, "มีข้อผิดพลาดภายในของผู้ให้บริการความปลอดภัย %1! เกิดขึ้น"
+
+19 = MSSPE_MSGALTERED, "ข้อความเกี่ยวกับความปลอดภัยมีการเปลี่ยนแปลง - การตรวจสอบลายเซ็นล้มเหลว"
+
+20 = MSSPE_MSGSEQ, "พบข้อความที่ไม่เรียงลำดับ"
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "การจัดสรรหน่วยความจำล้มเหลว"
+
+2 = NDSE_SRVNOTSUPP, "บริการความปลอดภัยที่ขอไม่ได้รับการสนับสนุน"
+
+3 = NDSE_PRINCIPAL, "ชื่อหลักการที่ระบุไม่ถูกต้อง"
+
+4 = NDSE_PROVIDER, "ไม่พบตัวให้บริการความปลอดภัย NDS หรือการกำหนดค่าเริ่มต้นล้มเหลว"
+
+5 = NDSE_INITSTR, "สตริงการกำหนดค่าเริ่มต้นไม่ถูกต้อง"
+
+6 = NDSE_PROPCMD, "คำสั่งคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+7 = NDSE_PROPNOTSUPP, "ชื่อคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+8 = NDSE_CONTEXT, "โครงสร้างเนื้อหาของไดรฟ์เวอร์ที่ระบุไม่ถูกต้อง"
+
+9 = NDSE_OPNOTSUPP, "จุดเข้าใช้งานไดรฟ์เวอร์ความปลอดภัยที่ระบุไม่ได้รับการสนับสนุน"
+
+10 = NDSE_PROPVALLEN, "บัฟเฟอร์ของค่าคุณสมบัติมีขนาดเล็กมาก"
+
+11 = NDSE_DITBASE, "DIT base ที่ระบุไม่ถูกต้อง"
+
+12 = NDSE_VERNOTSUPP, "เวอร์ชันที่ระบุไม่ได้รับการสนับสนุนโดยไดรฟ์เวอร์"
+
+13 = NDSE_CREDS, "ข้อมูลประจำตัวหรือประเภทการใช้ข้อมูลประจำตัวไม่ถูกต้อง"
+
+14 = NDSE_INITDITBASE, "DIT base เริ่มต้นไม่ถูกต้อง"
+
+15 = NDSE_NAMETOOLONG, "ชื่อหลักการ NDS ยาวเกินไป"
+
+16 = NDSE_NWCALLSINIT, "รูทีน NetWare NWCallsInit() ล้มเหลว (%1!)"
+
+17 = NDSE_NWDSCCTX, "รูทีน NetWare NWDSCreateContext() ล้มเหลว (%1!)"
+
+18 = NDSE_INIT, "NDS init ล้มเหลว (%1!)"
+
+19 = NDSE_NDS, "การเรียก NDS ล้มเหลว (%1!)"
+
+20 = NDSE_RMTNAME, "ไม่พบชื่อเป้าหมายของความปลอดภัย หรือชื่อดังกล่าวไม่ถูกต้อง"
+
+21 = NDSE_CHANNELID, "ไม่พบตัวระบุช่องทางที่ระบุ หรือตัวระบุดังกล่าวไม่ถูกต้อง"
+
+22 = NDSE_BIND, "การผูกเซสชันความปลอดภัยล้มเหลว"
+
+23 = NDSE_PROVIDERVER, "เวอร์ชันผู้ให้บริการความปลอดภัย NDS ไม่สอดคล้องกัน"
+
+24 = NDSE_NWDSTREE, "ชื่อไดเรกทอรีทรีที่ระบุไม่ถูกต้อง"
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "การจัดสรรหน่วยความจำล้มเหลว"
+
+2 = DCEE_SRVNOTSUPP, "บริการความปลอดภัยที่ขอไม่ได้รับการสนับสนุน"
+
+3 = DCEE_PRINCIPAL, "ไม่รู้จักชื่อหลักความปลอดภัยที่ระบุ หรือไม่ใช่เจ้าของ"
+
+4 = DCEE_BUFOF, "เกิดข้อผิดพลาดในการเกินขนาดของบัฟเฟอร์ค่าคุณสมบัติ"
+
+5 = DCEE_INITSTR, "สตริงการกำหนดค่าเริ่มต้นไดรฟ์เวอร์ไม่ถูกต้อง"
+
+6 = DCEE_PROPCMD, "คำสั่งคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+7 = DCEE_PROPNOTSUPP, "ชื่อคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+8 = DCEE_CONTEXT, "พบโครงสร้างเนื้อหาของไดรฟ์เวอร์ที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+9 = DCEE_OPNOTSUPP, "จุดเข้าใช้งานไดรฟ์เวอร์ไม่ได้รับการสนับสนุน"
+
+10 = DCEE_PROPVALLEN, "ความยาวบัฟเฟอร์ของค่าคุณสมบัติน้อยเกินไป"
+
+11 = DCEE_TOKEN, "Token ความปลอดภัยไม่ถูกต้อง (สถานะรอง %1!)"
+
+12 = DCEE_HANDLE, "ตัวจัดการความปลอดภัยไม่ถูกต้อง"
+
+13 = DCEE_NAMETOOLONG, "ชื่อกลไก/หลักการ/เป้าหมายยาวเกินไป"
+
+14 = DCEE_CHKSIGN, "การตรวจสอบลายเซ็นล้มเหลว (สถานะรอง %1!)"
+
+15 = DCEE_INTERNAL, "มีข้อผิดพลาดภายในที่ไม่คาดคิดเกิดขึ้น"
+
+16 = DCEE_DENIED, "คำขอเซสชันความปลอดภัยถูกปฏิเสธ (สถานะรอง %1!)"
+
+17 = DCEE_RMTNAME, "ไม่พบชื่อเป้าหมายของความปลอดภัย หรือชื่อดังกล่าวไม่ถูกต้อง (สถานะรอง %1!)"
+
+18 = DCEE_PROVIDERERR, "มีข้อผิดพลาดภายในของผู้ให้บริการความปลอดภัย %1! เกิดขึ้น"
+
+19 = DCEE_MSGALTERED, "ข้อความเกี่ยวกับความปลอดภัยมีการเปลี่ยนแปลง - การตรวจสอบลายเซ็นล้มเหลว"
+
+20 = DCEE_MSGSEQ, "พบข้อความที่ไม่เรียงลำดับ (สถานะรอง %1!)"
+
+21 = DCEE_BADNAMETYPE, "พบประเภทชื่อความปลอดภัยที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+22 = DCEE_BADCHANBIND, "พบการผูกช่องทางที่ไม่ถูกต้อง/ไม่สอดคล้องกัน (สถานะรอง %1!)"
+
+23 = DCEE_CREDEXPIRED, "ข้อมูลประจำตัวที่อ้างอิงหมดอายุ (สถานะรอง %1!)"
+
+24 = DCEE_BADCRED, "การตรวจสอบความสอดคล้องของข้อมูลประจำตัวล้มเหลว (สถานะรอง %1!)"
+
+25 = DCEE_OLDTOKEN, "Token ความปลอดภัยที่ระบุเก่าเกินไปที่จะใช้ (สถานะรอง %1!)"
+
+26 = DCEE_DUPTOKEN, "Token ความปลอดภัยที่ระบุถูกประมวลผลแล้ว (สถานะรอง %1!)"
+
+27 = DCEE_CTXTEXPIRED, "เนื้อหาความปลอดภัยหมดอายุแล้ว (สถานะรอง %1!)"
+
+28 = DCEE_BADNAME, "ชื่อความปลอดภัยที่ไม่ถูกต้องถูกส่งผ่านเข้าไป (สถานะรอง %1!)"
+
+29 = DCEE_REGIDENTITY, "รูทีนในการลงทะเบียน Identity ของตัวรับเนื้อหาล้มเหลว (สถานะรอง %1!)"
+
+30 = DCEE_BADMECH, "กลไกที่ระบุไม่ได้รับการสนับสนุนหรือไม่พร้อมใช้งาน (สถานะรอง %1!)"
+
+31 = DCEE_BADBUF, "พบบัฟเฟอร์ความปลอดภัยที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "การจัดสรรหน่วยความจำล้มเหลว"
+
+2 = KRBE_SRVNOTSUPP, "บริการความปลอดภัยที่ขอไม่ได้รับการสนับสนุน"
+
+3 = KRBE_PRINCIPAL, "ไม่รู้จักชื่อหลักความปลอดภัยที่ระบุ หรือไม่ใช่เจ้าของ"
+
+4 = KRBE_BUFOF, "เกิดข้อผิดพลาดในการเกินขนาดของบัฟเฟอร์ค่าคุณสมบัติ"
+
+5 = KRBE_INITSTR, "สตริงการกำหนดค่าเริ่มต้นไดรฟ์เวอร์ไม่ถูกต้อง"
+
+6 = KRBE_PROPCMD, "คำสั่งคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+7 = KRBE_PROPNOTSUPP, "ชื่อคุณสมบัติความปลอดภัยไม่ถูกต้อง"
+
+8 = KRBE_CONTEXT, "พบโครงสร้างเนื้อหาของไดรฟ์เวอร์ที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+9 = KRBE_OPNOTSUPP, "จุดเข้าใช้งานไดรฟ์เวอร์ไม่ได้รับการสนับสนุน"
+
+10 = KRBE_PROPVALLEN, "ความยาวบัฟเฟอร์ของค่าคุณสมบัติน้อยเกินไป"
+
+11 = KRBE_TOKEN, "Token ความปลอดภัยไม่ถูกต้อง (สถานะรอง %1!)"
+
+12 = KRBE_HANDLE, "ตัวจัดการความปลอดภัยไม่ถูกต้อง"
+
+13 = KRBE_NAMETOOLONG, "ชื่อกลไก/หลักการ/เป้าหมายยาวเกินไป"
+
+14 = KRBE_CHKSIGN, "การตรวจสอบลายเซ็นล้มเหลว (สถานะรอง %1!)"
+
+15 = KRBE_INTERNAL, "มีข้อผิดพลาดภายในที่ไม่คาดคิดเกิดขึ้น"
+
+16 = KRBE_DENIED, "คำขอเซสชันความปลอดภัยถูกปฏิเสธ (สถานะรอง %1!)"
+
+17 = KRBE_RMTNAME, "ไม่พบชื่อเป้าหมายของความปลอดภัย หรือชื่อดังกล่าวไม่ถูกต้อง (สถานะรอง %1!)"
+
+18 = KRBE_PROVIDERERR, "มีข้อผิดพลาดภายในของผู้ให้บริการความปลอดภัย %1! เกิดขึ้น"
+
+19 = KRBE_MSGALTERED, "ข้อความเกี่ยวกับความปลอดภัยมีการเปลี่ยนแปลง - การตรวจสอบลายเซ็นล้มเหลว"
+
+20 = KRBE_MSGSEQ, "พบข้อความที่ไม่เรียงลำดับ (สถานะรอง %1!)"
+
+21 = KRBE_BADNAMETYPE, "พบประเภทชื่อความปลอดภัยที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+22 = KRBE_BADCHANBIND, "พบการผูกช่องทางที่ไม่ถูกต้อง/ไม่สอดคล้องกัน (สถานะรอง %1!)"
+
+23 = KRBE_CREDEXPIRED, "ข้อมูลประจำตัวที่อ้างอิงหมดอายุ (สถานะรอง %1!)"
+
+24 = KRBE_BADCRED, "การตรวจสอบความสอดคล้องของข้อมูลประจำตัวล้มเหลว (สถานะรอง %1!)"
+
+25 = KRBE_OLDTOKEN, "Token ความปลอดภัยที่ระบุเก่าเกินไปที่จะใช้ (สถานะรอง %1!)"
+
+26 = KRBE_DUPTOKEN, "Token ความปลอดภัยที่ระบุถูกประมวลผลแล้ว (สถานะรอง %1!)"
+
+27 = KRBE_CTXTEXPIRED, "เนื้อหาความปลอดภัยหมดอายุแล้ว (สถานะรอง %1!)"
+
+28 = KRBE_BADNAME, "ชื่อความปลอดภัยที่ไม่ถูกต้องถูกส่งผ่านเข้าไป (สถานะรอง %1!)"
+
+29 = KRBE_REGIDENTITY, "รูทีนในการลงทะเบียน Identity ของตัวรับเนื้อหาล้มเหลว (สถานะรอง %1!)"
+
+30 = KRBE_BADMECH, "กลไกที่ระบุไม่ได้รับการสนับสนุนหรือไม่พร้อมใช้งาน (สถานะรอง %1!)"
+
+31 = KRBE_BADBUF, "พบบัฟเฟอร์ความปลอดภัยที่ไม่ถูกต้อง (สถานะรอง %1!)"
+
+32 = KRBE_DELEGNOTSUPP, "การมอบหมายข้อมูลประจำตัวถูกร้องขอ แต่ไม่ได้รับการสนับสนุนหรือไม่พร้อมใช้งาน"
+
+; end of Kerberos driver error strings
+;
+

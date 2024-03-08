@@ -1,0 +1,304 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Mot de passe : "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "FATAL ERROR : impossible d'ouvrir le fichier de définition, '%1!'."
+
+2 = ZZZZZ, "FATAL ERROR : échec de l'allocation mémoire pour l'initialisation de Client-Library."
+
+3 = ZZZZZ, "FATAL ERROR : échec de l'initialisation de Client-Library."
+
+4 = ZZZZZ, "FATAL ERROR : échec de l'installation de l'action de messages CS-Library."
+
+5 = ZZZZZ, "FATAL ERROR : échec de l'installation de l'action de messages clients."
+
+6 = ZZZZZ, "FATAL ERROR : échec de l'installation de l'action de messages serveur."
+
+7 = ZZZZZ, "FATAL ERROR : échec de l'indication, au contexte de l'application, du nom et du chemin d'accès du fichier d'interface."
+
+8 = ZZZZZ, "FATAL ERROR : échec de l'allocation de structure de contexte defncopy."
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "Erreur de syntaxe defncopy"
+
+2 = ZZZZZ, "Syntaxe"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "password"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "server_name"
+
+10 = ZZZZZ, "user_name"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "language"
+
+14 = ZZZZZ, "file_name"
+
+15 = ZZZZZ, "database_name"
+
+16 = ZZZZZ, "owner"
+
+17 = ZZZZZ, "object_name"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "FATAL ERROR : impossible d'allouer suffisamment de mémoire pour %1!."
+
+2 = ZZZZZ, "FATAL ERROR : impossible d'allouer suffisamment de mémoire pour %1!. Annulation de toute autre copie."
+
+3 = ZZZZZ, "FATAL ERROR : échec de l'allocation mémoire."
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "FATAL ERROR : vous n'avez pas indiqué de nom de serveur. Vérifiez la valeur de votre variable d'environnement DSQUERY."
+
+2 = ZZZZZ, "FATAL ERROR : échec de l'allocation d'une structure de connexion client/serveur."
+
+3 = ZZZZZ, "FATAL ERROR : échec lors de l'attribution de la valeur '%1!'au nom d'utilisateur de la connexion client/serveur."
+
+4 = ZZZZZ, "FATAL ERROR : échec de la définition du mot de passe de la connexion client/serveur."
+
+5 = ZZZZZ, "FATAL ERROR : échec de la définition du cryptage des mots de passe de la connexion client/serveur."
+
+6 = ZZZZZ, "FATAL ERROR : échec de la connexion au serveur '%1!'."
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "FATAL ERROR : échec de l'allocation de la structure de commandes CS-Library."
+
+2 = ZZZZZ, "FATAL ERROR : impossible d'initialiser les commandes SQL."
+
+3 = ZZZZZ, "FATAL ERROR : impossible d'initialiser les commandes SQL. Annulation de toute autre copie."
+
+4 = ZZZZZ, "FATAL ERROR : impossible d'envoyer les commandes SQL au serveur."
+
+5 = ZZZZZ, "FATAL ERROR : impossible d'envoyer les commandes SQL au serveur. Annulation de toute autre copie."
+
+6 = ZZZZZ, "FATAL ERROR : échec de la configuration des données des résultats des commandes SQL."
+
+7 = ZZZZZ, "FATAL ERROR : échec de la configuration des données des résultats des commandes SQL. Annulation de toute autre copie."
+
+8 = ZZZZZ, "FATAL ERROR : échec de la configuration des données des résultats des commandes SQL pour l'objet '%1!'. Annulation de toute autre copie."
+
+9 = ZZZZZ, "FATAL ERROR : annulation des données des résultats des commandes SQL."
+
+10 = ZZZZZ, "ERROR : annulation des données des résultats des commandes SQL. Annulation de la copie pour cet objet."
+
+11 = ZZZZZ, "ERROR : annulation des données des résultats des commandes SQL pour l'objet '%1!'. Annulation de la copie de cet objet."
+
+12 = ZZZZZ, "FATAL ERROR : la configuration des données des résultats des commandes SQL a généré un code de retour inattendu '%1!'."
+
+13 = ZZZZZ, "ERROR : la configuration des données des résultats des commandes SQL pour l'objet '%1!' a généré un code de retour inattendu '%1!'. Annulation de la copie de cet objet."
+
+14 = ZZZZZ, "FATAL ERROR : la configuration des données des résultats des commandes SQL a généré un type de résultats inattendu '%1!'."
+
+15 = ZZZZZ, "FATAL ERROR : échec de l'extraction d'informations sur les jeux de résultats."
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "ERROR : l'objet dans le fichier '%1!' n'est pas reconnu comme une définition."
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "FATAL ERROR : échec de l'extraction d'informations sur les jeux de résultats pour l'objet '%1!'. Annulation de toute autre copie."
+
+2 = ZZZZZ, "FATAL ERROR : échec de la liaison entre les données du jeu de résultats de l'objet '%1!' et une variable de programme interne. Annulation de toute autre copie."
+
+3 = ZZZZZ, "FATAL ERROR : échec de l'extraction des résultats de lignes pour l'objet '%1!'. Annulation de toute autre copie."
+
+4 = ZZZZZ, "ERROR : échec de l'extraction des résultats de lignes pour l'objet '%1!'. Annulation de la copie de cet objet."
+
+5 = ZZZZZ, "ERROR : annulation des données des résultats des commandes SQL pour l'objet '%1!'. Annulation de la copie de cet objet."
+
+6 = ZZZZZ, "ERROR : l'extraction de données de résultats de lignes pour l'objet '%1!' a généré un code de retour inattendu '%2!'. Annulation de la copie de cet objet."
+
+7 = ZZZZZ, "FATAL ERROR : la configuration des résultats de commandes SQL pour l'objet '%1!' a généré un type de résultats inattendu '%2!'. Annulation de la copie de cet objet."
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "FATAL ERROR : le serveur a détecté une erreur lors de la tentative d'accès à la base de données '%1!'."
+
+2 = ZZZZZ, "FATAL ERROR : la tentative d'accès à la base de données '%1!' a généré un type de résultats inattendu '%2!'."
+
+3 = ZZZZZ, "FATAL ERROR : échec de la configuration des données de résultats de commandes SQL. Impossible d'accéder à la base de données '%1!'."
+
+4 = ZZZZZ, "FATAL ERROR : annulation des résultats de commandes SQL. Impossible d'accéder à la base de données '%1!'."
+
+5 = ZZZZZ, "FATAL ERROR : la tentative d'accès à la base de données '%1!' a généré un code de retour inattendu '%2!'."
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "ERROR : le serveur a détecté une erreur lors de la tentative d'exécution du SQL contenu dans le fichier '%1!'. La copie se poursuit avec l'objet suivant dans le fichier."
+
+2 = ZZZZZ, "ERROR : l'exécution du SQL contenu dans le fichier '%1!' a généré un type de résultats inattendu '%2!'. Annulation de la copie de cet objet."
+
+3 = ZZZZZ, "ERROR : l'exécution du SQL contenu dans le fichier '%1!' a généré un code de retour inattendu '%2!'. Annulation de la copie de cet objet."
+
+4 = ZZZZZ, "FATAL ERROR : échec de l'extraction d'une description des résultats de l'exécution d'une procédure stockée. Annulation de toute autre copie."
+
+5 = ZZZZZ, "FATAL ERROR : échec de la liaison entre les résultats d'exécution d'une procédure stockée et une variable de programme interne. Annulation de toute autre copie."
+
+6 = ZZZZZ, "ERROR : une procédure stockée a généré un résultat d'état inattendu. Annulation de l'exécution de la procédure stockée."
+
+7 = ZZZZZ, "FATAL ERROR : échec de l'extraction des résultats de l'exécution d'une procédure stockée. Annulation de toute autre copie."
+
+8 = ZZZZZ, "ERROR : échec de l'extraction des résultats de l'exécution d'une procédure stockée. Annulation de l'exécution de la procédure stockée."
+
+9 = ZZZZZ, "ERROR : annulation des données de résultats de commandes SQL. Annulation de l'exécution de la procédure stockée."
+
+10 = ZZZZZ, "ERROR : l'extraction de résultats de l'exécution d'une procédure stockée a généré un code de retour inattendu '%1!'. Annulation de l'exécution de la procédure stockée."
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "FATAL ERROR : le serveur a détecté une erreur lors de la tentative d'extraction de données de la table syscomments de la base de données '%1!'."
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "ERROR : impossible de trouver l'objet '%1!' dans la base de données '%2!'."
+
+2 = ZZZZZ, "ERROR : le serveur a détecté une erreur lors de la tentative d'extraction de données de la table sysobjects de la base de données '%1!'. Annulation de la copie de l'objet '%2!'."
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "ERROR : impossible de trouver la définition de l'objet '%1!' dans la base de données '%2!'."
+
+2 = ZZZZZ, "ERROR : le serveur a détecté une erreur lors de la tentative d'extraction de données de la table syscomments de la base de données '%1!'. Annulation de la copie pour l'objet '%2!'."
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "ERROR : le serveur a détecté une erreur lors de la tentative d'extraction de données de la table sysobjects de la base de données '%1!'. Annulation de la copie de l'objet '%2!'."
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "ERROR : le serveur a détecté une erreur lors de la tentative d'extraction de données de la table syscomments de la base de données '%1!'. Annulation de la copie pour l'objet '%2!'."
+
+2 = ZZZZZ, "FATAL ERROR : échec de la lecture des instructions de définition SQL de l'objet '%1!' dans la table syscomments de la base de données '%1!'. Annulation de toute autre copie."
+
+3 = ZZZZZ, "FATAL ERROR : la tentative d'écriture dans le fichier '%1!' a généré une erreur de fin de fichier ; vérifiez l'espace disque disponible. Annulation de toute autre copie."
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "ERROR : impossible de sortir de Client-Library."
+
+2 = ZZZZZ, "ERROR : échec de la désallocation des structures de commandes CS-Library."
+
+3 = ZZZZZ, "ERROR : échec de l'extraction des propriétés associées à la connexion client/serveur."
+
+4 = ZZZZZ, "ERROR : échec de l'arrêt de la connexion client/serveur avec le serveur '%1!'."
+
+5 = ZZZZZ, "ERROR : échec de la désallocation des structures de connexion CS-Library."
+
+

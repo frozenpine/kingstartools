@@ -1,0 +1,252 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "เซสชัน"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "ความพยายามจัดสรรหน่วยความจำล้มเหลว"
+
+2  = ZZZZZ, "เกิดข้อผิดพลาดในการอ่านออบเจค"
+
+3  = ZZZZZ, "ไม่พบออบเจค"
+
+4  = ZZZZZ, "'ไม่มี %1!'"
+
+5  = ZZZZZ, "ล้มเหลว"
+
+6  = ZZZZZ, "ตกลง"
+
+7  = ZZZZZ, "ย้ายไปที่อินเตอร์เฟสไดรฟ์เวอร์เมื่อเกิดข้อผิดพลาด"
+
+8  = ZZZZZ, "ไม่มีเซสชันเปิดอยู่"
+
+9  = ZZZZZ, "มีการเพิ่ม %1!"
+
+10 = ZZZZZ, "เกิดข้อผิดพลาดในการเพิ่ม %1!"
+
+11 = ZZZZZ, "มีการปรับเปลี่ยน %1!"
+
+12 = ZZZZZ, "เกิดข้อผิดพลาดในการปรับเปลี่ยน %1!"
+
+13 = ZZZZZ, "มีการลบ %1!"
+
+14 = ZZZZZ, "เกิดข้อผิดพลาดในการลบ %1!"
+
+15 = ZZZZZ, "ออบเจคทั้งหมดของเซิร์ฟเวอร์ถูกลบ"
+
+16 = ZZZZZ, "เกิดข้อผิดพลาดในการลบออบเจคของเซิร์ฟเวอร์"
+
+17 = ZZZZZ, "ข้อผิดพลาด: พยายามคัดลอกออบเจคในเซสชันเดียวกัน"
+
+18 = ZZZZZ, "คัดลอก '%1!' จากเซสชัน %2! ไปยัง '%3!' ในเซสชัน %4!"
+
+19 = ZZZZZ, "เกิดข้อผิดพลาดในการคัดลอก %1!"
+
+20 = ZZZZZ, "ข้อผิดพลาด: พยายามคัดลอกไปยังเซสชันเดียวกัน"
+
+21 = ZZZZZ, "คัดลอกทั้งหมดไปยังเซสชัน %1!"
+
+22 = ZZZZZ, "เซสชัน %1! %2!"
+
+23 = ZZZZZ, "ปัจจุบัน"
+
+24 = ZZZZZ, "ข้อผิดพลาดทางไวยากรณ์"
+
+25 = ZZZZZ, "แอททริบิวต์พิเศษ"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "ประเภทการทรานสปอร์ต"
+
+2 =  ZZZZZ, "แอดเดรสการทรานสปอร์ต"
+
+3  = ZZZZZ, "ความปลอดภัยของเซิร์ฟเวอร์"
+
+4  = ZZZZZ, "กลไกความปลอดภัย"
+
+5  = ZZZZZ, "**ค่าที่ไม่รู้จัก**"
+
+6  = ZZZZZ, "DIT base สำหรับออบเจค"
+
+7  = ZZZZZ, "ชื่อเฉพาะ"
+
+8  = ZZZZZ, "พบออบเจคของเซิร์ฟเวอร์"
+
+9  = ZZZZZ, "เวอร์ชัน"
+
+10 = ZZZZZ, "บริการ"
+
+11 = ZZZZZ, "สถานะ"
+
+12 = ZZZZZ, "แอดเดรส"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "การกำหนดรูปแบบ"
+
+15 = ZZZZZ, "ชื่อ DS"
+
+16 = ZZZZZ, "เซิร์ฟเวอร์ HA ที่ใช้แทนเมื่อเกิดข้อผิดพลาด"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "คุณแน่ใจหรือไม่ว่าต้องการลบออบเจคทั้งหมดของเซิร์ฟเวอร์? (Y/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "จอภาพนี้"
+
+; open [DSNAME]
+2  = ZZZZZ, "เปิดเซสชันสำหรับบริการไดเรกทอรีตั้งต้น หรือบริการไดเรกทอรี DSNAME"
+
+; close [SESS]
+3  = ZZZZZ, "ปิดเซสชัน SESS ที่ระบุเลขที่ หรือเซสชันปัจจุบัน"
+
+; sess
+4  = ZZZZZ, "แสดงรายการเซสชันทั้งหมด"
+
+; [switch] SESS
+5  = ZZZZZ, "ทำให้เซสชัน SESS ที่ระบุเลขที่เป็นเซสชันปัจจุบัน"
+
+; add SERVER-NAME
+6  = ZZZZZ, "เพิ่มออบเจคใหม่ของเซิร์ฟเวอร์ลงในบริการไดเรกทอรี"
+
+; read SERVER-NAME
+7  = ZZZZZ, "อ่านเนื้อหาออบเจคของเซิร์ฟเวอร์"
+
+; mod SERVER-NAME
+8  = ZZZZZ, "ปรับเปลี่ยนออบเจคของเซิร์ฟเวอร์ที่มีอยู่"
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "เพิ่มแอททริบิวต์ให้กับออบเจคของเซิร์ฟเวอร์ที่มีอยู่"
+
+; del SERVER-NAME
+10 = ZZZZZ, "ลบออบเจคของเซิร์ฟเวอร์ที่มีอยู่"
+
+; list [all]
+11 = ZZZZZ, "แสดงรายการออบเจคของเซิร์ฟเวอร์ทั้งหมด"
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "คัดลอกออบเจค NAME1 ไปยังออบเจคใหม่ NAME2 ในเซสชัน SESS ที่ระบุเลขที่หรือเซสชันปัจจุบัน"
+
+; copyall to SESS
+13 = ZZZZZ, "คัดลอกออบเจคทั้งหมดของเซิร์ฟเวอร์ในเซสชันปัจจุบันไปที่เซสชัน SESS ที่ระบุเลขที่"
+
+; delete-all
+14 = ZZZZZ, "ลบออบเจคทั้งหมดของเซิร์ฟเวอร์ในเซสชันปัจจุบัน"
+
+; config
+15 = ZZZZZ, "แสดงรายการกำหนดรูปแบบปัจจุบัน"
+
+; exit | quit
+16 = ZZZZZ, "ออกจากโปรแกรม"
+

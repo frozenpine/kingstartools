@@ -1,0 +1,201 @@
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "impossível alocar memória."
+
+2 = ZZZZZ, "blklib "
+
+3 = ZZZZZ, "blklib "
+
+4 = ZZZZZ, "erro geral "
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "camada blk "
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "erro do usuário "
+
+2 = ZZZZZ, "erro interno em BLK-Library "
+
+3 = ZZZZZ, "erro de biblioteca CT "
+
+4 = ZZZZZ, "erro do gerenciador assíncrono "
+
+5 = ZZZZZ, "erro de biblioteca comum "
+
+6 = ZZZZZ, "erro de gerenciamento de memória "
+
+7 = ZZZZZ, "erro no Servidor"
+
+8 = ZZZZZ, "Erro de formato dos dados do cliente"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "blk OK "
+
+1 = ZZZZZ, "Impossível chamar API %1! a partir deste estado: %2!"
+
+2 = ZZZZZ, "API %1! só permitido para operação IN de cópia em massa "
+
+3 = ZZZZZ, "API %1! não pode ser chamado de um callback (estado = %2!)"
+
+4 = ZZZZZ, "O parâmetro %1! tem um valor ilegal de %2!"
+
+5 = ZZZZZ, "O campo %1! da estrutura CS_DATAFMT tem um valor ilegal \
+ de %2!."
+
+6 = ZZZZZ, "O parâmetro %1! não pode ser NULL."
+
+7 = ZZZZZ, "O buffer indicado de %1! bytes excede o comprimento total do \
+ valor a ser transferido."
+
+8 = ZZZZZ, "A precisão deve ser maior que ou igual à escala "
+
+9 = ZZZZZ, "Impossível vincular um NULL %1! com um tipo de dados %2!."
+
+10 = ZZZZZ, "uma coluna de tabela do tipo %1! não pode ser vinculada a uma variável de programa \
+ do tipo %2!."
+
+11 = ZZZZZ, "Impossível interligar textxfer e matriz."
+
+12 = ZZZZZ, "Todas as colunas devem ter o mesmo valor de contagem de matriz para o vínculo \
+ da matriz."
+
+13 = ZZZZZ, "Impossível encontrar um CS_TYPE equivalente para este tipo de dados TDS \
+ %1!"
+
+14 = ZZZZZ, "Falha quando a rotina %1! de CT_Lib chamou."
+
+15 = ZZZZZ, "Utilize a direção CS_BLK_IN ou CS_BLK_OUT para uma operação de cópia em massa."
+
+16 = ZZZZZ, "Utilize a opção CS_BLK_ALL para encerrar uma cópia em massa OUT."
+
+17 = ZZZZZ, "Status de processo inválido %1! para %2! - ele não deveria estar aqui."
+
+18 = ZZZZZ, "Status inválido para %1! - ele não deveria estar aqui."
+
+19 = ZZZZZ, "A coluna e o padrão %1! enviados do servidor não são \
+ iguais."
+
+20 = ZZZZZ, "Status inválido para %1! - mas é possível recuperar - continuar processando."
+
+21 = ZZZZZ, "O número de colunas esperado do servidor não é o mesmo \
+ que o recebido %1!."
+
+22 = ZZZZZ, "A aplicação deve fazer o login com o conjunto de propriedades  %1!."
+
+23 = ZZZZZ, "As versões da biblioteca de cópia em massa e CT_Lib são incompatíveis."
+
+24 = ZZZZZ, "Nenhum valor ou o valor padrão disponível e NULL não são permitidos. \
+ col = %1! linha = %2!."
+
+25 = ZZZZZ, "Falha na rotina de conversão - estouro de condição. \
+ col = %1! linha = %2!."
+
+26 = ZZZZZ, "Falha na rotina de conversão - erro de sintaxe. \
+ col = %1! linha = %2!."
+
+27 = ZZZZZ, "Ordem de vínculo inválida - uma coluna vinculada segue uma coluna marcada \
+ para textxfer."
+
+28 = ZZZZZ, "O tamanho total do textxfer %1! ultrapassa o tamanho %2! dos dados de entrada "
+
+29 = ZZZZZ, "O número de valores padrão %1! não coincide com a contagem padrão %2!"
+
+30 = ZZZZZ, "Retorno de CS_END_RESULTS para o arquivo solicitado para \
+ cópia em massa out. O arquivo pode estar vazio."
+
+31 = ZZZZZ, "O parâmetro %1! deve ser NULL."
+
+32 = ZZZZZ, "O parâmetro %1! deve ser CS_UNUSED."
+
+33 = ZZZZZ, "Impossível definir uma contagem de linhas maior que a contagem de vínculo de matriz."
+
+34 = ZZZZZ, "Apenas um BLK_IDENTITY ou BLK_IDSTARTNUM pode ser ativado."
+
+35 = ZZZZZ, "O valor da propriedade %1! não pode ser recuperado porque não foi estabelecido nenhum valor \
+para a propriedade."
+
+36 = ZZZZZ, "Um erro de conversão ou adição ocorreu ao atualizar o \
+valor de início da coluna de identidade."
+
+37 = ZZZZZ, "Erro durante a criação do comando para inserir massa."
+
+38 = ZZZZZ, "O valor de início da coluna de identidade deve ter uma escala de 0."
+
+39 = ZZZZZ, "Falha ao criar o comando de linguagem que obtém o formato da linha.  "
+
+40 = ZZZZZ, "O buffer de %1! bytes tem um valor illegal e deve ser maior que zero.  "
+
+41 = ZZZZZ, "BCP falhou ao criar linhas na tabela de destino. A coluna %1! começaria em um \
+deslocamento de mais de 8191 bytes; esta localização inicial não pode ser representada com exatidão no \
+formato (de linha) da tabela."
+
+42 = ZZZZZ, "Dados truncados durante a conversão do conjunto de caracteres local. \
+ col = %1! linha = %2!."
+
+43 = ZZZZZ, "O nome extenso da estrutura de %1! estava truncado."
+
+44 = ZZZZZ, "A vinculação da coluna computada materializada foi alterada: Inicie um novo lote com blk_done(CS_BLK_BATCH)."
+
+45 = ZZZZZ, "O parâmetro %1! possui erro de sintaxe."
+
+46 = ZZZZZ, "A localização do servidor é apenas uma propriedade de recuperação."
+
+47 = ZZZZZ, "Impossível recuperar o conjunto de caracteres do servidor, cancelando a sessão."
+
+48 = ZZZZZ, "Falha no BCP ao criar linhas na tabela de destino. A coluna %1! começa em \
+um deslocamento superior a %2! bytes; esta localização inicial não é permitida pela \
+configuração de banco de dados atual."
+
+49 = ZZZZZ, "O número de vezes que blk_textxfer() foi chamado excede o \
+número de colunas de texto ou imagem não vinculadas."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

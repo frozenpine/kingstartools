@@ -1,0 +1,164 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Erreur fatale : échec d'allocation de mémoire."
+2 = ZZZZZ, "Erreur d'E/S : espace insuffisant pour les données en entrée."
+3 = ZZZZZ, "Échec de l'ouverture du fichier temporaire '%1!' pour l'écriture dans dbedit()."
+4 = ZZZZZ, "Impossible d'appeler l'éditeur '%1!'."
+5 = ZZZZZ, "Impossible d'ouvrir le fichier d'entrée '%1!'."
+6 = ZZZZZ, "Impossible d'ouvrir le fichier résultat '%1!'."
+7 = ZZZZZ, "bcp : paramètre '%1!' inconnu."
+8 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la première ligne à copier, le numéro de ligne doit être supérieur ou égal à 1."
+9 = ZZZZZ, "Lors de l'utilisation des indicateurs '%1!' et '%2!' pour définir la première et la dernière ligne à copier, le numéro de la première ligne doit être inférieur au dernier."
+10 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la dernière ligne à copier, le numéro de ligne doit être supérieur ou égal à 1."
+11 = ZZZZZ, "La direction de la copie doit être 'in' ou 'out'."
+12 = ZZZZZ, "L'indicateur '%1!' doit être suivi par un entier. '%2!' n'est pas un entier autorisé."
+13 = ZZZZZ, "Avertissement : l'indicateur '%1!' apparaît plus d'une fois. La nouvelle valeur de l'indicateur remplace l'ancienne."
+14 = ZZZZZ, "Avertissement : '%1!' prévaut sur '%2!'"
+15 = ZZZZZ, "Longueur de préfixe incorrecte. Les valeurs autorisées sont 0, 1, 2 ou 4."
+16 = ZZZZZ, "Niveau (1-16) : "
+17 = ZZZZZ, "Niveau incorrect"
+18 = ZZZZZ, "Compartiment (1-64) : "
+19 = ZZZZZ, "Entrées multiples, séparées par un retour à la ligne, autorisées ; appuyer sur entrée à la fin. "
+20 = ZZZZZ, "Connexion en tant que SA (n/o) : "
+21 = ZZZZZ, "Essayez à nouveau :"
+22 = ZZZZZ, "Compartiment incorrect :"
+23 = ZZZZZ, "Démarrage de la copie..."
+24 = ZZZZZ, "%1! lignes copiées."
+25 = ZZZZZ, "Heure (ms.): total = %1!"
+26 = ZZZZZ, "Souhaitez-vous sauvegarder ces informations de format dans un fichier ? [o/n] "
+27 = ZZZZZ, "Nom de fichier de l'hôte [%1!] : "
+28 = ZZZZZ, "Type de colonne incorrect. Les types autorisés sont :"
+29 = ZZZZZ, "    <cr> : même type que la colonne DataServer."
+30 = ZZZZZ, "  Moy. = %1! (%2! lignes par seconde)"
+31 = ZZZZZ, "Échec de la copie bcp %1!"
+32 = ZZZZZ, "Échec partiel de la copie bcp %1!"
+33 = ZZZZZ, "Précision incorrecte. La précision doit être comprise entre %1! et %2!"
+34 = ZZZZZ, "Échelle incorrecte. L'échelle doit être comprise entre %1! et %2! et doit être inférieure ou égale à la précision"
+35 = ZZZZZ, "Type de résultat imprévisible retourné."
+36 = ZZZZZ, "Résultat imprévisible retourné."
+37 = ZZZZZ, "Erreur lors de l'écriture du fichier BCP (%1!)!"
+38 = ZZZZZ, "Échec de la récupération de la spécification du fichier hôte."
+39 = ZZZZZ, "La table que la bulk-copy tente de copier en direction d'un fichier hôte est plus petite que le nombre de lignes que la bulk-copy a reçu l'ordre de sauter."
+40 = ZZZZZ, "blk_rowxfer_mult a retourné un code de retour inattendu."
+41 = ZZZZZ, "Rencontre d'un type de donnée inconnu '%1!'."
+42 = ZZZZZ, "Erreur d'E/S lors de la lecture du fichier d'entrée bcp."
+43 = ZZZZZ, "Erreur d'E/S lors de l'écriture du fichier d'erreurs bcp."
+44 = ZZZZZ, "Impossible d'ouvrir un fichier d'erreurs."
+45 = ZZZZZ, "Détection de fin de ligne imprévue dans le fichier de données BCP."
+46 = ZZZZZ, "Détection d'un préfixe de longueur négatif dans le fichier de données BCP."
+47 = ZZZZZ, "Le BCP hostfile '%1!' ne contient que %2! lignes. L'omission de ces lignes n'est pas permise."
+48 = ZZZZZ, "Le BCP hostfile '%1!' ne contient que %2! lignes. Il était impossible de lire le nombre de lignes requises."
+49 = ZZZZZ, "Pour la bulk copy, toutes les données de longueur de variable doivent avoir soit un préfixe de longueur soit un terminateur spécifié."
+50 = ZZZZZ, "La zone text/image est supérieure à la valeur maximale. Données tronquées."
+51 = ZZZZZ, "Le nombre total d'erreurs dans cette opération BCP est supérieur au nombre maximal d'erreurs (%1!) autorisées. BCP interrompu."
+52 = ZZZZZ, "Impossible d'ouvrir le fichier de rejet '%1!'."
+53 = ZZZZZ, "Erreur d'E/S lors de l'écriture du fichier de rejet bcp '%1!'."
+54 = ZZZZZ, "Impossible de fermer le fichier '%1!'. Les données peuvent ne pas avoir été copiées."
+55 = ZZZZZ, "Avertissement : taille du lot ajustée à la valeur '%1!', pour l'optimisation de la fonction de fichier de rejet."
+56 = ZZZZZ, "Le nombre maximal de lignes que bcp peut traiter est atteint, un nombre total de '%1!' lignes a été traité, opération bcp terminée."
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Erreur fatale : échec d'allocation de mémoire."
+2 = ZZZZZ, "La direction de la copie doit être 'in' ou 'out'."
+3 = ZZZZZ, "Avertissement : '%1!' prévaut sur '%2!'"
+4 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la première ligne à copier, le numéro de ligne doit être supérieur ou égal à 1."
+5 = ZZZZZ, "Lors de l'utilisation des indicateurs '%1!' et '%2!' pour définir la première et la dernière ligne à copier, le numéro de la première ligne doit être inférieur au dernier."
+6 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la dernière ligne à copier, le numéro de ligne doit être supérieur ou égal à 1."
+7 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la taille du lot, le numéro doit être supérieur ou égal à 1."
+8 = ZZZZZ, "Avertissement : ignorer l'indicateur '%1!' en cas de copie « out »."
+9 = ZZZZZ, "Vous ne pouvez pas utiliser à la fois '%1!' et '%2!' en cas de copie « in »."
+10 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir la valeur de départ de la colonne identity, le numéro doit être supérieur ou égal à 0."
+11 = ZZZZZ, "Vous ne pouvez pas utiliser en même temps les indicateurs '%1!' et '%2!'."
+12 = ZZZZZ, "Avertissement : redéfinition de la taille de lot de %1! à %2!."
+13 = ZZZZZ, "Échec du paramétrage des propriétés de connexion."
+14 = ZZZZZ, "Échec de l'établissement de la connexion."
+15 = ZZZZZ, "Échec du paramétrage des options de connexion."
+16 = ZZZZZ, "Échec de la récupération de la langue."
+17 = ZZZZZ, "Échec du paramétrage des valeurs par défaut."
+18 = ZZZZZ, "Échec de la récupération du format de la table."
+19 = ZZZZZ, "Échec de blk_init."
+20 = ZZZZZ, "Impossible d'ouvrir le fichier d'erreur."
+21 = ZZZZZ, "Objet de localisation non reconnu. Utilisation de la valeur par défaut '%1!'."
+22 = ZZZZZ, "Erreur interne : type de localisation incorrect passé à cs_locale()."
+23 = ZZZZZ, "Avertissement : option '%1!' non supportée, ignorée."
+24 = ZZZZZ, "Erreur de syntaxe dans '%1!'."
+25 = ZZZZZ, "Erreur lors de la tentative de chargement d'une paire de tables de conversion."
+26 = ZZZZZ, "Une erreur s'est produite lors de la tentative de configuration du contexte de l'application pour une utilisation avec des structures de localisation."
+27 = ZZZZZ, "Avertissement : l'option "-E" n'est pas définie, DataServer génèrera les valeurs de la colonne identity."
+28 = ZZZZZ, "Lors de l'utilisation de l'indicateur '%1!' pour définir les lignes à sauter, le numéro de ligne doit être supérieur ou égal à 0."
+29 = ZZZZZ, "Les indicateurs '%1!' et '%2!' ne peuvent pas être utilisés concomitamment au niveau de la ligne de commande."
+30 = ZZZZZ, "Lors de l'utilisation des indicateurs '%1!' et '%2!' pour définir les lignes à sauter et la dernière ligne à copier, le nombre de lignes à sauter doit être inférieur au numéro de la dernière."
+31 = ZZZZZ, "L'option --clienterr et l'option -e doivent être mutuellement exclusives."
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Lot copié en bloc vers le serveur."
+2 = ZZZZZ, "%1! lignes envoyées vers le serveur."
+3 = ZZZZZ, "%1! lignes bulk-copied avec succès dans le fichier hôte."
+4 = ZZZZZ, "Interruption - Bulk copy abandonnée."
+5 = ZZZZZ, "%1! lignes copiées."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Mot de passe : "
+2 = ZZZZZ, "Entrez le type de stockage de fichier de la zone %1! [%2! : "
+3 = ZZZZZ, "Entrez la longueur de la zone %1! [pas de longueur maximale] : "
+4 = ZZZZZ, "Entrez la longueur de la zone %1! [%2!] : "
+5 = ZZZZZ, "Entrez le terminateur de zone [%1!] : "
+6 = ZZZZZ, "Entrez la longueur de préfixe de la zone %1! [%2!] : "
+7 = ZZZZZ, "Entrez la précision de la zone %1! [%2!] : "
+8 = ZZZZZ, "Entrez l'échelle de la zone %1! [%2!] : "
+9 = ZZZZZ, "Entrez le nom de colonne : "
+10 = ZZZZZ, "Entrez le nom de clé : "
+11 = ZZZZZ, "Entrez le mot de passe de la colonne %1! : "
+12 = ZZZZZ, "Entrez le mot de passe de la clé %1! : "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1! : impossible d'ouvrir le fichier format '%2!'."
+2 = ZZZZZ, "Erreur d'E/S lors de la lecture du fichier format bcp."
+3 = ZZZZZ, "Impossible de fermer le fichier format bcp."
+4 = ZZZZZ, "Colonne%1! : détection d'une valeur de précision incorrecte."
+5 = ZZZZZ, "Détection d'un type de données de longueur fixe."
+6 = ZZZZZ, "Tentative de lecture d'une version inconnue du fichier de format bcp."
+7 = ZZZZZ, "Détection d'un numéro de colonne hôte incorrect dans le fichier format bcp."
+8 = ZZZZZ, "Détection d'un type de donné '%1!' non reconnu dans le fichier format."
+9 = ZZZZZ, "Le fichier format a donné l'instruction à bcp de ne pas copier la colonne identity, conflit avec l'option -E."
+10 = ZZZZZ, "Aucune colonne à copier."

@@ -1,0 +1,252 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility.
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "会话"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "试图分配内存失败。"
+
+2  = ZZZZZ, "读取对象时出错。"
+
+3  = ZZZZZ, "未找到对象。"
+
+4  = ZZZZZ, "'%1!'不存在。"
+
+5  = ZZZZZ, "失败"
+
+6  = ZZZZZ, "ok"
+
+7  = ZZZZZ, "故障切换到接口驱动程序。"
+
+8  = ZZZZZ, "未打开会话。"
+
+9  = ZZZZZ, "已添加%1!"
+
+10 = ZZZZZ, "添加%1!时出错"
+
+11 = ZZZZZ, "已修改%1!"
+
+12 = ZZZZZ, "修改%1!时出错"
+
+13 = ZZZZZ, "已删除%1!"
+
+14 = ZZZZZ, "删除%1!时出错"
+
+15 = ZZZZZ, "已删除所有服务器对象。"
+
+16 = ZZZZZ, "删除服务器对象时出错。"
+
+17 = ZZZZZ, "错误: 试图在同一会话中复制到对象。"
+
+18 = ZZZZZ, "将'%1!'从会话%2!复制到会话%4!中的'%3!'"
+
+19 = ZZZZZ, "复制%1!时出错"
+
+20 = ZZZZZ, "错误: 尝试复制到同一会话。"
+
+21 = ZZZZZ, "将全部内容复制到会话%1!"
+
+22 = ZZZZZ, "会话%1! %2!"
+
+23 = ZZZZZ, "当前"
+
+24 = ZZZZZ, "语法错误"
+
+25 = ZZZZZ, "附加属性"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "传输类型"
+
+2 =  ZZZZZ, "传输地址"
+
+3  = ZZZZZ, "服务器安全"
+
+4  = ZZZZZ, "安全机制"
+
+5  = ZZZZZ, "**未知值**"
+
+6  = ZZZZZ, "对象的DIT基值"
+
+7  = ZZZZZ, "区分名"
+
+8  = ZZZZZ, "服务器对象已找到"
+
+9  = ZZZZZ, "版本"
+
+10 = ZZZZZ, "服务"
+
+11 = ZZZZZ, "状态"
+
+12 = ZZZZZ, "地址"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "配置"
+
+15 = ZZZZZ, "DS名"
+
+16 = ZZZZZ, "HA故障切换服务器"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "是否确实要删除所有服务器对象? (Y/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "此屏幕。"
+
+; open [DSNAME]
+2  = ZZZZZ, "为缺省目录服务或DSNAME目录服务打开一个会话。"
+
+; close [SESS]
+3  = ZZZZZ, "关闭编号为SESS的会话或关闭当前会话。"
+
+; sess
+4  = ZZZZZ, "列出所有会话。"
+
+; [switch] SESS
+5  = ZZZZZ, "使编号为SESS的会话成为当前会话。"
+
+; add SERVER-NAME
+6  = ZZZZZ, "向目录服务添加新服务器对象。"
+
+; read SERVER-NAME
+7  = ZZZZZ, "读取服务器对象的内容。"
+
+; mod SERVER-NAME
+8  = ZZZZZ, "修改现有服务器对象。"
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "向现有服务器对象添加属性。"
+
+; del SERVER-NAME
+10 = ZZZZZ, "删除现有服务器对象。"
+
+; list [all]
+11 = ZZZZZ, "列出所有服务器对象。"
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "将对象NAME1复制到编号为SESS的会话或复制到当前会话中，使其成为新对象NAME2。"
+
+; copyall to SESS
+13 = ZZZZZ, "将当前会话中的所有服务器对象复制到编号为SESS的会话中。"
+
+; delete-all
+14 = ZZZZZ, "删除当前会话中的所有服务器对象。"
+
+; config
+15 = ZZZZZ, "列出当前配置。"
+
+; exit | quit
+16 = ZZZZZ, "退出程序。"
+

@@ -1,0 +1,164 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "심각한 오류: 메모리를 할당하지 못했습니다."
+2 = ZZZZZ, "I/O 오류: 입력 데이터의 공간이 부족합니다."
+3 = ZZZZZ, "dbedit()에 기록할 temp 파일 '%1!'을(를) 열지 못했습니다."
+4 = ZZZZZ, "'%1!' 편집기를 호출할 수 없습니다."
+5 = ZZZZZ, "'%1!' 입력 파일을 열 수 없습니다."
+6 = ZZZZZ, "'%1!' 출력 파일을 열 수 없습니다."
+7 = ZZZZZ, "bcp: '%1!'은(는) 알 수 없는 매개변수입니다."
+8 = ZZZZZ, "복사할 첫 번째 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 1과 같거나 그보다 커야 합니다."
+9 = ZZZZZ, "복사할 첫 번째와 마지막 행을 설정하는 '%1!' 및 '%2!' 플래그를 사용하는 경우 첫 번째 행 번호는 마지막 행 번호보다 작아야 합니다."
+10 = ZZZZZ, "복사할 마지막 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 1과 같거나 그보다 커야 합니다."
+11 = ZZZZZ, "복사 방향은 'in' 또는 'out'이어야 합니다."
+12 = ZZZZZ, "'%1!' 플래그 다음에는 정수가 와야 합니다. '%2!'은(는) 유효 정수가 아닙니다."
+13 = ZZZZZ, "경고: '%1!' 플래그가 여러 번 나타납니다. 새 플래그의 값이 기존 값을 대체합니다."
+14 = ZZZZZ, "경고: '%1!'은(는) '%2!'을(를) 오버라이드합니다."
+15 = ZZZZZ, "접두어 길이가 잘못되었습니다. 올바른 접두어 길이는 0, 1, 2, 4입니다."
+16 = ZZZZZ, "레벨(1-16): "
+17 = ZZZZZ, "유효하지 않은 레벨"
+18 = ZZZZZ, "컴파트먼트(1-64): "
+19 = ZZZZZ, "복수 엔트리, 반환에 의해 구분됨, 허용됨, 완료 시 반환 "
+20 = ZZZZZ, "SA로 로그인(n/y): "
+21 = ZZZZZ, "다시 시도하십시오."
+22 = ZZZZZ, "유효하지 않은 컴파트먼트"
+23 = ZZZZZ, "복사 시작 중..."
+24 = ZZZZZ, "%1!개의 행이 복사되었습니다."
+25 = ZZZZZ, "시계 시간(ms): 총 = %1!"
+26 = ZZZZZ, "파일에 이 형식 정보를 저장하시겠습니까?[Y/n] "
+27 = ZZZZZ, "호스트 파일 이름 [%1!]: "
+28 = ZZZZZ, "열 유형이 잘못되었습니다. 유효한 유형은 다음과 같습니다."
+29 = ZZZZZ, "    <cr>: DataServer 열과 동일한 유형"
+30 = ZZZZZ, "  평균 = 초당 %1!(%2!개의 행)"
+31 = ZZZZZ, "bcp 복사 %1!에 실패했습니다."
+32 = ZZZZZ, "bcp 복사 %1!에 일부 실패했습니다."
+33 = ZZZZZ, "정밀도가 잘못되었습니다. 정밀도는 %1!과(와) %2! 사이여야 합니다."
+34 = ZZZZZ, "스케일이 잘못되었습니다. 스케일은 %1!과(와) %2! 사이여야 하며 정밀도와 같거나 그보다 작아야 합니다."
+35 = ZZZZZ, "예기치 않은 결과 유형이 반환되었습니다."
+36 = ZZZZZ, "예기치 않은 결과가 반환되었습니다."
+37 = ZZZZZ, "BCP 파일 (%1!)!을(를) 쓰는 중 오류가 발생했습니다."
+38 = ZZZZZ, "호스트 파일 명세를 검색하지 못했습니다."
+39 = ZZZZZ, "대량 복사가 호스트 파일에 복사하려고 시도하는 테이블이 대량 복사가 스킵되도록 지시한 행 수보다 짧습니다."
+40 = ZZZZZ, "blk_rowxfer_mult에서 예기치 않은 리턴 코드를 반환했습니다."
+41 = ZZZZZ, "알 수 없는 데이타 유형 '%1!'이(가) 있습니다."
+42 = ZZZZZ, "bcp 형식 파일을 읽는 동안 I/O 오류가 발생했습니다."
+43 = ZZZZZ, "bcp 오류 파일을 쓰는 동안 I/O 오류가 발생했습니다."
+44 = ZZZZZ, "오류 파일을 열 수 없습니다."
+45 = ZZZZZ, "BCP 데이타 파일에 예기치 않은 EOF가 있습니다."
+46 = ZZZZZ, "BCP 데이타 파일에 음수의 길이 접두어가 있습니다."
+47 = ZZZZZ, "BCP 호스트 파일 '%1!'에는 %2!행만 포함됩니다. 이 행을 모두 스킵할 수 없습니다."
+48 = ZZZZZ, "BCP 호스트 파일 '%1!'에는 %2!행만 포함됩니다. 요청된 행 수를 읽을 수 없습니다."
+49 = ZZZZZ, "대량 복사의 경우 모든 가변 길이 데이타에는 길이 접두어 또는 종료자가 지정되어야 합니다."
+50 = ZZZZZ, "텍스트/이미지 필드가 최대값보다 큽니다. 데이타가 잘렸습니다."
+51 = ZZZZZ, "이 BCP 조작의 총 오류 수가 허용되는 최대 오류 수인 (%1!)보다 큽니다. BCP가 중지되었습니다."
+52 = ZZZZZ, "'%1!' 삭제 파일을 열 수 없습니다."
+53 = ZZZZZ, "bcp 삭제 파일 '%1!'을(를) 쓰는 동안 I/O 오류가 발생했습니다."
+54 = ZZZZZ, "'%1!' 파일을 닫을 수 없습니다. 데이타가 복사되지 않았을 수 있습니다."
+55 = ZZZZZ, "경고: 삭제 파일 기능의 최적화에 대해 배치 크기가 '%1!' 값으로 조정되었습니다."
+56 = ZZZZZ, "bcp를 처리할 수 있는 최대 행 수에 도달했습니다. 총 '%1!'행 수가 처리되어 bcp 조작이 종료되었습니다."
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "심각한 오류: 메모리를 할당하지 못했습니다."
+2 = ZZZZZ, "복사 방향은 'in' 또는 'out'이어야 합니다."
+3 = ZZZZZ, "경고: '%1!'은(는) '%2!'을(를) 오버라이드합니다."
+4 = ZZZZZ, "복사할 첫 번째 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 1과 같거나 그보다 커야 합니다."
+5 = ZZZZZ, "복사할 첫 번째와 마지막 행을 설정하는 '%1!' 및 '%2!' 플래그를 사용하는 경우 첫 번째 행 번호는 마지막 행 번호보다 작아야 합니다."
+6 = ZZZZZ, "복사할 마지막 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 1과 같거나 그보다 커야 합니다."
+7 = ZZZZZ, "복사할 마지막 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 1과 같거나 그보다 커야 합니다."
+8 = ZZZZZ, "경고: 범위 외로 복사 시 '%1!' 플래그가 무시됩니다."
+9 = ZZZZZ, "범위 내로 복사 시 '%1!'과(와) '%2!'을(를) 모두 사용할 수 없습니다."
+10 = ZZZZZ, "ID 열의 시작 값을 설정하는 '%1!' 플래그를 사용하는 경우 번호는 0과 같거나 그보다 커야 합니다."
+11 = ZZZZZ, "'%1!'과(와) '%2!' 플래그를 함께 사용할 수 없습니다."
+12 = ZZZZZ, "경고: 배치 크기를 %1!에서 %2!(으)로 재설정합니다."
+13 = ZZZZZ, "연결 속성을 설정하지 못했습니다."
+14 = ZZZZZ, "연결을 설정하지 못했습니다."
+15 = ZZZZZ, "연결 옵션을 설정하지 못했습니다."
+16 = ZZZZZ, "언어를 검색하지 못했습니다."
+17 = ZZZZZ, "기본값을 설정하지 못했습니다."
+18 = ZZZZZ, "테이블 형식을 검색하지 못했습니다."
+19 = ZZZZZ, "blk_init에 실패했습니다."
+20 = ZZZZZ, "오류 파일을 열 수 없습니다."
+21 = ZZZZZ, "지역화 객체를 인식할 수 없습니다. 기본값인 '%1!'을(를) 사용합니다."
+22 = ZZZZZ, "내부 오류: 잘못된 지역화 유형이 cs_locale()로 전달되었습니다."
+23 = ZZZZZ, "경고: '%1!' 옵션은 지원되지 않아 무시됩니다."
+24 = ZZZZZ, "'%1!'의 구문 오류."
+25 = ZZZZZ, "변환 테이블 한 쌍을 로드하려고 할 때 오류가 발생했습니다. "
+26 = ZZZZZ, "지역화 관련 구조에 사용하기 위해 응용프로그램의 컨텍스트를 구성하려고 시도하는 동안 오류가 발생했습니다."
+27 = ZZZZZ, "경고: 옵션 '-E'가 설정되지 않아 DataServer에서 아이덴티티 열의 값이 생성됩니다."
+28 = ZZZZZ, "스킵할 행을 설정하는 '%1!' 플래그를 사용하는 경우 행 번호는 0과 같거나 그보다 커야 합니다."
+29 = ZZZZZ, "'명령어 라인에서 %1!' 플래그와 '%2!' 플래그를 함께 사용할 수 없습니다."
+30 = ZZZZZ, "스킵할 행과 복사할 마지막 행을 설정하는 '%1!' 및 '%2!' 플래그를 사용하는 경우 스킵할 행 번호는 마지막 행 번호보다 작아야 합니다."
+31 = ZZZZZ, "옵션 --clienterr은 옵션 -e와 상호 배타적이어야 합니다."
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "배치가 서버로 대량 복사되었습니다."
+2 = ZZZZZ, "%1!개의 행이 서버로 전송되었습니다."
+3 = ZZZZZ, "%1!개의 행이 호스트 파일에 대량 복사되었습니다."
+4 = ZZZZZ, "인터럽트 - 대량 복사가 중단되었습니다."
+5 = ZZZZZ, "%1!개의 행이 복사되었습니다."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "암호:  "
+2 = ZZZZZ, "필드 %1! [%2!]의 파일 저장 유형을 입력하십시오. "
+3 = ZZZZZ, "필드 %1!의 길이를 입력하십시오[최대 길이 없음]. "
+4 = ZZZZZ, "필드 %1! [%2!]의 길이를 입력하십시오. "
+5 = ZZZZZ, "필드 종결자[%1!]를 입력하십시오. "
+6 = ZZZZZ, "필드 %1! [%2!]의 접두어 길이를 입력하십시오. "
+7 = ZZZZZ, "필드 %1! [%2!]의 정밀도를 입력하십시오. "
+8 = ZZZZZ, "필드 %1! [%2!]의 스케일을 입력하십시오. "
+9 = ZZZZZ, "열 이름을 입력하십시오. "
+10 = ZZZZZ, "키 이름을 입력하십시오. "
+11 = ZZZZZ, "열 %1!'의 암호를 입력하십시오. "
+12 = ZZZZZ, "키 %1!'의 암호를 입력하십시오. "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: 형식 파일 '%2!'을(를) 열 수 없습니다."
+2 = ZZZZZ, "bcp 형식 파일을 읽는 동안 I/O 오류가 발생했습니다."
+3 = ZZZZZ, "bcp 형식 파일을 닫을 수 없습니다."
+4 = ZZZZZ, "%1! 열: 잘못된 정밀도 값이 있습니다."
+5 = ZZZZZ, "알 수 없는 고정 길이 데이타 유형이 있습니다."
+6 = ZZZZZ, "알 수 없는 버전의 bcp 형식 파일을 읽으려고 합니다."
+7 = ZZZZZ, "bcp 형식 파일에 잘못된 호스트 열 개수가 있습니다."
+8 = ZZZZZ, "형식 파일에 인식되지 않는 데이타 유형 '%1!'이(가) 있습니다."
+9 = ZZZZZ, "형식 파일이 ID 열을 복사하지 않도록 bcp를 지시했습니다. -E 옵션과 충돌합니다."
+10 = ZZZZZ, "복사할 열이 없습니다."

@@ -1,0 +1,3 @@
+SYBASE15
+	master tcp ether 172.16.201.11 2048
+	query tcp ether 172.16.201.11 2048

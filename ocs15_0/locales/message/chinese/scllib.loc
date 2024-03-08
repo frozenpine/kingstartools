@@ -1,0 +1,338 @@
+; "scllib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=chinese
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+[scllib]
+
+1 = SCLE_DRIVER, "安全驱动程序级别错误。"
+
+2 = SCLE_INITED, "SCL已经初始化。"
+
+3 = SCLE_MEMALLOC, "尝试分配内存失败。"
+
+4 = SCLE_MUTXALLOC, "尝试分配互斥失败。"
+
+5 = SCLE_RMAN, "RMAN API中出错。"
+
+6 = SCLE_LMAN, "LMAN API中出错。"
+
+7 = SCLE_VERSION, "SCL-Library版本无效。"
+
+8 = SCLE_PROPCMD, "指定的属性命令无效。"
+
+9 = SCLE_PROPERTY, "指定的属性无效。"
+
+10 = SCLE_PROP_RO, "只读属性。"
+
+11 = SCLE_PROP_OF, "属性缓冲区溢出。"
+
+12 = SCLE_OPEN, "无法打开安全驱动程序。"
+
+13 = SCLE_LOAD, "无法装载安全驱动程序。"
+
+14 = SCLE_INTLHOME, "无法确定SYBASE主目录。"
+
+15 = SCLE_INTLOPEN, "无法打开配置文件。"
+
+16 = SCLE_INTLNOENT, "无法在配置文件中找到SCL记录项。"
+
+18 = SCLE_DRVLOAD, "装载指定的安全驱动程序失败。"
+
+19 = SCLE_SESSBOUND, "当前已绑定会话。"
+
+20 = SCLE_SESSUBOUND, "当前已解除会话绑定。"
+
+21 = SCLE_CREDACT, "当前正在使用凭证。"
+
+22 = SCLE_CRED_NA, "凭证未处于活动状态。"
+
+23 = SCLE_UNSUPPORT, "命令不受支持。"
+
+24 = SCLE_MUTEXLOCK, "互斥锁调用失败。"
+
+25 = SCLE_MECHNOTFND, "未找到指定的安全机制。"
+
+26 = SCLE_CFGERR, "配置文件错误。"
+
+27 = SCLE_CREDUSED, "未删除凭证句柄。"
+
+28 = SCLE_DRIVUSED, "未关闭驱动程序。"
+
+29 = SCLE_MECHUSED, "未删除安全机制句柄。"
+
+30 = SCLE_MECHOIDNOTFND, "未找到安全机制OID。"
+
+; end of scl error strings
+;
+
+; SSPI security driver error strings
+;
+
+[scdsspi]
+
+1 = MSSPE_MALLOC, "内存分配失败。"
+
+2 = MSSPE_SRVNOTSUPP, "请求的安全服务不受支持。"
+
+3 = MSSPE_PRINCIPAL, "指定的安全主体名称未知或者不是所有者。"
+
+4 = MSSPE_PROVIDER, "未找到安全提供程序或者提供程序初始化失败。"
+
+5 = MSSPE_INITSTR, "驱动程序初始化字符串无效。"
+
+6 = MSSPE_PROPCMD, "安全属性命令无效。"
+
+7 = MSSPE_PROPNOTSUPP, "安全属性名称无效。"
+
+8 = MSSPE_CONTEXT, "找到的驱动程序上下文结构不正确。"
+
+9 = MSSPE_OPNOTSUPP, "驱动程序入口点不受支持。"
+
+10 = MSSPE_PROPVALLEN, "属性值缓冲区长度太小。"
+
+11 = MSSPE_TOKEN, "安全令牌无效。"
+
+12 = MSSPE_HANDLE, "安全句柄无效。"
+
+13 = MSSPE_NAMETOOLONG, "机制/主体/目标名称太长。"
+
+14 = MSSPE_PACKAGE, "指定的安全包不受支持。"
+
+15 = MSSPE_INTERNAL, "出现意外内部错误。"
+
+16 = MSSPE_DENIED, "安全会话请求被拒绝。"
+
+17 = MSSPE_RMTNAME, "未找到安全目标名称或无效。"
+
+18 = MSSPE_PROVIDERERR, "安全服务提供程序出现内部错误%1!。"
+
+19 = MSSPE_MSGALTERED, "安全消息已变更 - 签名验证失败。"
+
+20 = MSSPE_MSGSEQ, "遇到无序消息。"
+
+; end of sspi driver error strings
+;
+
+; NDS security driver error strings
+;
+
+[scdnds]
+
+1 = NDSE_MALLOC, "内存分配失败。"
+
+2 = NDSE_SRVNOTSUPP, "请求的安全服务不受支持。"
+
+3 = NDSE_PRINCIPAL, "指定的主体名称无效。"
+
+4 = NDSE_PROVIDER, "未找到NDS安全提供程序或者初始化失败。"
+
+5 = NDSE_INITSTR, "初始化字符串无效。"
+
+6 = NDSE_PROPCMD, "安全属性命令无效。"
+
+7 = NDSE_PROPNOTSUPP, "安全属性名称无效。"
+
+8 = NDSE_CONTEXT, "指定的驱动程序上下文结构不正确。"
+
+9 = NDSE_OPNOTSUPP, "指定的安全驱动程序入口点不受支持。"
+
+10 = NDSE_PROPVALLEN, "属性值缓冲区非常小。"
+
+11 = NDSE_DITBASE, "指定的DIT基值无效。"
+
+12 = NDSE_VERNOTSUPP, "驱动程序不支持指定版本。"
+
+13 = NDSE_CREDS, "凭证或凭证用法类型无效。"
+
+14 = NDSE_INITDITBASE, "初始化DIT基值无效。"
+
+15 = NDSE_NAMETOOLONG, "NDS主体名称太长。"
+
+16 = NDSE_NWCALLSINIT, "NetWare例程NWCallsInit()失败(%1!)。"
+
+17 = NDSE_NWDSCCTX, "NetWare例程NWDSCreateContext()失败(%1!)。"
+
+18 = NDSE_INIT, "NDS初始化失败(%1!)。"
+
+19 = NDSE_NDS, "NDS调用失败(%1!)。"
+
+20 = NDSE_RMTNAME, "未找到安全目标名称或无效。"
+
+21 = NDSE_CHANNELID, "未找到指定的通道标识符或无效。"
+
+22 = NDSE_BIND, "安全会话绑定失败。"
+
+23 = NDSE_PROVIDERVER, "NDS安全提供程序版本不匹配。"
+
+24 = NDSE_NWDSTREE, "指定的目录树名称无效。"
+
+; end of nds driver error strings
+;
+
+; DCE security driver error strings
+;
+
+[scddce]
+
+1 = DCEE_MALLOC, "内存分配失败。"
+
+2 = DCEE_SRVNOTSUPP, "请求的安全服务不受支持。"
+
+3 = DCEE_PRINCIPAL, "指定的安全主体名称未知或者不是所有者。"
+
+4 = DCEE_BUFOF, "属性值缓冲区溢出错误。"
+
+5 = DCEE_INITSTR, "驱动程序初始化字符串无效。"
+
+6 = DCEE_PROPCMD, "安全属性命令无效。"
+
+7 = DCEE_PROPNOTSUPP, "安全属性名称无效。"
+
+8 = DCEE_CONTEXT, "找到的驱动程序上下文结构不正确(次要状态%1!)。"
+
+9 = DCEE_OPNOTSUPP, "驱动程序入口点不受支持。"
+
+10 = DCEE_PROPVALLEN, "属性值缓冲区长度太小。"
+
+11 = DCEE_TOKEN, "安全令牌无效(次要状态%1!)。"
+
+12 = DCEE_HANDLE, "安全句柄无效。"
+
+13 = DCEE_NAMETOOLONG, "机制/主体/目标名称太长。"
+
+14 = DCEE_CHKSIGN, "签名验证失败(次要状态%1!)。"
+
+15 = DCEE_INTERNAL, "出现意外内部错误。"
+
+16 = DCEE_DENIED, "安全会话请求被拒绝(次要状态%1!)。"
+
+17 = DCEE_RMTNAME, "未找到安全目标名称或者无效(次要状态%1!)。"
+
+18 = DCEE_PROVIDERERR, "安全服务提供程序出现内部错误%1!。"
+
+19 = DCEE_MSGALTERED, "安全消息已变更 - 签名验证失败。"
+
+20 = DCEE_MSGSEQ, "遇到无序消息(次要状态%1!)。"
+
+21 = DCEE_BADNAMETYPE, "找到的安全名称类型无效(次要状态%1!)。"
+
+22 = DCEE_BADCHANBIND, "找到的通道绑定无效/不匹配(次要状态%1!)。"
+
+23 = DCEE_CREDEXPIRED, "参考凭证已过期(次要状态%1!)。"
+
+24 = DCEE_BADCRED, "凭证一致性检查失败(次要状态%1!)。"
+
+25 = DCEE_OLDTOKEN, "指定的安全令牌版本太旧，无法使用(次要状态%1!)。"
+
+26 = DCEE_DUPTOKEN, "指定的安全令牌已经过处理(次要状态%1!)。"
+
+27 = DCEE_CTXTEXPIRED, "安全上下文已过期(次要状态%1!)。"
+
+28 = DCEE_BADNAME, "传入的安全名称无效(次要状态%1!)。"
+
+29 = DCEE_REGIDENTITY, "上下文接受程序标识的注册例程失败(次要状态%1!)。"
+
+30 = DCEE_BADMECH, "指定的机制不受支持或者不可用(次要状态%1!)。"
+
+31 = DCEE_BADBUF, "找到的安全缓冲区无效(次要状态%1!)。"
+
+; end of dce driver error strings
+;
+
+[scdkrb]
+
+1 = KRBE_MALLOC, "内存分配失败。"
+
+2 = KRBE_SRVNOTSUPP, "请求的安全服务不受支持。"
+
+3 = KRBE_PRINCIPAL, "指定的安全主体名称未知或者不是所有者。"
+
+4 = KRBE_BUFOF, "属性值缓冲区溢出错误。"
+
+5 = KRBE_INITSTR, "驱动程序初始化字符串无效。"
+
+6 = KRBE_PROPCMD, "安全属性命令无效。"
+
+7 = KRBE_PROPNOTSUPP, "安全属性名称无效。"
+
+8 = KRBE_CONTEXT, "找到的驱动程序上下文结构不正确(次要状态%1!)。"
+
+9 = KRBE_OPNOTSUPP, "驱动程序入口点不受支持。"
+
+10 = KRBE_PROPVALLEN, "属性值缓冲区长度太小。"
+
+11 = KRBE_TOKEN, "安全令牌无效(次要状态%1!)。"
+
+12 = KRBE_HANDLE, "安全句柄无效。"
+
+13 = KRBE_NAMETOOLONG, "机制/主体/目标名称太长。"
+
+14 = KRBE_CHKSIGN, "签名验证失败(次要状态%1!)。"
+
+15 = KRBE_INTERNAL, "出现意外内部错误。"
+
+16 = KRBE_DENIED, "安全会话请求被拒绝(次要状态%1!)。"
+
+17 = KRBE_RMTNAME, "未找到安全目标名称或者无效(次要状态%1!)。"
+
+18 = KRBE_PROVIDERERR, "安全服务提供程序出现内部错误%1!。"
+
+19 = KRBE_MSGALTERED, "安全消息已变更 - 签名验证失败。"
+
+20 = KRBE_MSGSEQ, "遇到无序消息(次要状态%1!)。"
+
+21 = KRBE_BADNAMETYPE, "找到的安全名称类型无效(次要状态%1!)。"
+
+22 = KRBE_BADCHANBIND, "找到的通道绑定无效/不匹配(次要状态%1!)。"
+
+23 = KRBE_CREDEXPIRED, "参考凭证已过期(次要状态%1!)。"
+
+24 = KRBE_BADCRED, "凭证一致性检查失败(次要状态%1!)。"
+
+25 = KRBE_OLDTOKEN, "指定的安全令牌版本太旧，无法使用(次要状态%1!)。"
+
+26 = KRBE_DUPTOKEN, "指定的安全令牌已经过处理(次要状态%1!)。"
+
+27 = KRBE_CTXTEXPIRED, "安全上下文已过期(次要状态%1!)。"
+
+28 = KRBE_BADNAME, "传入的安全名称无效(次要状态%1!)。"
+
+29 = KRBE_REGIDENTITY, "上下文接受程序标识的注册例程失败(次要状态%1!)。"
+
+30 = KRBE_BADMECH, "指定的机制不受支持或者不可用(次要状态%1!)。"
+
+31 = KRBE_BADBUF, "找到的安全缓冲区无效(次要状态%1!)。"
+
+32 = KRBE_DELEGNOTSUPP, "已请求凭证委托，但凭证委托不受支持或不可用。"
+
+; end of Kerberos driver error strings
+;
+

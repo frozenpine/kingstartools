@@ -1,0 +1,120 @@
+; "sybpllib.loc" - Localization file for the Perl extension module for ASE
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+; For readability, this example is for a us_english localization file.
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[pldefaults]
+
+1 = ZZZZZ,	"Unable to get string due to lack of memory"
+
+2 = ZZZZZ,	"Unable to get layer message string"
+
+3 = ZZZZZ,	"Unable to get origin message string"
+
+4 = ZZZZZ,	"Error string not available"
+
+;;;
+
+[pllayer]
+
+1 = ZZZZZ,	"SAP ASE Perl Driver "
+
+;;;
+
+[plorigin]
+
+1 = ZZZZZ,	"Internal error"
+
+2 = ZZZZZ,	"User error"
+
+3 = ZZZZZ,	"CT library error"
+
+;;;
+
+[plapierror]
+
+1 = ZZZZZ,	"%1! unable to allocate memory."
+
+2 = ZZZZZ,	"%1! handle is null."
+
+3 = ZZZZZ,	"The %1! api failed."
+
+4 = ZZZZZ,	"handle is null for statement id %1!."
+
+5 = ZZZZZ,	"failure for statement id %1!."
+
+6 = ZZZZZ,	"send failure for statement id %1!."
+
+7 = ZZZZZ,	"%1! must be > 0."
+
+8 = ZZZZZ,	"%1! must be <= %2!, setting to maximum allowed value."
+
+9 = ZZZZZ,	"ct_config( %2!, %1!) failed. The supplied option is illegal or missing."
+
+10 = ZZZZZ,	"cs_locale( CS_SET, %1! %2!) failed."
+
+11 = ZZZZZ,	"cs_dt_info( CS_SET, CS_DT_CONVFMT ) failed."
+
+12 = ZZZZZ,	"ct_debug( CS_SET CS_DBG_PROTOCOL ) failed."
+
+13 = ZZZZZ,	"ct_con_props( %2!, %1!) failed. The supplied option is illegal or missing."
+
+14 = ZZZZZ,	"cannot change to database %1!."
+
+15 = ZZZZZ,	"ct_command() failed for %1!."
+
+16 = ZZZZZ,	"ct_send() failed for %1!."
+
+17 = ZZZZZ,	"ct_describe() failed for column %1!."
+
+18 = ZZZZZ,	"ct_compute_info() failed on column %1! when describing column %2!."
+
+19 = ZZZZZ,	"conversion failed %1!."
+
+20 = ZZZZZ,	"ct_param() failed."
+
+21 = ZZZZZ,	"ct_command() %1! failed for statement %2!."
+
+22 = ZZZZZ,	"ct_results() failed for %1!."
+
+23 = ZZZZZ,	"%1! command is ineffective with autocommit enabled."
+
+24 = ZZZZZ,	"ct_dynamic( CS_PREPARE ) failed on statement %1!."
+
+25 = ZZZZZ,	"ct_dynamic( CS_DESCRIBE INPUT ) failed on statement %1!."
+
+26 = ZZZZZ,	"ct_dynamic( CS_EXECUTE ) failed on statement %1!."
+
+27 = ZZZZZ,	"%1! database handle is inactive, not connected to server."
+
+28 = ZZZZZ,	"subconnections are not allowed."
+
+29 = ZZZZZ,	"cannot bind placeholder %1!."
+
+30 = ZZZZZ,	"unexpected cancel."
+
+31 = ZZZZZ,	"unexpected return code from %1!."
+
+32 = ZZZZZ,	"invalid format %1! provided to syb_date_fmt ."
+
+33 = ZZZZZ,	"Fatal: multiple active statement handles on database handle without autocommit enabled."
+
+34 = ZZZZZ,     "Fatal: invalid or unsupported DSN option provided."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,64 @@
+; "cobct.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+; 
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cobctlayer]
+
+1 = ZZZZZ, "Veneer Layer ของ COBOL CT Library"
+2 = ZZZZZ, "เลเยอร์รันไทม์ COBOL"
+
+[cobcterror]
+
+1 = ZZZZZ, "ประเภทสำหรับ CSBDIAG หรือ CTBDIAG ไม่ถูกต้อง"
+2 = ZZZZZ, "ตัวเลือก CS_USERDATA ไม่ได้รับการสนับสนุนสำหรับ Cobol"
+3 = ZZZZZ, "รหัสคอมไพเลอร์ที่ไม่รู้จัก"
+4 = ZZZZZ, "การแปลงตัวแปรอินพุทใน CTBPARAM ล้มเหลว"
+5 = 22022, "ไม่สามารถจัดเก็บหรือดึงข้อมูลประเภทตัวบ่งชี้ได้"
+6 = ZZZZZ, "การจัดสรรหน่วยความจำล้มเหลว"
+7 = ZZZZZ, "ประเภทไม่ได้รับการสนับสนุน"
+8 = ZZZZZ, "ความสามารถ CS-ALL-CAPS ไม่ได้รับการสนับสนุนสำหรับ Cobol"
+9 = 22003, "จำนวนเต็มของรายการข้อมูลของ PIC ที่ดึงเข้ามามีเลขหลายหลักมากเกินไป"
+10 = ZZZZZ, "การรวมอาร์กิวเมนต์กับ SYBSETSQLDA ไม่ถูกต้อง"
+11 = ZZZZZ, "SQLDA-SQLN น้อยกว่า SQLDA-SQLD"
+12 = ZZZZZ, "SQLDA-SQLD เป็นค่าลบ"
+
+[cobctorigin]
+
+1 = ZZZZZ, "ข้อผิดพลาดภายใน"
+2 = ZZZZZ, "เกิดข้อผิดพลาดในการเรียกโปรแกรม อาจเกิดจากรหัสที่พรีคอมไพเลอร์สร้างขึ้น"
+3 = ZZZZZ, " "
+
+[cobctruntime]
+1 = ZZ000, "เกิดข้อผิดพลาดที่ไม่สามารถกู้คืนได้"
+2 = ZA000, "เกิดข้อผิดพลาดภายใน"
+3 = ZD000, "ได้รับ CS_COMPUTE_RESULT ที่ไม่คาดคิด"
+4 = ZE000, "ได้รับ CS_CURSOR_RESULT ที่ไม่คาดคิด"
+5 = ZF000, "ได้รับ CS_PARAM_RESULT ที่ไม่คาดคิด"
+6 = ZG000, "ได้รับ CS_ROW_RESULT ที่ไม่คาดคิด"
+7 = ZB000, "ไม่มีข้อความถูกส่งคืนสำหรับ sqlca, SQLCODE หรือ SQLSTATE"
+8 = ZC000, "ยังไม่ได้กำหนดการเชื่อมต่อ"
+9 = 00102, "ได้รับ CS_STATUS_RESULT ที่ไม่คาดคิด"
+10 = ZI000, "ได้รับ CS_DESCRIBE_RESULT ที่ไม่คาดคิด"
+11 = 22005, "ข้อยกเว้นของข้อมูล -- เกิดข้อผิดพลาดในการกำหนดตัวอธิบายรายการ - ประเภท"
+12 = JZ000, "การจัดสรรหน่วยความจำล้มเหลว"
+13 = ZK000, "SQL-Server ต้องเป็นเวอร์ชัน 10 ขึ้นไป"
+14 = ZM000, "เกิดข้อผิดพลาดในการกำหนดค่าเริ่มต้น Client Library"
+15 = ZN000, "เกิดข้อผิดพลาดในการรับหรือปล่อย mutex"
+16 = 08002, "มีการใช้ชื่อการเชื่อมต่ออยู่"
+17 = ZO000, "HA FAILOVER เกิดขึ้น"

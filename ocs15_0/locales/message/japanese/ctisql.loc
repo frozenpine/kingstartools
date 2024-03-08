@@ -1,0 +1,132 @@
+; ctisql.loc -- Localization message file for Open Client isql
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPTS
+;
+;   Prompt-related strings
+;
+[prompts]
+
+1 = ZZZZZ, "パスワード: "
+
+2 = ZZZZZ, "確認  "
+
+3 = ZZZZZ, "<enter> を押して次のページに進むか、<a> を押してすべて表示するか、<q> を押して終了します:  "
+
+; LOC_SECT_INIT
+;
+;   initialization strings
+;
+[init]
+
+1 = ZZZZZ, "致命的なエラー: メモリの割り当てに失敗しました。"
+
+2 = ZZZZZ, "ローカライゼーションオブジェクトを認識できません。デフォルト値の '%1!' を使用します。"
+
+3 = ZZZZZ, "内部エラー: cs_locale() に無効なローカライゼーションタイプが渡されました。"
+
+4 = ZZZZZ, "1 組の変換テーブルをロードしようとしてエラーが発生しました。"
+
+5 = ZZZZZ, "ローカライゼーション関連構造体と一緒に使用するためにアプリケーションのコンテキストを設定しようとして、エラーが発生しました。"
+
+6 = ZZZZZ, "ワイルドカードが長すぎます。"
+
+7 = ZZZZZ, "アプリケーション名が長すぎます。"
+
+8 = ZZZZZ, "履歴の長さが無効です。"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+;   NOTE: Errors 1 through 7 are messages carried over from pre-ConnR11 versions
+;   of isql.
+;
+[errors]
+
+1 = ZZZZZ, "致命的なエラー: メモリの割り当てに失敗しました。"
+
+2 = ZZZZZ, "I/O エラー: 領域不足のためデータを入力できません。"
+
+3 = ZZZZZ, "エディタの使用に必要なテンポラリファイル '%1!' をオープンできませんでした。"
+
+4 = ZZZZZ, "'%1!' エディタを起動できません。"
+
+5 = ZZZZZ, "入力ファイル '%1!' をオープンできません。"
+
+6 = ZZZZZ, "出力ファイル '%1!' をオープンできません。"
+
+7 = ZZZZZ, "Isql: 不明なパラメータ '%1!'。"
+
+8 = ZZZZZ, "データベース名が長すぎます。"
+
+9 = ZZZZZ, "CS-Library メッセージコールバックルーチンをインストールできません。"
+
+10 = ZZZZZ, "Client Library を初期化できません。"
+
+11 = ZZZZZ, "Client Library クライアントメッセージコールバックルーチンをインストールできません。"
+
+12 = ZZZZZ, "サポートされないデータ型です。"
+
+13 = ZZZZZ, "バッファがいっぱいです。ローの出力を中断します。"
+
+14 = ZZZZZ, "サポートされない結果型です。"
+
+15 = ZZZZZ, "無効なメモリブロックサイズです。"
+
+16 = ZZZZZ, "無効なメモリハンドルです。"
+
+17 = ZZZZZ, "内部 isql メモリの割り当てエラーです。"
+
+18 = ZZZZZ, "コマンドラインに長すぎる文字列が指定されたため、エディタを起動できません。"
+
+19 = ZZZZZ, "isql アプリケーションコンテキストが初期化されていません。"
+
+20 = ZZZZZ, "サーバとの接続が確立されていません。"
+
+21 = ZZZZZ, "コマンドハンドルは使用できません。"
+
+22 = ZZZZZ, "バッファファイルをオープンできません。"
+
+23 = ZZZZZ, "ファイルの位置インジケータをファイルの始めにリセットできませんでした。"
+
+24 = ZZZZZ, "コマンドバッファをクリアできませんでした。"
+
+25 = ZZZZZ, "コマンドを初期化できません。"
+
+26 = ZZZZZ, "コマンドハンドルのコマンドをクリアできませんでした。"
+
+27 = ZZZZZ, "1 組の変換テーブルをロードしようとしてエラーが発生しました。"
+
+28 = ZZZZZ, "コマンドラインが長すぎます。"
+
+29 = ZZZZZ, "ファイル名または実行プログラム名がありません。"
+
+30 = ZZZZZ, "プロンプトのラベルが長すぎます"
+
+31 = ZZZZZ, "最初のプロンプトで入力した値と、確認用プロンプトの入力が異なっています。"
+
+32 = ZZZZZ, "引用符付きのファイル名に、閉じる引用符がありません。"
+
+33 = ZZZZZ, "ディレクトリ '%1!' を作成できませんでした: '%2!'"
+
+34 = ZZZZZ, "'%1!' 予期しない種類が見つかりました: '%2!'"
+
+35 = ZZZZZ, "'%1!' を書き込むために開けませんでした: '%2!'"
+
+36 = ZZZZZ, "テンポラリファイル '%1!' を削除できませんでした。"

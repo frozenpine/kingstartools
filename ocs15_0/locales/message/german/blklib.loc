@@ -1,0 +1,201 @@
+; "blklib.loc" - Localization file for BLK-Lib.
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkdefaults]
+
+1 = ZZZZZ, "Speicherplatz kann nicht zugewiesen werden."
+
+2 = ZZZZZ, "blklib"
+
+3 = ZZZZZ, "blklib"
+
+4 = ZZZZZ, "Allgemeiner Fehler"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The BLK-Lib layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blklayer]
+
+1 = ZZZZZ, "BLK-Schicht"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkorigin]
+
+1 = ZZZZZ, "Benutzerfehler"
+
+2 = ZZZZZ, "Interner BLK-Library-Fehler"
+
+3 = ZZZZZ, "CT-Library-Fehler"
+
+4 = ZZZZZ, "Async-Managerfehler"
+
+5 = ZZZZZ, "Allgemeiner Bibliotheksfehler"
+
+6 = ZZZZZ, "Speicherverwaltungsfehler"
+
+7 = ZZZZZ, "Server-Fehler"
+
+8 = ZZZZZ, "Formatfehler der Clientdaten"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[blkapierror]
+
+0 = ZZZZZ, "BLK Okay"
+
+1 = ZZZZZ, "%1!-API kann vom Zustand %2! aus nicht aufgerufen werden"
+
+2 = ZZZZZ, "%1!-API nur für Massenimportieren zulässig"
+
+3 = ZZZZZ, "%1!-API darf nicht durch Rückruf (Zustand = %2!) aufgerufen werden"
+
+4 = ZZZZZ, "Parameter %1! hat unzulässigen Wert %2!"
+
+5 = ZZZZZ, "Feld %1! der CS_DATAFMT-Struktur weist unzulässigen Wert \
+%2! auf."
+
+6 = ZZZZZ, "Der Parameter %1! darf nicht NULL sein."
+
+7 = ZZZZZ, "Der angegebene Puffer von %1! Byte übersteigt die Gesamtlänge \
+ des zu übertragenden Werts."
+
+8 = ZZZZZ, "Die Gesamtstellenzahl muss größer oder gleich den Dezimalstellen sein"
+
+9 = ZZZZZ, "NULL-Wert %1! kann nicht mit dem Datentyp %2! gebunden werden."
+
+10 = ZZZZZ, "Tabellenspalte vom Typ %1! kann nicht an eine Programmvariable \
+ vom Typ %2! gebunden werden."
+
+11 = ZZZZZ, "Textxfer- und Array-Bindung gleichzeitig nicht möglich."
+
+12 = ZZZZZ, "Alle Spalten müssen denselben Array-Zählwert für Array-Bindung \
+ haben."
+
+13 = ZZZZZ, "Für diesen TDS-Datentyp %1! kann kein äquivalenter CS_TYPE \
+gefunden werden"
+
+14 = ZZZZZ, "Aufruf der CT_Lib-Routine %1! fehlgeschlagen."
+
+15 = ZZZZZ, "Verwenden Sie Richtung CS_BLK_IN oder CS_BLK_OUT für den Massenimport oder Massenexport."
+
+16 = ZZZZZ, "Verwenden Sie die Option CS_BLK_ALL, um das Exportieren zu beenden."
+
+17 = ZZZZZ, "Falscher Prozess %1! Status für %2! - sollte hier nicht auftreten."
+
+18 = ZZZZZ, "Falscher Status für %1! - sollte hier nicht auftreten."
+
+19 = ZZZZZ, "Die Spalte und der Standardwert %1!, die vom Server gesendet \
+ wurden, sind nicht gleich."
+
+20 = ZZZZZ, "Falscher Status für %1! - ist aber wiederherstellbar - Verarbeitung geht weiter."
+
+21 = ZZZZZ, "Vom Server erwartete Anzahl der Spalten entspricht nicht der \
+ empfangenen Anzahl %1!."
+
+22 = ZZZZZ, "Anwendung muss mit Eigenschaft %1! angemeldet werden."
+
+23 = ZZZZZ, "Versionen der Bulkcopy-Library und der CT_Lib sind nicht kompatibel."
+
+24 = ZZZZZ, "Kein Wert oder Standardwert verfügbar und NULL unzulässig. \
+ Spalte = %1!, Zeile = %2!."
+
+25 = ZZZZZ, "Konvertierungsroutine gescheitert - Bedingungsüberlauf. \
+ Spalte = %1!, Zeile = %2!."
+
+26 = ZZZZZ, "Konvertierungsroutine gescheitert - Syntaxfehler. \
+ Spalte = %1!, Zeile = %2!."
+
+27 = ZZZZZ, "Falsche Reihenfolge beim Binden - eine gebundene Spalte \
+ folgt einer für textxfer markierten Spalte."
+
+28 = ZZZZZ, "Gesamtgröße von textxfer %1! überschreitet Länge der Eingabedaten %2!"
+
+29 = ZZZZZ, "Anzahl der Standardwerte %1! entspricht nicht der Standardanzahl %2!"
+
+30 = ZZZZZ, "Für die Datei, die für die Ausgabe beim Exportieren angefordert \
+ wurde, wird CS_END_RESULTS gemeldet. Datei womöglich leer."
+
+31 = ZZZZZ, "Der Parameter %1! muss NULL sein."
+
+32 = ZZZZZ, "Der Parameter %1! muss CS_UNUSED sein."
+
+33 = ZZZZZ, "Zeilenzählwert kann nicht größer gesetzt werden als der Zählwert für Array-Bindung."
+
+34 = ZZZZZ, "Es kann nur entweder BLK_IDENTITY oder BLK_IDSTARTNUM aktiviert werden."
+
+35 = ZZZZZ, "Der Wert der Eigenschaft %1! kann nicht abgefragt werden, da für \
+die Eigenschaft kein Wert festgelegt wurde."
+
+36 = ZZZZZ, "Ein Umwandlungs- oder Hinzufügungsfehler trat beim Aktualisieren \
+des Startwerts der Identity-Spalte auf."
+
+37 = ZZZZZ, "Ein Fehler ist beim Erstellen des Insert-Bulk-Befehls aufgetreten."
+
+38 = ZZZZZ, "Der Startwert der Identity-Spalte muss 0 Dezimalstellen haben."
+
+39 = ZZZZZ, "Sprachbefehl zum Abruf des Zeilenformats konnte nicht erstellt werden. "
+
+40 = ZZZZZ, "Puffer von %1! Byte ist ein unzulässiger Wert, muss größer als 0 sein.  "
+
+41 = ZZZZZ, "BCP konnte Zeilen in Zieltabelle nicht erstellen. Spalte %1! startet bei einem Offset \
+über 8191 Byte. Dieser Anfangspunkt kann im Zeilenformat der Tabelle nicht \
+genau wiedergegeben werden."
+
+42 = ZZZZZ, "Daten wurden bei einer lokalen Zeichensatzumwandlung abgeschnitten. \
+ Spalte = %1! Zeile = %2!."
+
+43 = ZZZZZ, "Langer Name der Struktur %1! wurde abgeschnitten."
+
+44 = ZZZZZ, "Bindung von mit Festwerten besetzter berechneter Spalte geändert: Starten Sie eine neue Anweisungsfolge mit blk_done(CS_BLK_BATCH)."
+
+45 = ZZZZZ, "Syntaxfehler in Parameter %1!."
+
+46 = ZZZZZ, "Bei der Serversprachumgebung handelt es sich ausschließlich um eine abrufbare Eigenschaft."
+
+47 = ZZZZZ, "Zeichensatz des Servers konnte nicht ermittelt werden. Sitzung wird abgebrochen."
+
+48 = ZZZZZ, "BCP konnte Zeilen in Zieltabelle nicht erstellen. Spalte %1! startet \
+bei einem Offset über %2! Byte. Dieser Anfangspunkt ist mit der aktuellen \
+Datenbankkonfiguration nicht zulässig."
+
+49 = ZZZZZ, "Die Anzahl der Aufrufe von blk_textxfer() übersteigt die Anzahl \
+nicht gebundener Text- oder Bildspalten."
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

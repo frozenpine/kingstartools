@@ -1,0 +1,94 @@
+; "comnlib.loc" - Localization file for Comn-Library.
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comdefaults]
+
+1 = ZZZZZ, "由于内存不足，无法获取字符串"
+
+2 = ZZZZZ, "无法获取层消息字符串"
+
+3 = ZZZZZ, "无法获取源消息字符串"
+
+4 = ZZZZZ, "错误字符串不可用"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The Comn-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comlayer]
+
+1 = ZZZZZ, "用户api层"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comorigin]
+
+1 = ZZZZZ, "外部错误"
+
+2 = ZZZZZ, "内部客户端库错误"
+
+3 = ZZZZZ, "内部网络库错误"
+
+4 = ZZZZZ, "内部公用库错误"
+
+5 = ZZZZZ, "内部intl库错误"
+
+6 = ZZZZZ, "内部异步管理器错误"
+
+7 = ZZZZZ, "内部内存管理错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[comapierror]
+
+0 = 00000, "无错误。"
+
+1 = ZZZZZ, "未知错误。"
+
+2 = ZZZZZ, "内存分配失败。"
+
+3 = ZZX04, "无法打开配置文件%1!进行读取。"
+
+4 = ZZX05, "已删除配置%1! (CS_FORCE)。"
+
+5 = ZZX06, "配置文件名%1!过长。"
+
+6 = ZZX07, "文件格式错误，字符行%1!无效。"
+
+7 = ZZX08, "未找到配置节%1!。"
+
+8 = 01X09, "配置文件语法错误，行%1!，(%2!)附近。"
+
+9 = 01X0A, "配置%1!在使用时被删除(CS_FORCE)。"
+

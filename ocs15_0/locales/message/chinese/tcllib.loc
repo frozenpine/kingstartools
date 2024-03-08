@@ -1,0 +1,445 @@
+; "tcllib.loc"
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[file format]
+	; left and right brackets will delimit section titles. 
+	; Any special character, including the comment character 
+	; and the section-title delimiters, may be interpreted 
+	; literally by preceding them with the escape character. 
+	; In addition, any line that ends with the escape character 
+	; will be continued onto the next line. 
+	version=10.0.1
+	list_separator=,	; commas will separate the members of a list. 
+	escape=\		; backslash is the escape symbol.
+
+[language] 
+	language=chinese
+
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+[tcllib]
+
+1 = NETE_DRVINITSIZE, "无法确定协议驱动程序所需的内存大小"
+
+2 = NETE_NULLOPT, "向任意Net-Library例程传递空选项指针为非法操作"
+
+3 = NETE_UNKWOPT, "所请求的Net-Library选项未知"
+
+4 = NETE_UNKWINFCDE, "所请求的地址信息代码未知"
+
+5 = NETE_BOOLREP, "选项值必须是NET_TRUE或NET_FALSE"
+
+6 = NETE_NULLNETBUF, "向net_init()传递空缓冲区指针为非法操作"
+
+7 = NETE_NOTSUPPORTED, "功能不受支持"
+
+8 = NETE_NULLHDLR, "传递空NET_POLL数组指针为非法操作"
+
+9 = NETE_BADENGINE, "引擎标志符无效"
+
+10 = NETE_ALREADYINIT, "当前进程已调用net_init()"
+
+11 = NETE_DICTNOTFOUND, "找不到寻址字典"
+
+12 = NETE_SRVNAMENOTFND, "找不到指定服务器名称属性"
+
+13 = NETE_NODICTS, "找不到可用的地址字典结构"
+
+14 = NETE_DRVINIT, "协议驱动程序初始化期间出错。"
+
+15 = NETE_NODRIVERS, "找不到可用的协议驱动程序结构"
+
+16 = NETE_LFNOSECTION , "在本地化文件中找不到Net-Library错误段"
+
+17 = NETE_DICTSYNTAX, "地址字典中存在语法错误"
+
+18 = NETE_ADRTYPNOTFND, "找不到指定的地址类型属性"
+
+19 = NETE_DICTCLOSE, "关闭地址字典时出错"
+
+20 = NETE_NOEPS, "找不到可用的端点结构"
+
+21 = NETE_EPINUSE, "试图使用某个正在使用的端点"
+
+22 = NETE_DRVPROPERTY, "用于确定属性的协议驱动程序调用失败"
+
+23 = NETE_DRVLISTEN, "用于注册监听器的Net-Library协议驱动程序调用失败"
+
+24 = NETE_DRVCONNECT, "用于连接两个端点的Net-Library协议驱动程序调用失败"
+
+25 = NETE_DRVACCEPT, "用于接受传入连接请求的协议驱动程序调用失败"
+
+26 = NETE_BADIOSTATE, "端点存在错误的I/O状态"
+
+27 = NETE_DRVNOTAVAIL, "指定的Net-Library协议驱动程序不可用"
+
+28 = NETE_BADPROPERTY, "属性类型参数无效"
+
+29 = NETE_DISCONNECT, "因断开连接，Net-Library操作被终止"
+
+30 = NETE_DRVEXIT, "Net-Library协议驱动程序出口例程失败"
+
+31 = NETE_SUBACCEPT, "试图在其中一个监听器上发出接受响应失败"
+
+32 = NETE_DRVREAD, "用于读取数据的Net-Library协议驱动程序调用失败"
+
+33 = NETE_RDDATLEN, "所需读取的数据量大于读缓冲区的大小"
+
+34 = NETE_DRVREADOOB, "用于读取紧急数据的Net-Library协议驱动程序调用"
+
+35 = NETE_EXPNOTSUPPORT, "此Net-Library协议驱动程序不支持加速数据"
+
+36 = NETE_DRVWRITE, "用于写入数据的Net-Library协议驱动程序调用失败"
+
+37 = NETE_NULLADDR, "传递空net_addr指针为非法操作"
+
+38 = NETE_NULLDICT, "传递空字典指针为非法操作"
+
+39 = NETE_NULLSTATE, "传递空net_state指针为非法操作"
+
+40 = NETE_NULLRETRES, "传递空return_reason指针为非法操作"
+
+41 = NETE_NULLEP, "传递空端点指针为非法操作"
+
+42 = NETE_NULLCBACK, "传递空回调例程指针为非法操作"
+
+43 = NETE_NULLDICTNAME, "传递空字典ID指针为非法操作"
+
+44 = NETE_NULLEXPFLAG, "传递空加速数据标志指针为非法操作"
+
+45 = NETE_NULLDICTPTR, "传递空字典句柄指针为非法操作"
+
+46 = NETE_NULLNEWEP, "传递空端点句柄指针为非法操作"
+
+47 = NETE_NULLATTRLST, "传递空地址信息指针为非法操作"
+
+48 = NETE_NULLADDRPTR, "传递空net_addr句柄指针为非法操作"
+
+49 = NETE_NULLLASTENTRY, "传递空的最后记录项指针为非法操作"
+
+50 = NETE_NULLRDDATA, "传递空的读缓冲区为非法操作"
+
+51 = NETE_NOADDRS, "找不到可用的地址结构"
+
+52 = NETE_NULLBYTSRD, "传递空bytes_read指针为非法操作"
+
+53 = NETE_EPCLOSING, "即将关闭指定端点"
+
+54 = NETE_NULLWRDATA, "传递空的写缓冲区为非法操作"
+
+55 = NETE_CANCELLED, "请求的操作因其它事件被取消。"
+
+56 = NETE_NULLINTL, "传递空NET_INTL结构为非法操作"
+
+57 = NETE_NULLUSERPTR, "传递空用户指针缓冲区为非法操作"
+
+58 = NETE_BADDICT, "试图使用无效的字典句柄"
+
+59 = NETE_BADADDR, "试图使用无效的地址句柄"
+
+60 = NETE_BADEP, "试图使用无效的端点句柄"
+
+61 = NETE_DRVCLOSE, "用于关闭端点的Net-Library协议驱动程序调用失败"
+
+62 = NETE_VERSION, "协议驱动程序与当前Net-Library不兼容 -- 可能是Net-Library的版本较低"
+
+63 = NETE_NULLSUPPORT, "向net_capability()传递'supported'参数的空指针为非法操作"
+
+64 = NETE_BADPROCMODE, "处理模式无效"
+
+65 = NETE_FUNCCODE, "向net_report()传递了无效的函数代码"
+
+66 = NETE_DRVINUSE, "无法卸载驱动程序 -- 它仍在使用中"
+
+67 = NETE_NCONNECTED, "试图在未连接的端点上执行I/O操作"
+
+68 = NETE_NOMULTIRW, "无法执行多次读操作"
+
+69 = NETE_NULLPREVMODE, "先前的模式指针为空，这是非法的"
+
+70 = NETE_NULLREPORT, "如果net_opt_report()尚未请求报告，无法调用net_report()"
+
+71 = NETE_LFILENAME, "在调用net_intl_errstr()时未指定本地化文件名"
+
+72 = NETE_INTLOPEN, "试图使用intl_open打开本地化文件失败"
+
+73 = NETE_UP1ENIGNE, "仅允许Net-Library的uni-processor版本使用一个引擎"
+
+74 = NETE_NULLCBPARM, "向Net-Library例程传递空回调参数为非法操作"
+
+75 = NETE_NULLINFOLEN, "net_address_info()的空信息长度指针为非法"
+
+76 = NETE_UNKWNMODE, "所请求的回调模式未被识别"
+
+77 = NETE_BADEPNUM, "所请求的端点号无效"
+
+78 = NETE_NULLENGPTR, "向net_engine_init()传递空引擎指针为非法操作"
+
+79 = NETE_NULLENGINE, "向任何Net-Library例程传递空引擎指针为非法操作"
+
+80 = NETE_NOENGS, "找不到可用的引擎结构"
+
+81 = NETE_NOREQUESTS, "找不到可用的请求结构"
+
+82 = NETE_BADMONFLAG, "所请求的监控标志验码无效"
+
+83 = NETE_EPINCLOSE, "所需的端点即将关闭"
+
+84 = NETE_BADMODE, "不支持所请求的模式"
+
+85 = NETE_DRVLOAD, "试图装载协议驱动程序失败"
+
+86 = NETE_DRVUNLOAD, "试图卸载协议驱动程序失败"
+
+87 = NETE_MEMPOLICY, "所请求的内存策略无效"
+
+88 = NETE_MEMREALLOC, "试图重新分配内存失败"
+
+89 = NETE_MEMALLOC, "试图分配内存失败"
+
+90 = NETE_NULLSIZE, "向net_initsize()传递空尺寸指针为非法操作"
+
+91 = NETE_NULLSTATEPTR, "向net_init()传递空NET_STATE指针为非法操作"
+
+92 = NETE_NULLSPNLCKCNTPTR, "向net_spinlocks()传递空螺旋锁计数指针为非法操作"
+
+93 = NETE_ENGACTIVE, "当存在活动引擎时无法执行所请求的操作"
+
+94 = NETE_UNKWIDTYPE, "指定的地址字典ID类型无效"
+
+95 = NETE_SECNOTFOUND, "未找到所请求的配置文件节"
+
+96 = NETE_DRVNOTLOADED, "未装载指定网络协议的网络驱动程序"
+
+97 = NETE_NODRVERRSTR, "对于当前错误，未提供协议驱动程序错误字符串"
+
+98 = NETE_SHRTINFOBUF, "地址信息缓冲区过小。"
+
+99 = NETE_NULLNFDS, "向net_poll_external()传递空nfds指针为非法操作"
+
+100 = NETE_BADNFDS, "所请求的文件描述符数量无效"
+
+101 = NETE_NULLRDBUF, "向Net-Library传递空的读缓冲区为非法操作"
+
+102 = NETE_NULLWRTBUF, "向Net-Library传递空的写缓冲区为非法操作"
+
+103 = NETE_INTLNXTSEC, "调用intl_nextsection失败"
+
+104 = NETE_INTLNXTVAL, "调用intl_nextvalue失败"
+
+105 = NETE_LFNOVALUE, "找到本地化文件项，无错误消息"
+
+106 = NETE_BADERRID, "找到本地化文件项，具有无效错误号"
+
+107 = NETE_INTLNXTENT, "调用intl_nextentry失败"
+
+108 = NETE_NULLINTLSIZE, "向net_intl_size传递空尺寸指针为非法操作"
+
+109 = NETE_NULLINTLBUF, "向net_intl_errstr传递空缓冲区指针为非法操作"
+
+110 = NETE_BADMSECS, "毫秒参数值无效"
+
+111 = NETE_NOLISTENERS, "无监听端点时调用net_accept为非法操作"
+
+112 = NETE_POLLNOTSUP, "不支持函数net_poll_external()"
+
+113 = NETE_NONEQUEUED, "当队列为空时不能等待请求完成"
+
+114 = NETE_BADSIGNAL, "请求的信号未被Net-Library使用"
+
+115 = NETE_DICTINUSE, "试图在具有多个任务时访问地址字典"
+
+116 = NETE_NULLEXPFLG, "向net_read传递空加速标志指针为非法操作"
+
+117 = NETE_NODRVCLASS, "未提供所请求协议类的驱动程序"
+
+118 = NETE_BADSRCHATTR, "属性搜索列表包含无效记录项"
+	
+119 = NETE_BADDICTID, "向net_dict_open传递了无效的字典ID"
+
+120 = NETE_INVALIDVERSION, "Net-Library版本无效"
+
+121 = NETE_NULLVALUE, "此选项的值参数不能为空"
+
+122 = NETE_NULLARG, "例程的无效空参数"
+
+123 = NETE_BUFTOOSMALL, "缓冲区过小"
+
+124 = NETE_BADCMD, "命令参数无效"
+
+125 = NETE_NULLBUF, "空缓冲区参数"
+
+126 = NETE_NULLPROPINFO, "空属性信息参数"
+
+127 = NETE_SETNOTSUPPORTED, "不支持Net-Library属性的设置"
+
+128 = NETE_INTLHOME, "调用intl_home失败"
+
+129 = NETE_INVOSERR, "无效的操作系统错误号"
+
+130 = NETE_RLIMITERR, "无法获得/设置打开文件的最大数"
+
+131 = NETE_GETEF, "无法创建事件标志"
+
+132 = NETE_FREEEF, "无法释放事件标志"
+
+133 = NETE_INSQTI, "向互锁队列插入元素失败"
+
+134 = NETE_REMQHI, "从互锁队列删除元素失败"
+
+135 = NETE_SETIMR, "试图设置计时器失败"
+
+136 = NETE_CANTIM, "试图取消计时器失败"
+
+137 = NETE_WAITFR, "试图等待事件失败"
+
+138 = NETE_CLREF, "无法清除事件标志"
+
+139 = NETE_SETEF, "无法设置事件标志"
+
+140 = NETE_DRVATTNHDLR, "试图安装协议驱动程序ATTENTION处理程序失败"
+
+141 = NETE_QUEOPEN, "试图打开线程通信队列失败"
+
+142 = NETE_QUEREAD, "试图从线程通信队列中读取内容失败"
+
+143 = NETE_QUEWRITE, "试图向线程通信队列中写入内容失败"
+
+144 = NETE_QUECLOSE, "试图关闭线程通信队列失败"
+
+145 = NETE_CREATETHREAD, "试图生成线程失败"
+
+146 = NETE_EVENTCREATE, "试图创建事件对象失败"
+
+147 = NETE_EVENTPOST, "试图提交到事件对象失败"
+
+148 = NETE_EVENTCLEAR, "试图清除事件对象失败"
+
+149 = NETE_EVENTWAIT, "试图等待事件对象失败"
+
+150 = NETE_CREATEMTX, "试图创建互斥信号灯失败"
+
+151 = NETE_REQUESTMTX, "试图获得互斥信号灯的独占权失败"
+
+152 = NETE_RELEASEMTX, "试图释放互斥信号灯失败"
+
+153 = NETE_DESTROYMTX, "试图毁坏互斥信号灯失败"
+
+154 = NETE_THRDSPND, "试图挂起线程失败"
+
+155 = NETE_THRDRESUME, "试图恢复线程失败"
+
+156 = NETE_THRDKILL, "试图关闭线程失败"
+
+157 = NETE_SETSIGHDLR, "无法设置适当的信号处理程序"
+
+158 = NETE_SELECTFAIL, "调用select()失败"
+
+159 = NETE_FDOFLOW, "未提供更多的文件描述符"
+
+160 = NETE_NOPOLLSTRATS, "未提供更多的轮询策略结构"
+
+161 = NETE_NOSIGNALS, "Net-Library不能支持产生信号的协议驱动程序"
+
+162 = NETE_UNKNOWN, "未知的Net-Library错误"
+
+164 = NETE_OODDRIVER, "驱动程序的版本低于所支持的版本"
+
+165 = NETE_OSGENERIC, "操作系统错误 - %1!"
+
+166 = NETE_DRVLOCFAIL, "打开驱动程序本地化文件失败"
+
+167 = NETE_OSOBJECT, "创建操作系统对象失败"
+
+168 = NET_QPRFSTR, "从地址文件读取内容时出错"
+
+170 = NETE_BADHANDLER, "错误的信号处理程序"
+
+171 = NETE_FLTCONNECT, "Net-Lib过滤器驱动程序无法连接两个端点"
+
+172 = NETE_CONABORTED, "连接已中止"
+
+173 = NETE_TIMEOUT, "Net-lib操作已超时"
+
+174 = NETE_URGENT, "已收到OOB数据"
+
+175 = NETE_ACCEPTFAIL, "接受新连接时遇到致命错误"
+
+176 = NETE_INSTFLT, "安装网络过滤器失败"
+
+177 = NETE_FLTDRVINIT, "初始化网络过虑器失败"
+
+178 = NETE_DRVPARSE, "用于解析连接信息的协议驱动程序调用失败"
+
+179 = NETE_FLTSYN, "过滤器规范中存在语法错误。"
+
+180 = NETE_FLTNUNQ, "只允许指定过滤器一次。"
+
+181 = NETE_FLTMAX, "已超出最大过滤器数目。"
+
+182 = NETE_TCPBUF, "无法设置套接字缓冲区大小。"
+
+183 = NETE_CFG, "打开libtcl.cfg配置文件失败。"
+
+[filter]
+
+1 = FLTE_CALLFAIL, "供应商联系失败。"
+2 = FLTE_BUFOF, "缓冲区溢出错误。"
+3 = FLTE_MALLOC, "内存分配错误。"
+4 = FLTE_SRVNOTSUPP, "不支持此项服务。"
+5 = FLTE_INVPRM, "参数无效。"
+6 = FLTE_BADPOINTER, "指针错误。"
+
+; TLS/SSL specific errors:
+60 = FLTE_TLS_MSTRINIT, "无法初始化SSL/TLS主环境。"
+61 = FLTE_TLS_IO_SEMANTICS, "无法将I/O语义设置为部分I/O。"
+62 = FLTE_TLS_PROTOCOLVER, "无法设置SSL/TLS协议版本。"
+63 = FLTE_TLS_RANDOMOBJ, "无法创建PRNG对象。"
+64 = FLTE_TLS_RANDOMINIT, "无法初始化PRNG对象。"
+65 = FLTE_TLS_RANDOMSEED, "无法播种PRNG。"
+66 = FLTE_TLS_RANDOMREF, "无法设置PRNG对象参考。"
+67 = FLTE_TLS_RANDOMFUNC, "无法设置PRNG函数。"
+68 = FLTE_TLS_CERTFUNC, "无法设置检查证书函数。"
+69 = FLTE_TLS_DUPCONTEXT, "无法复制SSL/TLS环境信息。"
+70 = FLTE_TLS_DUPCHILD, "无法创建SSL/TLS子环境。"
+71 = FLTE_TLS_GETVER, "无法获得SSL/TLS协议版本。"
+72 = FLTE_TLS_INVALIDVER, "SSL/TLS协议版本未知。"
+73 = FLTE_TLS_NOVALIDCIPHERS, "设置密码，以便无法看到能识别的密码组。"
+74 = FLTE_TLS_SETCIPHER, "设置密码组时出错。"
+75 = FLTE_TLS_LOADCERT, "尝试装载本地标识失败。"
+76 = FLTE_TLS_LOADCA, "无法打开证书授权文件或读取其中的证书。"
+77 = FLTE_TLS_GETCERTLEN, "无法获得对等方证书的长度。"
+78 = FLTE_TLS_GETCERT, "无法获得对等方证书。"
+79 = FLTE_TLS_GETNAME, "无法抽取对等方的公用名。"
+80 = FLTE_TLS_SETIOREF, "无法设置TLS/SSL I/O参考。"
+81 = FLTE_TLS_SETCERTREF, "无法设置TLS/SSL证书参考。"
+82 = FLTE_TLS_SETREADFUNC, "无法设置TLS/SSL读回调函数。"
+83 = FLTE_TLS_SETWRITEFUNC, "无法设置TLS/SSL写回调函数。"
+84 = FLTE_TLS_HANDSHAKEFAIL, "TLS/SSL握手失败。请检查证书是否可能出现损坏。"
+85 = FLTE_TLS_SERVERSIDE, "无法将TLS/SSL设置到服务器端。"
+86 = FLTE_TLS_CLIENTSIDE, "无法将TLS/SSL设置到客户端。"
+87 = FLTE_TLS_NOEP, "在设置TLS/SSL之前已尝试I/O操作。"
+88 = FLTE_TLS_NOCONTEXT, "在SSL握手之前已尝试I/O操作。"
+89 = FLTE_TLS_READERROR, "读取时出错。"
+90 = FLTE_TLS_WRITEERROR, "写入时出错。"
+91 = FLTE_TLS_DNFCOUNT, "无法获得远程证书DN字段的计数。"
+92 = FLTE_TLS_DNFEXTRACT, "无法从远程证书中抽取区分名信息。"
+93 = FLTE_TLS_EXTCOUNT, "无法对远程证书的扩展计数。"
+94 = FLTE_TLS_EXTEXTRACT, "无法从远程证书中抽取扩展信息。"
+95 = FLTE_TLS_REQCLNT, "要求客户端证书调用失败。"
+
+; end of tcllib error strings
+;

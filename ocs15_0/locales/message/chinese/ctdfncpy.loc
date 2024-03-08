@@ -1,0 +1,304 @@
+; "defncopy.loc" -- Localization file for Open Client defncopy
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPT
+;
+;   defncopy prompts
+;
+[prompt]
+
+1 = ZZZZZ, "口令: "
+
+
+; LOC_SECT_INIT
+;
+;   Messages specific to application and Client-Library initialization
+;
+[init]
+
+1 = ZZZZZ, "致命错误: 无法打开定义文件'%1!'。"
+
+2 = ZZZZZ, "致命错误: 为Client-Library初始化分配内存失败。"
+
+3 = ZZZZZ, "致命错误: Client-Library初始化失败。"
+
+4 = ZZZZZ, "致命错误: 安装CS-Library消息回调失败。"
+
+5 = ZZZZZ, "致命错误: 安装客户端消息回调失败。"
+
+6 = ZZZZZ, "致命错误: 安装服务器消息回调失败。"
+
+7 = ZZZZZ, "致命错误: 为应用程序上下文提供interfaces文件路径和文件名失败。"
+
+8 = ZZZZZ, "致命错误: 分配defncopy上下文结构失败。"
+
+
+; LOC_SECT_SYNTAX
+;
+;   Strings unique to defncopy's syntax/usage
+;
+[syntax]
+
+1 = ZZZZZ, "defncopy语法错误"
+
+2 = ZZZZZ, "用法"
+
+3 = ZZZZZ, "display_charset"
+
+4 = ZZZZZ, "interfaces_file"
+
+5 = ZZZZZ, "client_charset"
+
+6 = ZZZZZ, "keytab_file"
+
+7 = ZZZZZ, "password"
+
+8 = ZZZZZ, "remote_server_principal"
+
+9 = ZZZZZ, "server_name"
+
+10 = ZZZZZ, "user_name"
+
+11 = ZZZZZ, "security_options"
+
+12 = ZZZZZ, "security_mechanism"
+
+13 = ZZZZZ, "language"
+
+14 = ZZZZZ, "file_name"
+
+15 = ZZZZZ, "database_name"
+
+16 = ZZZZZ, "owner"
+
+17 = ZZZZZ, "object_name"
+
+
+; LOC_SECT_ALLOC
+;
+;   Messages specific to general memory allocation
+;
+[alloc]
+
+1 = ZZZZZ, "致命错误: 未能为%1!分配充足的内存。"
+
+2 = ZZZZZ, "致命错误: 未能为%1!分配充足的内存。已取消所有进一步的复制。"
+
+3 = ZZZZZ, "致命错误: 分配内存失败。"
+
+
+; LOC_SECT_CONNECT
+;
+;   Messages specific to client-to-server connectivity
+;
+[connect]
+
+1 = ZZZZZ, "致命错误: 未指定服务器名称。请检查DSQUERY环境变量值。"
+
+2 = ZZZZZ, "致命错误: 分配客户端/服务器连接结构失败。"
+
+3 = ZZZZZ, "致命错误: 未能将客户端/服务器连接的用户名属性设置为'%1!'。"
+
+4 = ZZZZZ, "致命错误: 设置客户端/服务器连接的口令属性失败。"
+
+5 = ZZZZZ, "致命错误: 设置客户端/服务器连接的口令加密属性失败。"
+
+6 = ZZZZZ, "致命错误: 连接服务器'%1!'失败。"
+
+
+; LOC_SECT_COMMAND
+;
+;   Messages common to command- and results-processing-related routines
+;
+[command]
+
+1 = ZZZZZ, "致命错误: 分配CS-Library命令结构失败。"
+
+2 = ZZZZZ, "致命错误: 无法启动SQL命令。"
+
+3 = ZZZZZ, "致命错误: 无法启动SQL命令。已取消所有进一步的复制。"
+
+4 = ZZZZZ, "致命错误: 无法向服务器发送SQL命令。"
+
+5 = ZZZZZ, "致命错误: 无法向服务器发送SQL命令。已取消所有进一步的复制。"
+
+6 = ZZZZZ, "致命错误: 设置SQL命令结果数据失败。"
+
+7 = ZZZZZ, "致命错误: 设置SQL命令结果数据失败。已取消所有进一步的复制。"
+
+8 = ZZZZZ, "致命错误: 为对象'%1!'设置SQL命令结果数据失败。已取消所有进一步的复制。"
+
+9 = ZZZZZ, "致命错误: 已取消SQL命令结果数据。"
+
+10 = ZZZZZ, "错误: 已取消SQL命令结果数据。已取消对此对象的复制。"
+
+11 = ZZZZZ, "错误: 已取消对象'%1!'的SQL命令结果数据。已取消对此对象的复制。"
+
+12 = ZZZZZ, "致命错误: 设置SQL命令结果数据时生成意外返回代码'%1!'。"
+
+13 = ZZZZZ, "错误: 设置对象'%1!'的SQL命令结果数据时生成意外返回代码'%1!'。取消对此对象的复制。"
+
+14 = ZZZZZ, "致命错误: 设置SQL命令结果数据时生成意外结果类型'%1!'。"
+
+15 = ZZZZZ, "致命错误: 检索结果集信息失败。"
+
+
+; LOC_SECT_COPYIN
+;
+;   Messages specific to copying objects from a file to a database
+;
+[copyin]
+
+1 = ZZZZZ, "错误: 文件'%1!'中的对象未识别为定义。"
+
+
+; LOC_SECT_COPYOUT
+;
+;   Messages specific to copying objects from a database to a file
+;
+[copyout]
+
+1 = ZZZZZ, "致命错误: 检索对象'%1!'的结果集信息失败。已取消所有进一步的复制。"
+
+2 = ZZZZZ, "致命错误: 将对象'%1!'的结果集数据捆绑到内部程序变量失败。已取消所有进一步的复制。"
+
+3 = ZZZZZ, "致命错误: 提取对象'%1!'的行结果数据失败。已取消所有进一步的复制。"
+
+4 = ZZZZZ, "错误: 提取对象'%1!'的行结果数据失败。已取消对此对象的复制。"
+
+5 = ZZZZZ, "错误: 已取消对象'%1!'的SQL命令结果数据。已取消对此对象的复制。"
+
+6 = ZZZZZ, "错误: 提取对象'%1!'的行结果数据时生成意外返回代码'%2!'。已取消对此对象的复制。"
+
+7 = ZZZZZ, "致命错误: 设置对象'%1!'的SQL命令结果数据时生成意外结果类型'%2!'。取消对此对象的复制。"
+
+
+; LOC_SECT_USEDB
+;
+;   Messages specific to results-processing routine dc_Cmd_UseDB
+;
+[usedb]
+
+1 = ZZZZZ, "致命错误: 服务器在尝试访问数据库'%1!'时出错。"
+
+2 = ZZZZZ, "致命错误: 访问数据库'%1!'时生成意外结果类型'%2!'。"
+
+3 = ZZZZZ, "致命错误: 设置SQL命令结果数据失败。无法访问数据库'%1!'。"
+
+4 = ZZZZZ, "致命错误: 已取消SQL命令结果数据。无法访问数据库'%1!'。"
+
+5 = ZZZZZ, "致命错误: 访问数据库'%1!'时生成意外返回代码'%2!'。"
+
+
+; LOC_SECT_CREATEDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_CreateDef
+;
+[createdef]
+
+1 = ZZZZZ, "错误: 服务器执行文件'%1!'内包含的SQL时出错。使用文件中的下一个对象继续复制。"
+
+2 = ZZZZZ, "错误: 执行文件'%1!'内包含的SQL时生成意外结果类型'%2!'。取消对此对象的复制。"
+
+3 = ZZZZZ, "错误: 执行文件'%1!'内包含的SQL时生成意外返回代码'%2!'。取消对此对象的复制。"
+
+4 = ZZZZZ, "致命错误: 检索存储过程执行结果的描述失败。已取消所有进一步的复制。"
+
+5 = ZZZZZ, "致命错误: 将存储过程执行结果捆绑到内部程序变量失败。已取消所有进一步的复制。"
+
+6 = ZZZZZ, "错误: 存储过程生成意外状态结果。存储过程执行已取消。"
+
+7 = ZZZZZ, "致命错误: 提取存储过程执行结果失败。已取消所有进一步的复制。"
+
+8 = ZZZZZ, "错误: 提取存储过程执行结果失败。已取消存储过程执行。"
+
+9 = ZZZZZ, "错误: 已取消SQL命令结果数据。已取消存储过程执行。"
+
+10 = ZZZZZ, "错误: 提取存储过程执行结果时生成意外返回代码'%1!'。已取消存储过程执行。"
+
+
+; LOC_SECT_SERVERERA
+;
+;   Messages specific to results-processing routine dc_Cmd_GetServerEra
+;
+[serverera]
+
+1 = ZZZZZ, "致命错误: 服务器在从数据库'%1!'的syscomments表检索数据时出错。"
+
+
+; LOC_SECT_ISOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsObject
+;
+[isobject]
+
+1 = ZZZZZ, "错误: 在数据库'%2!'中未找到对象'%1!'。"
+
+2 = ZZZZZ, "错误: 服务器在从数据库'%1!'的sysobjects表检索数据时出错。已取消对象'%2!'的复制。"
+
+
+; LOC_SECT_ISDEF
+;
+;   Messages specific to results-processing routine dc_Cmd_IsDef
+;
+[isdef]
+
+1 = ZZZZZ, "错误: 在数据库'%2!'中未找到对象'%1!'的定义。"
+
+2 = ZZZZZ, "错误: 服务器在从数据库'%1!'的syscomments表检索数据时出错。已取消对象'%2!'的复制。"
+
+
+; LOC_SECT_ISREPORT
+;
+;   Messages specific to results-processing routine dc_Cmd_IsReport
+;
+[isreport]
+
+1 = ZZZZZ, "错误: 服务器在从数据库'%1!'的sysobjects表检索数据时出错。已取消对象'%2!'的复制。"
+
+
+; LOC_SECT_GETOBJECT
+;
+;   Messages specific to results-processing routine dc_Cmd_GetObject
+;
+[getobject]
+
+1 = ZZZZZ, "错误: 服务器在从数据库'%1!'的syscomments表检索数据时出错。已取消对象'%2!'的复制。"
+
+2 = ZZZZZ, "致命错误: 从数据库'%1!'的syscomments表读取对象'%1!'的SQL定义语句失败。已取消所有进一步的复制。"
+
+3 = ZZZZZ, "致命错误: 向文件'%1!'写入数据时产生文件结束符错误;请检查可用磁盘空间。已取消所有进一步的复制。"
+
+
+; LOC_SECT_EXIT
+;
+;    Messages specific to exiting defncopy application
+;
+[exit]
+
+1 = ZZZZZ, "错误: 退出Client-Library失败。"
+
+2 = ZZZZZ, "错误: 释放CS-Library命令结构失败。"
+
+3 = ZZZZZ, "错误: 检索与客户端/服务器连接相关联的属性失败。"
+
+4 = ZZZZZ, "错误: 无法关闭与服务器'%1!'的客户端/服务器连接。"
+
+5 = ZZZZZ, "错误: 释放CS-Library连接结构失败。"
+
+

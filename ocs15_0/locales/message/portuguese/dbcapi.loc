@@ -1,0 +1,55 @@
+; "dbcapi.loc" - Localization file for DBCAPI Server
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; DBCAPI Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[dbcapidefaults]
+
+1 = ZZZZZ, "impossível obter string por insuficiência de memória "
+
+2 = ZZZZZ, "impossível obter a string de mensagem da camada "
+
+3 = ZZZZZ, "impossível obter string da mensagem de origem "
+
+4 = ZZZZZ, "string de erro não está disponível "
+
+[dbcapilayer]
+
+8 = ZZZZZ, "Camada DBCAPI"
+
+[dbcapiorigin]
+
+10 = ZZZZZ, "Erro"
+
+[dbcapierror]
+
+1 = ZZZZZ, "Falha na rotina da CT-Lib %1!."
+
+2 = ZZZZZ, "Retorno inesperado de %1!, obtido %2!."
+
+3 = ZZZZZ, "Falha na alocação de memória %1!."
+
+4 = ZZZZZ, "O parâmetro %1! não pode ser NULL."
+
+5 = ZZZZZ, "O parâmetro %1! tem um valor inválido."
+
+6 = ZZZZZ, "Erro."
+

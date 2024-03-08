@@ -1,0 +1,164 @@
+; ctbcp.loc -- Localization message file for Open Client bcp
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_ERRORS
+;
+;   Error message strings
+;
+[errors]
+
+1 = ZZZZZ, "Błąd krytyczny: przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Błąd we/wy: Za mało miejsca na dane wejściowe."
+3 = ZZZZZ, "Otwarcie pliku tymczasowego '%1!' na potrzeby zapisu w dbedit() nie powiodło się."
+4 = ZZZZZ, "Nie można wywołać edytora '%1!'."
+5 = ZZZZZ, "Nie można otworzyć pliku wejściowego '%1!'."
+6 = ZZZZZ, "Nie można otworzyć pliku wyjściowego '%1!'."
+7 = ZZZZZ, "bcp: Nieznany parametr '%1!'."
+8 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia pierwszego wiersza do skopiowania numer wiersza musi być większy lub równy 1."
+9 = ZZZZZ, "W przypadku używania flag '%1!' i '%2!' do ustawienia pierwszego i ostatniego wiersza do skopiowania numer pierwszego wiersza musi być mniejszy od numeru ostatniego."
+10 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia ostatniego wiersza do skopiowania numer wiersza musi być większy lub równy 1."
+11 = ZZZZZ, "Kierunek kopiowania musi mieć wartość 'in' lub 'out'."
+12 = ZZZZZ, "Za flagą '%1!' musi występować liczba całkowita.  '%2!' nie jest poprawną liczbą całkowitą."
+13 = ZZZZZ, "Ostrzeżenie: flaga '%1!' występuje więcej niż raz.  Nowa wartość flagi poprzedza starą."
+14 = ZZZZZ, "Ostrzeżenie: '%1!' nadpisuje '%2!'"
+15 = ZZZZZ, "Niepoprawna długość prefiksu. Poprawne długości prefiksu to 0, 1, 2 lub 4."
+16 = ZZZZZ, "Poziom (1-16): "
+17 = ZZZZZ, "Niepoprawny poziom"
+18 = ZZZZZ, "Przedział (1-64): "
+19 = ZZZZZ, "Wiele wpisów, oddzielanych przy zwrocie, dozwolonych; zwrot po zakończeniu. "
+20 = ZZZZZ, "Zaloguj jako SA (n/t): "
+21 = ZZZZZ, "Spróbuj ponownie:"
+22 = ZZZZZ, "Nieprawidłowy przedział"
+23 = ZZZZZ, "Rozpoczynanie kopiowania..."
+24 = ZZZZZ, "Skopiowano wierszy: %1!."
+25 = ZZZZZ, "Czas zegarowy (ms.): suma = %1!"
+26 = ZZZZZ, "Czy chcesz zapisać te informacje o formacie w pliku? [t/n] "
+27 = ZZZZZ, "Nazwa pliku hosta [%1!]: "
+28 = ZZZZZ, "Niepoprawny typ kolumny. Poprawne typy to:"
+29 = ZZZZZ, "    <cr>: ten sam typ co w przypadku kolumny DataServer."
+30 = ZZZZZ, "  Avg = %1! (%2! wierszy na sekundę.)"
+31 = ZZZZZ, "Kopiowanie bcp %1! nie powiodło się"
+32 = ZZZZZ, "Częściowe kopiowanie bcp %1! nie powiodło się"
+33 = ZZZZZ, "Niewłaściwa dokładność. Dokładność powinna mieścić się w zakresie od %1! do %2!"
+34 = ZZZZZ, "Niepoprawna skala. Skala powinna mieścić się w zakresie od %1! do %2! i powinna być mniejsza lub równa dokładności."
+35 = ZZZZZ, "Napotkano nieoczekiwany typ wyniku."
+36 = ZZZZZ, "Zwrócono nieoczekiwany wynik."
+37 = ZZZZZ, "Błąd: Zapisywanie pliku BCP (%1!)!"
+38 = ZZZZZ, "Pobieranie specyfikacji pliku hosta nie powiodło się."
+39 = ZZZZZ, "Tabela, którą kopiowania zbiorczego próbuje skopiować do pliku hosta, jest krótsza niż liczba wierszy, którą procedura kopiowania zbiorczego miała zgodnie z instrukcją pominąć."
+40 = ZZZZZ, "blk_rowxfer_mult zwróciła nieoczekiwany kod zwrotny."
+41 = ZZZZZ, "Napotkano nieznany typ danych '%1!'."
+42 = ZZZZZ, "Błąd we/wy podczas odczytu pliku wejściowego bcp."
+43 = ZZZZZ, "Błąd we/wy podczas zapisu pliku błędów bcp."
+44 = ZZZZZ, "Nie można otworzyć pliku błędów."
+45 = ZZZZZ, "Napotkano nieoczekiwany koniec pliku (EOF) w pliku danych BCP."
+46 = ZZZZZ, "W pliku danych BCP znaleziono ujemny prefiks długości."
+47 = ZZZZZ, "Plik hosta BCP '%1!' zawiera wiersze w liczbie tylko %2!. Pominięcie wszystkich tych wierszy nie jest dozwolone."
+48 = ZZZZZ, "Plik hosta BCP '%1!' zawiera wiersze w liczbie tylko %2!. Odczytanie żądanej liczby wierszy nie było możliwe."
+49 = ZZZZZ, "Na potrzeby kopiowania masowego wszystkie dane o zmiennej długości muszą mieć określony prefiks długości lub terminator."
+50 = ZZZZZ, "Pole text/image jest większe niż maksymalna wartość. Dane obcięte."
+51 = ZZZZZ, "Łączna liczba błędów w tej operacji BCP jest większa niż maksymalna dozwolona liczba błędów (%1!). Nastąpiło zatrzymanie BCP."
+52 = ZZZZZ, "Nie można otworzyć pliku odrzucania '%1!'."
+53 = ZZZZZ, "Błąd we/wy podczas zapisu pliku odrzucania bcp '%1!'."
+54 = ZZZZZ, "Nie można zamknąć pliku '%1!'. Danych nie można było skopiować."
+55 = ZZZZZ, "Ostrzeżenie: Rozmiar wsadu dostosowano do wartości '%1!', celem optymalizacji funkcji pliku odrzucania."
+56 = ZZZZZ, "Osiągnięto maksymalną liczbę wierszy, jaką może przetworzyć bcp; łączna liczba wierszy ('%1!') została przetworzona; operacja bcp została zakończona."
+; LOC_SECT_INIT
+;
+;   Message strings related to initialization
+;
+[init]
+
+1 = ZZZZZ, "Błąd krytyczny: przydzielanie pamięci nie powiodło się."
+2 = ZZZZZ, "Kierunek kopiowania musi mieć wartość 'in' lub 'out'."
+3 = ZZZZZ, "Ostrzeżenie: '%1!' nadpisuje '%2!'."
+4 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia pierwszego wiersza do skopiowania numer wiersza musi być większy lub równy 1."
+5 = ZZZZZ, "W przypadku używania flag '%1!' i '%2!' do ustawienia pierwszego i ostatniego wiersza do skopiowania numer pierwszego wiersza musi być mniejszy od numeru ostatniego."
+6 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia ostatniego wiersza do skopiowania numer wiersza musi być większy lub równy 1."
+7 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia rozmiaru wsadu numer musi być większy lub równy 1."
+8 = ZZZZZ, "Ostrzeżenie: Ignorowanie flagi '%1!' podczas kopiowania z parametrem OUT."
+9 = ZZZZZ, "Nie można użyć zarówno '%1!' jak i '%2!' podczas kopiowania z parametrem IN."
+10 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawienia wartości początkowej kolumny identity numer musi być większy lub równy 0."
+11 = ZZZZZ, "Nie można użyć jednocześnie flag '%1!' i '%2!'."
+12 = ZZZZZ, "Ostrzeżenie: Resetowanie rozmiaru wsadu z wartości %1! na %2!."
+13 = ZZZZZ, "Ustawianie właściwości połączenia nie powiodło się."
+14 = ZZZZZ, "Nawiązanie połączenia nie powiodło się."
+15 = ZZZZZ, "Ustawianie opcji połączenia nie powiodło się."
+16 = ZZZZZ, "Pobieranie języka nie powiodło się."
+17 = ZZZZZ, "Ustawianie wartości domyślnych nie powiodło się."
+18 = ZZZZZ, "Pobieranie formatu tabeli nie powiodło się."
+19 = ZZZZZ, "Niepowodzenie blk_init."
+20 = ZZZZZ, "Nie można otworzyć pliku błędów."
+21 = ZZZZZ, "Nierozpoznany obiekt lokalizacji.  Użyto wartości domyślnej '%1!'."
+22 = ZZZZZ, "Błąd wewnętrzny: Nieprawidłowy typ lokalizacji został przekazany do funkcji cs_locale()."
+23 = ZZZZZ, "Ostrzeżenie: opcja '%1!' nie jest obsługiwana; zignorowano"
+24 = ZZZZZ, "Błąd składniowy w '%1!'."
+25 = ZZZZZ, "Błąd podczas próby ładowania pary tabel translacji."
+26 = ZZZZZ, "Wystąpił błąd podczas próby skonfigurowania kontekstu aplikacji na potrzeby struktur związanych z lokalizacją."
+27 = ZZZZZ, "Ostrzeżenie: Opcja "-E" nie została ustawiona; serwer DataServer wygeneruje wartości dla kolumny identity."
+28 = ZZZZZ, "W przypadku używania flagi '%1!' do ustawiania wierszy do pominięcia numer wiersza musi być większy lub równy 0."
+29 = ZZZZZ, "'Flag %1!' i '%2!' nie można użyć naraz w wierszu poleceń."
+30 = ZZZZZ, "W przypadku używania flag '%1!' i '%2!' do ustawienia wierszy do pominięcia oraz ostatniego wiersza do skopiowania liczba wierszy do pominięcia musi być mniejsza od numeru ostatniego wiersza."
+31 = ZZZZZ, "Opcja --clienterr musi wzajemnie wykluczać się z opcją -e."
+; LOC_SECT_MESSAGES
+;
+;   Informational message strings
+;
+[messages]
+
+1 = ZZZZZ, "Wsad skopiowano zbiorczo do serwera."
+2 = ZZZZZ, "%1! wiersze(-y) wysłano do serwera."
+3 = ZZZZZ, "%1! wiersze(-y) pomyślnie skopiowano do pliku hosta."
+4 = ZZZZZ, "Przerwanie - kopiowanie masowe zostało przerwane."
+5 = ZZZZZ, "Skopiowano %1! wierszy(-e)."
+
+; LOC_SECT_DIALOG
+;
+;   Message strings related to application-to-user dialog
+;
+[dialog]
+
+1 = ZZZZZ, "Hasło:  "
+2 = ZZZZZ, "Wprowadź typ pamięci plików dla pola %1! [%2!]: "
+3 = ZZZZZ, "Wprowadź długość pola %1! [bez długości maksymalnej]: "
+4 = ZZZZZ, "Wprowadź długość pola %1! [%2!]: "
+5 = ZZZZZ, "Wprowadź terminator pola [%1!]: "
+6 = ZZZZZ, "Wprowadź długość prefiksu pola %1! [%2!]: "
+7 = ZZZZZ, "Wprowadź dokładność pola %1! [%2!]: "
+8 = ZZZZZ, "Wprowadź skalę pola %1! [%2!]: "
+9 = ZZZZZ, "Wprowadź nazwę kolumny: "
+10 = ZZZZZ, "Wprowadź nazwę klucza: "
+11 = ZZZZZ, "Wprowadź hasło kolumny %1!: "
+12 = ZZZZZ, "Wprowadź hasło klucza %1!: "
+
+; LOC_SECT_FORMAT
+;
+;   Message strings related to format file
+;
+[format]
+
+1 = ZZZZZ, "%1!: Nie można otworzyć pliku formatu '%2!'."
+2 = ZZZZZ, "Błąd we/wy podczas odczytu pliku formatu bcp."
+3 = ZZZZZ, "Nie można zamknąć pliku formatu bcp."
+4 = ZZZZZ, "Kolumna %1!: Napotkano niedozwoloną wartość dokładności."
+5 = ZZZZZ, "Napotkano nieznany typ danych o stałej długości."
+6 = ZZZZZ, "Próba odczytu nieznanej wersji pliku formatu bcp."
+7 = ZZZZZ, "W pliku formatu bcp znaleziono niewłaściwy numer kolumny hosta."
+8 = ZZZZZ, "W pliku formatu znaleziono nierozpoznany typ danych '%1!'."
+9 = ZZZZZ, "Plik formatu bcp przekazał instrukcję zaniechania kopiowania kolumny identity; konflikt z opcją -E."
+10 = ZZZZZ, "Brak kolumn do skopiowania."

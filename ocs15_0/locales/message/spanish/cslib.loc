@@ -1,0 +1,192 @@
+; "cslib.loc" - Localization file for CS-Library.
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "no es posible asignar memoria."
+
+2 = ZZZZZ, "cslib"
+
+3 = ZZZZZ, "cslib"
+
+4 = ZZZZZ, "error general "
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "nivel api de usuario cslib"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "error externo"
+
+2 = ZZZZZ, "error interno en la biblioteca CS"
+
+4 = ZZZZZ, "error en la biblioteca common"
+
+5 = ZZZZZ,"error en la biblioteca intl"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 = 00000, "No hay ningún error."
+
+1 = ZZZZZ, "Error desconocido."
+
+2 = ZZZZZ, "La información que se está recuperando no se podrá almacenar en una memoria intermedia de %1! bytes."
+
+3 = ZZZZZ, "Fallo de asignación de memoria."
+
+4 = 22023, "El parámetro %1! no puede ser NULL."
+
+5 = 22023, "Si %1! es NULL, el parámetro %2! debe ser 0."
+
+6 = 22023, "Se ha fijado un valor incorrecto de %1! para el parámetro %2!."
+
+7 = 22023, "El parámetro %1! debe ser NULL."
+
+8 = 22023, "El parámetro %1! se debe definir como CS_UNUSED."
+
+9 = 22023, "No es posible definir o borrar la propiedad %1!."
+
+10 = 22023, "Se ha transferido un puntero incorrecto a una estructura Locale."
+
+11 = 22023, "El parámetro %1! apunta a un valor de tipo de datos incorrecto."
+
+12 = 22023, "Se ha transferido un nombre de idioma desconocido."
+
+13 = 22023, "No es posible realizar una operación CS_GET con el tipo %1!."
+
+14 = ZZZZZ, "No se ha podido cargar la información de localización."
+
+15 = ZZZZZ, "No se ha podido inicializar la gestión de errores."
+
+16 = 0A000, "La conversión entre los tipos de datos %1! y %2! no se soporta."
+
+17 = 22023, "El campo de formato de una estructura CS_DATAFMT debe ser CS_FMT_UNUSED si el tipo de datos es %1!."
+
+18 = 22023, "Se ha ubicado un valor incorrecto de %1! en el campo %2! de la \
+estructura CS_DATAFMT."
+
+19 = 22023, "Se ha especificado un puntero locale no válido en la estructura CS_DATAFMT."
+
+20 = ZZZZZ, "La conversión/operación ha producido un desbordamiento."
+
+21 = ZZZZZ, "La conversión/operación ha producido un subdesbordamiento."
+
+22 = ZZZZZ, "Se ha encontrado un valor de precisión incorrecto."
+
+23 = ZZZZZ, "Se ha encontrado un valor de escala incorrecto."
+
+24 = ZZZZZ, "La conversión/operación se ha detenido debido a un error de sintaxis en el campo de origen."
+
+25 = ZZZZZ, "El valor del tipo de datos está fuera del margen de valores aceptados para el tipo de datos."
+
+26 = 22012, "Imposible dividir por cero."
+
+27 = 01000, "ADVERTENCIA: Se han desinstalado los gestores de errores y mensajes existentes."
+
+28 = ZZZZZ, "No hay suficiente memoria disponible para grabar mensajes. Todos los mensajes almacenados anteriormente se han borrado."
+
+29 = ZZZZZ, "El control de errores en fila debe inicializarse con la operación CS_INIT antes de realizar cualquier otra acción cs_diag()."
+
+30 = ZZZZZ, "No es posible fijar el límite de mensajes en un valor inferior al número de mensajes de la biblioteca CS grabados actualmente."
+
+31 = ZZZZZ, "La estructura de contexto no puede eliminarse porque la aplicación no ha salido de %1!."
+
+32 = 22023, "La operación CS_SET es posible sólo si el tipo es CS_DT_CONVFMT."
+
+33 = 0A000, "La conversión solicitada no se soporta."
+ 
+34 = ZZZZZ, "Algunos caracteres no se han podido convertir."
+
+35 = ZZZZZ, "La conversión/operación se ha detenido debido a un error de estilo."
+
+36 = 22001, "El resultado está truncado porque la conversión/operación ha provocado un desbordamiento."
+
+37 = ZZZZZ, "cs_ctx_name no ha podido hacer coincidir las claves dadas."
+
+38 = ZZZZZ, "No se ha copiado la cadena porque habría provocado un desbordamiento."
+
+39 = ZZZZZ, "No se ha podido crear la cadena de caracteres. Se ha encontrado un carácter de reserva de espacio incorrecto en la cadena de texto."
+
+40 = ZZZZZ, "Sólo se permiten 0, 1 ó 2 estrellas en la cadena de formato."
+
+41 = ZZZZZ, "Se ha encontrado un identificador de tipo de datos desconocido en la cadena de formato."
+
+42 = 22023, "La cadena de formato no puede ser NULL."
+
+43 = 22023, "El especificador de formato personalizado es demasiado largo."
+
+44 = 22023, "No se ha encontrado un especificador de formato personalizado que coincida con el especificador de la cadena de formato."
+
+45 = ZZZZZ, "Gestor de localización erróneo para cs_locale en los tipos CS_SYB_LANG, CS_SYB_CHARSET o CS_SYB_LANG_CHARSET."
+ 
+46 = ZZZZZ, "No es posible acceder al fichero de localización %1!."
+ 
+47 = 08003, "%1! Excepción de conexión. La conexión no existe."
+ 
+48 = 08002, "%1! Excepción de conexión. Nombre de conexión en uso."
+ 
+49 = 34000, "%1! Nombre de cursor incorrecto."
+ 
+50 = 26000, "%1! Identificador de instrucción SQL incorrecto."
+ 
+51 = ZZZZZ, "%1! cs_objects: error al realizar la operación solicitada."
+
+52 = ZZZZZ, "Desbordamiento en la memoria intermedia interna."
+
+;CSE_ERROPENFILE
+53 = ZZZZZ, "Error al abrir el fichero de localización"
+
+;CSE_USEREP
+54 = ZZZZZ, "Advertencia: se usará el carácter de sustitución para caracteres sin representación en el destino porque algunos caracteres no pueden convertirse."
+
+;CSE_CTBCORRUPT
+55 = ZZZZZ, "Un fichero de tabla de conversión (.ctb file) está dañado. Reinstálelo o regenérelo."
+
+;CSE_NOOID
+56 = ZZZZZ, "Imposible asignar un nombre local a una ID de objeto"
+
+;CSE_MAPTRUNC
+57 = ZZZZZ, "El nombre grande de la estructura %1! se ha truncado."
+
+;CSE_BADLOCATOR
+58 = ZZZZZ, "Estructura de localizador no válida."

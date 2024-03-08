@@ -1,0 +1,192 @@
+; "cslib.loc" - Localization file for CS-Library.
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+	All rights reserved.\
+	Unpublished rights reserved under U.S. Copyright laws.\
+	This software contains confidential and trade secret information of\
+	SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+	the software and documentation by the U.S. Government is subject to\
+	restrictions set forth in a license agreement between the Government\
+	and SAP AG or an SAP affiliate company, or other written agreement\
+	specifying the Government's rights to use the software and any\
+	applicable FAR provisions, for example, FAR 52.227-19.\
+	SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The default errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csdefaults]
+
+1 = ZZZZZ, "无法分配内存。"
+
+2 = ZZZZZ, "cslib"
+
+3 = ZZZZZ, "cslib"
+
+4 = ZZZZZ, "常规错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The CS-Library layers.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cslayer]
+
+2 = ZZZZZ, "cslib用户api层"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The "origin of error" definitons.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csorigin]
+
+1 = ZZZZZ, "外部错误"
+
+2 = ZZZZZ, "内部CS-Library错误"
+
+4 = ZZZZZ, "公用库错误"
+
+5 = ZZZZZ,"intl库错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; The User API Layer Errors
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[csapierror]
+
+0 = 00000, "无错误。"
+
+1 = ZZZZZ, "未知错误。"
+
+2 = ZZZZZ, "%1!字节的缓冲区无法容纳所检索的信息。"
+
+3 = ZZZZZ, "内存分配失败。"
+
+4 = 22023, "参数%1!不能为NULL。"
+
+5 = 22023, "当%1!为NULL时，参数%2!必须是0。"
+
+6 = 22023, "为参数%2!指定了非法值%1!"
+
+7 = 22023, "参数%1!必须为NULL。"
+
+8 = 22023, "%1!参数必须设置为CS_UNUSED。"
+
+9 = 22023, "无法设置或清除属性%1!。"
+
+10 = 22023, "传入的区域设置指针无效。"
+
+11 = 22023, "参数%1!指向非法的数据类型值。"
+
+12 = 22023, "传入的区域设置名称是未知名称。"
+
+13 = 22023, "无法对类型%1!执行CS_GET操作。"
+
+14 = ZZZZZ, "无法装载本地化信息。"
+
+15 = ZZZZZ, "无法初始化错误处理。"
+
+16 = 0A000, "不支持数据类型%1!和%2!之间的转换。"
+
+17 = 22023, "当数据类型为%1!时，CS_DATAFMT结构的格式字段应是CS_FMT_UNUSED。"
+
+18 = 22023, "在\
+CS_DATAFMT结构的%2!字段中置入了非法值%1!。"
+
+19 = 22023, "在CS_DATAFMT结构中指定了非法的区域设置指针。"
+
+20 = ZZZZZ, "该转换/操作导致了上溢。"
+
+21 = ZZZZZ, "该转换/操作导致了下溢。"
+
+22 = ZZZZZ, "遇到非法精度值。"
+
+23 = ZZZZZ, "遇到非法标度值。"
+
+24 = ZZZZZ, "由于源字段出现语法错误，转换/操作停止。"
+
+25 = ZZZZZ, "该数据类型值在合法数据类型值的范围之外。"
+
+26 = 22012, "不允许除以零。"
+
+27 = 01000, "警告: 现有的错误和消息处理程序已被卸载。"
+
+28 = ZZZZZ, "内存不足，无法保存消息。已清除之前存储的所有消息。"
+
+29 = ZZZZZ, "必须先通过CS_INIT操作将内联错误处理初始化，然后才能执行其它任何cs_diag()操作。"
+
+30 = ZZZZZ, "为消息限制设置的值不能小于当前保存的CS-Library消息数。"
+
+31 = ZZZZZ, "上下文结构无法删除，因为应用程序尚未从%1!退出。"
+
+32 = 22023, "只有在类型是CS_DT_CONVFMT时才允许执行CS_SET操作。"
+
+33 = 0A000, "不支持所请求的转换。"
+ 
+34 = ZZZZZ, "某些字符无法转换。"
+
+35 = ZZZZZ, "由于样式错误，转换/操作停止。"
+
+36 = 22001, "由于转换/操作导致了上溢，结果被截断。"
+
+37 = ZZZZZ, "cs_ctx_name未能匹配给定的键值。"
+
+38 = ZZZZZ, "未复制字符串，因为这会导致上溢。"
+
+39 = ZZZZZ, "无法构建字符串。在文本字符串中发现非法的占位符。"
+
+40 = ZZZZZ, "格式字符串中只允许有0、1或2个星号。"
+
+41 = ZZZZZ, "在格式字符串中发现未知的数据类型令牌。"
+
+42 = 22023, "格式字符串不能为NULL。"
+
+43 = 22023, "自定义格式说明符过长。"
+
+44 = 22023, "未能找到与格式字符串中说明符匹配的自定义格式说明符。"
+
+45 = ZZZZZ, "类型CS_SYB_LANG、CS_SYB_CHARSET或CS_SYB_LANG_CHARSET的cs_locale区域设置处理程序错误。"
+ 
+46 = ZZZZZ, "无法访问本地化文件%1!"
+ 
+47 = 08003, "%1!连接异常 -- 连接不存在。"
+ 
+48 = 08002, "%1!连接异常 -- 连接名正在使用中。"
+ 
+49 = 34000, "%1!游标名称无效。"
+ 
+50 = 26000, "%1!SQL语句标识符无效。"
+ 
+51 = ZZZZZ, "%1! cs_objects: 执行请求的操作时出错。"
+
+52 = ZZZZZ, "发生内部缓冲区上溢。"
+
+;CSE_ERROPENFILE
+53 = ZZZZZ, "打开本地化文件时出错!"
+
+;CSE_USEREP
+54 = ZZZZZ, "警告: 由于一些字符无法转换，因此目的文件中使用了非映射替换字符。"
+
+;CSE_CTBCORRUPT
+55 = ZZZZZ, "某一转换表文件(.ctb file)已损坏。请重新安装或重新生成该文件。"
+
+;CSE_NOOID
+56 = ZZZZZ, "将本地名称映射到对象ID失败!"
+
+;CSE_MAPTRUNC
+57 = ZZZZZ, "来自%1!结构的长名称已截断。"
+
+;CSE_BADLOCATOR
+58 = ZZZZZ, "定位符结构无效。"

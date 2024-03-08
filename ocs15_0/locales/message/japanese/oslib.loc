@@ -1,0 +1,870 @@
+; "oslib.loc" - Localization file for Open Server
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Open Server Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[oserrors]
+
+0 = SRV_EOPTION, "オプション '%1!' が不明です。"
+
+1 = SRV_ENOPROC, "空きサーバプロセスがありません。"
+
+2 = SRV_ELIVEPROC, "アクティブ I/O を持つクライアントサーバプロセス '%1!' を削除しようとしています。"
+
+3 = SRV_ENOEVENT, "プロセス '%2!' で要求されたイベント '%1!' が不明です。"
+
+4 = SRV_EBADEVENT, "クライアントプロセス '%1!' はイベント '%2!' を生成することができません。"
+
+5 = SRV_EBADUEVENT, "%2! のイベント '%1!' が不明です。"
+
+6 = SRV_EIOBADBUF, "送信バッファが破損しています。sleft < 0 (%1!)"
+
+7 = SRV_EIOBADTYPE, "srv__buf_io() で要求された I/O 操作 (%1!) が不明です。"
+
+8 = SRV_EMEMORY, "'%1!' バイトのメモリ割り当てが '%3!' の割り当ての '%2!' で失敗しました。"
+
+9 = SRV_ENOPPROC, "'%1!' プロセスのサーバプロセスを作成できません。"
+
+10 = SRV_EEINITNET, "マシン '%2!' 上のネットワーク '%1!' の初期化に失敗しました。"
+
+11 = SRV_EIFILE, "interfaces ファイルが正しくありません。"
+
+12 = SRV_EFOPEN, "%1! ファイル '%2!' をオープンできません。"
+
+13 = SRV_ESRVNAME, "interfaces ファイルでサーバ名 '%1!' が見つかりませんでした。"
+
+14 = SRV_EHOMEDIR, "ユーザの (%1!) のホームディレクトリが見つかりませんでした。"
+
+15 = SRV_EPROCTYPE, "ルーチン '%2!' にあるプロセスタイプ '%1!' が不明です。"
+
+16 = SRV_ENOMSGS, "空きメッセージがありません。"
+
+17 = SRV_EMSGPROC, "プロセス '%3!' からのメッセージのための %1! プロセス '%2!' が割り当てられていません。"
+
+18 = SRV_EMSGADDRESS, "プロセス '%3!' からのメッセージの %1! プロセス '%2!' のメッセージが正しくありません。"
+
+19 = SRV_EMSGTYPE, "%1! によって受け取ったメッセージタイプが正しくありません。"
+
+20 = SRV_EBADIOEVENT, "クライアント '%2!' に対する srv__runnet() からのイベントタイプ '%1!' が正しくありません。"
+
+21 = SRV_EIOERROR, "クライアントプロセス '%3!' で I/O エラー '%1!' (%2!) が発生しました。"
+
+22 = SRV_EQPROC, "%2! でサーバプロセス ID '%1!' が正しくありません。"
+
+23 = SRV_EQFREE, "実行キュー構造体に空きがありません。"
+
+24 = SRV_ESRVEVENT, "クライアントプロセス spid %1! が非イベントメッセージを受け取りました。"
+
+25 = SRV_ECLNTMSG, "%2! に与えられたメッセージタイプ '%1!' が不明です。"
+
+26 = SRV_ESOCKET, "リッスンソケットを作成できません。"
+
+27 = SRV_EBIND, "ソケットをバインドできません。"
+
+28 = SRV_EGETHOST, "ホスト '%1!' が見つかりません。"
+
+29 = SRV_ELISTEN, "どのネットワークリスナも起動できませんでした。"
+
+30 = SRV_ECNTSOCKET, "クライアントソケットを接続できません。"
+
+31 = SRV_EPROCDEAD, "サーバプロセス '%1!' は '%2!' でアクティブではありません。"
+
+32 = SRV_EBADINDEX, "'%2!' に渡された STRCHR (%1!) が正しくありません。"
+
+33 = SRV_ENOCONVERT, "タイプ '%1!' からタイプ '%2!' に変換できません。"
+
+34 = SRV_EMAXNAME, "%1! の名前は (%3! があれば) %2! バイトよりも長くなってはいけません。"
+
+35 = SRV_ECUFLOW, "タイプ '%1!' からタイプ '%2!' への変換がアンダーフローになりました。"
+
+36 = SRV_ECOFLOW, "タイプ '%1!' からタイプ '%2!' への変換がオーバーフローになりました。"
+
+37 = SRV_ECBINOFLOW, "バイナリ変数への変換がオーバーフローになりました。"
+
+38 = SRV_ECPREC, "タイプ '%1!' からタイプ '%2!' への変換により総桁数が低下しました。"
+
+39 = SRV_ECSYNTAX, "ソースフィールドの構文エラーによってタイプ '%1!' からタイプ '%2!' への変換が停止しました。"
+
+40 = SRV_EBADLEN, "整数カラム長 '%1!' が正しくありません。正しい値は 1、2、および 4 バイトです。"
+
+41 = SRV_EUVDT, "不明な可変長データ型 '%1!' が見つかりました。"
+
+42 = SRV_EUFDT, "不明な固定長データ型 '%1!' が見つかりました。"
+
+43 = SRV_ENOROWDESC, "ロー記述を付けずにローを送信しようとしました。"
+
+44 = SRV_ENOTYPE, "%1! データ型 '%2!' が既知のデータ型ではありません。"
+
+45 = SRV_ENOITEM, "%1!: %2! のデータ項目がありません。"
+
+46 = SRV_ESTATSTATE, "%1!: 結果状態エラー %2! はすでにクライアントに送信されています。"
+
+47 = SRV_ENOTRACE, "このようなトレースフラグ (%1!) はありません。"
+
+48 = SRV_ENORPC, "現在のリモートプロシージャ呼び出しがありません。"
+
+49 = SRV_ENOITEMNO, "%1!: %3! のデータ項目番号 %2! がありません。"
+
+50 = SRV_ENORETPARAM, "RPC パラメータ番号 %1! がリターンパラメータではありません。"
+
+51 = SRV_EBADPARMLEN, "タイプ '%2!' の長さ '%1!' が正しくありません。"
+
+52 = SRV_EBADPARAMMAXLEN, "実際の長さ '%1!' を最大長 '%2!' よりも大きくすることはできません。"
+
+53 = SRV_ESYMBOL, "srv_symbol() へ渡された %1! '%2!' が不明です。"
+
+54 = SRV_ESRVTYPE, "このようなサーバフィールド (%1!) はありません。"
+
+55 = SRV_ESRVPROCTYPE, "このようなサーバプロセスフィールド (%1!) はありません。"
+
+56 = SRV_ENULLPTR, "%2! へ NULL %1! ポインタが渡されました。"
+
+57 = SRV_ETDSVERSION, "下位レベル TDS -- ステータス ENVCHANGE またはパラメータを送信しようとしましたが無視されました。"
+
+58 = SRV_EOOB, "ネットワーク ATTENTION/OOB ハンドラをインストールできませんでした。致命的エラー"
+
+59 = SRV_ENO_OOB, "TCP Select は SIGURG を送信したソケットがないことを確認しました。SIGURG が無視されました。"
+
+60 = SRV_ESIGURG_SETUP, "%1! 状態のために TCP ソケット SIGURG 設定が失敗しました。"
+
+61 = SRV_ENOTSITE, "スレッド %1! はサイトハンドラではありません。type = %2!、function = %3!"
+
+62 = SRV_EBADCONFIGOPT, "オプション %2! の設定オプション値 (%1!) が正しくありません。"
+
+63 = SRV_EOBJSYNTAX, "オブジェクト名の構文エラーです。site.db.owner.object;1 を使用してください。"
+
+64 = SRV_ENETTERM, "ネットワークの終了に失敗しました。"
+
+65 = SRV_EBADSTATUS, "%1!: 不正なステータス - %2!"
+
+66 = SRV_ERETVALRPC, "現在のクライアントコマンドは RPC です。srv__paramset() を使用してパラメータを返してください。"
+
+67 = SRV_EBADTYPELEN, "データ型 '%2!' の長さ (%1!) が正しくありません。"
+
+68 = SRV_EPROCFREE, "現在空のスレッドを削除しようとしています。"
+
+69 = SRV_EINVCHAN, "%1! にある無効なチャネルのメッセージを読み取ってください。"
+
+70 = SRV_ENOLOGFILE, "オープンしているサーバログファイルがありません。"
+
+71 = SRV_ECOLNUMBER, "カラム番号は %1! よりも大きくする必要があります。"
+
+72 = SRV_EDUPITEM,  "%1!: 項目番号 '%2!' はすでに記述されています。"
+
+73 = SRV_EINCDESC, "%3! の %1! %2! の記述が完全ではありません。"
+
+74 = SRV_EMAXUEVENT, "ユーザイベント (%1!) の設定済みの最大数はすでに定義されています。"
+
+75 = SRV_EEVENTTYPE, "イベントタイプ (%1!) が正しくありません。"
+
+76 = SRV_EINATTN, "アテンションハンドラから %1! を呼び出すことはできません。"
+
+77 = SRV_EINCONNECT, "SRV_CONNECT ハンドラから %1! を呼び出すことはできません。"
+
+78 = SRV_EBLOCKREAD, "サイトハンドラ '%1!' からブロックした読み取りを受け取りました。"
+
+79 = SRV_ESIGIO, "ネットワーク I/O 割り込みハンドラをインストールできませんでした。致命的エラー"
+
+80 = SRV_EDEFQFULL, "遅延起動キューがいっぱいです。SRV_S_DEFQUEUESIZE サーバプロパティを使用してサイズを増やしてください。"
+
+81 = SRV_EFLAGIGN, "警告: SAP OCS のインストール済みハンドラがこのシグナル用に存在するため、シグナル %2! の %1! は無視されました。"
+
+82 = SRV_ESIGSUPERCEDE, "同じシグナルに対する SAP OCS のインストール済みハンドラによって、%1! のシグナルハンドラが実行されます。"
+
+83 = SRV_EDEFUNUSED, "未使用のエラー定義です。"
+
+84 = SRV_EBADPROCTYPE, "サーバを削除中に %2! で未知のタスクタイプ %1! が見つかりました。"
+
+85 = SRV_EDNAALLFAIL, "DECnet のためのネットワーク制御構造体のメモリ割り当てができませんでした。"
+
+86 = SRV_EDNACRELSNMBX, "DECnet リスナのメールボックスを作成できませんでした。"
+
+87 = SRV_EDNANETASSIGN, "DECnet のための _NET への割り当てに失敗しました。ネットワークを開始できません。"
+
+88 = SRV_EDNADUPOBJ, "ポート名 %1! はすでに DECnet に使用されています。ネットワークを開始できません。"
+
+89 = SRV_EDNADECLARE, "DECnet のためのオブジェクト %1! のオブジェクト宣言に失敗しました。ネットワークを開始できません。"
+
+90 = SRV_EDNALISTEN, "DECnet でのリッスンのための読み取りに失敗しました。"
+
+91 = SRV_EDNAASSIGN, "クライアント接続に新しいチャネルを割り当てられませんでした。"
+
+92 = SRV_EDNAACCESS, "新しいクライアント接続を完了できませんでした。"
+
+93 = SRV_EDNANOLINK, "クライアントで使用可能なリンクテーブルエントリがありません。"
+
+94 = SRV_ENOTSERVICE, "サービスを行っていないプロセス %1! を削除しようとしています。"
+
+95 = SRV_EEVENTNOSERVICE, "プロセス %1! からサービスプロセス %2! へ非ユーザ定義イベントを送信しようとしています。"
+
+96 = SRV_EDEFHANDLER, "プロセス %1! の遅延イベント通知の処理中にエラーが発生しました。"
+
+97 = SRV_ERPCINCONSIST, "RPC パラメータはすべて名前を指定するか、または位置を指定するかのいずれかによって渡す必要があります。"
+
+98 = SRV_ECHANSETUP, "プロセスを割り当てられなかったため、サブチャネル設定に失敗しました。"
+
+99 = SRV_ENOSCHEDPROC, "スケジューラのスレッドを作成できませんでした。"
+
+100 = SRV_EDEFERFAIL, "遅延割り込みハンドラメッセージキューの srv__rundef() における障害です。status = %1!"
+
+101 = SRV_EDEFERINVMSG, "srv__rundef() において遅延割り込みハンドラによって受け取ったメッセージが無効です。。type = %1!、from = %2!"
+
+102 = SRV_EINVEVENT, "サイトハンドラによって受け取ったイベントタイプが無効です。"
+
+103 = SRV_EINVSTACK, "srv_spawn() へ渡されたスタックサイズ %1! が無効です。"
+
+104 = SRV_ESTACKALLOC, "新しいスレッドにサイズ %1! のスタックを割り当てることができません。"
+
+105 = SRV_EINVPRIORITY, "%2! へ渡された優先度 %1! が無効です。有効な優先度は %3! から %4! の範囲です。"
+
+106 = SRV_EALLOCFAIL, "空のプロセスキューのメモリを割り当てることができませんでした。"
+
+107 = SRV_ENOPRACK, "プロトコル確認メッセージを割り当てることができません。"
+
+108 = SRV_ENULLPARAM, "%1! が NULL %2! パラメータで呼び出されました。"
+
+109 = SRV_EPMSTAT, "%1! を呼び出すことができるのは、%2! が正常に返された後だけです。"
+
+110 = SRV_EBADPARAM, "不正なパラメータ %2! によって %1! が呼び出されました"
+
+111 = SRV_EPNOTCLIENT, "%1! へ渡された SRV_PROC はクライアントスレッドではありません。"
+
+112 = SRV_EOBJNAME, "%1! で見つかったオブジェクト名は無効です。"
+
+113 = SRV_EOBJID, "%1! で見つかったオブジェクト ID は無効です。"
+
+114 = SRV_ELOCKMODE, "%1! で見つかったロックモードが無効です。"
+
+115 = SRV_ENOSPAWN, "スレッドを開始できませんでした。"
+
+116 = SRV_EINRESTART, "停止されていなかったスレッド %1! を再起動しようとしました。"
+
+117 = SRV_EINSTOP, "実行中のスレッド %1! を停止しようとしました。"
+
+118 = SRV_ENOTOWNER, "スレッド %1! によって所有されていない mutex のロックを解除しようとしました。"
+
+119 = SRV_EPRNUM, "プロシージャ %1! で受け取ったパラメータが多すぎます。"
+
+120 = SRV_EPARAMNAME, "パラメータ用に名前が使用されたら、プロシージャ %2! のパラメータ %1! 用に別の名前を指定する必要があります。"
+
+121 = SRV_EPTYPE, "プロシージャ %2! に対してパラメータ %1! の不正なデータ型を取得しました。"
+
+122 = SRV_EPUNREGNOPROC, "未知のプロシージャ %1! の登録を解除しようとしました。"
+
+123 = SRV_EPROCNOTREG, "プロシージャ %1! を実行しようとしました。このプロシージャは登録されませんでした。"
+
+124 = SRV_EPEXISTS, "%1! %2! はすでに存在するため、作成できません。"
+
+125 = SRV_EPNOPROC, "不明なプロシージャ %1! の通知が要求されました。"
+
+126 = SRV_EPNONOTICEREQ, "クライアントはプロシージャ %1! の通知要求を持っていません。"
+
+127 = SRV_EPNOSRVPROC, "SRV_PROC を割り当ててシステムプロシージャを登録することができませんでした。"
+
+128 = SRV_EBUFFSIZE, "プロシージャ %2! で %1! 値を保持するにはバッファサイズが不十分です。"
+
+129 = SRV_EPNOPROCEX, "プロシージャ %1! が存在しないため、このプロシージャの通知要求をキャンセルできません。"
+
+130 = SRV_ENEEDPARAM, "プロシージャ %1! は、提供されなかったパラメータ %2! を必要とします。"
+
+131 = SRV_EUNKNOWNPARAM, "登録済みのプロシージャ %2! の名前を付けられたパラメータ %1! は存在しません。"
+
+132 = SRV_ENOLANG, "現在の言語コマンドがありません。"
+
+133 = SRV_EMAXCONNECT, "%1! 接続の設定で限界を超えました。接続は拒否されました。"
+
+134 = SRV_EPCALLBACK, "%1! のコールバックルーチンが現在の操作をアボートしました。"
+
+135 = SRV_EMAXPARAM, "プロシージャ %1! のパラメータの最大数はすでに定義されています。"
+
+136 = SRV_EBADFLAG, "ルーチン %1! に渡されたフラグ値が正しくありません。"
+
+137 = SRV_EMAXREMSITES, "サイトハンドラの最大数 %1! を超えています。"
+
+138 = SRV_EPNOTIFYEXISTS, "このクライアントにはすでにプロシージャ %1! の通知要求があります。"
+
+139 = SRV_EMAXREMCONNS, "リモートチャネルの最大数 %1! を超えています。"
+
+140 = SRV_EMAXRPC, "RPC 実行スタックの最大の深さにすでに達しています。"
+
+141 = SRV_EPROCNULL, "'%1!' に NULL のサーバプロセスが渡されました。"
+
+142 = SRV_EPROCINVALID, "'%2!' にサーバプロセスアドレス 0x%1! がプールされていません。"
+
+143 = SRV_EPROCBOUND, "サーバプロセスアドレス 0x%1! が '%2!' の正しい境界にありません。"
+
+144 = SRV_EPROCNOTUSED, "'%2!' にサーバプロセス '%1!' が割り当てられていません。"
+
+145 = SRV_EPROCIODEAD, "サーバプロセス '%1!' の '%2!' に無効な I/O があります。"
+
+146 = SRV_ECONSRVFAIL, "接続サービスプロセスに失敗しました。"
+
+147 = SRV_ENONETBUF, "スレッド '%1!' のネットワークバッファを割り当てることができませんでした。"
+
+148 = SRV_ENOTSUPPORTED, "''%1!' は有効な機能値ではありません。"
+
+149 = SRV_ECORRUPT, "致命的エラー: 内部 %1! 構造体が %2! で破損しています。"
+
+150 = SRV_ELOWSTK, "スレッド '%1!' が %2! バイトの割り当てスタック領域を超えそうです。"
+
+151 = SRV_EBADSTK, "スレッド '%1!' のスタックがオーバーフローしているか、破損しています。 アボートします。"
+
+152 = SRV_EIO, "致命的エラー: ネットワーク I/O 中にエラーが見つかりました。エラー '%1!'"
+
+153 = SRV_EDISC, "ネットワーク読み取り中にクライアントが切断されました。"
+
+154 = SRV_ENETCLOSE, "ネットワーク接続を閉じるときにエラーが発生しました。エラー '%1!'"
+
+155 = SRV_ENODEV, "致命的エラー: ファイル記述子の最大数を超えました。"
+
+156 = SRV_ECMD, "コマンド引数 (0x%1!) が無効です。"
+
+157 = SRV_ETYPE, "タイプ引数 (0x%1!) が無効です。"
+
+158 = SRV_EBADCOUNT, "%1!: CS_DATAFMT のカウント (%2!) が無効です。"
+
+159 = SRV_EBADSTAT, "%1!: CS_DATAFMT のステータス (0x%2!) が無効です。"
+
+160 = SRV_EBADFORMAT, "%1!: CS_DATAFMT のフォーマット (0x%2!) が無効です。"
+
+161 = SRV_ENOMSG, "SRV_MSG に CS_GET のイベントハンドラが存在している必要があります。"
+
+162 = SRV_ENOBIND, "%1!: %3! の項目番号 (%2!) のバインドが完了しませんでした。"
+
+163 = SRV_ETRUNC, "%1! 構造体の長い名前がトランケートされました。"
+
+164 = SRV_ENULLADDR, "NULL プログラム変数でバインドしようとしました。"
+
+165 = SRV_ESTATE, "%1!: %3! の %2! が無効です。"
+
+166 = SRV_ELEN, "%1!: 変数、oldvallen(%2!)、newvallen(%3!) の長さが無効です。"
+
+167 = SRV_EDUPROW, "ロー '%1!' はすでに記述されています。"
+
+168 = SRV_ENOROW, "%1!: 現在のスレッドの compute ロー '%2!' がありません。"
+
+169 = SRV_ENOAGG, "%1!: ID 番号 '%2!' のある集合演算がありません。"
+
+170 = SRV_EDUPTAB, "%1!: テーブル '%2!' はすでに記述されています。"
+
+171 = SRV_ENOTAB, "%1!: テーブル '%2!' は記述されていません。"
+
+172 = SRV_EBADROW, "%1!: compute-id '%2!' が正しくありません。"
+
+173 = SRV_EBADCOMPUTBY, "%1!: compute-by リストが order-by リストに一致していません。"
+
+174 = SRV_ENOCOMPUTEBY, "%1!: 現在の文に compute-by リストがありません。"
+
+175 = SRV_EBADNUMBYLIST, "%1!: compute-by カラム数の値 '%2!' が正しくありません。"
+
+176 = SRV_ENOORDERBY, "%1!: 現在の文に order-by リストがありません。"
+
+177 = SRV_EBADNUMCOLS, "%1!: order-by カラム数の値 '%2!' が正しくありません。"
+
+178 = SRV_EBADTABNUM, "%1!: テーブル番号 '%2!' が正しくありません。"
+
+179 = SRV_EBADNAMELEN, "%1!: 名前の長さの値 '%2!' が正しくありません。"
+
+180 = SRV_EBADCTRLLEN, "%1!: 制御フォーマットの長さの値 '%2!' が正しくありません。"
+
+181 = SRV_ENULLNAME, "%1!: '%2!' 引数は NULL にはできません。"
+
+182 = SRV_EBADTABCOL, "%1!: カラム '%2!' は srv_tabcolname() を介してテーブルとリンクする必要があります。"
+
+183 = SRV_EUNSUPPORTED, "%1!: %3! のオプション (%2!) はサポートされていません。"
+
+184 = SRV_ENOCHARSET, "関数 '%2!' にある文字セット %1! が不明です。"
+
+185 = SRV_ECSRFILE, "csr ファイル '%1!' ('%2!' 行) のフォーマットが正しくありません。"
+
+186 = SRV_ECHARATTR, "文字セット '%1!' の文字属性構造体を構築中にエラーが発生しました。"
+
+187 = SRV_ENOTHEX, "16 進数の桁が必要でしたが、関数 '%2!' で %1! を取得しました。"
+
+188 = SRV_EARG, "関数 '%3!' の引数 %1! %2! が正しくありません。"
+
+189 = SRV_ECSNOCVT, "サーバ文字セット '%1!' とクライアント文字セット '%2!' との間の変換はできません。"
+
+190 = SRV_ECSCVT, "'%2!' で文字セット変換 %1! が発生しました。"
+
+191 = SRV_ENORETURN, "関数 '%2!' の戻り (%1!) が不明です。"
+
+192 = SRV_ECSLOGREC, "ログイン記録の %1! 文字セット変換エラー"
+
+193 = SRV_ECSMISMATCH, "'%1!' は '%2!' ではありません。"
+
+194 = SRV_ECSLOAD, "%1! '%2!' の定義ファイルをロードできません。"
+
+195 = SRV_EBADNULL, "無効なデータ型 (%1!) 用に設定された CS_CANBENULL"
+
+196 = SRV_ECHCONFIG, "srv_init() の後に設定オプション '%1!' を変更することはできません。"
+
+197 = SRV_ELATEORDER, "compute-by リストがある場合、srv_alt_header() の前に %1! を呼び出す必要があります。"
+
+198 = SRV_EBADITEM, "項目番号 (%1!) が無効です。"
+
+199 = SRV_ENOTINBULK, "%1!: プロパティ %2! を取得するためには SRV_BULK ハンドラにある必要があります。"
+
+200 = SRV_EBADIOTYPE, "%1!: 転送タイプ '%2!' が無効です。"
+
+201 = SRV_EGTONECOL, "%1! は単一カラムのローの場合のみ呼び出し可能です。"
+
+202 = SRV_ENONELEFT, "%1!: %2! にはなにも残っていません。"
+
+203 = SRV_EWRONGTYPE, "%1!: カラムは TEXT または IMAGE のタイプである必要があります。"
+
+204 = SRV_EBADNUMVAL, "%1!: 構造体メンバー '%3!' の値 %2! が正しくありません。"
+
+205 = SRV_EDUPPARAM, "%1!: パラメータ '%2!' はすでに記述されています。"
+
+206 = SRV_ERPCINC, "RPC パラメータの記述が完全ではありません。%1! %2! が記述されていません。"
+
+207 = SRV_EBADROWLEN, "%1!: 読み取られたローは %2! バイトを超えてはいけません。"
+
+208 = SRV_EBADALTCOLTYPE, "%1!: compute ローカラムは TEXT または IMAGE のタイプにはできません。"
+
+209 = SRV_EIOTYPENOTSET, "%1!: SRV_PROC の srvp_iotype フィールドが初期化されていません。"
+
+210 = SRV_EBOUND, "%1!: カラム %2! をバインドしないでください"
+
+211 = SRV_ETXTLENREAD, "%1!: 現在のカラムのテキストまたはイメージの長さはすでにクライアントから読み取られています。"
+
+212 = SRV_ETXTLENNOTREAD, "%1!: 現在のカラムのテキストまたはイメージの長さはまだクライアントから読み取られていません。"
+
+213 = SRV_ENOTIMESTAMP, "テキストまたはイメージのタイムスタンプが定義されていません。"
+
+214 = SRV_ECSFALLBACK, "使用できる文字セット定義ファイルがありません。サーバの文字セットを '%1!' に設定しています。"
+
+215 = SRV_ELOGINLEN, "ログインフィールド '%2!' の範囲外の長さ (%1!) です。"
+
+216 = SRV_EBADCOLTYPE, "%1! は TEXT または IMAGE のカラム値を取得できません。"
+
+217 = SRV_ENEEDROW, "%1!: ロー情報を取得するには blk_getrow() を呼び出す必要があります。"
+
+218 = SRV_ENEEDHANDLE, "%1!: バルクコピー操作を初期化するには blk_exec() を呼び出す必要があります。"
+
+219 = SRV_EINTERRUPTED, "アテンションにより %1! の呼び出しに割り込みが発生しました。"
+
+220 = SRV_ESTATUS, "%1!: ステータス引数 (0x%2!) が無効です。"
+
+221 = SRV_EFLUSH, "%1!: SRV_DONE_FINAL で SRV_DONE_FLUSH を設定することはできません。"
+
+222 = SRV_EFLUSHCON, "%1!: SRV_CONNECT イベントから SRV_DONE_FLUSH を実行することはできません。"
+
+223 = SRV_EMORE, "%1!: SRV_DONE_FINAL で SRV_DONE_MORE を設定することはできません。"
+
+224 = SRV_EMORECON, "%1!: SRV_CONNECT イベントから SRV_DONE_MORE を実行することはできません。"
+
+225 = SRV_ECONTEXT, "%1!: コンテキストが無効です。"
+
+226 = SRV_EVERSION, "%1!: バージョン番号 (%1!) が無効です。"
+
+227 = SRV_EBADTDS, "spid %2! によって受け取った %1! TDS ストリームが不明です。"
+
+228 = SRV_EINOPTION, "%1!: SRV_OPTION ハンドラでのみ呼び出し可能です。"
+
+229 = SRV_EWRONGTDSVER, "%1!: %3! の TDS バージョン (%2!) が正しくありません。"
+
+230 = SRV_EWRONGOPTCMD, "%1!: 関数 %2! のクライアントからのオプションコマンドが不明です。"
+
+231 = SRV_EWRONGOPT, "%1!: 関数 %2! のクライアントからのオプションが不明です。"
+
+232 = SRV_ENODATA, "%1!: 現在のトークンストリームにはなにもデータがありません。"
+
+233 = SRV_ENULLARG, "関数 %2! の引数 %1! が NULL です。"
+
+234 = SRV_EINUSEREVENT, "ユーザ定義のイベントハンドラで %1! を呼び出すことはできません。"
+
+235 = SRV_EBINDARG, "関数 %3! のカラム (%2!) のバインド値 (0x%1!) が無効です。"
+
+236 = SRV_ESTATECHK, "%1!: 状態エラー (0x%2!) "
+
+237 = SRV_ENOVERSION, "%1!: srv_version でバージョンが設定されていません。"
+
+238 = SRV_EBADRESULT, "%1!: イベント (%3!) の結果タイプ (%2!) が無効です。"
+
+239 = SRV_ECONFAIL, "接続サービススレッドをスリープできませんでした。"
+
+240 = SRV_ENETFUNC, "%2! の Net-Library ルーチン %1! が失敗しました。"
+
+241 = SRV_EPROCFAIL, "スレッド %1! が新しいイベントを取得できませんでした。"
+
+242 = SRV_ECLOSEFAIL, "クライアント接続をクローズできませんでした。"
+
+243 = SRV_EREADFAIL, "プロセス %1! の読み取り操作に失敗しました。"
+
+244 = SRV_EWRITEFAIL, "プロセス %1! の書き込み操作に失敗しました。"
+
+245 = SRV_EBLOCK, "ブロック割り込みができませんでした。"
+
+246 = SRV_EUNBLOCK, "アンブロック割り込みができませんでした。"
+
+247 = SRV_ECHANNEL, "サイトハンドラ spid %1! が新しいチャネルを設定できませんでした。"
+
+248 = SRV_EPOLL, "%1! のエラー。ファイル記述子 %2! はもうアクティブではありません。"
+
+249 = SRV_EGLOBAL, "%1!: 共用ライブラリのグローバルデータにアクセスすることができませんでした。"
+
+250 = SRV_EIOPOST, "%1!: 非同期マネージャを実行できませんでした。"
+
+251 = SRV_EBADLENARG, "%1! は関数 %3! に無効な長さの値 (%2!) を持っています。"
+
+252 = SRV_EPROCPROPS, "%2! にあるスレッドプロパティ (%1!) が無効です。"
+
+253 = SRV_EINSERVTHREAD,"%1!: サービススレッドのプロパティ %2! は無効です。"
+
+254 = SRV_EFROMDISCONNECT, "%1!: %2! プロパティは SRV_DISCONNECT ハンドルでのみ有効です。"
+
+255 = SRV_ESMALLBUF, "%1!: プロパティ %3! のバッファサイズが (%2!) よりも小さいです。"
+
+256 = SRV_ELARGBUF, "%1!: %3! のバッファサイズは (%2!) バイトを超えてはいけません。"
+
+257 = SRV_EFROMCONNECT, "%1!: プロパティ %2! を設定するためには接続ハンドラに存在する必要があります。"
+
+258 = SRV_EWRONGTDSSET, "%1!: TDS レベル (%2!) は現在のレベル (%3!) よりも大きく設定することはできません。"
+
+259 = SRV_EWRONGLANG, "%1!: プロパティ %3! に対して (%2!) は無効です。"
+
+260 = SRV_ENOPROPSET, "%1!: プロパティ %2! を設定またはクリアすることはできません。"
+
+261 = SRV_ESRVPROPS, "%2! のサーバプロパティ (%1!) は無効です。"
+
+262 = SRV_EPROPCFG, "%1!: srv_init() の後でサーバプロパティを設定できません。"
+
+263 = SRV_EBADINTPROP, "%1!: プロパティ %3! の値 (%2!) が正しくありません。"
+
+264 = SRV_ECAPMASK, "%1!: %2! の機能マスクが無効です。"
+
+265 = SRV_EPROPNOSUPPORT, "%1!: このプラットフォームではプロパティ %2! はサポートされていません。"
+
+266 = SRV_ENOPROPCLEAR, "%1!: プロパティ %2! をクリアすることはできません。"
+
+267 = SRV_ENOPROPTDS, "%1!: 現在の TDS バージョン (%3!) のプロパティ %2! が無効です。"
+
+268 = SRV_ENOSERVNAME, "%1!: srv_init の前にプロパティ %2! を取得できません。"
+
+269 = SRV_ENOFDONE, "イベントハンドラは最後の DONE を送りませんでした。"
+
+270 = SRV_EERROR, "%1!: SRV_DONE_FLUSH は SRV_DONE_ERROR と同時には設定できません。"
+
+271 = SRV_EENVDB, "データベースコンテキストが '%1!' に変更されました。"
+
+272 = SRV_EENVLANG, "言語設定が '%1!' に変更されました。"
+
+273 = SRV_EENVCHAR, "クライアントの文字設定が '%1!' に変更されました。"
+
+274 = SRV_ENOCUR, "%1!: ID %2! または名前 '%3!' を持つカーソルはありません。"
+
+275 = SRV_ENOCUREVENT, "%1!: SRV_CURSOR イベントハンドラにありません。"
+
+276 = SRV_ENOCURPARAMS, "%1!: カーソルのパラメータがありません。"
+
+277 = SRV_ENOCURPARAM, "%1!: カーソルのパラメータ %2! がありません。"
+
+278 = SRV_ENOCURUPCOLS, "%1!: カーソルの更新カラムがありません。"
+
+279 = SRV_ENOCURUPCOL, "%1!: カーソルの更新カラム %2! がありません。"
+
+280 = SRV_EDUPCUR, "%1!: カーソル '%2!' はすでに宣言されています。"
+
+281 = SRV_EBADCUR, "%1!: カーソル記述子が無効です。"
+
+282 = SRV_ENOCURROWDESC, "%1!: カーソルのロー記述がありません。"
+
+283 = SRV_EROWCNT, "%1!: カーソルのローフェッチカウント %2! が限界を超えました。"
+
+284 = SRV_ENOCURSENT, "%1!: DONE を送る前に srv_cursor_props() を介してカーソル情報を送信する必要があります。"
+
+285 = SRV_ECURSENT, "%1!: srv_cursor_props() によってカーソル情報はすでに送信されました。"
+
+286 = SRV_ENOSENDCUR, "%1!: カーソル情報を送信中にエラーが発生しました。"
+
+287 = SRV_ENOKEY, "%1!: 現在のカーソルローのキーカラムが記述されませんでした。"
+
+288 = SRV_ENOKEYCOL, "%1!: キーカラム %2! がありません。"
+
+289 = SRV_ENODYN, "%1!: 動的 SQL 文 '%2!' がありません。"
+
+290 = SRV_ENODYNEVENT, "%1!: SRV_DYNAMIC イベントハンドラにありません。"
+
+291 = SRV_ENODYNPARAMS, "%1!: 動的 SQL パラメータがありません。"
+
+292 = SRV_ENODYNPARAM, "%1!: 動的 SQL パラメータ %2! がありません。"
+
+293 = SRV_EDUPDYN, "%1!: 動的 SQL 文 '%2!' はすでに準備されています。"
+
+294 = SRV_EDYNINC, "%1!: 動的 SQL パラメータリストが不完全です。%2! パラメータが記述されていません。"
+
+295 = SRV_ENOSENDDYN, "%1!: 動的 SQL 情報を送信中にエラーが発生しました。"
+
+296 = SRV_ENODYNSENT, "%1!: %2! を送信する前に srv_dynamic() によって動的 SQL 文の情報を送信する必要があります。"
+
+297 = SRV_EDYNSENT, "%1!: srv_dynamic() によって動的 SQL 文の情報はすでに送信されました。"
+
+298 = SRV_EBADCTXT, "%1!: この %2! の呼び出しが無効です。"
+
+299 = SRV_EBADRESP, "%1!: '%3!' への応答 '%2!' が無効です。"
+
+300 = SRV_EBADTOKEN, "クライアントから受け取ったトークン 0x%1! が不明です。"
+
+301 = SRV_ENOCONN, "%1!: SRV_CONNECT イベントハンドラにありません。"
+
+302 = SRV_EDUPCURID, "%1!: カーソル ID %2! はすでに割り当てられています。"
+
+303 = SRV_ETEXTLEFT, "テキストまたはイメージのカラム %1! が完全には送信されませんでした。"
+
+304 = SRV_EBADALTID, "%1!: compute-id %2! が限界を超えました。1 ～ %3! にする必要があります。"
+
+305 = SRV_ENOTXTSENT, "%1!: カラム %2! に NULL データが送信されました。テキストポインタの長さが 0 でした。"
+
+306 = SRV_ENOTEXTPTR, "%1!: テキストまたはイメージポインタが定義されていません。"
+
+307 = SRV_ENOPARAMRPC, "%1!: 現在の RPC にはパラメータがありません。: %2!"
+
+308 = SRV_ECAPABILITY, "%2! で機能 (%1!) が無効です。"
+
+309 = SRV_ECAPTYPE, "%2! で機能タイプ (%1!) が無効です。"
+
+310 = SRV_EBADIO, "%1!: spid %3! の %2! 中に致命的エラーが発生しました。"
+
+311 = SRV_EBADMSGID, "%1!: msgid の値 (%2!) が正しくありません。"
+
+312 = SRV_ENOPARAMMSG, "%1!: 現在のメッセージのパラメータがありません。"
+
+313 = SRV_ENOPARAMNUM, "%1!: 現在の %3! にパラメータ番号 %2! がありません。"
+
+314 = SRV_EPARAMINC, "%1!: パラメータ記述が完全ではありません。%2! %3! が記述されていません。"
+
+315 = SRV_EPROTERR, "%1!: プロトコルエラーが発生しました: %2!"
+
+316 = SRV_ENOPARAMEED, "%1!: 現在のエラーメッセージのパラメータがありません。"
+
+317 = SRV_ENODYNDESC, "%1!: 動的 SQL データは CS_DESCIN (入力パラメータフォーマット) または CS_DESCOUT (出力カラムフォーマット) として定義する必要があります。"
+
+318 = SRV_ETXTLEFT, "%1!: blk_gettext() によって読み取られるテキストまたはイメージのカラムがまだ残っています。"
+
+319 = SRV_EBLKINIT, "%1!: テーブルカラム情報の送信中に障害が発生しました。"
+
+320 = SRV_ENONATLOCALE, "ロケール %1! のローカライゼーション情報をロードすることができませんでした。"
+
+321 = SRV_EBADLOCALE, "CS_LOCALE が無効、または Open Server CS_CONTEXT を使用して割り当てられていません。"
+
+322 = SRV_ENOLOCALE, "スレッド %1! のローカライゼーション情報を割り当てることができませんでした。"
+
+323 = SRV_ENOCHARLOCALE, "文字セット %1!、言語 %2! のローカライゼーション情報をロードできませんでした。"
+
+324 = SRV_EWRONGNULL, "%1!: カラム番号 %2! のデータを NULL にはできません。"
+
+325 = SRV_ENOINIT, "srv_init が呼び出されていません。"
+
+326 = SRV_EWRONGARGLEN, "%2! のときに %1! に渡された引数の長さが正しくありません。"
+
+327 = SRV_ENONEGPWD, "%1!: クライアントによって送信されたリモートサーバ情報はありません。"
+
+328 = SRV_EREADFAILED, "%1!: クライアント応答の待機中に障害が発生しました。"
+
+329 = SRV_EWRONGMSG, "%1!: %3! への応答で受け取られた応答タイプ %2! が正しくありません。"
+
+330 = SRV_EINCPASSTHRU, "spid %1! のパススルーが完全ではありません。"
+
+331 = SRV_ERECURSIVE, "ダミーのエラー文字列です。どこにも出力しないでください。"
+
+332 = SRV_ENORESCAP, "%1!: %2! 結果タイプが保留されているか、サポートされていません。"
+
+333 = SRV_EINSTART, "%1!: SRV_START ハンドラで呼び出すことはできません。" 
+
+334 = SRV_ESTARTEVENT, "SRV_START イベントにより srv_run がアボートされました。"
+
+335 = SRV_ENONULLIND, "%1!: 項目番号 %2! のデータ長が 0 のときに、NULL インジケータは設定されません。"
+
+336 = SRV_EBADPREC,  "%1!: CS_DATAFMT の総桁数の値 (%2!) が正しくありません。"
+
+337 = SRV_EBADSCALE, "%1!: CS_DATAFMT の小数点以下桁数の値 (%2!) が正しくありません。"
+
+338 = SRV_ERUN, "srv_run により致命的エラーが見つかりました。"
+
+339 = SRV_ETAKECOROUTINE, "%1! でコルーチン制御を戻すことができませんでした。"
+
+340 = SRV_ERELEASECOROUTINE, "%1! でコルーチン制御を解放できませんでした。"
+
+341 = SRV_ETAKEMUTEX, "%1! でシステム mutex を取得できませんでした。"
+
+342 = SRV_ERELEASEMUTEX, "%1! でシステム mutex を解放できませんでした。"
+
+;	End of generic error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VOS
+;	platforms.  Generic error numbers should be added above this
+;
+343 = SRV_EMSGSENDREPLY, "spid %1! への応答時にエラーが発生しました。"
+
+344 = SRV_EFREEBUF, "不正な読み取りバッファが解放されました。"
+
+345 = SRV_ENOREADBUFFERS, "現在利用可能なネットワーク読み取りバッファはありません。"
+
+346 = SRV_EDEADCLIENT, "dead 状態かまたは切断されたクライアントのメッセージを受け取りました。"
+
+347 = SRV_EMSGSKIPPED, "spid %1! のメッセージが省略されました。"
+
+348 = SRV_ECLIENTACCEPT, "procid %1! へログイン受け入れメッセージを送信できませんでした。"
+
+349 = SRV_ECLIENTDISCONNECT, "spid %1! は完全に終了しているか、切断されています。"
+
+350 = SRV_EQUEUECREATE, "ダイレクトキュー %1! を作成中にエラーが発生しました。"
+
+351 = SRV_ESETTINGFASTQ, "s$control() とのポートを設定中にエラーが発生しました。"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported VMS
+;	platforms.
+;
+352 = SRV_ETCPALLFAIL, "TCP/IP ネットワーク制御構造体用にメモリを割り当てられませんでした。"
+
+353 = SRV_ETCPNETASSIGN, "TCP/IP デバイス %1! を割り当てられませんでした。"
+
+354 = SRV_ETCPSETKEEP, "TCP/IP ソケットオプション SO_KEEPALIVE を設定できません。"
+
+355 = SRV_ETCPSETREUSE, "TCP/IP ソケットオプション SO_REUSEADDR を設定できません。"
+
+356 = SRV_ETCPACCEPTW, "TCP/IP 受け入れ待ちを記述中にエラーが発生しました。"
+
+357 = SRV_ETCPASSIGN, "クライアント接続の新しいチャネルの割り当てられませんでした。"
+
+358 = SRV_ETCPNOLINK, "クライアント接続で利用可能なリンクエントリはありません。"
+
+359 = SRV_ETCPATTNAST, "ソケットでアテンション AST を設定できませんでした。"
+;
+;	End of VOS specific error messages
+;
+
+;
+;	NOTE:  The error numbers below here are only supported NT
+;	platforms.
+;
+360 = SRV_EWAITFAIL, "%1! で WaitForSingleObject() が失敗しました。"
+
+361 = SRV_ECREATEEVENT, "%1! で CreateEvent() が失敗しました。"
+
+362 = SRV_ESETEVENT, "%1! で SetEvent() が失敗しました。"
+
+363 = SRV_ESTARTCOROUTINE, "コルーチンモードを開始できませんでした。"
+
+364 = SRV_EENDCOROUTINE, "コルーチンモードを終了できませんでした。"
+
+365 = SRV_ECREATEMUTEX, "%1! で CreateMutex() が失敗しました。"
+
+366 = SRV_EDELETEMUTEX, "%1! で mutex の削除に失敗しました。"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added after the initial 10.0 release.
+;
+367 = SRV_EBADMSGFIELD, "%1!: CS_SERVERMSG 引数の %2! フィールドは最初の呼び出しでは %3! に設定する必要があります。"
+
+368 = SRV_ENOMSGSENT, "%1!: メッセージは初期化されましたが、完了しませんでした。"
+
+;
+;	NOTE:  The errors below are additional generic errors,
+;	added for 11.0 release.
+;
+
+369 = SRV_ESCLFUNC, "%2! でセキュリティ制御レイヤルーチン %1! が失敗しました。"
+
+370 = SRV_ESCLINIT, "セキュリティ制御レイヤの初期化に失敗しました。"
+
+371 = SRV_EBADSECPROT, "セキュリティプロトコルエラーが発生しました。"
+
+372 = SRV_EBADSECVER, "不明なセキュリティバージョン (%1!) を受け取りました。"
+
+373 = SRV_EBADSECMECHOID, "不明なセキュリティメカニズムオブジェクト識別子を受け取りました。"
+
+374 = SRV_ESESSTO, "セキュリティセッションが有効期限切れになりました。"
+
+375 = SRV_ECREDTO, "セキュリティセッションの資格が有効期限切れになりました。"
+
+376 = SRV_EBADSIGN, "無効なセキュリティシグネチャを受け取りました。"
+
+377 = SRV_EBADSEAL, "セキュリティの復号化に失敗しました。"
+
+378 = SRV_ESECMECHLEN, "セキュリティメカニズム名が長すぎます。"
+
+379 = SRV_ELMAN, "リストマネージャ操作に失敗しました。"
+
+380 = SRV_EBADSECTOK, "不正なセキュリティメッセージトークンを受け取りました。"
+
+381 = SRV_ESECSRVNOTSUP, "要求されたセキュリティサービスはサポートされていません。"
+
+382 = SRV_EMAXMUTEXES, "mutex は、設定できる最大数まですでに作成されています。"
+
+;
+;	NOTE:	These are for Windows NT Thread Local Storage API errors
+;			being added for the 11.1.1 release
+;
+383 = SRV_ETLSALLOC, "TlsAlloc() は %1! で失敗しました。"
+384 = SRV_ETLSFREE, "TlsFree() は %1! で失敗しました。"
+385 = SRV_ETLSSETVAL, "TlsSetValue() は %1! で失敗しました。"
+386 = SRV_ETLSGETVAL, "TlsGetValue() は %1! で失敗しました。"
+
+;
+; Following added for 15.0 and higher: HA and Login Redirection Support
+;
+387 = SRV_EBADTRANADDRLEN, "addr_trantype または addr_tranaddress の長さが無効です。"
+388 = SRV_ESRVNAMELEN, "サーバ名の長さ (%1!) が無効です。"
+389 = SRV_ENOSESSION, "クライアントは HA をサポートしていません。"
+
+;
+;	Following is added for 15.0 and higher: Large Identifier Support
+;
+390 = SRV_ENOLARGEID, "%1! で始まる識別子が長すぎます。 クライアントは長い識別子をサポートしていません。"
+
+;
+; New error message added for srv_langcpy()
+;
+391 = SRV_EBADSTART, "文字のコピーを開始する位置 (%1!) を要求バッファの文字数 (%2!) より大きくすることはできません。"
+
+;
+; New error message added for creating message queue
+;
+392 = SRV_EMAXMQUEUES, "設定された最大数のメッセージキューがすでに作成済みです。"
+
+;
+; Following added for 15.0 and higher: Connection Migration
+;
+393 = SRV_EPROPNOTAVAIL, "%1!: プロパティ %2! は利用できません。"
+394 = SRV_ENOTMIGRATABLE, "%1!: 接続はマイグレートできません。"
+395 = SRV_EMIGNOTCANCEL, "%1!: マイグレーションをキャンセルできなくなりました。"
+396 = SRV_EMIGFAILED, "マイグレーションが失敗しました。SRV_MIGRATE_STATE ハンドラはインストールされていません。"
+397 = SRV_ENOTLISTENER, "プロパティ %1! はリスナスレッドでのみ設定できます。"
+398 = SRV_EXMAXLISTEN, "最大リスナカウント (%1!) を超えます。"
+
+;
+; Error messages for handling chunked LOB type parameters
+;
+399 = SRV_EBLOBBADTYPE, "ストリーム LOB データは、このルーチンでは処理できません。%1! を使用してください。"
+
+; Generic error message for an unexpected failure.
+400 - SRV_EUNEXPECTED, "%1!: %2! で予期しない障害が発生しました。"

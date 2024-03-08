@@ -1,0 +1,55 @@
+; "dbcapi.loc" - Localization file for DBCAPI Server
+;
+; Note: Lines begun with a semicolon (;) are comments. 
+;
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; DBCAPI Error Messages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[dbcapidefaults]
+
+1 = ZZZZZ, "Zeichenfolge kann wegen Speichermangels nicht abgerufen werden"
+
+2 = ZZZZZ, "Schicht-Meldungszeichenfolge kann nicht abgerufen werden"
+
+3 = ZZZZZ, "Ursprung-Meldungszeichenfolge kann nicht abgerufen werden"
+
+4 = ZZZZZ, "Fehlerzeichenfolge nicht verfügbar"
+
+[dbcapilayer]
+
+8 = ZZZZZ, "DBCAPI-Ebene"
+
+[dbcapiorigin]
+
+10 = ZZZZZ, "Fehler"
+
+[dbcapierror]
+
+1 = ZZZZZ, "Die CT-Lib-Routine %1! ist fehlgeschlagen."
+
+2 = ZZZZZ, "Unerwartete Rückgabe von %1!, ist %2!."
+
+3 = ZZZZZ, "Fehler bei Speicherzuweisung von %1!."
+
+4 = ZZZZZ, "Der Parameter %1! darf nicht NULL sein."
+
+5 = ZZZZZ, "Der Parameter %1! hat einen ungültigen Wert."
+
+6 = ZZZZZ, "Fehler."
+

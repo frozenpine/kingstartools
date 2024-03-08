@@ -1,0 +1,251 @@
+; "dscp.loc" -- Localization file for Open Client dscp utility
+;
+; Note: Lines begun with a semicolon (;) are comments.
+;
+[copyright]
+copyright = "Copyright (c) 2013 SAP AG or an SAP affiliate company.\
+        All rights reserved.\
+        Unpublished rights reserved under U.S. Copyright laws.\
+        This software contains confidential and trade secret information of\
+        SAP AG or an SAP affiliate company. Use, duplication or disclosure of\
+        the software and documentation by the U.S. Government is subject to\
+        restrictions set forth in a license agreement between the Government\
+        and SAP AG or an SAP affiliate company, or other written agreement\
+        specifying the Government's rights to use the software and any\
+        applicable FAR provisions, for example, FAR 52.227-19.\
+        SAP AG or an SAP affiliate company"
+
+; LOC_SECT_PROMPT
+;
+;   Prompts
+;
+[prompt]
+
+1 = ZZZZZ, "Sitzung"
+
+
+; LOC_SECT_MESSAGE
+;
+;   Informational and error messages
+; 
+[message]
+
+1  = ZZZZZ, "Versuchte Speicherzuweisung fehlgeschlagen."
+
+2  = ZZZZZ, "Fehler beim Lesen von Objekten."
+
+3  = ZZZZZ, "Keine Objekte gefunden."
+
+4  = ZZZZZ, "'%1!' existiert nicht."
+
+5  = ZZZZZ, "Fehlgeschlagen"
+
+6  = ZZZZZ, "OK"
+
+7  = ZZZZZ, "Failover zum Interface-Treiber."
+
+8  = ZZZZZ, "Keine Sitzung geöffnet."
+
+9  = ZZZZZ, "%1! hinzugefügt"
+
+10 = ZZZZZ, "Fehler beim Hinzufügen von %1!"
+
+11 = ZZZZZ, "%1! geändert"
+
+12 = ZZZZZ, "Fehler beim Ändern von %1!"
+
+13 = ZZZZZ, "%1! gelöscht"
+
+14 = ZZZZZ, "Fehler beim Löschen von %1!"
+
+15 = ZZZZZ, "Alle Serverobjekte gelöscht."
+
+16 = ZZZZZ, "Fehler beim Löschen von Serverobjekten."
+
+17 = ZZZZZ, "Fehler: Versuch, in das Objekt derselben Sitzung zu kopieren."
+
+18 = ZZZZZ, "Kopie von '%1!' aus Sitzung %2! in '%3!' in Sitzung %4!"
+
+19 = ZZZZZ, "Fehler beim Kopieren von %1!"
+
+20 = ZZZZZ, "Fehler: Versuch, in dieselbe Sitzung zu kopieren."
+
+21 = ZZZZZ, "Alles wird in Sitzung %1! kopiert."
+
+22 = ZZZZZ, "Sitzung %1! %2!"
+
+23 = ZZZZZ, "aktuell"
+
+24 = ZZZZZ, "Syntaxfehler"
+
+25 = ZZZZZ, "Extraattribut"
+
+
+; LOC_SECT_ATTR
+;
+;   dscp attributes
+;
+[attr]
+
+1  = ZZZZZ, "Transporttyp"
+
+2 =  ZZZZZ, "Transportadresse"
+
+3  = ZZZZZ, "Serversicherheit"
+
+4  = ZZZZZ, "Sicherheitsmechanismus"
+
+5  = ZZZZZ, "**Unbekannter Wert**"
+
+6  = ZZZZZ, "DIT-Basis für Objekt"
+
+7  = ZZZZZ, "Name unterscheiden"
+
+8  = ZZZZZ, "Serverobjekte gefunden"
+
+9  = ZZZZZ, "Version"
+
+10 = ZZZZZ, "Dienst"
+
+11 = ZZZZZ, "Status"
+
+12 = ZZZZZ, "Adresse"
+
+13 = ZZZZZ, "SYBASE"
+
+14 = ZZZZZ, "Konfiguration"
+
+15 = ZZZZZ, "DS-Name"
+
+16 = ZZZZZ, "HA-Server für Failover"
+
+; LOC_SECT_INPUT
+;
+;   User input prompts
+;
+[input]
+
+1  = ZZZZZ, "Wollen Sie wirklich alle Serverobjekte löschen? (J/N)"
+
+
+; LOC_SECT_COMMAND
+;
+;   dscp commands
+;
+[command]
+
+1  = ZZZZZ, "help"
+
+2  = ZZZZZ, "h"
+
+3  = ZZZZZ, "?"
+
+4  = ZZZZZ, "open"
+
+5  = ZZZZZ, "close"
+
+6  = ZZZZZ, "read"
+
+7  = ZZZZZ, "add"
+
+8  = ZZZZZ, "mod"
+
+9  = ZZZZZ, "addattr"
+
+10 = ZZZZZ, "del"
+
+11 = ZZZZZ, "delete-all"
+
+12 = ZZZZZ, "copy"
+
+13 = ZZZZZ, "copyall"
+
+14 = ZZZZZ, "to"
+
+15 = ZZZZZ, "list"
+
+16 = ZZZZZ, "all"
+
+17 = ZZZZZ, "sess"
+
+18 = ZZZZZ, "config"
+
+19 = ZZZZZ, "exit"
+
+20 = ZZZZZ, "quit"
+
+21 = ZZZZZ, "switch"
+
+22 = ZZZZZ, "#done"
+
+23 = ZZZZZ, "#del"
+
+24 = ZZZZZ, "Y"
+
+25 = ZZZZZ, "y"
+
+26 = ZZZZZ, "DSNAME"
+
+27 = ZZZZZ, "SESS"
+
+28 = ZZZZZ, "SERVER_NAME"
+
+29 = ZZZZZ, "NAME1"
+
+30 = ZZZZZ, "NAME2"
+
+
+; LOC_SECT_HELP
+;
+;   dscp commands' functional descriptions
+;
+[help]
+
+; help | h | ?
+1  = ZZZZZ, "Diese Anzeige."
+
+; open [DSNAME]
+2  = ZZZZZ, "Sitzung für den standardmäßigen Verzeichnisdienst oder für den Verzeichnisdienst DSNAME öffnen."
+
+; close [SESS]
+3  = ZZZZZ, "Sitzung mit der Nummer SESS oder die aktuelle Sitzung schließen."
+
+; sess
+4  = ZZZZZ, "Alle Sitzungen auflisten."
+
+; [switch] SESS
+5  = ZZZZZ, "Sitzung mit der Nummer SESS zur aktuellen Sitzung machen."
+
+; add SERVER-NAME
+6  = ZZZZZ, "Neues Serverobjekt zum Verzeichnisdienst hinzufügen."
+
+; read SERVER-NAME
+7  = ZZZZZ, "Inhalt eines Serverobjekts lesen."
+
+; mod SERVER-NAME
+8  = ZZZZZ, "Vorhandenes Serverobjekt ändern."
+
+; addattr SERVER-NAME
+9  = ZZZZZ, "Attribut zu einem vorhandenen Serverobjekt hinzufügen."
+
+; del SERVER-NAME
+10 = ZZZZZ, "Vorhandenes Serverobjekt löschen."
+
+; list [all]
+11 = ZZZZZ, "Alle Serverobjekte auflisten."
+
+; copy NAME1 to {SESS NAME2 | SESS | NAME2}
+12 = ZZZZZ, "Objekt NAME1 in ein neues Objekt NAME2 in der Sitzung mit der Nummer SESS oder in der aktuellen Sitzung kopieren."
+
+; copyall to SESS
+13 = ZZZZZ, "Alle Serverobjekte in der aktuellen Sitzung in die Sitzung mit der Nummer SESS kopieren."
+
+; delete-all
+14 = ZZZZZ, "Alle Serverobjekte in der aktuellen Sitzung löschen."
+
+; config
+15 = ZZZZZ, "Aktuelle Konfiguration auflisten."
+
+; exit | quit
+16 = ZZZZZ, "Programm verlassen."
+
